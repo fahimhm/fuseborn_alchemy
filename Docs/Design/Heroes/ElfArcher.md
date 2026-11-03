@@ -29,7 +29,7 @@ Wren woke up, stretched, looked around the workshop and announced that she was c
 | Attack range | Long |
 | Base attack interval | 1.6 s |
 | Move Speed | — (ranged, stays in her cell) |
-| Targeting | Lowest HP → Front-most |
+| Targeting | Same lane, back-most → Back-line |
 | Recommended row | Back |
 
 ## 4. Stats

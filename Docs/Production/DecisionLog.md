@@ -4,6 +4,7 @@ Record notable decisions so future-you (and AI assistants) know *why*. Newest at
 
 | Date | Decision | Alternatives considered | Reason |
 |---|---|---|---|
+| 2026-11-03 | New targeting rule "Same lane, back-most"; Wren uses it with Back-line fallback (tie: nearest lane) | Keep Lowest HP → Front-most; Lowest HP fallback | Fits her sniper identity and makes her lane placement a tactical choice |
 | 2026-11-03 | 1–3 branches per hero (max 3, fixed for now); 1 branch opens automatically; 30-point budget unchanged | Exactly 3 for every hero | Branch count follows each homunculus's lore (Wren: 2 paths); simple heroes cost less content and art |
 | 2026-11-03 | Hero = homunculus = homunculi (same thing). Player-facing prefers "Homunculus"; code, data IDs and files keep "Hero" | Full rename incl. files and IDs; keep "Hero" everywhere | Fits the lore without breaking links or data names |
 | 2026-11-03 | Tone → "hopeful, with weight": player is guild master and alchemist and carries every risk; some homunculi draw a soul from nature, others are soulless; in a reaction, ingredient souls return to nature (nothing carries over). Lore only for now, may gain mechanics later | Light adventure, no grim costs; souls merge into the result; souls destroyed | Lets homunculi have will and unique lore (e.g. Wren's curse) without fusion becoming killing; avoids "which soul carries over" questions |

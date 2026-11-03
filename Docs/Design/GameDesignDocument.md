@@ -421,7 +421,8 @@ Each hero has its **own built-in targeting characteristic**. This is part of the
 |---|---|
 | Front-most | Nearest enemy in the front-most occupied row |
 | Same lane | Enemy in the same lane, front to back |
-| Back-line | Enemy in the back-most occupied row |
+| Same lane, back-most | Furthest-back enemy in the same lane |
+| Back-line | Enemy in the back-most occupied row (tie: nearest lane first) |
 | Role: X | First enemy with role X (e.g. Support), otherwise fallback |
 | Lowest HP | Enemy with the lowest current HP % |
 | Highest ATK | Strongest enemy attacker |
@@ -646,7 +647,7 @@ Planned to be discussed later.
 ## 14. Change History
 | Version | Date | Changes |
 |---|---|---|
-| 0.31 | 2026-11-03 | Tone "hopeful, with weight" and souls (lore only, Lore.md; §13 #37); Terms: hero = homunculus; 1–3 branches per hero (max 3), 1-branch heroes open it automatically; budget unchanged |
+| 0.31 | 2026-11-03 | Tone "hopeful, with weight" and souls (lore only, Lore.md; §13 #37); Terms: hero = homunculus; 1–3 branches per hero (max 3), 1-branch heroes open it automatically; budget unchanged; new targeting rule "Same lane, back-most" (§6.4) |
 | 0.30 | 2026-11-03 | Every skill has 5 levels: 6 × 5 = 30 points, all on the hero's own skills; Scroll skills cost no points and level up with duplicate Scrolls; Tier I tables extended; §13 #36 |
 | 0.29 | 2026-11-03 | Tank DEF rule (§6.9): Tanks get base DEF 6 + 0.3 DEF per level so they out-armor AGI heroes; Tobin updated |
 | 0.28 | 2026-11-03 | Tier I hero drafts: Wren (Elf – Archer), Elsie (Angel – Priest), Snick (Goblin – Rogue), Grum (Orc – Warlock); statuses Bleed, Weaken, Untargetable, Knockback added; Tobin approved |
