@@ -4,6 +4,7 @@ Record notable decisions so future-you (and AI assistants) know *why*. Newest at
 
 | Date | Decision | Alternatives considered | Reason |
 |---|---|---|---|
+| 2026-11-03 | Wren: 2 branches, Leashed (precision/burst) and Unbound (AoE, evasion, Caged Fury: 3 rage → 5 s Berserk + lane Ensnare → curse Sleep 4→3 s, no rage gain while berserk or asleep); Trickster and Volley removed | 8 rage; rage from dodges too; keep 3 branches | Back row + evasion makes hits rare, so 3 rage keeps Berserk a real event; no rage during the cycle stops instant re-triggering |
 | 2026-11-03 | Wren reworked: souled elf homunculus cursed by the guild master (player) to stop her returning to the forest; proud, restless, homesick, defiant | Comedic show-off archer | User's lore; the curse drives her two branches (obedient vs grudge) |
 | 2026-11-03 | New statuses: Ensnare (can't move, can't evade, physical DoT) and Sleep (can't act, wakes on damage); curse variants may override in the skill text | Magic DoT for Ensnare; Sleep that never breaks | Physical scales with Wren and DEF counters it; general Sleep stays reusable while Wren's curse sleep can stay harsh |
 | 2026-11-03 | New targeting rule "Same lane, back-most"; Wren uses it with Back-line fallback (tie: nearest lane) | Keep Lowest HP → Front-most; Lowest HP fallback | Fits her sniper identity and makes her lane placement a tactical choice |
