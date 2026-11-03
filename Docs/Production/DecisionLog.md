@@ -4,6 +4,7 @@ Record notable decisions so future-you (and AI assistants) know *why*. Newest at
 
 | Date | Decision | Alternatives considered | Reason |
 |---|---|---|---|
+| 2026-11-03 | Wren reworked: souled elf homunculus cursed by the guild master (player) to stop her returning to the forest; proud, restless, homesick, defiant | Comedic show-off archer | User's lore; the curse drives her two branches (obedient vs grudge) |
 | 2026-11-03 | New statuses: Ensnare (can't move, can't evade, physical DoT) and Sleep (can't act, wakes on damage); curse variants may override in the skill text | Magic DoT for Ensnare; Sleep that never breaks | Physical scales with Wren and DEF counters it; general Sleep stays reusable while Wren's curse sleep can stay harsh |
 | 2026-11-03 | New targeting rule "Same lane, back-most"; Wren uses it with Back-line fallback (tie: nearest lane) | Keep Lowest HP → Front-most; Lowest HP fallback | Fits her sniper identity and makes her lane placement a tactical choice |
 | 2026-11-03 | 1–3 branches per hero (max 3, fixed for now); 1 branch opens automatically; 30-point budget unchanged | Exactly 3 for every hero | Branch count follows each homunculus's lore (Wren: 2 paths); simple heroes cost less content and art |

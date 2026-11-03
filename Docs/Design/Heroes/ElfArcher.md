@@ -13,12 +13,15 @@
 | Tier | I |
 | Recipe(s) | Basic |
 | Basic rarity | Seasonal, hidden (GDD §4.2.2) |
-| Codex flavor | "Declared herself the best archer in Alembria. Then she found a bow." |
+| Soul | Yes: an elf soul drawn from the forest (Lore.md) |
+| Codex flavor | "Her soul remembers a forest she has never seen. The mark on her brow remembers who she belongs to." |
 
 ## 2. Backstory
-**Personality keywords:** proud, showy, competitive, secretly hardworking.
+**Personality keywords:** proud, restless, homesick, defiant.
 
-Wren woke up, stretched, looked around the workshop and announced that she was clearly the most talented homunculus there. Nobody argued, mostly because she was the only one awake. She had never held a bow, but she was certain she'd be brilliant at it. Her first hundred arrows hit the ceiling, the floor and the guild master's lunch. So she practised every night in secret, and she still claims she never needed to. Now she rarely misses, and she makes sure everyone sees it: a twirl after every shot, a bow after every win. She and Tobin bicker constantly, but she always aims at whatever is attacking him first.
+Wren woke with leaves in her memory. She had never seen a forest, yet she knew its smell, its paths, the sound of its wind. Within a day she tried to leave. The guild master stopped her the only way an alchemist could: a binding mark burned into her brow. The harder she pulls toward the forest, the tighter it holds. Fury doesn't break it. She has tried. Now she draws her bow for the guild, and every arrow hits. Some days she shoots calmly, careful not to wake the mark. Other days she shoots like she's aiming past every enemy, at someone standing behind her. She hasn't stopped listening for the wind.
+
+**The curse:** placed by the guild master (the player). The stronger her urge to return to the forest, the stronger it binds; even berserk she cannot break it. Her branches are her two answers to it (§5).
 
 ## 3. Combat Profile
 | Field | Value |
@@ -108,15 +111,15 @@ Skill points: 1 per hero level. Every skill has 5 levels: core + one branch = 6 
 ## 8. Illustrator Brief (draft)
 | Field | Value |
 |---|---|
-| Silhouette & key shapes | Tall and slim; long ponytail and pointed ears; a bow taller than she should carry; chin always up |
-| Palette (3–4 colors) | Forest green, cream, gold trim, a bright red scarf she thinks is very stylish |
+| Silhouette & key shapes | Tall and slim; long ponytail and pointed ears; a bow taller than she should carry; chin up, eyes often toward the horizon; **curse mark on her brow** |
+| Palette (3–4 colors) | Forest green, cream, gold trim, a red guild-issued scarf she resents; the curse mark glows faintly (flares in Berserk) |
 | Race family base body | Elven base body (shared with Light, Dark and Wood Elf) |
 | Weapon held | Longbow; quiver with mismatched arrows (some fletched with workshop junk) |
-| Card illustration | Mid-twirl after a shot, winking; arrows stuck in the workshop ceiling behind her |
+| Card illustration | Drawing her bow at a workshop window, leaves drifting in from outside; the mark on her brow faintly glowing |
 | Battle views | Front ¾ and back ¾. Back view shows the quiver and ponytail |
-| Animations | Idle (polishing the bow), shoot, Double Shot, Pinning Arrow, hit, KO (dramatic faint), victory (bow and twirl). Branches: B1 slow aim; B2 sky volley; B3 smoke shot + decoy toss |
+| Animations | Idle (glances toward the horizon), shoot, Double Shot, Pinning Arrow, hit, KO, victory (lowers the bow, looks away). Branches: B1 slow aim; B2 sky volley; B3 smoke shot + decoy toss |
 | Branch props | B1 a simple tuned bow; B2 a quiver overflowing with arrows; B3 a bow tied with ribbons and a smoke pouch |
 | VFX per skill | Double Shot: twin streaks; Pinning Arrow: impact pin; Aimed Shot: glint + long streak; Piercing Arrow: lane-long line; Arrow Rain: arrow shower; Scatter Shot: fan; Smoke Arrow: purple puff; Decoy Arrow: painted target pop-up |
-| SFX / voice notes | Bowstring twangs; smug "Ha!" on crits; a long sigh when she misses |
+| SFX / voice notes | Bowstring twangs; a quiet exhale on crits; a sharp breath when the mark flares |
 | References | TBD (moodboard) |
 | Avoid | Anything that looks like an existing game's character |
