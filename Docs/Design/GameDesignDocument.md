@@ -516,6 +516,20 @@ Each hero has its **own built-in targeting characteristic**. This is part of the
 
 - Status duration reduction (Control Resist from gear, passives, traits) is **capped at −50%**. No full status immunity; only **knockback** immunity exists.
 
+### 6.11 Summons ✅
+Some skills summon **minions** onto the grid (first user: Grum's Demonology branch).
+
+| Rule | Value |
+|---|---|
+| **Limit** | Up to **2 minions** per summoner. Summoning again with 2 alive replaces the oldest |
+| **Placement** | An **empty cell on the summoner's side**: front-most empty cell in the summoner's lane first, otherwise the front-most empty cell anywhere. No empty cell → the skill is not cast and no mana is spent |
+| **Stats** | **Fixed per skill level** (HP, attack damage, DEF / RES, attack interval, attack range). They do not scale with the summoner's stats, gear or traits |
+| **Targetable** | Normal units for rows and targeting: a minion in front shields the units behind it. Statuses affect them as usual |
+| **Lifetime** | The whole battle unless killed. They vanish at battle end and never get XP, drops or items, and never become cards |
+| **Defeat** | Minions don't keep a battle alive: it is lost when all homunculi are down |
+| **Server** | Spawns are server-authoritative, like every roll |
+| **Art** | Each minion needs its own sprite set and animations (AssetList.md) |
+
 ---
 
 ## 7. Mining (outline)
@@ -650,7 +664,7 @@ Planned to be discussed later.
 ## 14. Change History
 | Version | Date | Changes |
 |---|---|---|
-| 0.31 | 2026-11-03 | Tone "hopeful, with weight" and souls (lore only, Lore.md; §13 #37); Terms: hero = homunculus; 1–3 branches per hero (max 3), 1-branch heroes open it automatically; budget unchanged; new targeting rule "Same lane, back-most" (§6.4); statuses Ensnare, Sleep and Curse (§6.10) |
+| 0.31 | 2026-11-03 | Tone "hopeful, with weight" and souls (lore only, Lore.md; §13 #37); Terms: hero = homunculus; 1–3 branches per hero (max 3), 1-branch heroes open it automatically; budget unchanged; new targeting rule "Same lane, back-most" (§6.4); statuses Ensnare, Sleep and Curse (§6.10); Summons (§6.11) |
 | 0.30 | 2026-11-03 | Every skill has 5 levels: 6 × 5 = 30 points, all on the hero's own skills; Scroll skills cost no points and level up with duplicate Scrolls; Tier I tables extended; §13 #36 |
 | 0.29 | 2026-11-03 | Tank DEF rule (§6.9): Tanks get base DEF 6 + 0.3 DEF per level so they out-armor AGI heroes; Tobin updated |
 | 0.28 | 2026-11-03 | Tier I hero drafts: Wren (Elf – Archer), Elsie (Angel – Priest), Snick (Goblin – Rogue), Grum (Orc – Warlock); statuses Bleed, Weaken, Untargetable, Knockback added; Tobin approved |
