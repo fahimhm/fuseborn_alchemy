@@ -20,7 +20,7 @@
 ## 2. Backstory
 **Personality keywords:** 3–4 words.
 
-80–150 words. Heroes are **homunculi** (Lore.md): new beings in the form of a people of Alembria, each with its own personality. Write how this one woke up, what it loves, what it is like in the guild. Light adventure tone, no grim costs.
+80–150 words. Heroes are **homunculi** (Lore.md): new beings in the form of a people of Alembria, each with its own personality. Write how this one woke up, what it loves, what it is like in the guild. Tone: hopeful, with weight (Lore.md); can vary per homunculus. Say whether it has a soul (drawn from nature) or is soulless.
 
 ## 3. Combat Profile
 | Field | Value |

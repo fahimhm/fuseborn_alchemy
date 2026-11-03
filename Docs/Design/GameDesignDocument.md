@@ -17,7 +17,7 @@
 **Elevator pitch:**
 > _An online card game where you fuse two cards to discover new heroes, weapons, and items. Fusion consumes the ingredients, results roll random unique skills and weapon slots, and your party fights monsters and other players in auto-battles where you choose when to fire each skill._
 
-**World & Story:** ✅ In Alembria *(placeholder)*, alchemy is everything: any two things can **react** into something new. The first to discover a reaction is written into the **Great Codex** and gains wealth and fame. The player leads a new **alchemy guild** of **homunculi** (the heroes: living alchemical beings in the forms of the world's peoples), reacts junk into treasure, fights **Runoffs** (monsters born from failed reactions) and rival guilds for resources. Tone: light adventure. Full lore: [Lore.md](Lore.md).
+**World & Story:** ✅ In Alembria *(placeholder)*, alchemy is everything: any two things can **react** into something new. The first to discover a reaction is written into the **Great Codex** and gains wealth and fame. The player leads a new **alchemy guild** of **homunculi** (the heroes: living alchemical beings in the forms of the world's peoples), reacts junk into treasure, fights **Runoffs** (monsters born from failed reactions) and rival guilds for resources. Tone: hopeful, with weight (the player is the alchemist and carries the risk; souls return to nature in reactions). Full lore: [Lore.md](Lore.md).
 
 **Genre:** Combination/discovery crafting + hero collection + auto-battler with manual skill activation
 **Perspective / Camera:** UI-driven card board for fusion; **diagonal battle view** (party bottom-left, enemies top-right)
@@ -635,6 +635,7 @@ Planned to be discussed later.
 | 35 | World name (Alembria is a placeholder), guild base name, named rival guilds? | Open |
 | 32 | Does Move Speed matter in battle (do heroes move, e.g. melee running to targets)? | ✅ Yes: melee heroes run to targets; ranged stay in place (§6.2) |
 | 36 | When the level cap rises above 30, what do the extra skill points buy (capstone skill, Lv. 6, etc.)? | Open; decide with the cap raise (§4.6.4) |
+| 37 | Should souled vs soulless homunculi (Lore.md) ever matter in battle or fusion (e.g. soulless immune to Sleep/Confuse)? | Open; lore only for now |
 | 26 | Naming: card rarity and unique-skill rarity both use "Common/Rare". Use different labels to avoid confusion? | ✅ Skills use Bronze / Silver / Gold |
 | 27 | Risk: many random layers (card rarity, skill roll, slot roll, socket chance) can feel like a slot machine | Mitigate: progress never depends only on luck; Exchange, trading, pity |
 

@@ -11,13 +11,14 @@ The **Great Codex** records every known reaction. Whoever discovers a new reacti
 You lead a newly founded **alchemy guild** *(name chosen by the player)*. You start with a handful of homunculi and a pile of junk. Your goal is to grow into the most famous guild in the Codex by recruiting, reacting and discovering.
 
 ## Tone
-**Light adventure.** Hopeful and colorful, with humor in item flavor text (junk becomes treasure) and in the goblins' antics. There are no grim costs: no one dies, and fused homunculi are new beings, not victims.
+**Hopeful, with weight.** Alchemy has a price, and the alchemist pays it. The player is the guild master and the alchemist: every experiment and reaction is the player's own, and so is every risk. Each reaction sends its reagents' souls back to nature; a new homunculus may draw a fresh soul, or none. Souled homunculi have their own will and don't always obey. Humor stays in item flavor, the goblins' antics and some personalities, but not every homunculus's story is light. Tone can vary per homunculus.
 
 ## Glossary
 | Term | Meaning | Game system |
 |---|---|---|
 | **Reaction** | Two things combining into a new one; both are used up | Fusion |
 | **Homunculus** | A living alchemical being created by a guild. Homunculi take the forms of Alembria's peoples (Elf, Orc, Golem…) and each has its own personality. Any one can become great. | Heroes; tier ≠ power |
+| **Soul** | Drawn from nature by some homunculi at birth (often tied to their race), giving them will and instinct. Soulless ones (e.g. golems, slimes) simply follow. Returns to nature when the homunculus is used in a reaction; the new homunculus does not inherit it. **Lore only for now**; open to affecting mechanics later (GDD §13) | — (lore only) |
 | **Innate trait** | The random gift a homunculus wakes up with; no two are the same | Unique skill roll |
 | **Reagent** | Any reactable thing: junk, materials, gear, homunculi | Cards |
 | **Runoff** | A failed or uncontrolled reaction that leaked into the world as a living creature. Defeating one recovers its reagents. | PvE monsters, card drops |
@@ -31,7 +32,7 @@ You lead a newly founded **alchemy guild** *(name chosen by the player)*. You st
 ## System Mapping
 | System | In-world reason |
 |---|---|
-| Fusion consumes both cards | A reaction uses up its reagents |
+| Fusion consumes both cards | A reaction uses up its reagents; their souls return to nature |
 | No-match pairs | Some things simply don't react |
 | Recipes are surprising | Alchemy defies common sense; that's why discovery is valuable |
 | Junk starts every item recipe | Every treasure in Alembria began as junk reacted cleverly |
