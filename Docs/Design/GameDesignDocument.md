@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| **Version** | 0.30 (draft) |
+| **Version** | 0.31 (draft) |
 | **Last updated** | 2026-11-03 |
 | **Status** | Pre-production. Fusion, card categories, and upgrade systems defined; combat and mining outlined |
 | **Engine** | Unity (tentative) |
@@ -198,14 +198,14 @@ Every hero has its own **base STR / AGI / MAG** and **growth per level** for eac
 - ✅ **Branching skill tree** (per hero, `Docs/Design/Heroes/`). Unlocks depend on **skill levels**, never on hero level:
   - **Skill points:** 1 per hero level (Lv. 1 starts with 1, so 30 at cap). The player spends them.
   - **Core:** **A1** (available from the start) → **A2** (unlocks at A1 skill Lv. 2), plus a **core passive** (on from the start; its levels cost points).
-  - **Branch point:** set per hero, after A1 Lv. 2 or after A2 Lv. 2. Three branches (B1 / B2 / B3); spending the first point in one **locks it permanently** and closes the other two. The branch stays on the card when traded.
+  - **Branch point:** set per hero, after A1 Lv. 2 or after A2 Lv. 2. **1 to 3 branches per hero (maximum 3, fixed for now)**; the count fits the hero's lore. With **2–3 branches**, spending the first point in one **locks it permanently** and closes the others. With **1 branch** there is no choice: it opens automatically at the branch point, with no permanent-choice warning. The branch stays on the card when traded.
   - **Each branch:** **Bx1** active (available once chosen) → **Bx2** active (at Bx1 Lv. 2) → **Bx passive** (at Bx2 Lv. 2).
   - **Skill levels:** **5 for every skill**, actives and passives. Values are **fixed per skill level**; each active costs **mana** and has a **cooldown**.
   - **Budget:** 6 skills (A1, A2, core passive + the branch's 2 actives and passive) × 5 levels = **30 points**, all on the hero's own skills, maxed exactly at Lv. 30. While leveling, the player chooses what to raise first.
   - **Scroll skills** cost no points: a Scroll teaches its skill at Lv. 1; using another copy of the **same Scroll** on that hero raises it by 1 level (max Lv. 5). Server-authoritative, like all inventory use.
   - **Role stays fixed** in every branch; a branch changes the hero's **style** (e.g. a bruiser Tank vs a protector Tank), not its role.
   - In battle the hero brings **2 actives** (loadout, §6.5) from A1, A2, its branch actives and Scroll skills. Passives are always on.
-  - Content per hero: 9 actives + 3 passives. Branch skills should reuse the hero's animation set where possible; a branch may swap one signature prop so the build reads at a glance.
+  - Content per hero: 2 core actives + 1 core passive, plus 2 actives + 1 passive **per branch** (up to 9 actives + 3 passives with 3 branches). Fewer branches = less content and art. Branch skills should reuse the hero's animation set where possible; a branch may swap one signature prop so the build reads at a glance.
 - ✅ The **rolled unique skill** (innate trait, Lore.md) below is **separate** from the tree: tree passives are the hero's identity, the unique roll is what makes each copy special.
 - ✅ **Every hero rolls a unique skill (passive, always on), basics included.** A basic hero rolls when it is obtained (chest, starter pack, drop); a fused hero rolls when it is created. Basics are therefore worth keeping or trading, not only fusing. Weighted pool:
 
@@ -646,6 +646,7 @@ Planned to be discussed later.
 ## 14. Change History
 | Version | Date | Changes |
 |---|---|---|
+| 0.31 | 2026-11-03 | Tone "hopeful, with weight" and souls (lore only, Lore.md; §13 #37); Terms: hero = homunculus; 1–3 branches per hero (max 3), 1-branch heroes open it automatically; budget unchanged |
 | 0.30 | 2026-11-03 | Every skill has 5 levels: 6 × 5 = 30 points, all on the hero's own skills; Scroll skills cost no points and level up with duplicate Scrolls; Tier I tables extended; §13 #36 |
 | 0.29 | 2026-11-03 | Tank DEF rule (§6.9): Tanks get base DEF 6 + 0.3 DEF per level so they out-armor AGI heroes; Tobin updated |
 | 0.28 | 2026-11-03 | Tier I hero drafts: Wren (Elf – Archer), Elsie (Angel – Priest), Snick (Goblin – Rogue), Grum (Orc – Warlock); statuses Bleed, Weaken, Untargetable, Knockback added; Tobin approved |

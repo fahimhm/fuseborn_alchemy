@@ -71,7 +71,7 @@ Rules: GDD §4.6.4. Skill points: 1 per hero level (30 at cap). Unlocks depend o
 | A2 | | A1 Lv. 2 | | | |
 | P0 | (core passive) | Start | — | | |
 
-**Branch point:** after A1 Lv. 2 / after A2 Lv. 2 (pick one). Choosing a branch is **permanent**. Role stays the same in every branch.
+**Branch point:** after A1 Lv. 2 / after A2 Lv. 2 (pick one). **Branches: 1 / 2 / 3** (pick to fit the lore; delete unused branch tables). With 2–3, choosing a branch is **permanent**; with 1, it opens automatically. Role stays the same in every branch.
 
 **B1 · [Branch name]** (style in one line)
 | # | Skill | Unlock | Mana / CD | Target / area | Effect (Lv. 1 / 2 / 3 / 4 / 5) |
