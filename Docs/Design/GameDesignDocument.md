@@ -510,6 +510,8 @@ Each hero has its **own built-in targeting characteristic**. This is part of the
 | **Weaken** | Deals less damage (%) |
 | **Untargetable** | Can't be targeted by enemies |
 | **Knockback** | Pushed back one cell; also interrupts |
+| **Ensnare** | Rooted: can't move (melee can't run to targets), can't evade (Evasion counts as 0, can't be or become Untargetable), and takes **physical** damage over time (reduced by DEF) |
+| **Sleep** | Can't act (no attacks, skills or mana regen); **wakes on taking damage**. Skill-specific variants may say otherwise (e.g. Wren's curse) |
 
 - Status duration reduction (Control Resist from gear, passives, traits) is **capped at −50%**. No full status immunity; only **knockback** immunity exists.
 
@@ -647,7 +649,7 @@ Planned to be discussed later.
 ## 14. Change History
 | Version | Date | Changes |
 |---|---|---|
-| 0.31 | 2026-11-03 | Tone "hopeful, with weight" and souls (lore only, Lore.md; §13 #37); Terms: hero = homunculus; 1–3 branches per hero (max 3), 1-branch heroes open it automatically; budget unchanged; new targeting rule "Same lane, back-most" (§6.4) |
+| 0.31 | 2026-11-03 | Tone "hopeful, with weight" and souls (lore only, Lore.md; §13 #37); Terms: hero = homunculus; 1–3 branches per hero (max 3), 1-branch heroes open it automatically; budget unchanged; new targeting rule "Same lane, back-most" (§6.4); statuses Ensnare and Sleep (§6.10) |
 | 0.30 | 2026-11-03 | Every skill has 5 levels: 6 × 5 = 30 points, all on the hero's own skills; Scroll skills cost no points and level up with duplicate Scrolls; Tier I tables extended; §13 #36 |
 | 0.29 | 2026-11-03 | Tank DEF rule (§6.9): Tanks get base DEF 6 + 0.3 DEF per level so they out-armor AGI heroes; Tobin updated |
 | 0.28 | 2026-11-03 | Tier I hero drafts: Wren (Elf – Archer), Elsie (Angel – Priest), Snick (Goblin – Rogue), Grum (Orc – Warlock); statuses Bleed, Weaken, Untargetable, Knockback added; Tobin approved |
