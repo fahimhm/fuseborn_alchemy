@@ -18,7 +18,8 @@ You lead a newly founded **alchemy guild** *(name chosen by the player)*. You st
 |---|---|---|
 | **Reaction** | Two things combining into a new one; both are used up | Fusion |
 | **Homunculus** | A living alchemical being created by a guild. Homunculi take the forms of Alembria's peoples (Elf, Orc, Golem…) and each has its own personality. Any one can become great. | Heroes; tier ≠ power |
-| **Soul** | Drawn from nature by some homunculi at birth (often tied to their race), giving them will and instinct. Soulless ones (e.g. golems, slimes) simply follow. Returns to nature when the homunculus is used in a reaction; the new homunculus does not inherit it. **Lore only for now**; open to affecting mechanics later (GDD §13) | — (lore only) |
+| **Soul** | Drawn from nature by some homunculi at birth (often tied to their race), giving them will and instinct. Soulless ones (e.g. golems, slimes) simply follow. Returns to nature when the homunculus is used in a reaction; the new homunculus does not inherit it. Nature recycles souls: a homunculus may draw a **reincarnated** soul, which keeps only a **temperament** from its past life, never memories (e.g. Grum's curiosity). **Lore only for now**; open to affecting mechanics later (GDD §13) | — (lore only) |
+| **Dark being** | An old power that lives inside a hex book in the guild library. It grants dark energy through an **oath**, and asks for absurd payments in return (Grum's: a lot of donuts). What else it wants is an open story hook | Warlock lore (Grum) |
 | **Innate trait** | The random gift a homunculus wakes up with; no two are the same | Unique skill roll |
 | **Reagent** | Any reactable thing: junk, materials, gear, homunculi | Cards |
 | **Runoff** | A failed or uncontrolled reaction that leaked into the world as a living creature. Defeating one recovers its reagents. | PvE monsters, card drops |
