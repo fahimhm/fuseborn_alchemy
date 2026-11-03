@@ -13,12 +13,15 @@
 | Tier | I |
 | Recipe(s) | Basic |
 | Basic rarity | Seasonal, hidden (GDD §4.2.2) |
-| Codex flavor | "Says 'excuse me' before every curse." |
+| Soul | Yes: a reincarnated child's soul; keeps only its curiosity (Lore.md) |
+| Codex flavor | "Great power, sworn in blood. Paid in donuts." |
 
 ## 2. Backstory
 **Personality keywords:** polite, bookish, gentle giant, nervous about his own power.
 
-Grum is the biggest homunculus in the guild and the quietest. He woke up, apologised for taking up so much space, and asked if there was anything to read. There was: an old book of hexes left on a shelf. He read it in one night and accidentally cursed a teapot. He has been very careful ever since. Grum's dark magic is strong, and it worries him, so he uses it politely: he says "excuse me" before every hex and "sorry" after. He keeps the guild's library tidy and reads bedtime stories to the younger homunculi, though Snick keeps stealing the bookmarks.
+Grum is the biggest homunculus in the guild and the quietest. He woke up, apologised for taking up so much space, and asked if there was anything to read. Nobody knows why a giant has a child's curiosity; his soul has been somewhere before, and kept only that. He spent his nights in the guild library, until an old hex book answered him back. Grum was too polite to refuse its offer. Now dark power flows through him, and every week a box of donuts disappears from the shelf where the book sleeps. His magic scares him, so he uses it carefully: "excuse me" before every hex, "sorry" after. He still reads bedtime stories to the younger homunculi, though Snick keeps stealing the bookmarks.
+
+**The oath:** the dark being in the library's hex book (Lore.md) grants his dark energy. Its price: donuts, a lot of them. What else it wants is an open story hook.
 
 ## 3. Combat Profile
 | Field | Value |

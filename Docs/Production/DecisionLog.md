@@ -4,6 +4,7 @@ Record notable decisions so future-you (and AI assistants) know *why*. Newest at
 
 | Date | Decision | Alternatives considered | Reason |
 |---|---|---|---|
+| 2026-11-03 | New status Curse: magic DoT that jumps to the nearest enemy on death; Burn stays plain fire | Reuse Burn | Gives the Corruptor branch its own identity; spreading needs its own rule |
 | 2026-11-03 | Souls can be reincarnated (temperament kept, never memories); Grum has a reincarnated child's soul and an oath with a dark being living in a library hex book, paid in donuts | Souls never reused; dark being as a demon | Explains his curiosity and gentleness without carry-over rules; the book ties to his existing story; donuts keep the warlock's power funny |
 | 2026-11-03 | Wren: 2 branches, Leashed (precision/burst) and Unbound (AoE, evasion, Caged Fury: 3 rage → 5 s Berserk + lane Ensnare → curse Sleep 4→3 s, no rage gain while berserk or asleep); Trickster and Volley removed | 8 rage; rage from dodges too; keep 3 branches | Back row + evasion makes hits rare, so 3 rage keeps Berserk a real event; no rage during the cycle stops instant re-triggering |
 | 2026-11-03 | Wren reworked: souled elf homunculus cursed by the guild master (player) to stop her returning to the forest; proud, restless, homesick, defiant | Comedic show-off archer | User's lore; the curse drives her two branches (obedient vs grudge) |
