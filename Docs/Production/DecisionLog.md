@@ -4,6 +4,7 @@ Record notable decisions so future-you (and AI assistants) know *why*. Newest at
 
 | Date | Decision | Alternatives considered | Reason |
 |---|---|---|---|
+| 2026-11-03 | Hero = homunculus = homunculi (same thing). Player-facing prefers "Homunculus"; code, data IDs and files keep "Hero" | Full rename incl. files and IDs; keep "Hero" everywhere | Fits the lore without breaking links or data names |
 | 2026-11-03 | Tone → "hopeful, with weight": player is guild master and alchemist and carries every risk; some homunculi draw a soul from nature, others are soulless; in a reaction, ingredient souls return to nature (nothing carries over). Lore only for now, may gain mechanics later | Light adventure, no grim costs; souls merge into the result; souls destroyed | Lets homunculi have will and unique lore (e.g. Wren's curse) without fusion becoming killing; avoids "which soul carries over" questions |
 | 2026-11-03 | Every skill has 5 levels (6 × 5 = 30 points, all on the hero's own skills); Scroll skills cost no points and level up with duplicate Scrolls | 8 points for Scroll skills; a third branch "ultimate" active | Exact fit at the cap with no new skills or animations (an ultimate would add ~84 skills); gives duplicate Scrolls a use |
 | 2026-11-03 | Heavy Lid lowered to +1 / 1.5 / 2 attack damage per DEF | Keep +3 / 4 / 5 | With the Tank DEF rule it would have added ~108 damage at Lv. 30; now ~43, close to before |

@@ -19,6 +19,8 @@
 
 **World & Story:** ✅ In Alembria *(placeholder)*, alchemy is everything: any two things can **react** into something new. The first to discover a reaction is written into the **Great Codex** and gains wealth and fame. The player leads a new **alchemy guild** of **homunculi** (the heroes: living alchemical beings in the forms of the world's peoples), reacts junk into treasure, fights **Runoffs** (monsters born from failed reactions) and rival guilds for resources. Tone: hopeful, with weight (the player is the alchemist and carries the risk; souls return to nature in reactions). Full lore: [Lore.md](Lore.md).
 
+**Terms:** ✅ **Hero**, **homunculus** and **homunculi** mean the same thing. Player-facing text (UI, card category, Codex, backstories) prefers *Homunculus*; code, data IDs and file names keep *Hero* (`SO_Hero_…`, `Docs/Design/Heroes/`, `HeroGrid.tsv`). Docs may use either; prose is switched to "homunculus" gradually as sections are touched.
+
 **Genre:** Combination/discovery crafting + hero collection + auto-battler with manual skill activation
 **Perspective / Camera:** UI-driven card board for fusion; **diagonal battle view** (party bottom-left, enemies top-right)
 **Target platform(s):** TBD (mobile + PC fits the card UI and auto-battle best)
