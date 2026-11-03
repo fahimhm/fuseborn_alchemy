@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -)",
+      "Bash(mkdir -p Docs/Design/Data)",
+      "Bash(pbcopy)",
+      "mcp__claude-in-chrome__tabs_context_mcp",
+      "mcp__claude-in-chrome__navigate",
+      "mcp__claude-in-chrome__computer",
+      "mcp__claude-in-chrome__get_page_text",
+      "Bash(ls -lt ~/Downloads | head -4)",
+      "mcp__claude-in-chrome__tabs_close_mcp"
+    ]
+  }
+}
