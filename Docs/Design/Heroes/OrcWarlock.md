@@ -71,28 +71,28 @@ Skill points: 1 per hero level. Every skill has 5 levels: core + one branch = 6 
 | A2 | **Weakening Hex** | A1 Lv. 2 | 80 / 16 s | Current target | Weaken: the target deals −15 / 20 / 25 / 30 / 35% damage for 4 s |
 | P0 | **Bookworm** (core passive) | Start | — | Self | +4 / 8 / 12 / 16 / 20% mana regen |
 
-**Branch point:** after A2 Lv. 2. Permanent choice; he stays a Mage.
+**Branch point:** after A2 Lv. 2. **3 branches**, permanent choice: three ways to use the dark being's gift. He stays a Mage.
 
-**B1 · Doom** — he stops holding back (and apologises more).
-| # | Skill | Unlock | Mana / CD | Target / area | Effect |
+**B1 · Soul Reaper** — sustain battle-mage: the longer the fight lasts, the harder he is to kill.
+| # | Skill | Unlock | Mana / CD | Target / area | Effect (Lv. 1 / 2 / 3 / 4 / 5) |
 |---|---|---|---|---|---|
-| B1a | **Shadow Burst** | Branch chosen | 130 / 20 s | Target cell + neighbors | 110 / 170 / 230 / 290 / 350 magic damage |
-| B1b | **Soul Flame** | B1a Lv. 2 | 100 / 16 s | Middle enemy row | Burn 30 / 45 / 60 / 75 / 90 magic damage per second for 4 s |
-| B1p | **Overcharge** | B1b Lv. 2 | — | Self | +4 / 8 / 12 / 16 / 20% skill damage; skills cost +10% mana |
+| B1a | **Soul Tether** | Branch chosen | 90 / 16 s | Current target | Tether for 5 s: drains 20 / 30 / 40 / 50 / 60 magic damage per s and heals Grum for all of it; **steals 5 / 7.5 / 10 / 12.5 / 15% Evasion** (the target loses it, Grum gains it even with no Evasion of his own; 40% cap) |
+| B1b | **Drain Life** | B1a Lv. 2 | 90 / 14 s | Current target | 80 / 125 / 170 / 215 / 260 magic damage; heals Grum for 50% of it |
+| B1p | **Undying Hunger** | B1b Lv. 2 | — | Self | Every 5 s in battle: +2 / 3 / 4 / 5 / 6 DEF and RES, stacks up to 5 times |
 
-**B2 · Hexer** — curses as a fine art.
-| # | Skill | Unlock | Mana / CD | Target / area | Effect |
+**B2 · Demonology** — pacts with minions. Summon rules: GDD §6.11 (max 2 minions, shared by both skills).
+| # | Skill | Unlock | Mana / CD | Target / area | Effect (Lv. 1 / 2 / 3 / 4 / 5) |
 |---|---|---|---|---|---|
-| B2a | **Mass Weaken** | Branch chosen | 120 / 22 s | Front-most enemy row | Weaken −10 / 15 / 20 / 25 / 30% damage for 4 s |
-| B2b | **Hex Chain** | B2a Lv. 2 | 110 / 20 s | 3 enemies | Links them for 5 s: 20 / 25 / 30 / 35 / 40% of damage taken by one is also dealt to the others |
-| B2p | **Lingering Curse** | B2b Lv. 2 | — | Self | His statuses last +20 / 25 / 30 / 35 / 40% longer |
+| B2a | **Summon Imp** | Branch chosen | 100 / 20 s | Empty ally cell | Ranged imp: HP 200 / 300 / 400 / 500 / 600; 20 / 30 / 40 / 50 / 60 magic damage every 1.5 s |
+| B2b | **Summon Brute** | B2a Lv. 2 | 140 / 30 s | Empty ally cell | Melee brute: HP 400 / 600 / 800 / 1,000 / 1,200, DEF 6; 30 / 40 / 50 / 60 / 70 physical damage every 2 s; **Taunts** for 2 s when it appears |
+| B2p | **Dark Command** | B2b Lv. 2 | — | His minions | +10 / 15 / 20 / 25 / 30% HP and damage |
 
-**B3 · Blood Pact** — big body, big reserves.
-| # | Skill | Unlock | Mana / CD | Target / area | Effect |
+**B3 · Corruptor** — spreading curses (GDD §6.10 Curse: jumps on death).
+| # | Skill | Unlock | Mana / CD | Target / area | Effect (Lv. 1 / 2 / 3 / 4 / 5) |
 |---|---|---|---|---|---|
-| B3a | **Drain Life** | Branch chosen | 90 / 14 s | Current target | 80 / 125 / 170 / 215 / 260 magic damage; heals Grum for 50% of it |
-| B3b | **Shared Strength** | B3a Lv. 2 | 60 / 18 s | Ally with the lowest mana | Spends 10% of his HP to give them 40 / 60 / 80 / 100 / 120 mana |
-| B3p | **Thick Hide** | B3b Lv. 2 | — | Self | +4 / 5 / 6 / 7 / 8 DEF and RES |
+| B3a | **Spreading Curse** | Branch chosen | 100 / 18 s | Target + neighboring cells (up, down, left, right) | **Curse** 6 s, 20 / 27.5 / 35 / 42.5 / 50 magic damage per s |
+| B3b | **Blight Wave** | B3a Lv. 2 | 110 / 20 s | Front-most enemy row | **Curse** 4 s, 15 / 20 / 25 / 30 / 35 magic damage per s |
+| B3p | **Lingering Curse** | B3b Lv. 2 | — | Self | His Curses last +20 / 25 / 30 / 35 / 40% longer |
 
 **Scroll skill tags:** Magic, Control, Sustain.
 
@@ -117,9 +117,9 @@ Skill points: 1 per hero level. Every skill has 5 levels: core + one branch = 6 
 | Weapon held | A gnarled staff with a cracked teapot hanging from it (the first thing he cursed) |
 | Card illustration | Sitting on a crate reading the hex book, glasses slipping; a faintly glowing cursed teapot beside him |
 | Battle views | Front ¾ and back ¾. Back view shows the chained book and robe |
-| Animations | Idle (reads, turns a page), cast, Hex Bolt, Weakening Hex, hit, KO (sits down heavily), victory (polite bow). Branches: B1 big two-handed cast; B2 drawn sigil + chain toss; B3 drain beam + hand-to-shoulder |
-| Branch props | B1 the book glows and floats; B2 hex charms hang from the staff; B3 dark red veins on the robe |
-| VFX per skill | Hex Bolt: green-purple orb; Weakening Hex: wilting sigil; Shadow Burst: dark bloom; Soul Flame: green flames; Mass Weaken: row of sigils; Hex Chain: glowing chain links; Drain Life: red beam; Shared Strength: blue sparkle transfer |
+| Animations | Idle (reads, turns a page), cast, Hex Bolt, Weakening Hex, hit, KO (sits down heavily), victory (polite bow). Branches: B1 tether pull + drain beam; B2 summoning gesture over a sigil; B3 two-handed spreading cast |
+| Branch props | B1 dark red veins on the robe; B2 the hex book floats open beside him (a donut crumb on the page); B3 rotting purple pages drift around him |
+| VFX per skill | Hex Bolt: green-purple orb; Weakening Hex: wilting sigil; Soul Tether: dark red chain between Grum and target; Drain Life: red beam; Undying Hunger: stacking dark aura; Summon Imp / Brute: summoning circle; Spreading Curse: purple rot blooming in a cross; Blight Wave: row-wide rot; Curse jump: purple wisp to the next enemy |
 | SFX / voice notes | Deep, soft voice; "Excuse me." before casts, "Sorry!" after big hits |
 | References | TBD (moodboard) |
 | Avoid | Anything that looks like an existing game's character |
