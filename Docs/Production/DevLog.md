@@ -4,6 +4,15 @@ Short dated entries: what was done, what was learned, what's next. Newest at the
 
 ---
 
+## 2026-11-04
+**Done:** Lore: reincarnated souls (temperament, never memories); the dark being in the library's hex book, paid in donuts. GDD: Curse status (§6.10), Summons (§6.11). Grum reworked: reincarnated child's soul, oath, 3 branches (Soul Reaper, Demonology, Corruptor).
+**Next:** Elsie (Angel – Priest) and Snick (Goblin – Rogue) against the new tone; Tier II heroes.
+
+## 2026-11-03 (7)
+**Done:** GDD v0.31. Lore tone "hopeful, with weight": the player is the guild master and alchemist; some homunculi draw a soul from nature, which returns to nature in a reaction (lore only, §13 #37). Hero = homunculus. 1–3 branches per hero. Targeting "Same lane, back-most". Statuses Ensnare and Sleep. Wren reworked: cursed elf, 2 branches (Leashed / Unbound with Caged Fury rage).
+**Learned:** A homunculus with a will changes the player's role: the alchemist is responsible for their homunculi, not just their owner.
+**Next:** Review the other Tier I drafts (Elsie, Snick, Grum) against the new tone; Tier II heroes.
+
 ## 2026-11-03 (6)
 **Done:** GDD v0.30: every skill has 5 levels, so all 30 skill points go to the hero's own skills. Actives got a Lv. 5 continuing their step; passives were re-spread so Lv. 5 = the old max. Scroll skills level up with duplicate Scrolls. Template and the 5 Tier I heroes updated; §13 #36 added (points after a cap raise).
 **Next:** User review of the 4 Tier I drafts; then Tier II heroes.

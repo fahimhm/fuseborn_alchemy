@@ -13,12 +13,15 @@
 | Tier | I |
 | Recipe(s) | Basic |
 | Basic rarity | Seasonal, hidden (GDD §4.2.2) |
-| Codex flavor | "Declared herself the best archer in Alembria. Then she found a bow." |
+| Soul | Yes: an elf soul drawn from the forest (Lore.md) |
+| Codex flavor | "Her soul remembers a forest she has never seen. The mark on her brow remembers who she belongs to." |
 
 ## 2. Backstory
-**Personality keywords:** proud, showy, competitive, secretly hardworking.
+**Personality keywords:** proud, restless, homesick, defiant.
 
-Wren woke up, stretched, looked around the workshop and announced that she was clearly the most talented homunculus there. Nobody argued, mostly because she was the only one awake. She had never held a bow, but she was certain she'd be brilliant at it. Her first hundred arrows hit the ceiling, the floor and the guild master's lunch. So she practised every night in secret, and she still claims she never needed to. Now she rarely misses, and she makes sure everyone sees it: a twirl after every shot, a bow after every win. She and Tobin bicker constantly, but she always aims at whatever is attacking him first.
+Wren woke with leaves in her memory. She had never seen a forest, yet she knew its smell, its paths, the sound of its wind. Within a day she tried to leave. The guild master stopped her the only way an alchemist could: a binding mark burned into her brow. The harder she pulls toward the forest, the tighter it holds. Fury doesn't break it. She has tried. Now she draws her bow for the guild, and every arrow hits. Some days she shoots calmly, careful not to wake the mark. Other days she shoots like she's aiming past every enemy, at someone standing behind her. She hasn't stopped listening for the wind.
+
+**The curse:** placed by the guild master (the player). The stronger her urge to return to the forest, the stronger it binds; even berserk she cannot break it. Her branches are her two answers to it (§5).
 
 ## 3. Combat Profile
 | Field | Value |
@@ -29,7 +32,7 @@ Wren woke up, stretched, looked around the workshop and announced that she was c
 | Attack range | Long |
 | Base attack interval | 1.6 s |
 | Move Speed | — (ranged, stays in her cell) |
-| Targeting | Lowest HP → Front-most |
+| Targeting | Same lane, back-most → Back-line |
 | Recommended row | Back |
 
 ## 4. Stats
@@ -66,30 +69,23 @@ Skill points: 1 per hero level. Every skill has 5 levels: core + one branch = 6 
 |---|---|---|---|---|---|
 | A1 | **Double Shot** | Start | 50 / 8 s | Current target | Two arrows, 40 / 65 / 90 / 115 / 140 physical damage each |
 | A2 | **Pinning Arrow** | A1 Lv. 2 | 70 / 14 s | Current target | 70 / 110 / 150 / 190 / 230 physical damage + Stagger |
-| P0 | **Show-Off** (core passive) | Start | — | Self | +3 / 5 / 7 / 9 / 11% Crit Chance; after each crit she twirls (cosmetic) |
+| P0 | **Forest Sense** (core passive) | Start | — | Self | +3 / 5 / 7 / 9 / 11% Crit Chance |
 
-**Branch point:** after A1 Lv. 2 (A2 and the branch open at the same time). Permanent choice; she stays a Ranger.
+**Branch point:** after A1 Lv. 2 (A2 and the branch open at the same time). **2 branches**, permanent choice: her two answers to the curse. She stays a Ranger.
 
-**B1 · Sharpshooter** — she stops showing off and starts aiming.
-| # | Skill | Unlock | Mana / CD | Target / area | Effect |
+**B1 · Leashed** — she obeys, careful never to wake the mark. Precision and burst.
+| # | Skill | Unlock | Mana / CD | Target / area | Effect (Lv. 1 / 2 / 3 / 4 / 5) |
 |---|---|---|---|---|---|
-| B1a | **Aimed Shot** | Branch chosen | 100 / 18 s | Lowest-HP enemy | Aims for 1 s, then 200 / 300 / 400 / 500 / 600 physical damage |
-| B1b | **Piercing Arrow** | B1a Lv. 2 | 90 / 16 s | One lane, all enemies | 90 / 140 / 190 / 240 / 290 physical damage to every enemy in the lane |
-| B1p | **Eagle Eye** | B1b Lv. 2 | — | Self | +4 / 8 / 12 / 16 / 20% damage to enemies below 50% HP |
+| B1a | **Aimed Shot** | Branch chosen | 100 / 18 s | Current target | Aims for 1 s, then 200 / 300 / 400 / 500 / 600 physical damage |
+| B1b | **Piercing Arrow** | B1a Lv. 2 | 90 / 16 s | Her lane, all enemies | 90 / 140 / 190 / 240 / 290 physical damage to every enemy in her lane |
+| B1p | **Fearful Focus** | B1b Lv. 2 | — | Self | +4 / 8 / 12 / 16 / 20% damage to enemies below 50% HP |
 
-**B2 · Volley** — more arrows, more applause.
-| # | Skill | Unlock | Mana / CD | Target / area | Effect |
+**B2 · Unbound** — she still holds the grudge. Area control and evasion.
+| # | Skill | Unlock | Mana / CD | Target / area | Effect (Lv. 1 / 2 / 3 / 4 / 5) |
 |---|---|---|---|---|---|
-| B2a | **Arrow Rain** | Branch chosen | 120 / 22 s | Front 2 enemy rows | 3 waves of 50 / 80 / 110 / 140 / 170 physical damage |
-| B2b | **Scatter Shot** | B2a Lv. 2 | 90 / 16 s | Front-most enemy row | 60 / 95 / 130 / 165 / 200 physical damage + Stagger |
-| B2p | **Quick Draw** | B2b Lv. 2 | — | Self | +4 / 8 / 12 / 16 / 20 Attack Speed |
-
-**B3 · Trickster** — the elf who wins by being annoying.
-| # | Skill | Unlock | Mana / CD | Target / area | Effect |
-|---|---|---|---|---|---|
-| B3a | **Smoke Arrow** | Branch chosen | 90 / 18 s | 1 enemy cell + neighbors | Confuse 1.5 / 2 / 2.5 / 3 / 3.5 s |
-| B3b | **Decoy Arrow** | B3a Lv. 2 | 80 / 20 s | Empty cell in front of allies | A painted target that Taunts enemies for 2 / 2.5 / 3 / 3.5 / 4 s |
-| B3p | **Light Feet** | B3b Lv. 2 | — | Self | +8 / 10 / 12 / 14 / 16% Evasion |
+| B2a | **Bramble Rain** | Branch chosen | 120 / 22 s | Front 2 enemy rows | 3 waves of 40 / 65 / 90 / 115 / 140 physical damage; the first wave applies **Ensnare** 1 / 1.25 / 1.5 / 1.75 / 2 s (15 / 20 / 25 / 30 / 35 damage per s) |
+| B2b | **Wild Dance** | B2a Lv. 2 | 80 / 20 s | Self | +15 / 20 / 25 / 30 / 35% Evasion for 4 s (Evasion cap 40% still applies) |
+| B2p | **Caged Fury** | B2b Lv. 2 | — | Self | **Rage:** +1 per hit taken (basic or skill). At **3 rage** she goes **Berserk** for 5 s: ×1.1 / 1.15 / 1.2 / 1.25 / 1.3 damage. On activation, roots burst through her lane: **Ensnare** on every enemy in it for 2 s (20 / 30 / 40 / 50 / 60 damage per s). When Berserk ends, the **curse** forces **Sleep** for 4 / 3.75 / 3.5 / 3.25 / 3 s: does **not** wake on damage and **ignores Control Resist**. Rage resets to 0; no rage is gained during Berserk or the curse Sleep |
 
 **Scroll skill tags:** Physical, Crit, Speed.
 
@@ -108,15 +104,15 @@ Skill points: 1 per hero level. Every skill has 5 levels: core + one branch = 6 
 ## 8. Illustrator Brief (draft)
 | Field | Value |
 |---|---|
-| Silhouette & key shapes | Tall and slim; long ponytail and pointed ears; a bow taller than she should carry; chin always up |
-| Palette (3–4 colors) | Forest green, cream, gold trim, a bright red scarf she thinks is very stylish |
+| Silhouette & key shapes | Tall and slim; long ponytail and pointed ears; a bow taller than she should carry; chin up, eyes often toward the horizon; **curse mark on her brow** |
+| Palette (3–4 colors) | Forest green, cream, gold trim, a red guild-issued scarf she resents; the curse mark glows faintly (flares in Berserk) |
 | Race family base body | Elven base body (shared with Light, Dark and Wood Elf) |
 | Weapon held | Longbow; quiver with mismatched arrows (some fletched with workshop junk) |
-| Card illustration | Mid-twirl after a shot, winking; arrows stuck in the workshop ceiling behind her |
+| Card illustration | Drawing her bow at a workshop window, leaves drifting in from outside; the mark on her brow faintly glowing |
 | Battle views | Front ¾ and back ¾. Back view shows the quiver and ponytail |
-| Animations | Idle (polishing the bow), shoot, Double Shot, Pinning Arrow, hit, KO (dramatic faint), victory (bow and twirl). Branches: B1 slow aim; B2 sky volley; B3 smoke shot + decoy toss |
-| Branch props | B1 a simple tuned bow; B2 a quiver overflowing with arrows; B3 a bow tied with ribbons and a smoke pouch |
-| VFX per skill | Double Shot: twin streaks; Pinning Arrow: impact pin; Aimed Shot: glint + long streak; Piercing Arrow: lane-long line; Arrow Rain: arrow shower; Scatter Shot: fan; Smoke Arrow: purple puff; Decoy Arrow: painted target pop-up |
-| SFX / voice notes | Bowstring twangs; smug "Ha!" on crits; a long sigh when she misses |
+| Animations | Idle (glances toward the horizon), shoot, Double Shot, Pinning Arrow, hit, KO, victory (lowers the bow, looks away). Branches: B1 slow aim; B2 vine-wrapped volley, Berserk (mark flares), curse Sleep (collapses, mark glowing) |
+| Branch props | B1 a plain, well-kept bow; mark dimmed. B2 a bow wrapped in thorny vines; mark burning |
+| VFX per skill | Double Shot: twin streaks; Pinning Arrow: impact pin; Aimed Shot: glint + long streak; Piercing Arrow: lane-long line; Bramble Rain: thorned arrow shower + roots; Wild Dance: leaf swirl; Caged Fury: mark flare, roots erupting down her lane, then a binding glow as she sleeps. UI: rage meter (3 pips) on her portrait, B2 only |
+| SFX / voice notes | Bowstring twangs; a quiet exhale on crits; a sharp breath when the mark flares |
 | References | TBD (moodboard) |
 | Avoid | Anything that looks like an existing game's character |

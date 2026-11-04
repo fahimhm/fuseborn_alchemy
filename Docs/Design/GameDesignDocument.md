@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| **Version** | 0.30 (draft) |
+| **Version** | 0.31 (draft) |
 | **Last updated** | 2026-11-03 |
 | **Status** | Pre-production. Fusion, card categories, and upgrade systems defined; combat and mining outlined |
 | **Engine** | Unity (tentative) |
@@ -17,7 +17,9 @@
 **Elevator pitch:**
 > _An online card game where you fuse two cards to discover new heroes, weapons, and items. Fusion consumes the ingredients, results roll random unique skills and weapon slots, and your party fights monsters and other players in auto-battles where you choose when to fire each skill._
 
-**World & Story:** ✅ In Alembria *(placeholder)*, alchemy is everything: any two things can **react** into something new. The first to discover a reaction is written into the **Great Codex** and gains wealth and fame. The player leads a new **alchemy guild** of **homunculi** (the heroes: living alchemical beings in the forms of the world's peoples), reacts junk into treasure, fights **Runoffs** (monsters born from failed reactions) and rival guilds for resources. Tone: light adventure. Full lore: [Lore.md](Lore.md).
+**World & Story:** ✅ In Alembria *(placeholder)*, alchemy is everything: any two things can **react** into something new. The first to discover a reaction is written into the **Great Codex** and gains wealth and fame. The player leads a new **alchemy guild** of **homunculi** (the heroes: living alchemical beings in the forms of the world's peoples), reacts junk into treasure, fights **Runoffs** (monsters born from failed reactions) and rival guilds for resources. Tone: hopeful, with weight (the player is the alchemist and carries the risk; souls return to nature in reactions). Full lore: [Lore.md](Lore.md).
+
+**Terms:** ✅ **Hero**, **homunculus** and **homunculi** mean the same thing. Player-facing text (UI, card category, Codex, backstories) prefers *Homunculus*; code, data IDs and file names keep *Hero* (`SO_Hero_…`, `Docs/Design/Heroes/`, `HeroGrid.tsv`). Docs may use either; prose is switched to "homunculus" gradually as sections are touched.
 
 **Genre:** Combination/discovery crafting + hero collection + auto-battler with manual skill activation
 **Perspective / Camera:** UI-driven card board for fusion; **diagonal battle view** (party bottom-left, enemies top-right)
@@ -196,14 +198,14 @@ Every hero has its own **base STR / AGI / MAG** and **growth per level** for eac
 - ✅ **Branching skill tree** (per hero, `Docs/Design/Heroes/`). Unlocks depend on **skill levels**, never on hero level:
   - **Skill points:** 1 per hero level (Lv. 1 starts with 1, so 30 at cap). The player spends them.
   - **Core:** **A1** (available from the start) → **A2** (unlocks at A1 skill Lv. 2), plus a **core passive** (on from the start; its levels cost points).
-  - **Branch point:** set per hero, after A1 Lv. 2 or after A2 Lv. 2. Three branches (B1 / B2 / B3); spending the first point in one **locks it permanently** and closes the other two. The branch stays on the card when traded.
+  - **Branch point:** set per hero, after A1 Lv. 2 or after A2 Lv. 2. **1 to 3 branches per hero (maximum 3, fixed for now)**; the count fits the hero's lore. With **2–3 branches**, spending the first point in one **locks it permanently** and closes the others. With **1 branch** there is no choice: it opens automatically at the branch point, with no permanent-choice warning. The branch stays on the card when traded.
   - **Each branch:** **Bx1** active (available once chosen) → **Bx2** active (at Bx1 Lv. 2) → **Bx passive** (at Bx2 Lv. 2).
   - **Skill levels:** **5 for every skill**, actives and passives. Values are **fixed per skill level**; each active costs **mana** and has a **cooldown**.
   - **Budget:** 6 skills (A1, A2, core passive + the branch's 2 actives and passive) × 5 levels = **30 points**, all on the hero's own skills, maxed exactly at Lv. 30. While leveling, the player chooses what to raise first.
   - **Scroll skills** cost no points: a Scroll teaches its skill at Lv. 1; using another copy of the **same Scroll** on that hero raises it by 1 level (max Lv. 5). Server-authoritative, like all inventory use.
   - **Role stays fixed** in every branch; a branch changes the hero's **style** (e.g. a bruiser Tank vs a protector Tank), not its role.
   - In battle the hero brings **2 actives** (loadout, §6.5) from A1, A2, its branch actives and Scroll skills. Passives are always on.
-  - Content per hero: 9 actives + 3 passives. Branch skills should reuse the hero's animation set where possible; a branch may swap one signature prop so the build reads at a glance.
+  - Content per hero: 2 core actives + 1 core passive, plus 2 actives + 1 passive **per branch** (up to 9 actives + 3 passives with 3 branches). Fewer branches = less content and art. Branch skills should reuse the hero's animation set where possible; a branch may swap one signature prop so the build reads at a glance.
 - ✅ The **rolled unique skill** (innate trait, Lore.md) below is **separate** from the tree: tree passives are the hero's identity, the unique roll is what makes each copy special.
 - ✅ **Every hero rolls a unique skill (passive, always on), basics included.** A basic hero rolls when it is obtained (chest, starter pack, drop); a fused hero rolls when it is created. Basics are therefore worth keeping or trading, not only fusing. Weighted pool:
 
@@ -419,7 +421,8 @@ Each hero has its **own built-in targeting characteristic**. This is part of the
 |---|---|
 | Front-most | Nearest enemy in the front-most occupied row |
 | Same lane | Enemy in the same lane, front to back |
-| Back-line | Enemy in the back-most occupied row |
+| Same lane, back-most | Furthest-back enemy in the same lane |
+| Back-line | Enemy in the back-most occupied row (tie: nearest lane first) |
 | Role: X | First enemy with role X (e.g. Support), otherwise fallback |
 | Lowest HP | Enemy with the lowest current HP % |
 | Highest ATK | Strongest enemy attacker |
@@ -507,8 +510,25 @@ Each hero has its **own built-in targeting characteristic**. This is part of the
 | **Weaken** | Deals less damage (%) |
 | **Untargetable** | Can't be targeted by enemies |
 | **Knockback** | Pushed back one cell; also interrupts |
+| **Ensnare** | Rooted: can't move (melee can't run to targets), can't evade (Evasion counts as 0, can't be or become Untargetable), and takes **physical** damage over time (reduced by DEF) |
+| **Curse** | Magic damage over time. If the target dies while cursed, the Curse **jumps** to the nearest living enemy (neighbor cell first) with its remaining duration. Re-applying refreshes the duration; it does not stack |
+| **Sleep** | Can't act (no attacks, skills or mana regen); **wakes on taking damage**. Skill-specific variants may say otherwise (e.g. Wren's curse) |
 
 - Status duration reduction (Control Resist from gear, passives, traits) is **capped at −50%**. No full status immunity; only **knockback** immunity exists.
+
+### 6.11 Summons ✅
+Some skills summon **minions** onto the grid (first user: Grum's Demonology branch).
+
+| Rule | Value |
+|---|---|
+| **Limit** | Up to **2 minions** per summoner. Summoning again with 2 alive replaces the oldest |
+| **Placement** | An **empty cell on the summoner's side**: front-most empty cell in the summoner's lane first, otherwise the front-most empty cell anywhere. No empty cell → the skill is not cast and no mana is spent |
+| **Stats** | **Fixed per skill level** (HP, attack damage, DEF / RES, attack interval, attack range). They do not scale with the summoner's stats, gear or traits |
+| **Targetable** | Normal units for rows and targeting: a minion in front shields the units behind it. Statuses affect them as usual |
+| **Lifetime** | The whole battle unless killed. They vanish at battle end and never get XP, drops or items, and never become cards |
+| **Defeat** | Minions don't keep a battle alive: it is lost when all homunculi are down |
+| **Server** | Spawns are server-authoritative, like every roll |
+| **Art** | Each minion needs its own sprite set and animations (AssetList.md) |
 
 ---
 
@@ -635,6 +655,7 @@ Planned to be discussed later.
 | 35 | World name (Alembria is a placeholder), guild base name, named rival guilds? | Open |
 | 32 | Does Move Speed matter in battle (do heroes move, e.g. melee running to targets)? | ✅ Yes: melee heroes run to targets; ranged stay in place (§6.2) |
 | 36 | When the level cap rises above 30, what do the extra skill points buy (capstone skill, Lv. 6, etc.)? | Open; decide with the cap raise (§4.6.4) |
+| 37 | Should souled vs soulless homunculi (Lore.md) ever matter in battle or fusion (e.g. soulless immune to Sleep/Confuse)? | Open; lore only for now |
 | 26 | Naming: card rarity and unique-skill rarity both use "Common/Rare". Use different labels to avoid confusion? | ✅ Skills use Bronze / Silver / Gold |
 | 27 | Risk: many random layers (card rarity, skill roll, slot roll, socket chance) can feel like a slot machine | Mitigate: progress never depends only on luck; Exchange, trading, pity |
 
@@ -643,6 +664,7 @@ Planned to be discussed later.
 ## 14. Change History
 | Version | Date | Changes |
 |---|---|---|
+| 0.31 | 2026-11-03 | Tone "hopeful, with weight" and souls (lore only, Lore.md; §13 #37); Terms: hero = homunculus; 1–3 branches per hero (max 3), 1-branch heroes open it automatically; budget unchanged; new targeting rule "Same lane, back-most" (§6.4); statuses Ensnare, Sleep and Curse (§6.10); Summons (§6.11) |
 | 0.30 | 2026-11-03 | Every skill has 5 levels: 6 × 5 = 30 points, all on the hero's own skills; Scroll skills cost no points and level up with duplicate Scrolls; Tier I tables extended; §13 #36 |
 | 0.29 | 2026-11-03 | Tank DEF rule (§6.9): Tanks get base DEF 6 + 0.3 DEF per level so they out-armor AGI heroes; Tobin updated |
 | 0.28 | 2026-11-03 | Tier I hero drafts: Wren (Elf – Archer), Elsie (Angel – Priest), Snick (Goblin – Rogue), Grum (Orc – Warlock); statuses Bleed, Weaken, Untargetable, Knockback added; Tobin approved |
