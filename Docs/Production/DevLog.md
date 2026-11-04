@@ -4,6 +4,11 @@ Short dated entries: what was done, what was learned, what's next. Newest at the
 
 ---
 
+## 2026-11-04 (2)
+**Done:** GDD v0.32 on branch `main_rule_review`. Roles are labels with a core tool; branches declare their role (lore-limited, one keeps the initial role). STR/AGI/MAG renamed to Salt/Mercury/Sulfur with a designer-set dominant principle and Resonance (+10%); growth rules; DEF growth per homunculus. Principles added to Lore.md. All 5 homunculi updated and their derived stats recomputed (formula checked against all old values first).
+**Learned:** Mercury Resonance raises Wren's and Snick's DEF to 54% at Lv. 30, closer to Tobin's 57%.
+**Next:** Board & range design (§13 #38); Elsie's branch roles; check the Tank DEF gap.
+
 ## 2026-11-04
 **Done:** Lore: reincarnated souls (temperament, never memories); the dark being in the library's hex book, paid in donuts. GDD: Curse status (§6.10), Summons (§6.11). Grum reworked: reincarnated child's soul, oath, 3 branches (Soul Reaper, Demonology, Corruptor).
 **Next:** Elsie (Angel – Priest) and Snick (Goblin – Rogue) against the new tone; Tier II heroes.

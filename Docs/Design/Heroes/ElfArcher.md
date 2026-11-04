@@ -9,7 +9,8 @@
 | Data ID | `SO_Hero_ElfArcher` |
 | Race (family) | Elf (Elven) |
 | Class | Archer |
-| Role | Ranger |
+| Initial role | Ranger |
+| Branch roles | Ranger (both branches) |
 | Tier | I |
 | Recipe(s) | Basic |
 | Basic rarity | Seasonal, hidden (GDD §4.2.2) |
@@ -26,7 +27,7 @@ Wren woke with leaves in her memory. She had never seen a forest, yet she knew i
 ## 3. Combat Profile
 | Field | Value |
 |---|---|
-| Main stat | AGI |
+| Dominant principle | Mercury |
 | Attack type | Ranged |
 | Damage type | Physical |
 | Attack range | Long |
@@ -38,9 +39,9 @@ Wren woke with leaves in her memory. She had never seen a forest, yet she knew i
 ## 4. Stats
 | | Base (Lv. 1) | Growth / level |
 |---|---|---|
-| STR | 14 | 1.4 |
-| AGI | 24 | 3.0 |
-| MAG | 12 | 1.2 |
+| Salt | 14 | 1.4 |
+| Mercury | 24 | 3.0 |
+| Sulfur | 12 | 1.2 |
 
 Budget: base 50 (46–54 ✔), growth 5.6 (5.0–6.0 ✔).
 
@@ -51,15 +52,15 @@ Budget: base 50 (46–54 ✔), growth 5.6 (5.0–6.0 ✔).
 | Base DEF / RES | 1 / 0 |
 | Base mana | 75 |
 
-**Derived** (GDD §6.9 rates, no gear):
+**Derived** (GDD §6.9 rates incl. Resonance, no gear):
 | Stat | Lv. 1 | Lv. 30 |
 |---|---|---|
 | HP / HP regen | 460 / 1.4 per s | 1,272 / 5.5 per s |
 | Mana / mana regen | 219 / 0.60 per s | 637 / 2.34 per s |
 | Attack damage | 48 | 135 |
-| DEF (reduction) | 4.6 (22%) | 17.6 (51%) |
+| DEF (reduction) | 5.0 (23%) | 19.3 (54%) |
 | RES (reduction) | 1.8 (10%) | 7.0 (30%) |
-| Attacks per second | 0.77 | 1.32 |
+| Attacks per second | 0.79 | 1.39 |
 
 ## 5. Skill Tree
 Skill points: 1 per hero level. Every skill has 5 levels: core + one branch = 6 × 5 = 30 points, all spent at Lv. 30. Statuses: GDD §6.10.

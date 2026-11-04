@@ -9,7 +9,8 @@
 | Data ID | `SO_Hero_GoblinRogue` |
 | Race (family) | Goblin (Greenskin) |
 | Class | Rogue |
-| Role | Assassin |
+| Initial role | Assassin |
+| Branch roles | Assassin (all branches) |
 | Tier | I |
 | Recipe(s) | Basic |
 | Basic rarity | Seasonal, hidden (GDD §4.2.2) |
@@ -23,7 +24,7 @@ Snick woke up already holding three things that weren't his. Nobody saw him take
 ## 3. Combat Profile
 | Field | Value |
 |---|---|
-| Main stat | AGI |
+| Dominant principle | Mercury |
 | Attack type | Melee |
 | Damage type | Physical |
 | Attack range | Melee |
@@ -35,9 +36,9 @@ Snick woke up already holding three things that weren't his. Nobody saw him take
 ## 4. Stats
 | | Base (Lv. 1) | Growth / level |
 |---|---|---|
-| STR | 14 | 1.6 |
-| AGI | 26 | 3.0 |
-| MAG | 10 | 1.0 |
+| Salt | 14 | 1.6 |
+| Mercury | 26 | 3.0 |
+| Sulfur | 10 | 1.0 |
 
 Budget: base 50 (46–54 ✔), growth 5.6 (5.0–6.0 ✔).
 
@@ -48,15 +49,15 @@ Budget: base 50 (46–54 ✔), growth 5.6 (5.0–6.0 ✔).
 | Base DEF / RES | 1 / 0 |
 | Base mana | 60 |
 
-**Derived** (GDD §6.9 rates, no gear):
+**Derived** (GDD §6.9 rates incl. Resonance, no gear):
 | Stat | Lv. 1 | Lv. 30 |
 |---|---|---|
 | HP / HP regen | 450 / 1.4 per s | 1,378 / 6.0 per s |
 | Mana / mana regen | 180 / 0.50 per s | 528 / 1.95 per s |
 | Attack damage | 52 | 139 |
-| DEF (reduction) | 4.9 (23%) | 17.9 (52%) |
+| DEF (reduction) | 5.3 (24%) | 19.6 (54%) |
 | RES (reduction) | 1.5 (8%) | 5.8 (26%) |
-| Attacks per second | 0.84 | 1.42 |
+| Attacks per second | 0.86 | 1.50 |
 
 ## 5. Skill Tree
 Skill points: 1 per hero level. Every skill has 5 levels: core + one branch = 6 × 5 = 30 points, all spent at Lv. 30. Statuses: GDD §6.10.

@@ -9,7 +9,8 @@
 | Data ID | `SO_Hero_OrcWarlock` |
 | Race (family) | Orc (Greenskin) |
 | Class | Warlock |
-| Role | Mage |
+| Initial role | Mage |
+| Branch roles | Mage (all branches) |
 | Tier | I |
 | Recipe(s) | Basic |
 | Basic rarity | Seasonal, hidden (GDD §4.2.2) |
@@ -26,7 +27,7 @@ Grum is the biggest homunculus in the guild and the quietest. He woke up, apolog
 ## 3. Combat Profile
 | Field | Value |
 |---|---|
-| Main stat | MAG |
+| Dominant principle | Sulfur |
 | Attack type | Ranged |
 | Damage type | Magic |
 | Attack range | Long |
@@ -38,9 +39,9 @@ Grum is the biggest homunculus in the guild and the quietest. He woke up, apolog
 ## 4. Stats
 | | Base (Lv. 1) | Growth / level |
 |---|---|---|
-| STR | 16 | 1.8 |
-| AGI | 10 | 1.0 |
-| MAG | 24 | 2.8 |
+| Salt | 16 | 1.8 |
+| Mercury | 10 | 1.0 |
+| Sulfur | 24 | 2.8 |
 
 Budget: base 50 (46–54 ✔), growth 5.6 (5.0–6.0 ✔).
 
@@ -51,14 +52,14 @@ Budget: base 50 (46–54 ✔), growth 5.6 (5.0–6.0 ✔).
 | Base DEF / RES | 2 / 2 |
 | Base mana | 90 |
 
-**Derived** (GDD §6.9 rates, no gear):
+**Derived** (GDD §6.9 rates incl. Resonance, no gear):
 | Stat | Lv. 1 | Lv. 30 |
 |---|---|---|
 | HP / HP regen | 520 / 1.6 per s | 1,564 / 6.8 per s |
-| Mana / mana regen | 378 / 1.20 per s | 1,352 / 5.26 per s |
+| Mana / mana regen | 407 / 1.32 per s | 1,479 / 5.79 per s |
 | Attack damage | 46 | 127 |
 | DEF (reduction) | 3.5 (17%) | 7.8 (32%) |
-| RES (reduction) | 5.6 (25%) | 17.8 (52%) |
+| RES (reduction) | 6.0 (26%) | 19.4 (54%) |
 | Attacks per second | 0.61 | 0.77 |
 
 ## 5. Skill Tree

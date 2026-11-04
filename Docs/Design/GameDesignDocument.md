@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| **Version** | 0.31 (draft) |
+| **Version** | 0.32 (draft) |
 | **Last updated** | 2026-11-03 |
 | **Status** | Pre-production. Fusion, card categories, and upgrade systems defined; combat and mining outlined |
 | **Engine** | Unity (tentative) |
@@ -154,7 +154,7 @@ Players trade unwanted basic cards to the system for a chest:
 ### 4.4 Tiers
 - Every card has a **Tier** (1 = basic). A result's tier ≥ the highest ingredient tier (formula TBD).
 - ✅ **Hero tier = recipe depth, not power.** A hero's tier only maps where it sits in the fusion tree (what it is made from). A Tier I hero is **not weaker** than a Tier III hero: hero strength comes from the hero's own base stats, role and skills, and from how the player **levels and equips** it. Hero base stats are set per hero, never by tier.
-- Why fuse heroes then: discovery and the Codex, new roles, targeting and active skills, a fresh unique-skill roll, and collection.
+- Why fuse heroes then: discovery and the Codex, new kits and roles (two homunculi with the same role bring different tools), targeting and active skills, a fresh unique-skill roll, and collection.
 - Gear and Items: higher tiers **are** better quality (§15.7–15.8). Tier also drives card frame visuals and gear slot odds.
 
 ### 4.5 Codex & Recipe Discovery
@@ -167,22 +167,26 @@ Players trade unwanted basic cards to the system for a chest:
 
 #### 4.6.1 Leveling
 - ✅ Heroes gain XP **only when used in a party** in battle. Unused heroes stay at Level 1.
-- ✅ **Level-up:** when XP passes the threshold, the hero levels up, its growth is **added to STR / AGI / MAG automatically**, and it gains **1 skill point** to spend in the skill tree (§4.6.4). Hero level only raises stats and gives points; it never unlocks skills directly.
+- ✅ **Level-up:** when XP passes the threshold, the hero levels up, its growth is **added to Salt / Mercury / Sulfur automatically**, and it gains **1 skill point** to spend in the skill tree (§4.6.4). Hero level only raises stats and gives points; it never unlocks skills directly.
 - ✅ **Level cap: 30** for every hero, any tier. Built to be raised in later updates (cap stored as data, not hard-coded). XP curve: TBD.
 - ✅ Each hero has its **own base stats and growth per level** (not set by tier), so a well-leveled basic can beat a Tier III hero.
 
-#### 4.6.2 Stats ✅ (attribute model, Dota-style)
-Every hero has its own **base STR / AGI / MAG** and **growth per level** for each, plus one **main stat**. Attributes give only flat stats through **universal rates** (same for every hero):
+#### 4.6.2 Stats ✅ (three principles)
+Every homunculus is made of the three alchemical **principles** (Lore.md): **Salt** (body), **Mercury** (fluidity), **Sulfur** (fire and spirit). Each has its own **base value and growth per level** for all three, plus one **dominant principle**, **set by design per homunculus** (never by role). Principles give only flat stats through **universal rates** (same for every homunculus):
 
-| Attribute | Grants (start values, §6.9) |
+| Principle | Grants (start values, §6.9) |
 |---|---|
-| **Main stat** (STR, AGI or MAG) | **+1 attack damage** per point |
-| **Strength (STR)** | +20 HP, +0.1 HP regen/s per point |
-| **Agility (AGI)** | +0.15 DEF, +1 Attack Speed per point |
-| **Magic (MAG)** | +12 mana, +0.05 mana regen/s, +0.15 RES per point |
+| **Salt** | +20 HP, +0.1 HP regen/s per point |
+| **Mercury** | +0.15 DEF, +1 Attack Speed per point |
+| **Sulfur** | +12 mana, +0.05 mana regen/s, +0.15 RES per point |
+| **Dominant principle** | **+1 attack damage** per point, and **Resonance:** that principle's own grants above are **+10%** |
 
-- **Percentage stats are never from attributes:** Crit, Evasion and Block come from gear, items, skill-tree passives and unique traits.
-- Full formulas: §6.9. Per-hero values: `Docs/Design/Heroes/`.
+- **Growth rules:**
+  1. **Budget:** base Salt + Mercury + Sulfur = **46–54**, total growth = **5.0–6.0 / level**, for every homunculus (tier ≠ power).
+  2. The **dominant principle has the highest growth**.
+  3. The rest of the spread follows **lore and kit**. **The more roles its branches cover (§4.6.4), the flatter the spread**: single-role homunculi can be spiky, multi-role ones flatter, with branch passives filling the gap.
+- **Percentage stats are never from principles:** Crit, Evasion and Block come from gear, items, skill-tree passives and unique traits.
+- Full formulas: §6.9. Per-homunculus values: `Docs/Design/Heroes/`.
 
 #### 4.6.3 Equipment Slots
 ✅ Each hero has 3 slots:
@@ -194,7 +198,7 @@ Every hero has its own **base STR / AGI / MAG** and **growth per level** for eac
 | **Accessory** | ✅ **One slot:** Ring, Necklace, Amulet **or** Crown |
 
 #### 4.6.4 Role, Trait & Unique Skill
-- Each hero has a **role** (Tank, Warrior, Ranger, Assassin, Mage, Support; §6.3), a **targeting priority** (§6.4), and trait(s).
+- Each hero has an **initial role** (a label, §6.3), a **targeting priority** (§6.4), and trait(s).
 - ✅ **Branching skill tree** (per hero, `Docs/Design/Heroes/`). Unlocks depend on **skill levels**, never on hero level:
   - **Skill points:** 1 per hero level (Lv. 1 starts with 1, so 30 at cap). The player spends them.
   - **Core:** **A1** (available from the start) → **A2** (unlocks at A1 skill Lv. 2), plus a **core passive** (on from the start; its levels cost points).
@@ -203,7 +207,11 @@ Every hero has its own **base STR / AGI / MAG** and **growth per level** for eac
   - **Skill levels:** **5 for every skill**, actives and passives. Values are **fixed per skill level**; each active costs **mana** and has a **cooldown**.
   - **Budget:** 6 skills (A1, A2, core passive + the branch's 2 actives and passive) × 5 levels = **30 points**, all on the hero's own skills, maxed exactly at Lv. 30. While leveling, the player chooses what to raise first.
   - **Scroll skills** cost no points: a Scroll teaches its skill at Lv. 1; using another copy of the **same Scroll** on that hero raises it by 1 level (max Lv. 5). Server-authoritative, like all inventory use.
-  - **Role stays fixed** in every branch; a branch changes the hero's **style** (e.g. a bruiser Tank vs a protector Tank), not its role.
+  - ✅ **Each branch declares its role** (§6.3). A branch may keep the initial role or shift to another one, so the same homunculus can become e.g. a healer, a paladin or a tank-like build. Rules for designing branches:
+    1. **Lore decides** which roles a homunculus can reach (an angel priest can tank; a goblin rogue never does).
+    2. **At least one branch keeps the initial role**, so the label shown at discovery is always a valid path. A 1-branch homunculus stays in its initial role.
+    3. **Specialists keep the core tool** (§6.3): an off-role branch takes the role's shape but only a weaker version of its core tool.
+  - Body stays the same in every branch: dominant principle, base stats and growth, attack type and range never change; the branch changes skills and role.
   - In battle the hero brings **2 actives** (loadout, §6.5) from A1, A2, its branch actives and Scroll skills. Passives are always on.
   - Content per hero: 2 core actives + 1 core passive, plus 2 actives + 1 passive **per branch** (up to 9 actives + 3 passives with 3 branches). Fewer branches = less content and art. Branch skills should reuse the hero's animation set where possible; a branch may swap one signature prop so the build reads at a glance.
 - ✅ The **rolled unique skill** (innate trait, Lore.md) below is **separate** from the tree: tree passives are the hero's identity, the unique roll is what makes each copy special.
@@ -275,7 +283,7 @@ Every hero has its own **base STR / AGI / MAG** and **growth per level** for eac
 | Gloves | ATK, Attack Speed, Crit Chance, Lifesteal |
 | Boots | Move Speed, Evasion |
 
-**Gear bonus stats** (on gear only, alongside hero STR/AGI/MAG): HP, DEF, ATK, Attack Speed, Move Speed, Crit Chance, Evasion, Block, Lifesteal, Cooldown Reduction, Skill Power, Thorns (reflects melee damage), Control Resist. These are the only sources of % stats besides passives and traits (§4.6.2). Values TBD.
+**Gear bonus stats** (on gear only, alongside hero Salt/Mercury/Sulfur): HP, DEF, ATK, Attack Speed, Move Speed, Crit Chance, Evasion, Block, Lifesteal, Cooldown Reduction, Skill Power, Thorns (reflects melee damage), Control Resist. These are the only sources of % stats besides passives and traits (§4.6.2). Values TBD.
 
 ### 4.8 Item
 
@@ -398,18 +406,23 @@ Each hero brings **2 active skills** (§6.5). The player **selects a hero, then 
 
 - The formation is set before battle and saved per mode (PvE party, PvP defense party).
 - Any role can be placed in any row. Placement is the player's strategy.
-- ✅ **Movement:** ranged heroes (Ranger, Mage, Support) attack from their grid cell. **Melee heroes (Tank, Warrior, Assassin) run to their target** and return when it dies or when re-targeting. **Move Speed** (gear bonus, §4.7.3) decides how fast they arrive.
+- ✅ **Movement:** **attack type (melee / ranged) is set per homunculus**, not by role. Ranged homunculi attack from their grid cell. **Melee homunculi run to their target** and return when it dies or when re-targeting. **Move Speed** (gear bonus, §4.7.3) decides how fast they arrive. *Under review:* attack range per homunculus and whether everyone can move to close the distance (board design, §13 #38).
 
-### 6.3 Roles (proposed list)
+### 6.3 Roles ✅ (labels)
+A role is a **label for the job a build is tuned for**. It drives no mechanics by itself: dominant principle, attack type and range, DEF growth and targeting are set **per homunculus** (§4.6.2, §6.9). A homunculus has an **initial role** (shown on the card at discovery) and each branch declares its role (§4.6.4); after branching, the card shows the **branch role**. Two homunculi with the same role bring different tools.
 
-| Role | Main stat | Job | Typical target priority |
+Each role has a **core tool**. **Specialists** (initial role) are the best at it; **off-role branches** take the role's shape but only a weaker version of its core tool.
+
+| Role | Job | Core tool (specialists keep the best of it) | Usual targeting (guideline only) |
 |---|---|---|---|
-| **Tank** | STR | Absorb damage, protect (taunt / shields) | Front-most enemy |
-| **Warrior** | STR | Melee damage, durable | Front-most enemy |
-| **Ranger** | AGI | Ranged physical damage, fast hits | Lowest-HP enemy |
-| **Assassin** | AGI | Burst damage, dives the back line | Support or Mage first |
-| **Mage** | MAG | Area/magic damage, strong skills | Largest group / middle row |
-| **Support** | MAG | Heal, buff, cleanse | Heals ally with lowest HP |
+| **Tank** | Survive in front, protect | **Protecting others:** Taunt, shields on allies, intercepting hits | Front-most enemy |
+| **Warrior** | Melee damage, durable | **Sustained front-line damage** | Front-most enemy |
+| **Ranger** | Ranged physical damage | **Reliable single-target damage from range** | Varies (e.g. Wren: same lane, back-most) |
+| **Assassin** | Burst, dives the back line | **Reaching and deleting the back line** | Support or Mage first |
+| **Mage** | Area / magic damage | **Area damage and control** | Largest group / middle row |
+| **Support** | Heal, buff, cleanse | **Healing and buffing others** | Heals ally with lowest HP |
+
+Example: Tobin (Tank specialist) keeps the team alive with Taunt and protection; an Elsie tank-like branch keeps *herself* alive with self-heal and a little healing, but protects others less.
 
 ### 6.4 Targeting Priority ✅
 Each hero has its **own built-in targeting characteristic**. This is part of the hero's identity (e.g. Hero A always hits the front row; Hero B hunts supports).
@@ -423,18 +436,18 @@ Each hero has its **own built-in targeting characteristic**. This is part of the
 | Same lane | Enemy in the same lane, front to back |
 | Same lane, back-most | Furthest-back enemy in the same lane |
 | Back-line | Enemy in the back-most occupied row (tie: nearest lane first) |
-| Role: X | First enemy with role X (e.g. Support), otherwise fallback |
+| Role: X | First enemy whose **current role** is X (branch role if branched, else initial role), otherwise fallback |
 | Lowest HP | Enemy with the lowest current HP % |
 | Highest ATK | Strongest enemy attacker |
 | Random | Any living enemy |
 
-- **Taunt** (from Tanks) overrides targeting for its duration.
+- **Taunt** (any skill that applies it, usually Tanks) overrides targeting for its duration.
 - Later: unique passives or accessories could modify targeting (e.g. "attacks the lowest-HP enemy instead").
 
 ### 6.5 Attacks & Skills
 | Element | Rule |
 |---|---|
-| **Basic hit** | ✅ Automatic when no skill is used. Rate from base attack interval + Attack Speed (AGI, gear). Damage = base damage + main stat (§6.9) |
+| **Basic hit** | ✅ Automatic when no skill is used. Rate from base attack interval + Attack Speed (Mercury, gear). Damage = base damage + dominant principle (§6.9) |
 | **Active skills** | ✅ **2 per hero in battle**, picked before battle from the hero's skill pool (leveling + Scrolls). Loadout saved per mode (PvE party, PvP defense). Cast via the hybrid HUD (§6.1.1) |
 | **Skill readiness** | ✅ Each skill costs **mana** and has a **cooldown**. Heroes start with 50% mana; skills start 50% charged. Cooldown Reduction only from gear |
 | **Unique skill** | ✅ **Passive**, always on (e.g. "heals allies 2% of damage dealt"). No extra button |
@@ -465,20 +478,21 @@ Each hero has its **own built-in targeting characteristic**. This is part of the
 ### 6.9 Combat Numbers (proposed, all tunable in ScriptableObjects)
 ✅ **Damage types: Physical and Magic** (§13 #23). DEF reduces physical damage, **RES** reduces magic damage. No element chart; elements appear only as small Magic Stone effects (below).
 
-**Per-hero data:** base STR / AGI / MAG, growth per level for each, main stat, base HP, base attack damage, base DEF / RES, DEF growth (Tanks only), base mana, base attack interval, attack range (melee / ranged), Move Speed. Never set by tier (§4.4).
+**Per-hero data:** base Salt / Mercury / Sulfur, growth per level for each, dominant principle, initial role, base HP, base attack damage, base DEF / RES, DEF growth (per homunculus; 0 for most), base mana, base attack interval, attack range (melee / ranged), Move Speed. Never set by tier (§4.4).
 
 **Attribute at level L** = base + growth × (L − 1).
 
 | Derived stat | Formula (start values) |
 |---|---|
-| HP | base HP + STR × 20 |
-| HP regen | STR × 0.1 /s |
-| Mana | base mana + MAG × 12 |
-| Mana regen | MAG × 0.05 /s |
-| Attack damage | base damage + main stat × 1 |
-| DEF | base DEF + DEF growth × (L − 1) + AGI × 0.15 + gear. **Tanks:** base DEF 6 and DEF growth 0.3 per level; other roles have no DEF growth |
-| RES | base RES + MAG × 0.15 + gear |
-| Attack Speed | AGI × 1 + gear (100 = normal) |
+| HP | base HP + Salt × 20 |
+| HP regen | Salt × 0.1 /s |
+| Mana | base mana + Sulfur × 12 |
+| Mana regen | Sulfur × 0.05 /s |
+| Attack damage | base damage + dominant principle × 1 |
+| Resonance | the dominant principle's own grants (HP & HP regen / DEF & Attack Speed / mana, mana regen & RES) × 1.1 |
+| DEF | base DEF + DEF growth × (L − 1) + Mercury × 0.15 + gear. DEF growth is **per homunculus** (e.g. Tobin: base DEF 6, +0.3 per level); most have none |
+| RES | base RES + Sulfur × 0.15 + gear |
+| Attack Speed | Mercury × 1 + gear (100 = normal) |
 | Attacks per second | (100 + Attack Speed) / 100 / base attack interval |
 | Crit / Evasion / Block | gear, items, passives, traits only. Crit = 150% damage |
 | Move Speed | per hero + gear (melee only, §6.2) |
@@ -556,7 +570,7 @@ Planned to be discussed later.
 │                     │
 │ NAME          Lv. 5 │
 │ Role / Subtype      │
-│ STR 12 AGI 8 MAG 4  │  ← hero stats / item effect
+│ Salt 12 Mercury 8 Sulfur 4  │  ← hero stats / item effect
 │ ◆ ◆ ◇ ◇ ◇           │  ← weapon slots (filled / empty)
 │ [Unique Skill]      │  ← highlighted by rarity
 └─────────────────────┘
@@ -656,6 +670,7 @@ Planned to be discussed later.
 | 32 | Does Move Speed matter in battle (do heroes move, e.g. melee running to targets)? | ✅ Yes: melee heroes run to targets; ranged stay in place (§6.2) |
 | 36 | When the level cap rises above 30, what do the extra skill points buy (capstone skill, Lv. 6, etc.)? | Open; decide with the cap raise (§4.6.4) |
 | 37 | Should souled vs soulless homunculi (Lore.md) ever matter in battle or fusion (e.g. soulless immune to Sleep/Confuse)? | Open; lore only for now |
+| 38 | Board & range: attack range per homunculus (tiles on the combined 6 × 3 board?) and whether every homunculus can move to close the distance | Open; user deciding (§6.2) |
 | 26 | Naming: card rarity and unique-skill rarity both use "Common/Rare". Use different labels to avoid confusion? | ✅ Skills use Bronze / Silver / Gold |
 | 27 | Risk: many random layers (card rarity, skill roll, slot roll, socket chance) can feel like a slot machine | Mitigate: progress never depends only on luck; Exchange, trading, pity |
 
@@ -664,6 +679,7 @@ Planned to be discussed later.
 ## 14. Change History
 | Version | Date | Changes |
 |---|---|---|
+| 0.32 | 2026-11-04 | Roles become labels with a core tool; initial role + branch roles (lore-limited, one branch keeps the initial role); STR/AGI/MAG → Salt/Mercury/Sulfur with a designer-set dominant principle and Resonance (+10%); growth rules; attack type and DEF growth per homunculus; Taunt not Tank-only; §13 #38 board & range |
 | 0.31 | 2026-11-03 | Tone "hopeful, with weight" and souls (lore only, Lore.md; §13 #37); Terms: hero = homunculus; 1–3 branches per hero (max 3), 1-branch heroes open it automatically; budget unchanged; new targeting rule "Same lane, back-most" (§6.4); statuses Ensnare, Sleep and Curse (§6.10); Summons (§6.11) |
 | 0.30 | 2026-11-03 | Every skill has 5 levels: 6 × 5 = 30 points, all on the hero's own skills; Scroll skills cost no points and level up with duplicate Scrolls; Tier I tables extended; §13 #36 |
 | 0.29 | 2026-11-03 | Tank DEF rule (§6.9): Tanks get base DEF 6 + 0.3 DEF per level so they out-armor AGI heroes; Tobin updated |
@@ -703,7 +719,7 @@ Planned to be discussed later.
 - Each hero is **Race – Class**, e.g. *Elf – Archer* (an elf whose main weapon is a bow, with longer attack range).
   - **Race:** free and diverse; mainly drives the look.
   - **Class:** free flavor name (Knight, Commander, Engineer…).
-  - **Role:** one of a **fixed, limited list**: Tank, Warrior, Ranger, Assassin, Mage, Support (§6.3). Role drives combat behavior and balance.
+  - **Role:** a **label** from a fixed list: Tank, Warrior, Ranger, Assassin, Mage, Support (§6.3). Each hero has an initial role; branches may reach other roles (§4.6.4).
 - ✅ **Recipes are intentionally surprising.** A result's race and class do **not** have to follow from the ingredients (Human + Human can give an Angel). Discovery comes from experimenting, hints, and community sharing, not from deduction.
 - ✅ **Naming rules:**
   1. A class is **never a role word** (no "– Tank", "– Support"), and avoids near-role words (Healer, Buffer).
@@ -711,7 +727,7 @@ Planned to be discussed later.
   3. A compound race only when it's a known type (Dark Elf, Light Elf, Wood Elf, Half-Angel), not a mash-up (no "Goblin Zombie").
   4. ✅ **Character name:** each Race – Class has **one character name**, shown on the card as **"Name · Race – Class"** (e.g. *Tobin · Human – Knight*). All copies share it; the rolled trait makes each copy unique. Names are humble or fit the personality, and never copy a real person or an existing game's character.
 - Race and class pools for future heroes: [HeroPool.md](HeroPool.md).
-- **Role balance (28 heroes):** Tank 4 · Warrior 3 · Ranger 5 · Assassin 4 · Mage 5 · Support 7.
+- **Initial-role balance (28 heroes):** Tank 4 · Warrior 3 · Ranger 5 · Assassin 4 · Mage 5 · Support 7.
 - Source of truth: [Hero recipe sheet](https://docs.google.com/spreadsheets/d/1r2Nj3ZUcm3-e148e-pixrB-15U9P9bdaQpWJdFwOqZo/edit?gid=0#gid=0) (cross-section grid). This section mirrors it. Synced with the sheet in v0.12.
 
 ### 15.2 Heroes — Tier I (Basic)
@@ -811,11 +827,11 @@ No match (✗): Priest + Rogue, Priest + Warlock. Two "no reaction" pairs are ke
 **Tier I (basic): 3 weapons, 2 armor**
 | # | Card | Slot | Leans to |
 |---|---|---|---|
-| 1 | Sword | Weapon | STR |
-| 2 | Bow | Weapon | AGI |
-| 3 | Staff | Weapon | MAG |
-| 4 | Iron Mail | Armor | STR, heavy |
-| 5 | Cloth Robe | Armor | MAG, light |
+| 1 | Sword | Weapon | Salt |
+| 2 | Bow | Weapon | Mercury |
+| 3 | Staff | Weapon | Sulfur |
+| 4 | Iron Mail | Armor | Salt, heavy |
+| 5 | Cloth Robe | Armor | Sulfur, light |
 
 **Tier II grid** (15 pairs: 11 results, 4 ✗). Source: `Docs/Design/Data/GearGrid.tsv`. Mirrored in the sheet's **Gear** tab.
 | | Sword | Bow | Staff | Iron Mail | Cloth Robe |
@@ -836,27 +852,27 @@ No match (✗): Priest + Rogue, Priest + Warlock. Two "no reaction" pairs are ke
 | Tower Shield | Sword + Iron Mail | Weapon | Tank |
 | Lute | Bow + Staff | Weapon | Support |
 | Plate Armor | Iron Mail + Iron Mail | Armor | Tank |
-| Shadow Cloak | Bow + Cloth Robe | Armor | Assassin / AGI |
-| Sage Robe | Staff + Cloth Robe | Armor | Mage / MAG |
-| Rune Mail | Staff + Iron Mail | Armor | MAG + defense hybrid |
-| Leather Armor | Iron Mail + Cloth Robe | Armor | Ranger / AGI |
+| Shadow Cloak | Bow + Cloth Robe | Armor | Assassin / Mercury |
+| Sage Robe | Staff + Cloth Robe | Armor | Mage / Sulfur |
+| Rune Mail | Staff + Iron Mail | Armor | Sulfur + defense hybrid |
+| Leather Armor | Iron Mail + Cloth Robe | Armor | Ranger / Mercury |
 
 No match: Cloth Robe + Cloth Robe, Sword + Staff, Sword + Cloth Robe, Bow + Iron Mail.
 
 **Tier III (Tier II + Tier I): 11 results from 55 pairs, 44 ✗.** Source: `Docs/Design/Data/GearGridTier3.tsv`.
 | Result | Recipe | Slot · piece | Bonus focus | Role fit |
 |---|---|---|---|---|
-| Iron Gauntlets | Greatsword + Iron Mail | Armor · Gloves | STR, ATK | Warrior |
-| Arcane Repeater | Crossbow + Staff | Weapon | Attack Speed, MAG | Ranger |
-| Wizard Hat | Grimoire + Cloth Robe | Armor · Helmet | Cooldown Reduction, MAG | Mage |
+| Iron Gauntlets | Greatsword + Iron Mail | Armor · Gloves | Salt, ATK | Warrior |
+| Arcane Repeater | Crossbow + Staff | Weapon | Attack Speed, Sulfur | Ranger |
+| Wizard Hat | Grimoire + Cloth Robe | Armor · Helmet | Cooldown Reduction, Sulfur | Mage |
 | Silent Boots | Twin Daggers + Cloth Robe | Armor · Boots | Move Speed, Evasion | Assassin |
 | Knight Helm | Tower Shield + Sword | Armor · Helmet | DEF, Control Resist | Tank |
 | War Drum | Lute + Iron Mail | Weapon | Team Attack Speed aura | Support |
 | Thorn Plate | Plate Armor + Sword | Armor · Body | DEF, Thorns | Tank |
 | Nightgrip Gloves | Shadow Cloak + Bow | Armor · Gloves | Crit Chance, Attack Speed | Assassin |
-| Elder Staff | Sage Robe + Staff | Weapon | Skill Power, MAG | Mage / Support |
-| Runeblade | Rune Mail + Iron Mail | Weapon | STR + MAG hybrid | Warrior |
-| Hunter's Boots | Leather Armor + Bow | Armor · Boots | Move Speed, AGI | Ranger |
+| Elder Staff | Sage Robe + Staff | Weapon | Skill Power, Sulfur | Mage / Support |
+| Runeblade | Rune Mail + Iron Mail | Weapon | Salt + Sulfur hybrid | Warrior |
+| Hunter's Boots | Leather Armor + Bow | Armor · Boots | Move Speed, Mercury | Ranger |
 
 Mix: 4 weapons, 7 armor (1 body, 2 helmets, 2 gloves, 2 boots). Each Tier II card is used once.
 To-do: exact stat values, second recipes for key results, Tier II + Tier II gear.

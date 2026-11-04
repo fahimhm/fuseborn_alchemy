@@ -11,7 +11,8 @@
 | Data ID | `SO_Hero_RaceClass` |
 | Race (family) | e.g. Elf (Elven) |
 | Class | |
-| Role | Tank / Warrior / Ranger / Assassin / Mage / Support |
+| Initial role | Tank / Warrior / Ranger / Assassin / Mage / Support (a label, GDD §6.3) |
+| Branch roles | Role per branch; lore decides, at least one branch keeps the initial role (GDD §4.6.4) |
 | Tier | I / II / III (recipe depth only, not power) |
 | Recipe(s) | Tier I: basic. Otherwise A + B (and C + D) |
 | Basic rarity | Tier I only: seasonal, hidden (GDD §4.2.2) |
@@ -25,7 +26,7 @@
 ## 3. Combat Profile
 | Field | Value |
 |---|---|
-| Main stat | STR / AGI / MAG (+1 attack damage per point) |
+| Dominant principle | Salt / Mercury / Sulfur (set by design; +1 attack damage per point, Resonance +10%) |
 | Attack type | Melee / Ranged |
 | Damage type | Physical / Magic |
 | Attack range | Melee / Short / Long |
@@ -37,9 +38,9 @@
 ## 4. Stats
 | | Base (Lv. 1) | Growth / level |
 |---|---|---|
-| STR | | |
-| AGI | | |
-| MAG | | |
+| Salt | | |
+| Mercury | | |
+| Sulfur | | |
 
 | Other base values | Value |
 |---|---|
@@ -59,7 +60,7 @@
 | RES (reduction) | | |
 | Attacks per second | | |
 
-**Power-budget check:** base STR + AGI + MAG = **46–54**, total growth = **5.0–6.0 / level** for every hero. The role decides the split, not the total.
+**Power-budget check:** base Salt + Mercury + Sulfur = **46–54**, total growth = **5.0–6.0 / level** for every hero. The dominant principle has the highest growth; lore and kit decide the rest. The more roles the branches cover, the flatter the spread (GDD §4.6.2).
 
 ## 5. Skill Tree
 Rules: GDD §4.6.4. Skill points: 1 per hero level (30 at cap). Unlocks depend on **skill levels**. Every skill has 5 levels: core + one branch = 6 × 5 = 30 points, all spent at Lv. 30. Scroll skills cost no points (duplicate Scrolls level them). In battle: 2 actives. Statuses: GDD §6.10.
