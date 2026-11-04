@@ -4,6 +4,11 @@ Short dated entries: what was done, what was learned, what's next. Newest at the
 
 ---
 
+## 2026-11-05
+**Done:** GDD v0.33. Board 3 × 8 with square tiles for placement and range, free movement, crowding rules; battle results with time limits, Unstable Reaction overtime, HP % and stars (§6.12). Tower objective parked. Homunculus ranges in tiles.
+**Learned:** Tiles work for placement and range but not as movement rails; a narrow board needs "allies don't block allies".
+**Next:** Elsie's branch roles; Tank DEF gap (Wren/Snick 54% vs Tobin 57%); Snick needs a leap/dash to reach the back line; prototype check of fight length (~25–45 s).
+
 ## 2026-11-04 (2)
 **Done:** GDD v0.32 on branch `main_rule_review`. Roles are labels with a core tool; branches declare their role (lore-limited, one keeps the initial role). STR/AGI/MAG renamed to Salt/Mercury/Sulfur with a designer-set dominant principle and Resonance (+10%); growth rules; DEF growth per homunculus. Principles added to Lore.md. All 5 homunculi updated and their derived stats recomputed (formula checked against all old values first).
 **Learned:** Mercury Resonance raises Wren's and Snick's DEF to 54% at Lv. 30, closer to Tobin's 57%.

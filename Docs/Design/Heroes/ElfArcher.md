@@ -30,9 +30,9 @@ Wren woke with leaves in her memory. She had never seen a forest, yet she knew i
 | Dominant principle | Mercury |
 | Attack type | Ranged |
 | Damage type | Physical |
-| Attack range | Long |
+| Attack range | Long (7 tiles) |
 | Base attack interval | 1.6 s |
-| Move Speed | — (ranged, stays in her cell) |
+| Move Speed | — (Long range: never needs to move) |
 | Targeting | Same lane, back-most → Back-line |
 | Recommended row | Back |
 

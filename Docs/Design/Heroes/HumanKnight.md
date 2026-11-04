@@ -27,7 +27,7 @@ Tobin opened his eyes on a workbench, dizzy, with no past and no idea what he wa
 | Dominant principle | Salt |
 | Attack type | Melee |
 | Damage type | Physical |
-| Attack range | Melee |
+| Attack range | Melee (1 tile) |
 | Base attack interval | 1.7 s |
 | Move Speed | 300 |
 | Targeting | Front-most → Same lane |

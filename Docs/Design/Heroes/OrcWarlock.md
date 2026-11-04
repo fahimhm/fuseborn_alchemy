@@ -30,9 +30,9 @@ Grum is the biggest homunculus in the guild and the quietest. He woke up, apolog
 | Dominant principle | Sulfur |
 | Attack type | Ranged |
 | Damage type | Magic |
-| Attack range | Long |
+| Attack range | Long (7 tiles) |
 | Base attack interval | 1.8 s |
-| Move Speed | — (ranged, stays in his cell) |
+| Move Speed | — (Long range: never needs to move) |
 | Targeting | Largest group (middle row) → Front-most |
 | Recommended row | Back |
 

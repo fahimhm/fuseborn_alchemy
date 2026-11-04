@@ -27,9 +27,9 @@ Elsie woke up with a pair of white wings and immediately fell off the workbench.
 | Dominant principle | Sulfur |
 | Attack type | Ranged |
 | Damage type | Magic |
-| Attack range | Long |
+| Attack range | Long (7 tiles) |
 | Base attack interval | 1.8 s |
-| Move Speed | — (ranged, stays in her cell) |
+| Move Speed | — (Long range: never needs to move) |
 | Targeting | Basic hits: Front-most → Random. Heals: lowest-HP ally |
 | Recommended row | Back |
 

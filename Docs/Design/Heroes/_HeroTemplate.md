@@ -29,9 +29,9 @@
 | Dominant principle | Salt / Mercury / Sulfur (set by design; +1 attack damage per point, Resonance +10%) |
 | Attack type | Melee / Ranged |
 | Damage type | Physical / Magic |
-| Attack range | Melee / Short / Long |
+| Attack range | Melee 1 / Short 3 / Medium 5 / Long 7 tiles (GDD §6.2) |
 | Base attack interval | seconds (1.7 = normal) |
-| Move Speed | melee only |
+| Move Speed | everyone who needs to move (— for Long range) |
 | Targeting | Primary → Fallback (GDD §6.4) |
 | Recommended row | Front / Middle / Back |
 

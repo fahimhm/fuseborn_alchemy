@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| **Version** | 0.32 (draft) |
+| **Version** | 0.33 (draft) |
 | **Last updated** | 2026-11-03 |
 | **Status** | Pre-production. Fusion, card categories, and upgrade systems defined; combat and mining outlined |
 | **Engine** | Unity (tentative) |
@@ -395,8 +395,14 @@ Each hero brings **2 active skills** (§6.5). The player **selects a hero, then 
 
 ### 6.2 Party & Formation
 - ✅ **Party size: 5 heroes.**
-- ✅ **Grid formation: 3 × 3** (3 rows × 3 lanes). The player places 5 heroes; 4 cells stay empty.
-- ✅ **Lanes matter:** rows decide who gets hit first; lanes are used by "Same lane" targeting and by lane skills (e.g. a pierce that hits a whole lane).
+- ✅ **Board: 3 lanes × 8 rows.** Each side has a **3 × 3 formation** (back, middle, front row); **2 neutral middle rows** separate them. **Square tiles** (they keep lanes clean). The player places 5 heroes on their own 3 × 3 before battle; 4 tiles stay empty.
+
+```
+Enemy   row 8 back · 7 middle · 6 front
+Middle  rows 5, 4
+You     row 3 front · 2 middle · 1 back
+```
+- ✅ **Lanes matter:** rows decide who gets hit first; lanes are used by "Same lane" targeting and by lane skills (e.g. a pierce that hits a whole lane). A unit's lane and row are **where it currently stands**.
 
 | Row | Intended roles | Rule (proposed) |
 |---|---|---|
@@ -406,7 +412,19 @@ Each hero brings **2 active skills** (§6.5). The player **selects a hero, then 
 
 - The formation is set before battle and saved per mode (PvE party, PvP defense party).
 - Any role can be placed in any row. Placement is the player's strategy.
-- ✅ **Movement:** **attack type (melee / ranged) is set per homunculus**, not by role. Ranged homunculi attack from their grid cell. **Melee homunculi run to their target** and return when it dies or when re-targeting. **Move Speed** (gear bonus, §4.7.3) decides how fast they arrive. *Under review:* attack range per homunculus and whether everyone can move to close the distance (board design, §13 #38).
+- ✅ **Tiles are for placement and range only.** In battle, homunculi **move freely** (continuous, not tile to tile).
+- ✅ **Attack range in tile lengths**, set per homunculus (not by role):
+
+| Range | Tiles | Reaches without moving |
+|---|---|---|
+| Melee | 1 | Must walk to the target |
+| Short | 3 | From the front row: the enemy front row |
+| Medium | 5 | From the back row: the enemy front row |
+| Long | 7 | Anywhere; never needs to move |
+
+- ✅ **Movement:** a homunculus moves only until its target is in range, then attacks. **Move Speed** (per homunculus + gear) decides how fast. Attack type (melee / ranged) is set per homunculus.
+- ✅ **Crowding:** **allies never block allies** (they pass or slide around each other); only enemies block. Up to **4 melee attackers** can surround one target; extra ones **retarget** to the nearest other reachable enemy. Summons and back-row melee therefore always reach the fight.
+- The simulation runs on the server in fixed steps, so every replay gives the same result.
 
 ### 6.3 Roles ✅ (labels)
 A role is a **label for the job a build is tuned for**. It drives no mechanics by itself: dominant principle, attack type and range, DEF growth and targeting are set **per homunculus** (§4.6.2, §6.9). A homunculus has an **initial role** (shown on the card at discovery) and each branch declares its role (§4.6.4); after branching, the card shows the **branch role**. Two homunculi with the same role bring different tools.
@@ -458,15 +476,16 @@ Each hero has its **own built-in targeting characteristic**. This is part of the
 - ✅ Monsters are **Runoffs**: failed or uncontrolled reactions that came alive (Lore.md). Their drops are recovered reagents.
 - Stages are grouped into **chapters** following the guild's rise; chapter bosses are large Runoffs from famous failed reactions. Each stage = several **waves** entering from the top-right, ending with a **boss wave** on key stages.
 - Rewards: **XP for party heroes**, **basic card drops** (main card source), Coins, chance of higher-tier cards on harder stages.
-- Cleared stages can be replayed for grinding (optional later: "sweep" / skip for 3-star stages).
-- **Win:** all waves defeated. **Lose:** all heroes knocked out, or the time limit runs out (proposed: 90 s per wave group).
+- Cleared stages can be replayed for grinding (optional later: "sweep" / skip for **3-star** stages, §6.12).
+- **Win:** all waves defeated. **Lose:** all heroes knocked out, or the time limit runs out (**90 s per wave group**, with overtime in the last 15 s, §6.12). Wins are graded with **stars** (§6.12).
 - Knocked-out heroes recover after battle. No permanent loss.
 
 ### 6.7 PvP — Asynchronous
 - ✅ (proposed earlier) You fight another player's saved **defense party**. Both sides are shown in the same diagonal view: you at the bottom-left, the opponent at the top-right.
 - The opponent's skills fire automatically by AI (e.g. when ready, or by simple rules: heal when an ally is under 50% HP).
 - Your skills: manual, or auto if toggled.
-- Rewards: rank points + a winner reward chest. **The loser loses no cards.**
+- ✅ **Time limit 60 s**, overtime in the last 15 s. On timeout with both sides standing, **higher HP % wins** (§6.12).
+- Rewards: **rank points scaled by stars** (§6.12) + a winner reward chest. A loss costs rank points; a draw gives a small change. **The loser loses no cards.**
 
 ### 6.8 Prototype 2 Scope (combat)
 - 1 chapter, ~5 stages with waves + 1 boss
@@ -495,7 +514,7 @@ Each hero has its **own built-in targeting characteristic**. This is part of the
 | Attack Speed | Mercury × 1 + gear (100 = normal) |
 | Attacks per second | (100 + Attack Speed) / 100 / base attack interval |
 | Crit / Evasion / Block | gear, items, passives, traits only. Crit = 150% damage |
-| Move Speed | per hero + gear (melee only, §6.2) |
+| Move Speed | per hero + gear (everyone who needs to move, §6.2) |
 
 **Damage reduction** = 0.06 × DEF / (1 + 0.06 × DEF) against physical; same formula with RES against magic. 10 DEF ≈ 37%, 20 DEF ≈ 55%, never immune.
 
@@ -523,8 +542,8 @@ Each hero has its **own built-in targeting characteristic**. This is part of the
 | **Bleed** | Physical damage over time |
 | **Weaken** | Deals less damage (%) |
 | **Untargetable** | Can't be targeted by enemies |
-| **Knockback** | Pushed back one cell; also interrupts |
-| **Ensnare** | Rooted: can't move (melee can't run to targets), can't evade (Evasion counts as 0, can't be or become Untargetable), and takes **physical** damage over time (reduced by DEF) |
+| **Knockback** | Pushed back 1 tile length; also interrupts |
+| **Ensnare** | Rooted: can't move (can't close distance to targets), can't evade (Evasion counts as 0, can't be or become Untargetable), and takes **physical** damage over time (reduced by DEF) |
 | **Curse** | Magic damage over time. If the target dies while cursed, the Curse **jumps** to the nearest living enemy (neighbor cell first) with its remaining duration. Re-applying refreshes the duration; it does not stack |
 | **Sleep** | Can't act (no attacks, skills or mana regen); **wakes on taking damage**. Skill-specific variants may say otherwise (e.g. Wren's curse) |
 
@@ -543,6 +562,17 @@ Some skills summon **minions** onto the grid (first user: Grum's Demonology bran
 | **Defeat** | Minions don't keep a battle alive: it is lost when all homunculi are down |
 | **Server** | Spawns are server-authoritative, like every roll |
 | **Art** | Each minion needs its own sprite set and animations (AssetList.md) |
+
+### 6.12 Battle Result, Stars & Overtime ✅
+| Rule | Value (start values) |
+|---|---|
+| **Time limit** | PvP **60 s**. PvE **90 s per wave group**; PvE timeout = **lose** |
+| **Overtime "Unstable Reaction"** | Last **15 s** of each limit: all damage **+15% every 5 s** (max **+45%**); **healing and shields −50%**. UI shows the arena bubbling (Lore.md) |
+| **HP %** | Party's current HP ÷ its starting max HP. Knocked-out homunculi count as 0; **minions don't count** |
+| **Stars (win)** | ★★★ ≥ 60% HP · ★★ 30–59% · ★ < 30% |
+| **PvP timeout** | Both sides standing → higher HP % wins, **★ at most**. Within 1% → **draw**, no stars |
+| **Rewards** | PvP rank points scale with stars (exact values with the rank system). PvE stars count toward chapter rewards; 3★ unlocks sweep |
+| **Why** | Fights normally end in ~25–45 s; HP % (not raw HP) keeps tank teams from winning timeouts; overtime and the ★ cap stop turtling |
 
 ---
 
@@ -670,7 +700,7 @@ Planned to be discussed later.
 | 32 | Does Move Speed matter in battle (do heroes move, e.g. melee running to targets)? | ✅ Yes: melee heroes run to targets; ranged stay in place (§6.2) |
 | 36 | When the level cap rises above 30, what do the extra skill points buy (capstone skill, Lv. 6, etc.)? | Open; decide with the cap raise (§4.6.4) |
 | 37 | Should souled vs soulless homunculi (Lore.md) ever matter in battle or fusion (e.g. soulless immune to Sleep/Confuse)? | Open; lore only for now |
-| 38 | Board & range: attack range per homunculus (tiles on the combined 6 × 3 board?) and whether every homunculus can move to close the distance | Open; user deciding (§6.2) |
+| 38 | Board & range: attack range per homunculus and whether every homunculus can move | ✅ 3 × 8 board, ranges in tiles, free movement, allies don't block (§6.2); results & overtime (§6.12). Tower/furnace objective parked: needs revive or deployment |
 | 26 | Naming: card rarity and unique-skill rarity both use "Common/Rare". Use different labels to avoid confusion? | ✅ Skills use Bronze / Silver / Gold |
 | 27 | Risk: many random layers (card rarity, skill roll, slot roll, socket chance) can feel like a slot machine | Mitigate: progress never depends only on luck; Exchange, trading, pity |
 
@@ -679,6 +709,7 @@ Planned to be discussed later.
 ## 14. Change History
 | Version | Date | Changes |
 |---|---|---|
+| 0.33 | 2026-11-05 | Board 3 × 8 (3 × 3 per side + 2 middle rows), square tiles for placement & range (Melee 1 / Short 3 / Medium 5 / Long 7), free movement, allies don't block, 4 melee per target + retarget; PvP 60 s, overtime, HP % tiebreak, stars (§6.12); §13 #38 closed |
 | 0.32 | 2026-11-04 | Roles become labels with a core tool; initial role + branch roles (lore-limited, one branch keeps the initial role); STR/AGI/MAG → Salt/Mercury/Sulfur with a designer-set dominant principle and Resonance (+10%); growth rules; attack type and DEF growth per homunculus; Taunt not Tank-only; §13 #38 board & range |
 | 0.31 | 2026-11-03 | Tone "hopeful, with weight" and souls (lore only, Lore.md; §13 #37); Terms: hero = homunculus; 1–3 branches per hero (max 3), 1-branch heroes open it automatically; budget unchanged; new targeting rule "Same lane, back-most" (§6.4); statuses Ensnare, Sleep and Curse (§6.10); Summons (§6.11) |
 | 0.30 | 2026-11-03 | Every skill has 5 levels: 6 × 5 = 30 points, all on the hero's own skills; Scroll skills cost no points and level up with duplicate Scrolls; Tier I tables extended; §13 #36 |

@@ -27,7 +27,7 @@ Snick woke up already holding three things that weren't his. Nobody saw him take
 | Dominant principle | Mercury |
 | Attack type | Melee |
 | Damage type | Physical |
-| Attack range | Melee |
+| Attack range | Melee (1 tile) |
 | Base attack interval | 1.5 s |
 | Move Speed | 330 |
 | Targeting | Back-line → Lowest HP |
