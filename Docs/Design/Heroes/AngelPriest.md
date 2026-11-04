@@ -1,6 +1,6 @@
 # Elsie · Angel – Priest
 
-**Status:** Draft (for review)
+**Status:** Draft (rework in review). Needs 4 passive skills from the user: the core aura (Celestial Resilience) and one passive for each branch (The Seraph, The Archangel, The Fallen)
 
 ## 1. Identity
 | Field | Value |
