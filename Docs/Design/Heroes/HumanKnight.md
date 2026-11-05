@@ -10,7 +10,7 @@
 | Race (family) | Human (Folk) |
 | Class | Knight |
 | Initial role | Tank |
-| Branch roles | Tank (all branches) |
+| Branch roles | B1 Bludgeon: **Warrior** (off-role) · B2 Ultimate Protector: Tank · B3 Spellguard: Tank |
 | Tier | I |
 | Recipe(s) | Basic |
 | Basic rarity | Seasonal, hidden (GDD §4.2.2) |
@@ -70,23 +70,23 @@ Skill points: 1 per hero level. Every skill has 5 levels: core + one branch = 6 
 | A2 | **Panicked Shout** | A1 Lv. 2 | 80 / 18 s | Front-most enemy row | Yells in panic; enemies turn to him. Taunt 2 / 2.5 / 3 / 3.5 / 4 s; +4 / 6 / 8 / 10 / 12 DEF while it lasts |
 | P0 | **Pot-Lid Guard** (core passive) | Start | — | Self | 4 / 6 / 8 / 10 / 12% chance to block half a physical hit. At battle start he raises his shield first: Shield 60 / 80 / 100 / 120 / 140 for 3 s |
 
-**Branch point:** after A2 Lv. 2. Each branch is how Tobin finds his courage. Permanent choice; he stays a Tank.
+**Branch point:** after A2 Lv. 2. Each branch is how Tobin finds his courage. Permanent choice. B2 and B3 keep him a Tank; **B1 makes him a Warrior** (GDD §4.6.4). In every branch he keeps Panicked Shout's Taunt, so a Warrior Tobin still protects a little (a weaker version of the Tank core tool).
 
-**B1 · Bludgeon** — his bravery piles up: high mobility, staggering enemies, heavy physical damage.
+**B1 · Bludgeon** (role: **Warrior**) — his bravery piles up until he stops hiding behind the lid and starts swinging: high mobility, staggering enemies, heavy physical damage.
 | # | Skill | Unlock | Mana / CD | Target / area | Effect |
 |---|---|---|---|---|---|
 | B1a | **Shield Charge** | Branch chosen | 90 / 14 s | Enemy in his lane | Dashes in and slams: 80 / 130 / 180 / 230 / 280 physical damage + Stagger; +20% Move Speed for 4 s |
 | B1b | **Shield Toss** | B1a Lv. 2 | 110 / 18 s | 3 enemies (bounces) | Throws the lid: 70 / 110 / 150 / 190 / 230 physical damage each. Pot-Lid Guard is off until it returns (2 s) |
 | B1p | **Heavy Lid** | B1b Lv. 2 | — | Self | +1 / 1.25 / 1.5 / 1.75 / 2 attack damage per point of DEF; +4 / 8 / 12 / 16 / 20% Move Speed |
 
-**B2 · Ultimate Protector** — he gains confidence in defense.
+**B2 · Ultimate Protector** (role: Tank) — he gains confidence in defense.
 | # | Skill | Unlock | Mana / CD | Target / area | Effect |
 |---|---|---|---|---|---|
-| B2a | **Wall** | Branch chosen | 120 / 25 s | His lane + adjacent lanes | Plants the lid: barrier absorbs 150 / 240 / 330 / 420 / 510 damage for 6 s; he can't move. **Redirection:** when it ends, 30% of the absorbed damage hits the front-most enemies |
+| B2a | **Wall** | Branch chosen | 120 / 25 s | Allies in his lane + adjacent lanes | Plants the lid: a **shared shield** absorbs 150 / 240 / 330 / 420 / 510 damage in total for 6 s for every ally in those lanes; he can't move. **Redirection:** when it ends, 30% of the absorbed damage hits the front-most enemies |
 | B2b | **Oath Leap** | B2a Lv. 2 | 70 / 16 s | Lowest-HP ally | Leaps to them and takes all hits meant for them for 2 / 2.5 / 3 / 3.5 / 4 s |
 | B2p | **Unshaken** | B2b Lv. 2 | — | Self | Immune to knockback; status durations −10 / 20 / 30 / 40 / 50%; +4 / 5 / 6 / 7 / 8% block chance (stacks with Pot-Lid Guard, max 20%) |
 
-**B3 · Spellguard** — magic infuses the shield.
+**B3 · Spellguard** (role: Tank) — magic infuses the shield.
 | # | Skill | Unlock | Mana / CD | Target / area | Effect |
 |---|---|---|---|---|---|
 | B3a | **Spell Mirror** | Branch chosen | 100 / 20 s | Self | For 3 s, reflects the next 1 / 1 / 2 / 2 / 3 enemy magic skills that hit him back at the caster at 50 / 60 / 70 / 80 / 90% damage |
