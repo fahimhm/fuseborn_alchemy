@@ -4,6 +4,7 @@ Record notable decisions so future-you (and AI assistants) know *why*. Newest at
 
 | Date | Decision | Alternatives considered | Reason |
 |---|---|---|---|
+| 2026-11-05 | Grum: Undying Hunger every 3 s, +1 → 3 DEF/RES per stack (max 5); Imp Medium 5 tiles, Brute Melee with Move Speed 280; Spreading Curse hits enemies within 1 tile of the target; overtime healing cut kept | Every 5 s at +2 → 6 per stack | Old pace only filled at 25 s; faster with old values gave 69% DEF (above Tobin). Now ~58% DEF / 67% RES, effective HP ~3,700 vs Tobin ~6,100 |
 | 2026-11-05 | Wren's Bramble Rain keeps 2 rows but waves halved (20 → 70): Lv. 5 max ~1,700 total vs Grum's Spreading Curse ~2,100 | One row, full damage | User prefers keeping the area; now below the Mage core tool as the rule requires |
 | 2026-11-05 | Tobin B1 Bludgeon becomes an off-role **Warrior** branch; B2/B3 stay Tank; Wall is a shared shield for allies in his lane + adjacent lanes | Bruiser Tank label; physical barrier on the ground | Kit already fits the Warrior core tool; pilot shows one card, two roles; a shared shield needs no barrier physics under free movement |
 | 2026-11-05 | No Tank DEF change: Tobin's effective physical HP at Lv. 30 is ~6,100 vs Wren ~2,800 and Snick ~3,000 | Raise Tobin's DEF growth | DEF % alone was misleading; with HP he stays about twice as tough |

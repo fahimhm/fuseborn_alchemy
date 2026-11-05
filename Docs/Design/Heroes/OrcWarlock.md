@@ -74,24 +74,24 @@ Skill points: 1 per hero level. Every skill has 5 levels: core + one branch = 6 
 
 **Branch point:** after A2 Lv. 2. **3 branches**, permanent choice: three ways to use the dark being's gift. He stays a Mage.
 
-**B1 · Soul Reaper** — sustain battle-mage: the longer the fight lasts, the harder he is to kill.
+**B1 · Soul Reaper** (role: Mage) — sustain battle-mage: the longer the fight lasts, the harder he is to kill. Overtime (GDD §6.12) halves his healing in the last 15 s; intended.
 | # | Skill | Unlock | Mana / CD | Target / area | Effect (Lv. 1 / 2 / 3 / 4 / 5) |
 |---|---|---|---|---|---|
 | B1a | **Soul Tether** | Branch chosen | 90 / 16 s | Current target | Tether for 5 s: drains 20 / 30 / 40 / 50 / 60 magic damage per s and heals Grum for all of it; **steals 5 / 7.5 / 10 / 12.5 / 15% Evasion** (the target loses it, Grum gains it even with no Evasion of his own; 40% cap) |
 | B1b | **Drain Life** | B1a Lv. 2 | 90 / 14 s | Current target | 80 / 125 / 170 / 215 / 260 magic damage; heals Grum for 50% of it |
-| B1p | **Undying Hunger** | B1b Lv. 2 | — | Self | Every 5 s in battle: +2 / 3 / 4 / 5 / 6 DEF and RES, stacks up to 5 times |
+| B1p | **Undying Hunger** | B1b Lv. 2 | — | Self | Every 3 s in battle: +1 / 1.5 / 2 / 2.5 / 3 DEF and RES, stacks up to 5 times (full at 15 s) |
 
-**B2 · Demonology** — pacts with minions. Summon rules: GDD §6.11 (max 2 minions, shared by both skills).
+**B2 · Demonology** (role: Mage) — pacts with minions. Summon rules: GDD §6.11 (max 2 minions, shared by both skills).
 | # | Skill | Unlock | Mana / CD | Target / area | Effect (Lv. 1 / 2 / 3 / 4 / 5) |
 |---|---|---|---|---|---|
-| B2a | **Summon Imp** | Branch chosen | 100 / 20 s | Empty ally cell | Ranged imp: HP 200 / 300 / 400 / 500 / 600; 20 / 30 / 40 / 50 / 60 magic damage every 1.5 s |
-| B2b | **Summon Brute** | B2a Lv. 2 | 140 / 30 s | Empty ally cell | Melee brute: HP 400 / 600 / 800 / 1,000 / 1,200, DEF 6; 30 / 40 / 50 / 60 / 70 physical damage every 2 s; **Taunts** for 2 s when it appears |
+| B2a | **Summon Imp** | Branch chosen | 100 / 20 s | Empty ally tile (GDD §6.11) | Ranged imp, **Medium range (5 tiles)**: HP 200 / 300 / 400 / 500 / 600; 20 / 30 / 40 / 50 / 60 magic damage every 1.5 s |
+| B2b | **Summon Brute** | B2a Lv. 2 | 140 / 30 s | Empty ally tile (GDD §6.11) | Melee brute, **Melee (1 tile), Move Speed 280**: HP 400 / 600 / 800 / 1,000 / 1,200, DEF 6; 30 / 40 / 50 / 60 / 70 physical damage every 2 s; **Taunts** for 2 s when it appears |
 | B2p | **Dark Command** | B2b Lv. 2 | — | His minions | +10 / 15 / 20 / 25 / 30% HP and damage |
 
-**B3 · Corruptor** — spreading curses (GDD §6.10 Curse: jumps on death).
+**B3 · Corruptor** (role: Mage) — spreading curses (GDD §6.10 Curse: jumps on death).
 | # | Skill | Unlock | Mana / CD | Target / area | Effect (Lv. 1 / 2 / 3 / 4 / 5) |
 |---|---|---|---|---|---|
-| B3a | **Spreading Curse** | Branch chosen | 100 / 18 s | Target + neighboring cells (up, down, left, right) | **Curse** 6 s, 20 / 27.5 / 35 / 42.5 / 50 magic damage per s |
+| B3a | **Spreading Curse** | Branch chosen | 100 / 18 s | The target and every enemy within 1 tile of it | **Curse** 6 s, 20 / 27.5 / 35 / 42.5 / 50 magic damage per s |
 | B3b | **Blight Wave** | B3a Lv. 2 | 110 / 20 s | Front-most enemy row | **Curse** 4 s, 15 / 20 / 25 / 30 / 35 magic damage per s |
 | B3p | **Lingering Curse** | B3b Lv. 2 | — | Self | His Curses last +20 / 25 / 30 / 35 / 40% longer |
 
