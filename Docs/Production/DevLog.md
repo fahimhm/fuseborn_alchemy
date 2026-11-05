@@ -4,6 +4,10 @@ Short dated entries: what was done, what was learned, what's next. Newest at the
 
 ---
 
+## 2026-11-05 (2)
+**Done:** Tobin reviewed against GDD v0.33 (branch `tobin_human_knight`): B1 Bludgeon is now an off-role Warrior branch; Wall is a shared shield. Tank DEF gap closed: effective HP shows Tobin ~2× tougher than Wren/Snick.
+**Next:** Wren (Bramble Rain vs Mage core tool), then Grum.
+
 ## 2026-11-05
 **Done:** GDD v0.33. Board 3 × 8 with square tiles for placement and range, free movement, crowding rules; battle results with time limits, Unstable Reaction overtime, HP % and stars (§6.12). Tower objective parked. Homunculus ranges in tiles.
 **Learned:** Tiles work for placement and range but not as movement rails; a narrow board needs "allies don't block allies".

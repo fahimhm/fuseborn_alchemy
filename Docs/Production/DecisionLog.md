@@ -4,6 +4,8 @@ Record notable decisions so future-you (and AI assistants) know *why*. Newest at
 
 | Date | Decision | Alternatives considered | Reason |
 |---|---|---|---|
+| 2026-11-05 | Tobin B1 Bludgeon becomes an off-role **Warrior** branch; B2/B3 stay Tank; Wall is a shared shield for allies in his lane + adjacent lanes | Bruiser Tank label; physical barrier on the ground | Kit already fits the Warrior core tool; pilot shows one card, two roles; a shared shield needs no barrier physics under free movement |
+| 2026-11-05 | No Tank DEF change: Tobin's effective physical HP at Lv. 30 is ~6,100 vs Wren ~2,800 and Snick ~3,000 | Raise Tobin's DEF growth | DEF % alone was misleading; with HP he stays about twice as tough |
 | 2026-11-05 | Board 3 lanes × 8 rows: 3 × 3 per side + 2 middle rows; square tiles for placement and range only (Melee 1 / Short 3 / Medium 5 / Long 7); free movement; allies don't block allies; 4 melee per target, extras retarget | 3 × 3 with fixed cells; 8 × 8 board; hex tiles; strict tile-to-tile movement | Keeps the compact formation and lanes, adds real movement; avoids units and summons getting stuck (user's Tap Troop experience) |
 | 2026-11-05 | Tower / furnace objective parked | King tower (Clash Royale), 3 towers | Only matters with revive or in-battle deployment, which would undercut pre-battle placement |
 | 2026-11-05 | PvP 60 s, PvE 90 s per wave group; overtime last 15 s (+15% damage per 5 s up to +45%, healing/shields −50%); HP % score; stars ≥60 / 30–59 / <30%; timeout win ★ max; draw within 1% | No PvP limit; raw HP tiebreak | Graded results like Auto Chess without rounds; HP % is fair to non-tank teams; overtime and the ★ cap stop turtling |
