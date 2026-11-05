@@ -1,6 +1,6 @@
 # Snick · Goblin – Rogue
 
-**Status:** Draft (for review)
+**Status:** Draft (rework in progress: new core done; branches pending from the user, B1 = Assassin)
 
 ## 1. Identity
 | Field | Value |
@@ -65,12 +65,12 @@ Budget: base 50 (46–54 ✔), growth 5.6 (5.0–6.0 ✔).
 ## 5. Skill Tree
 Skill points: 1 per hero level. Every skill has 5 levels: core + one branch = 6 × 5 = 30 points, all spent at Lv. 30. Statuses: GDD §6.10.
 
-**Core**
+**Core** — rogue skills: blind and slip away. The dive to the back line comes from the Assassin branch (B1).
 | # | Skill | Unlock | Mana / CD | Target / area | Effect (Lv. 1 / 2 / 3 / 4 / 5) |
 |---|---|---|---|---|---|
-| A1 | **Backstab** | Start | 60 / 10 s | Back-line enemy | Dashes behind them: 90 / 140 / 190 / 240 / 290 physical damage |
-| A2 | **Pocket Sand** | A1 Lv. 2 | 50 / 14 s | Current target | Confuse 1 / 1.5 / 2 / 2.5 / 3 s |
-| P0 | **Sticky Fingers** (core passive) | Start | — | Self | Basic hits have a 4 / 8 / 12 / 16 / 20% chance to steal 10 mana from the target |
+| A1 | **Pocket Sand** | Start | 50 / 12 s | Current target | Sand in the eyes: 30 / 45 / 60 / 75 / 90 physical damage + **Blind** 1.5 / 1.75 / 2 / 2.25 / 2.5 s |
+| A2 | **Nimble Escape** | A1 Lv. 2 | 40 / 14 s | Self | Instantly breaks all **soft control** on himself (GDD §6.10); +20 / 25 / 30 / 35 / 40% Move Speed for 3 s |
+| P0 | **Opportunist** (core passive) | Start | — | Self | +4 / 8 / 12 / 16 / 20% damage to enemies that are controlled, Blinded or taking damage over time |
 
 **Branch point:** after A1 Lv. 2 (A2 and the branch open at the same time). Permanent choice; he stays an Assassin.
 

@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| **Version** | 0.33 (draft) |
+| **Version** | 0.34 (draft) |
 | **Last updated** | 2026-11-03 |
 | **Status** | Pre-production. Fusion, card categories, and upgrade systems defined; combat and mining outlined |
 | **Engine** | Unity (tentative) |
@@ -545,8 +545,10 @@ Each hero has its **own built-in targeting characteristic**. This is part of the
 | **Knockback** | Pushed back 1 tile length; also interrupts |
 | **Ensnare** | Rooted: can't move (can't close distance to targets), can't evade (Evasion counts as 0, can't be or become Untargetable), and takes **physical** damage over time (reduced by DEF) |
 | **Curse** | Magic damage over time. If the target dies while cursed, the Curse **jumps** to the nearest living enemy (neighbor cell first) with its remaining duration. Re-applying refreshes the duration; it does not stack |
+| **Blind** | **Misdirection:** if the unit needs to move, it wanders off course instead of heading to its target; its **basic hits miss**. Skills still land |
 | **Sleep** | Can't act (no attacks, skills or mana regen); **wakes on taking damage**. Skill-specific variants may say otherwise (e.g. Wren's curse) |
 
+- ✅ **Soft vs hard control.** **Soft** = slows, holds or misdirects movement: Ensnare, Stagger's slow, Blind. **Hard** = stops or overrides acting: Stun, Sleep, Confuse, Taunt. Skills that "break soft control" (e.g. Snick's Nimble Escape) remove soft statuses only; under hard control a unit can't act, so it can't cast them anyway.
 - Status duration reduction (Control Resist from gear, passives, traits) is **capped at −50%**. No full status immunity; only **knockback** immunity exists.
 
 ### 6.11 Summons ✅
@@ -709,6 +711,7 @@ Planned to be discussed later.
 ## 14. Change History
 | Version | Date | Changes |
 |---|---|---|
+| 0.34 | 2026-11-06 | Blind status (misdirected movement, basic hits miss, skills land); soft vs hard control defined (§6.10) |
 | 0.33 | 2026-11-05 | Board 3 × 8 (3 × 3 per side + 2 middle rows), square tiles for placement & range (Melee 1 / Short 3 / Medium 5 / Long 7), free movement, allies don't block, 4 melee per target + retarget; PvP 60 s, overtime, HP % tiebreak, stars (§6.12); §13 #38 closed |
 | 0.32 | 2026-11-04 | Roles become labels with a core tool; initial role + branch roles (lore-limited, one branch keeps the initial role); STR/AGI/MAG → Salt/Mercury/Sulfur with a designer-set dominant principle and Resonance (+10%); growth rules; attack type and DEF growth per homunculus; Taunt not Tank-only; §13 #38 board & range |
 | 0.31 | 2026-11-03 | Tone "hopeful, with weight" and souls (lore only, Lore.md; §13 #37); Terms: hero = homunculus; 1–3 branches per hero (max 3), 1-branch heroes open it automatically; budget unchanged; new targeting rule "Same lane, back-most" (§6.4); statuses Ensnare, Sleep and Curse (§6.10); Summons (§6.11) |
