@@ -4,6 +4,10 @@ Short dated entries: what was done, what was learned, what's next. Newest at the
 
 ---
 
+## 2026-11-05 (3)
+**Done:** Wren and Grum reviewed against GDD v0.33. Wren: Bramble Rain keeps 2 rows, damage halved (branch `wren_elf_archer`). Grum: Undying Hunger faster but weaker per stack, minion ranges, Spreading Curse wording (branch `grum_orc_warlock`).
+**Next:** Elsie's branch roles; Snick (needs a leap/dash to reach the back line).
+
 ## 2026-11-05 (2)
 **Done:** Tobin reviewed against GDD v0.33 (branch `tobin_human_knight`): B1 Bludgeon is now an off-role Warrior branch; Wall is a shared shield. Tank DEF gap closed: effective HP shows Tobin ~2× tougher than Wren/Snick.
 **Next:** Wren (Bramble Rain vs Mage core tool), then Grum.
