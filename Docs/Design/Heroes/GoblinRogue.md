@@ -74,12 +74,12 @@ Skill points: 1 per hero level. Every skill has 5 levels: core + one branch = 6 
 
 **Branch point:** after A1 Lv. 2 (A2 and the branch open at the same time). Permanent choice; he stays an Assassin.
 
-**B1 · Cutthroat** — fast hands, faster finishes.
-| # | Skill | Unlock | Mana / CD | Target / area | Effect |
+**B1 · Shadow Assassin** (role: Assassin) — the dive to the back line: vanish, reappear, strike.
+| # | Skill | Unlock | Mana / CD | Target / area | Effect (Lv. 1 / 2 / 3 / 4 / 5) |
 |---|---|---|---|---|---|
-| B1a | **Flurry** | Branch chosen | 80 / 12 s | Current target | 4 quick stabs, 30 / 45 / 60 / 75 / 90 physical damage each |
-| B1b | **Finish Them** | B1a Lv. 2 | 90 / 16 s | Enemy below 30% HP (else lowest HP) | 150 / 250 / 350 / 450 / 550 physical damage |
-| B1p | **Opportunist** | B1b Lv. 2 | — | Self | +3 / 5 / 7 / 9 / 11% Crit Chance |
+| B1a | **Backstab** | Branch chosen | 70 / 12 s | Back-line enemy | Lunges behind them: 120 / 190 / 260 / 330 / 400 physical damage; **guaranteed crit if cast from Stealth** |
+| B1b | **Shadow Stalker** | B1a Lv. 2 | 60 / 16 s | Self | Instantly gains **Stealth** for 1.5 / 2 / 2.5 / 3 / 3.5 s, then reappears on a random tile next to an enemy in their back half |
+| B1p | **Lethal Precision** | B1b Lv. 2 | — | Self | +10 / 15 / 20 / 25 / 30% crit damage on hits made from Stealth |
 
 **B2 · Shadow** — now you see him, now he has your wallet.
 | # | Skill | Unlock | Mana / CD | Target / area | Effect |
