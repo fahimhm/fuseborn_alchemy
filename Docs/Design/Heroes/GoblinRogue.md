@@ -14,12 +14,15 @@
 | Tier | I |
 | Recipe(s) | Basic |
 | Basic rarity | Seasonal, hidden (GDD §4.2.2) |
-| Codex flavor | "Everything in his pockets is 'borrowed'. Including your pockets." |
+| Soul | Yes: the soul of a forest hare (Lore.md) |
+| Codex flavor | "The Alchemist wanted an obedient elf. He got the ears." |
 
 ## 2. Backstory
-**Personality keywords:** greedy, giggly, quick, loyal in his own way.
+**Personality keywords:** wary, nimble, jumpy, quick-witted.
 
-Snick woke up already holding three things that weren't his. Nobody saw him take them. He loves anything shiny, anything useful, and anything that belongs to someone else, and he hides it all in a coat that has far more pockets than any coat should. The guild master has asked him to stop "borrowing" the reagents. He has agreed many times. In battle, Snick vanishes the moment it starts and reappears behind whoever looks most important, giggling. He never steals from the guild in a fight, though; after every win he quietly returns something he took, and pretends he found it.
+After Wren, the Alchemist wanted an elf that would obey, so he tried again. The reaction gave him the pointed ears and nothing else: a small, bald, green-skinned thing with thin bones and the soul of a forest hare. The Alchemist called him a failure and set out to fix him: another reaction, another test, another punishment for every flaw. Snick learned to run before he learned to speak. His body was made for it, quick and light, and within weeks nobody in the workshop could catch him. He started carrying a pocket of sand. When he's cornered, the sand goes in their eyes, and he's gone. He still flinches when the workshop door opens. On the battlefield, that flinch is the fastest thing alive.
+
+**Link:** a failed attempt to make an obedient elf after Wren ([ElfArcher.md](ElfArcher.md)). The Alchemist controls him with harsh "fixing" (Lore.md).
 
 ## 3. Combat Profile
 | Field | Value |
@@ -109,15 +112,15 @@ Skill points: 1 per hero level. Every skill has 5 levels: core + one branch = 6 
 ## 8. Illustrator Brief (draft)
 | Field | Value |
 |---|---|
-| Silhouette & key shapes | Short and hunched; huge ears; a long coat bulging with pockets; big grin |
-| Palette (3–4 colors) | Moss green skin, patched brown coat, brass buttons, a stolen purple sash |
+| Silhouette & key shapes | Small, thin and bald; pointed elf ears that twitch at every sound; crouched, ready to bolt |
+| Palette (3–4 colors) | Moss green skin, worn grey-brown rags, a sand-colored pouch, faded workshop-issue straps |
 | Race family base body | Greenskin base body (shared with Hobgoblin, Orc and Troll scaled) |
-| Weapon held | A chipped short blade held backwards; random loot dangling from the coat |
-| Card illustration | Peeking out of a pile of junk with a coin in his teeth; the guild master's pouch half out of his coat |
-| Battle views | Front ¾ and back ¾. Back view shows the pocket coat and ears |
-| Animations | Idle (counting coins), run (crouched), stab, Backstab (vanishing dash), Pocket Sand (throw), hit, KO (spills his pockets), victory (giggles, juggles a coin). Branches: B1 stab flurry; B2 fade out + junk pile drop; B3 shiv + bomb throw |
+| Weapon held | A chipped short blade held backwards; a worn sand pouch at his hip |
+| Card illustration | Mid-escape through a workshop doorway, a handful of sand flying behind him, ears flat |
+| Battle views | Front ¾ and back ¾. Back view shows the sand pouch and ears |
+| Animations | Idle (ears twitching, glancing over his shoulder), run (crouched), stab, Backstab (vanishing dash), Pocket Sand (throw), hit, KO (curls up small), victory (a quick, relieved breath; checks his pouch). Branches: B1 stab flurry; B2 fade out + junk pile drop; B3 shiv + bomb throw |
 | Branch props | B1 a pair of polished daggers; B2 a hooded coat; B3 a bandolier of junk bombs |
 | VFX per skill | Backstab: shadow streak; Pocket Sand: sand puff; Flurry: slash lines; Finish Them: big red slash; Vanish: smoke ring; Junk Decoy: junk pile pop; Rusty Shiv: dripping red ticks; Gutter Bomb: clattering blast |
-| SFX / voice notes | Coin jingles; sneaky giggle; "Mine!" on kills |
+| SFX / voice notes | Quick light footsteps; a sharp nervous laugh; a hiss of sand |
 | References | TBD (moodboard) |
 | Avoid | Anything that looks like an existing game's character |

@@ -4,6 +4,7 @@ Record notable decisions so future-you (and AI assistants) know *why*. Newest at
 
 | Date | Decision | Alternatives considered | Reason |
 |---|---|---|---|
+| 2026-11-06 | Snick reworked: a failed attempt at an obedient elf after Wren; the Alchemist harshly "fixes" him; hare's soul; escape artist. Lore: the Alchemist controls homunculi by whatever works (curse, fixing, a father's hand) and is not always good | Daily torture; comedic thief; Alchemist redemption arc | User's story; "fixing" keeps the weight without the player committing torture; no intention to make the Alchemist look good |
 | 2026-11-05 | Grum: Undying Hunger every 3 s, +1 → 3 DEF/RES per stack (max 5); Imp Medium 5 tiles, Brute Melee with Move Speed 280; Spreading Curse hits enemies within 1 tile of the target; overtime healing cut kept | Every 5 s at +2 → 6 per stack | Old pace only filled at 25 s; faster with old values gave 69% DEF (above Tobin). Now ~58% DEF / 67% RES, effective HP ~3,700 vs Tobin ~6,100 |
 | 2026-11-05 | Wren's Bramble Rain keeps 2 rows but waves halved (20 → 70): Lv. 5 max ~1,700 total vs Grum's Spreading Curse ~2,100 | One row, full damage | User prefers keeping the area; now below the Mage core tool as the rule requires |
 | 2026-11-05 | Tobin B1 Bludgeon becomes an off-role **Warrior** branch; B2/B3 stay Tank; Wall is a shared shield for allies in his lane + adjacent lanes | Bruiser Tank label; physical barrier on the ground | Kit already fits the Warrior core tool; pilot shows one card, two roles; a shared shield needs no barrier physics under free movement |
