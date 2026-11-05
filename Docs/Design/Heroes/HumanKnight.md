@@ -9,7 +9,8 @@
 | Data ID | `SO_Hero_HumanKnight` |
 | Race (family) | Human (Folk) |
 | Class | Knight |
-| Role | Tank |
+| Initial role | Tank |
+| Branch roles | Tank (all branches) |
 | Tier | I |
 | Recipe(s) | Basic |
 | Basic rarity | Seasonal, hidden (GDD §4.2.2) |
@@ -23,10 +24,10 @@ Tobin opened his eyes on a workbench, dizzy, with no past and no idea what he wa
 ## 3. Combat Profile
 | Field | Value |
 |---|---|
-| Main stat | STR |
+| Dominant principle | Salt |
 | Attack type | Melee |
 | Damage type | Physical |
-| Attack range | Melee |
+| Attack range | Melee (1 tile) |
 | Base attack interval | 1.7 s |
 | Move Speed | 300 |
 | Targeting | Front-most → Same lane |
@@ -35,9 +36,9 @@ Tobin opened his eyes on a workbench, dizzy, with no past and no idea what he wa
 ## 4. Stats
 | | Base (Lv. 1) | Growth / level |
 |---|---|---|
-| STR | 24 | 3.0 |
-| AGI | 12 | 1.2 |
-| MAG | 14 | 1.4 |
+| Salt | 24 | 3.0 |
+| Mercury | 12 | 1.2 |
+| Sulfur | 14 | 1.4 |
 
 Budget: base 50 (46–54 ✔), growth 5.6 (5.0–6.0 ✔).
 
@@ -45,14 +46,14 @@ Budget: base 50 (46–54 ✔), growth 5.6 (5.0–6.0 ✔).
 |---|---|
 | Base HP | 200 |
 | Base attack damage | 26 (the dull sword) |
-| Base DEF / RES | 6 / 0 (Tank rule, GDD §6.9) |
+| Base DEF / RES | 6 / 0 (Tobin's own DEF growth, GDD §6.9) |
 | DEF growth / level | 0.3 |
 | Base mana | 75 |
 
-**Derived** (GDD §6.9 rates, no gear):
+**Derived** (GDD §6.9 rates incl. Resonance, no gear):
 | Stat | Lv. 1 | Lv. 30 |
 |---|---|---|
-| HP / HP regen | 680 / 2.4 per s | 2,420 / 11.1 per s |
+| HP / HP regen | 728 / 2.6 per s | 2,642 / 12.2 per s |
 | Mana / mana regen | 243 / 0.70 per s | 730 / 2.73 per s |
 | Attack damage | 50 | 137 |
 | DEF (reduction) | 7.8 (32%) | 21.7 (57%) |
