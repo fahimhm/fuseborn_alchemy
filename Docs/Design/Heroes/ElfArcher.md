@@ -84,7 +84,7 @@ Skill points: 1 per hero level. Every skill has 5 levels: core + one branch = 6 
 **B2 · Unbound** — she still holds the grudge. Area control and evasion.
 | # | Skill | Unlock | Mana / CD | Target / area | Effect (Lv. 1 / 2 / 3 / 4 / 5) |
 |---|---|---|---|---|---|
-| B2a | **Bramble Rain** | Branch chosen | 120 / 22 s | Front 2 enemy rows | 3 waves of 40 / 65 / 90 / 115 / 140 physical damage; the first wave applies **Ensnare** 1 / 1.25 / 1.5 / 1.75 / 2 s (15 / 20 / 25 / 30 / 35 damage per s) |
+| B2a | **Bramble Rain** | Branch chosen | 120 / 22 s | Front 2 enemy rows | 3 waves of 20 / 30 / 45 / 55 / 70 physical damage (kept wide but light: a Ranger's area is weaker than a Mage's, GDD §6.3); the first wave applies **Ensnare** 1 / 1.25 / 1.5 / 1.75 / 2 s (15 / 20 / 25 / 30 / 35 damage per s) |
 | B2b | **Wild Dance** | B2a Lv. 2 | 80 / 20 s | Self | +15 / 20 / 25 / 30 / 35% Evasion for 4 s (Evasion cap 40% still applies) |
 | B2p | **Caged Fury** | B2b Lv. 2 | — | Self | **Rage:** +1 per hit taken (basic or skill). At **3 rage** she goes **Berserk** for 5 s: ×1.1 / 1.15 / 1.2 / 1.25 / 1.3 damage. On activation, roots burst through her lane: **Ensnare** on every enemy in it for 2 s (20 / 30 / 40 / 50 / 60 damage per s). When Berserk ends, the **curse** forces **Sleep** for 4 / 3.75 / 3.5 / 3.25 / 3 s: does **not** wake on damage and **ignores Control Resist**. Rage resets to 0; no rage is gained during Berserk or the curse Sleep |
 
