@@ -2,8 +2,8 @@
 
 | | |
 |---|---|
-| **Version** | 0.35 (draft) |
-| **Last updated** | 2026-11-03 |
+| **Version** | 0.36 (draft) |
+| **Last updated** | 2026-11-07 |
 | **Status** | Pre-production. Fusion, card categories, and upgrade systems defined; combat and mining outlined |
 | **Engine** | Unity (tentative) |
 | **Online** | ✅ Online game (server-authoritative) |
@@ -280,12 +280,12 @@ Every homunculus is made of the three alchemical **principles** (Lore.md): **Sal
 
 | Armor piece | Typical bonuses |
 |---|---|
-| Body | HP, DEF, Block, Thorns |
-| Helmet | DEF, Cooldown Reduction, Control Resist |
+| Body | HP, DEF, Block, Thorns, Holy / Dark resist |
+| Helmet | DEF, Cooldown Reduction, Control Resist, Holy / Dark resist |
 | Gloves | ATK, Attack Speed, Crit Chance, Lifesteal |
 | Boots | Move Speed, Evasion |
 
-**Gear bonus stats** (on gear only, alongside hero Salt/Mercury/Sulfur): HP, DEF, ATK, Attack Speed, Move Speed, Crit Chance, Evasion, Block, Lifesteal, Cooldown Reduction, Skill Power, Thorns (reflects melee damage), Control Resist. These are the only sources of % stats besides passives and traits (§4.6.2). Values TBD.
+**Gear bonus stats** (on gear only, alongside hero Salt/Mercury/Sulfur): HP, DEF, ATK, Attack Speed, Move Speed, Crit Chance, Evasion, Block, Lifesteal, Cooldown Reduction, Skill Power, Thorns (reflects melee damage), Control Resist, Holy / Dark damage % (weapons and accessories), Holy / Dark resist % (body armor, helmets and accessories; §6.9). These are the only sources of % stats besides passives and traits (§4.6.2). Values TBD.
 
 ### 4.8 Item
 
@@ -500,6 +500,12 @@ Each hero has its **own built-in targeting characteristic**. This is part of the
 ### 6.9 Combat Numbers (proposed, all tunable in ScriptableObjects)
 ✅ **Damage types: Physical and Magic** (§13 #23). DEF reduces physical damage, **RES** reduces magic damage. No element chart; elements appear only as small Magic Stone effects (below).
 
+✅ **Holy and Dark** are **tags on Magic** (not new damage types): RES still reduces them, and untagged magic is plain Magic.
+- **Skills only** (and the statuses they apply, e.g. a Dark Curse) carry a tag; **basic attacks are never tagged**.
+- **No counters:** Holy doesn't beat Dark or the reverse. Tags matter only through bonuses and resists.
+- **Bonuses and resists:** Holy / Dark damage % and Holy / Dark resist % come from **gear** (§4.7.3), branch passives, traits and Magic Stones. Resist applies after RES and is **capped at −50%** (never immune).
+- Users: Elsie (Seraph and Archangel: Holy; Fallen: Dark), Grum (Dark).
+
 **Per-hero data:** base Salt / Mercury / Sulfur, growth per level for each, dominant principle, initial role, base HP, base attack damage, base DEF / RES, DEF growth (per homunculus; 0 for most), base mana, base attack interval, attack range (melee / ranged), Move Speed. Never set by tier (§4.4).
 
 **Attribute at level L** = base + growth × (L − 1).
@@ -552,8 +558,12 @@ Each hero has its **own built-in targeting characteristic**. This is part of the
 | **Stealth** | Can't be targeted by enemies; ends when the unit attacks or uses a skill, or when its duration ends. **Ensnare reveals** (removes Stealth) |
 | **Slow** | Move Speed reduced by the skill's % |
 | **Sleep** | Can't act (no attacks, skills or mana regen); **wakes on taking damage**. Skill-specific variants may say otherwise (e.g. Wren's curse) |
+| **Silence** | Can't cast active skills. Basic attacks, passives and mana regen still work |
+| **Invulnerable** | Takes no damage (damage over time included). Can still be targeted and receive statuses. Short by design (~2 s max per skill); **halved in overtime** (§6.12) |
 
-- ✅ **Soft vs hard control.** **Soft** = slows, holds or misdirects movement: Slow, Ensnare, Stagger's slow, Blind. **Hard** = stops or overrides acting: Stun, Sleep, Confuse, Taunt. Skills that "break soft control" (e.g. Snick's Nimble Escape) remove soft statuses only; under hard control a unit can't act, so it can't cast them anyway.
+- ✅ **Soft vs hard control.** **Soft** = slows, holds or misdirects movement: Slow, Ensnare, Stagger's slow, Blind. **Hard** = stops or overrides acting: Stun, Sleep, Confuse, Taunt, Silence. Skills that "break soft control" (e.g. Snick's Nimble Escape) remove soft statuses only; under hard control a unit can't act, so it can't cast them anyway.
+- ✅ **Hard control interrupts:** it ends the unit's running **tethers and channels** (e.g. Grum's Soul Tether, Elsie's Abyssal Tether); no mana refund. Zones, traps and summons already placed keep going.
+- ✅ **Helpful vs harmful:** **helpful** = Shield, Untargetable, Stealth, Invulnerable; every other status is **harmful**. Cleanses remove harmful statuses only; effects that count "negative statuses" count harmful ones.
 - Status duration reduction (Control Resist from gear, passives, traits) is **capped at −50%**. No full status immunity; only **knockback** immunity exists.
 
 ### 6.11 Summons ✅
@@ -574,12 +584,28 @@ Some skills summon **minions** onto the grid (first user: Grum's Demonology bran
 | Rule | Value (start values) |
 |---|---|
 | **Time limit** | PvP **60 s**. PvE **90 s per wave group**; PvE timeout = **lose** |
-| **Overtime "Unstable Reaction"** | Last **15 s** of each limit: all damage **+15% every 5 s** (max **+45%**); **healing and shields −50%**. UI shows the arena bubbling (Lore.md) |
+| **Overtime "Unstable Reaction"** | Last **15 s** of each limit: all damage **+15% every 5 s** (max **+45%**); **healing and shields −50%**; **Invulnerable durations −50%**. UI shows the arena bubbling (Lore.md) |
 | **HP %** | Party's current HP ÷ its starting max HP. Knocked-out homunculi count as 0; **minions don't count** |
 | **Stars (win)** | ★★★ ≥ 60% HP · ★★ 30–59% · ★ < 30% |
 | **PvP timeout** | Both sides standing → higher HP % wins, **★ at most**. Within 1% → **draw**, no stars |
 | **Rewards** | PvP rank points scale with stars (exact values with the rank system). PvE stars count toward chapter rewards; 3★ unlocks sweep |
 | **Why** | Fights normally end in ~25–45 s; HP % (not raw HP) keeps tank teams from winning timeouts; overtime and the ★ cap stop turtling |
+
+### 6.13 Zones ✅
+A **zone** is an area on the ground with a fixed duration (users: Snick's Caltrops & Wire, Elsie's Heavenly Canopy and Condemnation).
+
+| Rule | Value |
+|---|---|
+| **Shape** | A **circle** with a radius in tiles (e.g. "1-tile radius around a point"), or a **strip** across lanes. Set per skill |
+| **Anchor** | **Fixed to the ground** where it was cast; units walk in and out |
+| **Who** | Units whose **current position** is inside |
+| **Statuses** | **Pulsed:** re-applied every 0.5 s with a 1 s duration while a unit stays inside, so Control Resist still counts |
+| **Movement** | Units **ignore zones** and keep heading to their target (no pathing around them) |
+| **Caster knocked out** | The zone runs its full duration |
+| **Stacking** | Re-casting the same zone refreshes it; different zones stack |
+| **Visibility** | Visible to both sides unless the skill says invisible |
+| **Overtime** | Zone healing is cut like all healing (§6.12) |
+| **Server** | Placement and ticks are server-authoritative |
 
 ---
 
@@ -694,7 +720,7 @@ Planned to be discussed later.
 | 20 | Battle character art: 2D sprites with 2 facings, 2D skeletal (Spine), or low-poly 3D? | Deferred: prototypes use greybox; decide after combat is proven fun |
 | 21 | Grid size (3×3?) and whether lanes matter | ✅ 3×3, lanes matter |
 | 22 | Battle stamina / energy limit for PvE? | ✅ No stamina. Pace with drop rates and daily-limited rewards (proposed: card drops on the first N clears per day, then XP and Coins only) |
-| 23 | Elements or damage types (fire/water…) for counters? | ✅ Hybrid: Physical vs Magic (DEF/RES); elements only as Magic Stone effects (§6.9) |
+| 23 | Elements or damage types (fire/water…) for counters? | ✅ Hybrid: Physical vs Magic (DEF/RES); elements only as Magic Stone effects (§6.9). Holy / Dark are tags on Magic with bonuses and resists, no counter chart |
 | 24 | Basic card rarity split (2/2/1) and weights (65/30/5)? | ✅ Confirmed |
 | 25 | Exchange | ✅ 10 → Small Chest, 25 → Big Chest (contents proposed); daily limit? |
 | 28 | Seasonal rarity rotation | ✅ Per season (4–6 weeks, exact length TBD); odds public, card mapping hidden |
@@ -708,6 +734,7 @@ Planned to be discussed later.
 | 36 | When the level cap rises above 30, what do the extra skill points buy (capstone skill, Lv. 6, etc.)? | Open; decide with the cap raise (§4.6.4) |
 | 37 | Should souled vs soulless homunculi (Lore.md) ever matter in battle or fusion (e.g. soulless immune to Sleep/Confuse)? | Open; lore only for now |
 | 38 | Board & range: attack range per homunculus and whether every homunculus can move | ✅ 3 × 8 board, ranges in tiles, free movement, allies don't block (§6.2); results & overtime (§6.12). Tower/furnace objective parked: needs revive or deployment |
+| 39 | Do ranged attacks fly as projectiles (travel time, can be blocked or destroyed)? | Open. Hits land instantly for now; Heavenly Canopy (Elsie) cuts damage from ranged enemies, and its burning shots are visual only |
 | 26 | Naming: card rarity and unique-skill rarity both use "Common/Rare". Use different labels to avoid confusion? | ✅ Skills use Bronze / Silver / Gold |
 | 27 | Risk: many random layers (card rarity, skill roll, slot roll, socket chance) can feel like a slot machine | Mitigate: progress never depends only on luck; Exchange, trading, pity |
 
@@ -716,6 +743,7 @@ Planned to be discussed later.
 ## 14. Change History
 | Version | Date | Changes |
 |---|---|---|
+| 0.36 | 2026-11-07 | Holy / Dark as tags on Magic, with gear damage % and resist % (§6.9, §4.7.3); statuses Silence and Invulnerable; Silence is hard control; hard control interrupts tethers and channels; helpful vs harmful statuses (§6.10); overtime halves Invulnerable (§6.12); Zones (§6.13); §13 #39 projectiles; Elsie reworked |
 | 0.35 | 2026-11-06 | Skill tree MOBA-style: all core skills open from Lv. 1, branch at hero Lv. 10 with all 3 branch skills open; skill level cap = hero level ÷ 2 rounded up; Confirm button, no skill-point reset (§4.6.4) |
 | 0.34 | 2026-11-06 | Pre-placed skills (§6.2); Slow status; Stealth status; crit damage bonus rule (§6.9); Blind status (misdirected movement, basic hits miss, skills land); soft vs hard control defined (§6.10) |
 | 0.33 | 2026-11-05 | Board 3 × 8 (3 × 3 per side + 2 middle rows), square tiles for placement & range (Melee 1 / Short 3 / Medium 5 / Long 7), free movement, allies don't block, 4 melee per target + retarget; PvP 60 s, overtime, HP % tiebreak, stars (§6.12); §13 #38 closed |

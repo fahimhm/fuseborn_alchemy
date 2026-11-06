@@ -63,12 +63,12 @@ Budget: base 50 (46–54 ✔), growth 5.6 (5.0–6.0 ✔).
 | Attacks per second | 0.61 | 0.77 |
 
 ## 5. Skill Tree
-Skill points: 1 per hero level, spent on any open skill. Every skill has 5 levels; a skill's level can't exceed hero level ÷ 2, rounded up. Core skills are all open from Lv. 1; the branch opens at **hero Lv. 10** with all 3 of its skills open (GDD §4.6.4). Core + one branch = 6 × 5 = 30 points, all spent at Lv. 30. Statuses: GDD §6.10.
+Skill points: 1 per hero level, spent on any open skill. Every skill has 5 levels; a skill's level can't exceed hero level ÷ 2, rounded up. Core skills are all open from Lv. 1; the branch opens at **hero Lv. 10** with all 3 of its skills open (GDD §4.6.4). Core + one branch = 6 × 5 = 30 points, all spent at Lv. 30. Statuses: GDD §6.10. **Dark** (GDD §6.9): his hexes, drains and Curses come from the dark being and carry the Dark tag; his minions' attacks stay plain.
 
 **Core**
 | # | Skill | Unlock | Mana / CD | Target / area | Effect (Lv. 1 / 2 / 3 / 4 / 5) |
 |---|---|---|---|---|---|
-| A1 | **Hex Bolt** | Lv. 1 | 60 / 8 s | Current target | 90 / 140 / 190 / 240 / 290 magic damage |
+| A1 | **Hex Bolt** | Lv. 1 | 60 / 8 s | Current target | 90 / 140 / 190 / 240 / 290 **Dark** damage |
 | A2 | **Weakening Hex** | Lv. 1 | 80 / 16 s | Current target | Weaken: the target deals −15 / 20 / 25 / 30 / 35% damage for 4 s |
 | P0 | **Bookworm** (core passive) | Lv. 1 | — | Self | +4 / 8 / 12 / 16 / 20% mana regen |
 
@@ -77,8 +77,8 @@ Skill points: 1 per hero level, spent on any open skill. Every skill has 5 level
 **B1 · Soul Reaper** (role: Mage) — sustain battle-mage: the longer the fight lasts, the harder he is to kill. Overtime (GDD §6.12) halves his healing in the last 15 s; intended.
 | # | Skill | Unlock | Mana / CD | Target / area | Effect (Lv. 1 / 2 / 3 / 4 / 5) |
 |---|---|---|---|---|---|
-| B1a | **Soul Tether** | Branch (Lv. 10) | 90 / 16 s | Current target | Tether for 5 s: drains 20 / 30 / 40 / 50 / 60 magic damage per s and heals Grum for all of it; **steals 5 / 7.5 / 10 / 12.5 / 15% Evasion** (the target loses it, Grum gains it even with no Evasion of his own; 40% cap) |
-| B1b | **Drain Life** | Branch (Lv. 10) | 90 / 14 s | Current target | 80 / 125 / 170 / 215 / 260 magic damage; heals Grum for 50% of it |
+| B1a | **Soul Tether** | Branch (Lv. 10) | 90 / 16 s | Current target | Tether for 5 s: drains 20 / 30 / 40 / 50 / 60 **Dark** damage per s and heals Grum for all of it; **steals 5 / 7.5 / 10 / 12.5 / 15% Evasion** (the target loses it, Grum gains it even with no Evasion of his own; 40% cap). Hard control on Grum breaks the tether (GDD §6.10) |
+| B1b | **Drain Life** | Branch (Lv. 10) | 90 / 14 s | Current target | 80 / 125 / 170 / 215 / 260 **Dark** damage; heals Grum for 50% of it |
 | B1p | **Undying Hunger** | Branch (Lv. 10) | — | Self | Every 3 s in battle: +1 / 1.5 / 2 / 2.5 / 3 DEF and RES, stacks up to 5 times (full at 15 s) |
 
 **B2 · Demonology** (role: Mage) — pacts with minions. Summon rules: GDD §6.11 (max 2 minions, shared by both skills).
@@ -91,8 +91,8 @@ Skill points: 1 per hero level, spent on any open skill. Every skill has 5 level
 **B3 · Corruptor** (role: Mage) — spreading curses (GDD §6.10 Curse: jumps on death).
 | # | Skill | Unlock | Mana / CD | Target / area | Effect (Lv. 1 / 2 / 3 / 4 / 5) |
 |---|---|---|---|---|---|
-| B3a | **Spreading Curse** | Branch (Lv. 10) | 100 / 18 s | The target and every enemy within 1 tile of it | **Curse** 6 s, 20 / 27.5 / 35 / 42.5 / 50 magic damage per s |
-| B3b | **Blight Wave** | Branch (Lv. 10) | 110 / 20 s | Front-most enemy row | **Curse** 4 s, 15 / 20 / 25 / 30 / 35 magic damage per s |
+| B3a | **Spreading Curse** | Branch (Lv. 10) | 100 / 18 s | The target and every enemy within 1 tile of it | **Curse** 6 s, 20 / 27.5 / 35 / 42.5 / 50 **Dark** damage per s |
+| B3b | **Blight Wave** | Branch (Lv. 10) | 110 / 20 s | Front-most enemy row | **Curse** 4 s, 15 / 20 / 25 / 30 / 35 **Dark** damage per s |
 | B3p | **Lingering Curse** | Branch (Lv. 10) | — | Self | His Curses last +20 / 25 / 30 / 35 / 40% longer |
 
 **Scroll skill tags:** Magic, Control, Sustain.
