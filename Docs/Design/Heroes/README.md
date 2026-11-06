@@ -7,10 +7,10 @@ One file per hero, made from [_HeroTemplate.md](_HeroTemplate.md). Roster and re
 | # | Hero | Name | Tier | Role | File | Status |
 |---|---|---|---|---|---|---|
 | 1 | Human – Knight | Tobin | I | Tank | [HumanKnight.md](HumanKnight.md) | Numbers done (approved) |
-| 2 | Elf – Archer | Wren | I | Ranger | [ElfArcher.md](ElfArcher.md) | Draft |
-| 3 | Angel – Priest | Elsie | I | Support | [AngelPriest.md](AngelPriest.md) | Draft |
-| 4 | Goblin – Rogue | Snick | I | Assassin | [GoblinRogue.md](GoblinRogue.md) | Draft |
-| 5 | Orc – Warlock | Grum | I | Mage | [OrcWarlock.md](OrcWarlock.md) | Draft |
+| 2 | Elf – Archer | Wren | I | Ranger | [ElfArcher.md](ElfArcher.md) | Numbers done (approved) |
+| 3 | Angel – Priest | Elsie | I | Support | [AngelPriest.md](AngelPriest.md) | Numbers done (approved) |
+| 4 | Goblin – Rogue | Snick | I | Assassin | [GoblinRogue.md](GoblinRogue.md) | Numbers done (approved) |
+| 5 | Orc – Warlock | Grum | I | Mage | [OrcWarlock.md](OrcWarlock.md) | Numbers done (approved) |
 | 6 | Human – Commander | — | II | Support | | — |
 | 7 | Human – Thief | — | II | Assassin | | — |
 | 8 | Wood Elf – Hunter | — | II | Ranger | | — |

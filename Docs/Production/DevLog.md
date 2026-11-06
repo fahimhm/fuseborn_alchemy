@@ -4,6 +4,10 @@ Short dated entries: what was done, what was learned, what's next. Newest at the
 
 ---
 
+## 2026-11-07 (2)
+**Done:** All 5 Tier I homunculi approved by the user (Tobin, Wren, Elsie, Snick, Grum): status "Numbers done (approved)". Merged branches cleaned up on GitHub.
+**Next:** Tier II homunculi (not started; user will lead).
+
 ## 2026-11-07
 **Done:** GDD v0.36: Holy / Dark tags with gear stats; statuses Silence and Invulnerable; hard control interrupts tethers; helpful vs harmful; Zones (§6.13); §13 #39 projectiles. Elsie reworked (branch `elsie_angel_priest`): sky-light soul, "Father"; core Minor Mending, Halo Pulse, Celestial Resilience; B1 Seraph (Support), B2 Archangel (off-role Warrior), B3 Fallen (off-role Mage); flatter stats. Grum's kit tagged Dark; Snick's Caltrops is a zone; 4 unused passives to SkillBank.
 **Learned:** Reviewing the user's input against the GDD before writing catches clashes early (role rule, damage types, projectiles); off-role branches need an aura or passive to cover the stat gap.
