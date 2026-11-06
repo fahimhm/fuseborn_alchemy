@@ -9,7 +9,8 @@
 | Data ID | `SO_Hero_OrcWarlock` |
 | Race (family) | Orc (Greenskin) |
 | Class | Warlock |
-| Role | Mage |
+| Initial role | Mage |
+| Branch roles | Mage (all branches) |
 | Tier | I |
 | Recipe(s) | Basic |
 | Basic rarity | Seasonal, hidden (GDD §4.2.2) |
@@ -26,21 +27,21 @@ Grum is the biggest homunculus in the guild and the quietest. He woke up, apolog
 ## 3. Combat Profile
 | Field | Value |
 |---|---|
-| Main stat | MAG |
+| Dominant principle | Sulfur |
 | Attack type | Ranged |
 | Damage type | Magic |
-| Attack range | Long |
+| Attack range | Long (7 tiles) |
 | Base attack interval | 1.8 s |
-| Move Speed | — (ranged, stays in his cell) |
+| Move Speed | — (Long range: never needs to move) |
 | Targeting | Largest group (middle row) → Front-most |
 | Recommended row | Back |
 
 ## 4. Stats
 | | Base (Lv. 1) | Growth / level |
 |---|---|---|
-| STR | 16 | 1.8 |
-| AGI | 10 | 1.0 |
-| MAG | 24 | 2.8 |
+| Salt | 16 | 1.8 |
+| Mercury | 10 | 1.0 |
+| Sulfur | 24 | 2.8 |
 
 Budget: base 50 (46–54 ✔), growth 5.6 (5.0–6.0 ✔).
 
@@ -51,48 +52,48 @@ Budget: base 50 (46–54 ✔), growth 5.6 (5.0–6.0 ✔).
 | Base DEF / RES | 2 / 2 |
 | Base mana | 90 |
 
-**Derived** (GDD §6.9 rates, no gear):
+**Derived** (GDD §6.9 rates incl. Resonance, no gear):
 | Stat | Lv. 1 | Lv. 30 |
 |---|---|---|
 | HP / HP regen | 520 / 1.6 per s | 1,564 / 6.8 per s |
-| Mana / mana regen | 378 / 1.20 per s | 1,352 / 5.26 per s |
+| Mana / mana regen | 407 / 1.32 per s | 1,479 / 5.79 per s |
 | Attack damage | 46 | 127 |
 | DEF (reduction) | 3.5 (17%) | 7.8 (32%) |
-| RES (reduction) | 5.6 (25%) | 17.8 (52%) |
+| RES (reduction) | 6.0 (26%) | 19.4 (54%) |
 | Attacks per second | 0.61 | 0.77 |
 
 ## 5. Skill Tree
-Skill points: 1 per hero level. Every skill has 5 levels: core + one branch = 6 × 5 = 30 points, all spent at Lv. 30. Statuses: GDD §6.10.
+Skill points: 1 per hero level, spent on any open skill. Every skill has 5 levels; a skill's level can't exceed hero level ÷ 2, rounded up. Core skills are all open from Lv. 1; the branch opens at **hero Lv. 10** with all 3 of its skills open (GDD §4.6.4). Core + one branch = 6 × 5 = 30 points, all spent at Lv. 30. Statuses: GDD §6.10.
 
 **Core**
 | # | Skill | Unlock | Mana / CD | Target / area | Effect (Lv. 1 / 2 / 3 / 4 / 5) |
 |---|---|---|---|---|---|
-| A1 | **Hex Bolt** | Start | 60 / 8 s | Current target | 90 / 140 / 190 / 240 / 290 magic damage |
-| A2 | **Weakening Hex** | A1 Lv. 2 | 80 / 16 s | Current target | Weaken: the target deals −15 / 20 / 25 / 30 / 35% damage for 4 s |
-| P0 | **Bookworm** (core passive) | Start | — | Self | +4 / 8 / 12 / 16 / 20% mana regen |
+| A1 | **Hex Bolt** | Lv. 1 | 60 / 8 s | Current target | 90 / 140 / 190 / 240 / 290 magic damage |
+| A2 | **Weakening Hex** | Lv. 1 | 80 / 16 s | Current target | Weaken: the target deals −15 / 20 / 25 / 30 / 35% damage for 4 s |
+| P0 | **Bookworm** (core passive) | Lv. 1 | — | Self | +4 / 8 / 12 / 16 / 20% mana regen |
 
-**Branch point:** after A2 Lv. 2. **3 branches**, permanent choice: three ways to use the dark being's gift. He stays a Mage.
+**Branch point:** hero Lv. 10. **3 branches**, permanent choice: three ways to use the dark being's gift. He stays a Mage.
 
-**B1 · Soul Reaper** — sustain battle-mage: the longer the fight lasts, the harder he is to kill.
+**B1 · Soul Reaper** (role: Mage) — sustain battle-mage: the longer the fight lasts, the harder he is to kill. Overtime (GDD §6.12) halves his healing in the last 15 s; intended.
 | # | Skill | Unlock | Mana / CD | Target / area | Effect (Lv. 1 / 2 / 3 / 4 / 5) |
 |---|---|---|---|---|---|
-| B1a | **Soul Tether** | Branch chosen | 90 / 16 s | Current target | Tether for 5 s: drains 20 / 30 / 40 / 50 / 60 magic damage per s and heals Grum for all of it; **steals 5 / 7.5 / 10 / 12.5 / 15% Evasion** (the target loses it, Grum gains it even with no Evasion of his own; 40% cap) |
-| B1b | **Drain Life** | B1a Lv. 2 | 90 / 14 s | Current target | 80 / 125 / 170 / 215 / 260 magic damage; heals Grum for 50% of it |
-| B1p | **Undying Hunger** | B1b Lv. 2 | — | Self | Every 5 s in battle: +2 / 3 / 4 / 5 / 6 DEF and RES, stacks up to 5 times |
+| B1a | **Soul Tether** | Branch (Lv. 10) | 90 / 16 s | Current target | Tether for 5 s: drains 20 / 30 / 40 / 50 / 60 magic damage per s and heals Grum for all of it; **steals 5 / 7.5 / 10 / 12.5 / 15% Evasion** (the target loses it, Grum gains it even with no Evasion of his own; 40% cap) |
+| B1b | **Drain Life** | Branch (Lv. 10) | 90 / 14 s | Current target | 80 / 125 / 170 / 215 / 260 magic damage; heals Grum for 50% of it |
+| B1p | **Undying Hunger** | Branch (Lv. 10) | — | Self | Every 3 s in battle: +1 / 1.5 / 2 / 2.5 / 3 DEF and RES, stacks up to 5 times (full at 15 s) |
 
-**B2 · Demonology** — pacts with minions. Summon rules: GDD §6.11 (max 2 minions, shared by both skills).
+**B2 · Demonology** (role: Mage) — pacts with minions. Summon rules: GDD §6.11 (max 2 minions, shared by both skills).
 | # | Skill | Unlock | Mana / CD | Target / area | Effect (Lv. 1 / 2 / 3 / 4 / 5) |
 |---|---|---|---|---|---|
-| B2a | **Summon Imp** | Branch chosen | 100 / 20 s | Empty ally cell | Ranged imp: HP 200 / 300 / 400 / 500 / 600; 20 / 30 / 40 / 50 / 60 magic damage every 1.5 s |
-| B2b | **Summon Brute** | B2a Lv. 2 | 140 / 30 s | Empty ally cell | Melee brute: HP 400 / 600 / 800 / 1,000 / 1,200, DEF 6; 30 / 40 / 50 / 60 / 70 physical damage every 2 s; **Taunts** for 2 s when it appears |
-| B2p | **Dark Command** | B2b Lv. 2 | — | His minions | +10 / 15 / 20 / 25 / 30% HP and damage |
+| B2a | **Summon Imp** | Branch (Lv. 10) | 100 / 20 s | Empty ally tile (GDD §6.11) | Ranged imp, **Medium range (5 tiles)**: HP 200 / 300 / 400 / 500 / 600; 20 / 30 / 40 / 50 / 60 magic damage every 1.5 s |
+| B2b | **Summon Brute** | Branch (Lv. 10) | 140 / 30 s | Empty ally tile (GDD §6.11) | Melee brute, **Melee (1 tile), Move Speed 280**: HP 400 / 600 / 800 / 1,000 / 1,200, DEF 6; 30 / 40 / 50 / 60 / 70 physical damage every 2 s; **Taunts** for 2 s when it appears |
+| B2p | **Dark Command** | Branch (Lv. 10) | — | His minions | +10 / 15 / 20 / 25 / 30% HP and damage |
 
-**B3 · Corruptor** — spreading curses (GDD §6.10 Curse: jumps on death).
+**B3 · Corruptor** (role: Mage) — spreading curses (GDD §6.10 Curse: jumps on death).
 | # | Skill | Unlock | Mana / CD | Target / area | Effect (Lv. 1 / 2 / 3 / 4 / 5) |
 |---|---|---|---|---|---|
-| B3a | **Spreading Curse** | Branch chosen | 100 / 18 s | Target + neighboring cells (up, down, left, right) | **Curse** 6 s, 20 / 27.5 / 35 / 42.5 / 50 magic damage per s |
-| B3b | **Blight Wave** | B3a Lv. 2 | 110 / 20 s | Front-most enemy row | **Curse** 4 s, 15 / 20 / 25 / 30 / 35 magic damage per s |
-| B3p | **Lingering Curse** | B3b Lv. 2 | — | Self | His Curses last +20 / 25 / 30 / 35 / 40% longer |
+| B3a | **Spreading Curse** | Branch (Lv. 10) | 100 / 18 s | The target and every enemy within 1 tile of it | **Curse** 6 s, 20 / 27.5 / 35 / 42.5 / 50 magic damage per s |
+| B3b | **Blight Wave** | Branch (Lv. 10) | 110 / 20 s | Front-most enemy row | **Curse** 4 s, 15 / 20 / 25 / 30 / 35 magic damage per s |
+| B3p | **Lingering Curse** | Branch (Lv. 10) | — | Self | His Curses last +20 / 25 / 30 / 35 / 40% longer |
 
 **Scroll skill tags:** Magic, Control, Sustain.
 

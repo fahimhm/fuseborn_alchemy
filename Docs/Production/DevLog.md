@@ -4,6 +4,28 @@ Short dated entries: what was done, what was learned, what's next. Newest at the
 
 ---
 
+## 2026-11-06
+**Done:** GDD v0.34: statuses Blind, Stealth, Slow; soft vs hard control; pre-placed skills; crit damage bonus rule. Snick reworked (branch `snick_goblin_rogue`): failed-elf backstory with a hare's soul; rogue core (Pocket Sand, Nimble Escape, Opportunist); B1 Shadow Assassin, B2 Trapmaster (Assassin), B3 Goblin Sapper (off-role Mage). New `SkillBank.md` for unused skills. Lore: the Alchemist is not always good.
+**Next:** Elsie rework (on the user's MacBook); Tier II homunculi.
+
+## 2026-11-05 (3)
+**Done:** Wren and Grum reviewed against GDD v0.33. Wren: Bramble Rain keeps 2 rows, damage halved (branch `wren_elf_archer`). Grum: Undying Hunger faster but weaker per stack, minion ranges, Spreading Curse wording (branch `grum_orc_warlock`).
+**Next:** Elsie's branch roles; Snick (needs a leap/dash to reach the back line).
+
+## 2026-11-05 (2)
+**Done:** Tobin reviewed against GDD v0.33 (branch `tobin_human_knight`): B1 Bludgeon is now an off-role Warrior branch; Wall is a shared shield. Tank DEF gap closed: effective HP shows Tobin ~2× tougher than Wren/Snick.
+**Next:** Wren (Bramble Rain vs Mage core tool), then Grum.
+
+## 2026-11-05
+**Done:** GDD v0.33. Board 3 × 8 with square tiles for placement and range, free movement, crowding rules; battle results with time limits, Unstable Reaction overtime, HP % and stars (§6.12). Tower objective parked. Homunculus ranges in tiles.
+**Learned:** Tiles work for placement and range but not as movement rails; a narrow board needs "allies don't block allies".
+**Next:** Elsie's branch roles; Tank DEF gap (Wren/Snick 54% vs Tobin 57%); Snick needs a leap/dash to reach the back line; prototype check of fight length (~25–45 s).
+
+## 2026-11-04 (2)
+**Done:** GDD v0.32 on branch `main_rule_review`. Roles are labels with a core tool; branches declare their role (lore-limited, one keeps the initial role). STR/AGI/MAG renamed to Salt/Mercury/Sulfur with a designer-set dominant principle and Resonance (+10%); growth rules; DEF growth per homunculus. Principles added to Lore.md. All 5 homunculi updated and their derived stats recomputed (formula checked against all old values first).
+**Learned:** Mercury Resonance raises Wren's and Snick's DEF to 54% at Lv. 30, closer to Tobin's 57%.
+**Next:** Board & range design (§13 #38); Elsie's branch roles; check the Tank DEF gap.
+
 ## 2026-11-04
 **Done:** Lore: reincarnated souls (temperament, never memories); the dark being in the library's hex book, paid in donuts. GDD: Curse status (§6.10), Summons (§6.11). Grum reworked: reincarnated child's soul, oath, 3 branches (Soul Reaper, Demonology, Corruptor).
 **Next:** Elsie (Angel – Priest) and Snick (Goblin – Rogue) against the new tone; Tier II heroes.

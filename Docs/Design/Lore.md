@@ -10,6 +10,8 @@ The **Great Codex** records every known reaction. Whoever discovers a new reacti
 ## The Player
 You lead a newly founded **alchemy guild** *(name chosen by the player)*. You start with a handful of homunculi and a pile of junk. Your goal is to grow into the most famous guild in the Codex by recruiting, reacting and discovering.
 
+**The Alchemist is not always good.** The player experiments to strengthen the guild against Runoffs and rival Alchemists, and controls each homunculus in whatever way works on it: a curse (Wren), harsh "fixing" (Snick), a father's hand (Tobin).
+
 ## Tone
 **Hopeful, with weight.** Alchemy has a price, and the alchemist pays it. The player is the guild master and the alchemist: every experiment and reaction is the player's own, and so is every risk. Each reaction sends its reagents' souls back to nature; a new homunculus may draw a fresh soul, or none. Souled homunculi have their own will and don't always obey. Humor stays in item flavor, the goblins' antics and some personalities, but not every homunculus's story is light. Tone can vary per homunculus.
 
@@ -18,6 +20,8 @@ You lead a newly founded **alchemy guild** *(name chosen by the player)*. You st
 |---|---|---|
 | **Reaction** | Two things combining into a new one; both are used up | Fusion |
 | **Homunculus** | A living alchemical being created by a guild. Homunculi take the forms of Alembria's peoples (Elf, Orc, Golem…) and each has its own personality. Any one can become great. | Heroes; tier ≠ power |
+| **Principles** (Salt, Mercury, Sulfur) | Everything in Alembria is made of three principles in different proportions: **Salt** (body), **Mercury** (fluidity), **Sulfur** (fire and spirit). A reaction between two reagents rebalances their principles into a new whole, and the new balance can't be predicted from the ingredients. A homunculus's **dominant principle** is set at its creation. Old alchemists knew only Sulfur and Mercury, the pair that reacts; Salt, the body that holds them, came later | Attributes (GDD §4.6.2) |
+| **Unstable Reaction** | Every battle is fueled by a reaction between the two guilds' homunculi; the longer it runs, the more unstable it grows: blows hit harder, healing fails | Overtime (GDD §6.12) |
 | **Soul** | Drawn from nature by some homunculi at birth (often tied to their race), giving them will and instinct. Soulless ones (e.g. golems, slimes) simply follow. Returns to nature when the homunculus is used in a reaction; the new homunculus does not inherit it. Nature recycles souls: a homunculus may draw a **reincarnated** soul, which keeps only a **temperament** from its past life, never memories (e.g. Grum's curiosity). **Lore only for now**; open to affecting mechanics later (GDD §13) | — (lore only) |
 | **Dark being** | An old power that lives inside a hex book in the guild library. It grants dark energy through an **oath**, and asks for absurd payments in return (Grum's: a lot of donuts). What else it wants is an open story hook | Warlock lore (Grum) |
 | **Innate trait** | The random gift a homunculus wakes up with; no two are the same | Unique skill roll |

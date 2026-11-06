@@ -9,7 +9,8 @@
 | Data ID | `SO_Hero_AngelPriest` |
 | Race (family) | Angel (Celestial) |
 | Class | Priest |
-| Role | Support |
+| Initial role | Support |
+| Branch roles | Support (branch roles: in rework, see branch `elsie_angel_priest`) |
 | Tier | I |
 | Recipe(s) | Basic |
 | Basic rarity | Seasonal, hidden (GDD §4.2.2) |
@@ -23,21 +24,21 @@ Elsie woke up with a pair of white wings and immediately fell off the workbench.
 ## 3. Combat Profile
 | Field | Value |
 |---|---|
-| Main stat | MAG |
+| Dominant principle | Sulfur |
 | Attack type | Ranged |
 | Damage type | Magic |
-| Attack range | Long |
+| Attack range | Long (7 tiles) |
 | Base attack interval | 1.8 s |
-| Move Speed | — (ranged, stays in her cell) |
+| Move Speed | — (Long range: never needs to move) |
 | Targeting | Basic hits: Front-most → Random. Heals: lowest-HP ally |
 | Recommended row | Back |
 
 ## 4. Stats
 | | Base (Lv. 1) | Growth / level |
 |---|---|---|
-| STR | 12 | 1.2 |
-| AGI | 12 | 1.2 |
-| MAG | 26 | 3.2 |
+| Salt | 12 | 1.2 |
+| Mercury | 12 | 1.2 |
+| Sulfur | 26 | 3.2 |
 
 Budget: base 50 (46–54 ✔), growth 5.6 (5.0–6.0 ✔).
 
@@ -48,14 +49,14 @@ Budget: base 50 (46–54 ✔), growth 5.6 (5.0–6.0 ✔).
 | Base DEF / RES | 1 / 2 |
 | Base mana | 100 |
 
-**Derived** (GDD §6.9 rates, no gear):
+**Derived** (GDD §6.9 rates incl. Resonance, no gear):
 | Stat | Lv. 1 | Lv. 30 |
 |---|---|---|
 | HP / HP regen | 410 / 1.2 per s | 1,106 / 4.7 per s |
-| Mana / mana regen | 412 / 1.30 per s | 1,526 / 5.94 per s |
+| Mana / mana regen | 443 / 1.43 per s | 1,668 / 6.53 per s |
 | Attack damage | 46 | 139 |
 | DEF (reduction) | 2.8 (14%) | 8.0 (32%) |
-| RES (reduction) | 5.9 (26%) | 19.8 (54%) |
+| RES (reduction) | 6.3 (27%) | 21.6 (56%) |
 | Attacks per second | 0.62 | 0.82 |
 
 ## 5. Skill Tree
