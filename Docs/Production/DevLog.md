@@ -4,6 +4,10 @@ Short dated entries: what was done, what was learned, what's next. Newest at the
 
 ---
 
+## 2026-11-06
+**Done:** GDD v0.34: statuses Blind, Stealth, Slow; soft vs hard control; pre-placed skills; crit damage bonus rule. Snick reworked (branch `snick_goblin_rogue`): failed-elf backstory with a hare's soul; rogue core (Pocket Sand, Nimble Escape, Opportunist); B1 Shadow Assassin, B2 Trapmaster (Assassin), B3 Goblin Sapper (off-role Mage). New `SkillBank.md` for unused skills. Lore: the Alchemist is not always good.
+**Next:** Elsie rework (on the user's MacBook); Tier II homunculi.
+
 ## 2026-11-05 (3)
 **Done:** Wren and Grum reviewed against GDD v0.33. Wren: Bramble Rain keeps 2 rows, damage halved (branch `wren_elf_archer`). Grum: Undying Hunger faster but weaker per stack, minion ranges, Spreading Curse wording (branch `grum_orc_warlock`).
 **Next:** Elsie's branch roles; Snick (needs a leap/dash to reach the back line).

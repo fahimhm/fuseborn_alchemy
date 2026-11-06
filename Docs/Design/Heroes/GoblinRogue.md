@@ -1,6 +1,6 @@
 # Snick · Goblin – Rogue
 
-**Status:** Draft (rework in progress: new core done; branches pending from the user, B1 = Assassin)
+**Status:** Draft (for review)
 
 ## 1. Identity
 | Field | Value |
@@ -10,7 +10,7 @@
 | Race (family) | Goblin (Greenskin) |
 | Class | Rogue |
 | Initial role | Assassin |
-| Branch roles | Assassin (all branches) |
+| Branch roles | B1 Shadow Assassin: Assassin · B2 Trapmaster: Assassin · B3 Goblin Sapper: **Mage** (off-role) |
 | Tier | I |
 | Recipe(s) | Basic |
 | Basic rarity | Seasonal, hidden (GDD §4.2.2) |
@@ -72,7 +72,7 @@ Skill points: 1 per hero level. Every skill has 5 levels: core + one branch = 6 
 | A2 | **Nimble Escape** | A1 Lv. 2 | 40 / 14 s | Self | Instantly breaks all **soft control** on himself (GDD §6.10); +20 / 25 / 30 / 35 / 40% Move Speed for 3 s |
 | P0 | **Opportunist** (core passive) | Start | — | Self | +4 / 8 / 12 / 16 / 20% damage to enemies that are controlled, Blinded or taking damage over time |
 
-**Branch point:** after A1 Lv. 2 (A2 and the branch open at the same time). Permanent choice; he stays an Assassin.
+**Branch point:** after A1 Lv. 2 (A2 and the branch open at the same time). **3 branches**, permanent choice: B1 Shadow Assassin and B2 Trapmaster keep him an Assassin; B3 Goblin Sapper makes him a Mage (off-role).
 
 **B1 · Shadow Assassin** (role: Assassin) — the dive to the back line: vanish, reappear, strike.
 | # | Skill | Unlock | Mana / CD | Target / area | Effect (Lv. 1 / 2 / 3 / 4 / 5) |
@@ -90,12 +90,12 @@ Skill points: 1 per hero level. Every skill has 5 levels: core + one branch = 6 
 
 **In-battle trap placement:** in the path of the nearest enemy moving toward his side; if none is moving, just in front of his own front row. Traps don't hit enemies that never move (Long range): that's their counter.
 
-**B3 · Dirty Fighter** — rusty, sneaky and proud of it.
-| # | Skill | Unlock | Mana / CD | Target / area | Effect |
+**B3 · Goblin Sapper** (role: **Mage**, off-role) — high risk, high reward (Techies style): trades stealth for volatile area explosions. Area damage stays below Mage specialists (GDD §6.3). Explosions are physical; the fire is visual.
+| # | Skill | Unlock | Mana / CD | Target / area | Effect (Lv. 1 / 2 / 3 / 4 / 5) |
 |---|---|---|---|---|---|
-| B3a | **Rusty Shiv** | Branch chosen | 60 / 10 s | Current target | 40 / 60 / 80 / 100 / 120 physical damage + Bleed 20 / 30 / 40 / 50 / 60 per second for 4 s |
-| B3b | **Gutter Bomb** | B3a Lv. 2 | 90 / 18 s | Back enemy row | 60 / 95 / 130 / 165 / 200 physical damage + Stagger |
-| B3p | **Dirty Tricks** | B3b Lv. 2 | — | Self | +4 / 8 / 12 / 16 / 20% damage to enemies with any status |
+| B3a | **Black Powder Grenade** | Branch chosen | 90 / 16 s | The target and every enemy within 1 tile | 60 / 95 / 130 / 165 / 200 physical damage + **Knockback** on everyone hit |
+| B3b | **Kamikaze Dash** | B3a Lv. 2 | 120 / 24 s | Front-most enemy; enemies within 1 tile of the blast | Straps on a lit fuse and charges: 100 / 150 / 200 / 250 / 300 physical damage. **Costs him 15% of his max HP; if his HP is at or below the cost, the blast knocks him out.** Afterwards he is thrown 2 tiles back toward his side. AI-controlled Snick (PvP defense) never casts it when it would knock him out |
+| B3p | **Blast Shielding** | B3b Lv. 2 | — | Self | Self-damage from his skills −10 / 20 / 30 / 40 / 50%; 2 / 4 / 6 / 8 / 10% of his explosive damage dealt becomes a shield on himself for 4 s |
 
 **Scroll skill tags:** Physical, Crit, Speed.
 
@@ -120,9 +120,9 @@ Skill points: 1 per hero level. Every skill has 5 levels: core + one branch = 6 
 | Weapon held | A chipped short blade held backwards; a worn sand pouch at his hip |
 | Card illustration | Mid-escape through a workshop doorway, a handful of sand flying behind him, ears flat |
 | Battle views | Front ¾ and back ¾. Back view shows the sand pouch and ears |
-| Animations | Idle (ears twitching, glancing over his shoulder), run (crouched), stab, Backstab (vanishing dash), Pocket Sand (throw), hit, KO (curls up small), victory (a quick, relieved breath; checks his pouch). Branches: B1 Backstab lunge, Shadow Stalker fade and reappear; B2 kneels to set a trap, scatters caltrops; B3 shiv + bomb throw |
+| Animations | Idle (ears twitching, glancing over his shoulder), run (crouched), stab, Backstab (vanishing dash), Pocket Sand (throw), hit, KO (curls up small), victory (a quick, relieved breath; checks his pouch). Branches: B1 Backstab lunge, Shadow Stalker fade and reappear; B2 kneels to set a trap, scatters caltrops; B3 bomb throw, lit-fuse charge and blast-back tumble |
 | Branch props | B1 a dark hood and a thin black dagger; B2 a hooked wire knife, a coil of wire and a pouch of trap parts (still melee); B3 a bandolier of junk bombs |
-| VFX per skill | Pocket Sand: sand puff; Nimble Escape: dust kick; Backstab: shadow streak; Shadow Stalker: fade + reappear shimmer; Caltrops & Wire: scattered spikes; Snare Trap: hidden glint, then snapping jaws; Rusty Shiv: dripping red ticks; Gutter Bomb: clattering blast |
+| VFX per skill | Pocket Sand: sand puff; Nimble Escape: dust kick; Backstab: shadow streak; Shadow Stalker: fade + reappear shimmer; Caltrops & Wire: scattered spikes; Snare Trap: hidden glint, then snapping jaws; Black Powder Grenade: smoky fire blast; Kamikaze Dash: fuse sparks trail, big explosion |
 | SFX / voice notes | Quick light footsteps; a sharp nervous laugh; a hiss of sand |
 | References | TBD (moodboard) |
 | Avoid | Anything that looks like an existing game's character |
