@@ -68,18 +68,18 @@ Rules: GDD §4.6.4. Skill points: 1 per hero level (30 at cap). Unlocks depend o
 **Core** (every skill 5 levels; passives: Lv. 5 = the intended max)
 | # | Skill | Unlock | Mana / CD | Target / area | Effect (Lv. 1 / 2 / 3 / 4 / 5) |
 |---|---|---|---|---|---|
-| A1 | | Start | | | |
-| A2 | | A1 Lv. 2 | | | |
-| P0 | (core passive) | Start | — | | |
+| A1 | | Lv. 1 | | | |
+| A2 | | Lv. 1 | | | |
+| P0 | (core passive) | Lv. 1 | — | | |
 
-**Branch point:** after A1 Lv. 2 / after A2 Lv. 2 (pick one). **Branches: 1 / 2 / 3** (pick to fit the lore; delete unused branch tables). With 2–3, choosing a branch is **permanent**; with 1, it opens automatically. Role stays the same in every branch.
+**Branch point:** hero Lv. 10 (all heroes). **Branches: 1 / 2 / 3** (pick to fit the lore; delete unused branch tables). With 2–3, choosing a branch is **permanent**; with 1, it opens automatically. Role stays the same in every branch.
 
 **B1 · [Branch name]** (style in one line)
 | # | Skill | Unlock | Mana / CD | Target / area | Effect (Lv. 1 / 2 / 3 / 4 / 5) |
 |---|---|---|---|---|---|
-| B1a | | Branch chosen | | | |
-| B1b | | B1a Lv. 2 | | | |
-| B1p | (passive) | B1b Lv. 2 | — | | |
+| B1a | | Branch (Lv. 10) | | | |
+| B1b | | Branch (Lv. 10) | | | |
+| B1p | (passive) | Branch (Lv. 10) | — | | |
 
 **B2 · [Branch name]** and **B3 · [Branch name]**: same table.
 

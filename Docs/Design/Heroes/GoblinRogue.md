@@ -63,39 +63,39 @@ Budget: base 50 (46–54 ✔), growth 5.6 (5.0–6.0 ✔).
 | Attacks per second | 0.86 | 1.50 |
 
 ## 5. Skill Tree
-Skill points: 1 per hero level. Every skill has 5 levels: core + one branch = 6 × 5 = 30 points, all spent at Lv. 30. Statuses: GDD §6.10.
+Skill points: 1 per hero level, spent on any open skill. Every skill has 5 levels; a skill's level can't exceed hero level ÷ 2, rounded up. Core skills are all open from Lv. 1; the branch opens at **hero Lv. 10** with all 3 of its skills open (GDD §4.6.4). Core + one branch = 6 × 5 = 30 points, all spent at Lv. 30. Statuses: GDD §6.10.
 
 **Core** — rogue skills: blind and slip away. The dive to the back line comes from the Assassin branch (B1).
 | # | Skill | Unlock | Mana / CD | Target / area | Effect (Lv. 1 / 2 / 3 / 4 / 5) |
 |---|---|---|---|---|---|
-| A1 | **Pocket Sand** | Start | 50 / 12 s | Current target | Sand in the eyes: 30 / 45 / 60 / 75 / 90 physical damage + **Blind** 1.5 / 1.75 / 2 / 2.25 / 2.5 s |
-| A2 | **Nimble Escape** | A1 Lv. 2 | 40 / 14 s | Self | Instantly breaks all **soft control** on himself (GDD §6.10); +20 / 25 / 30 / 35 / 40% Move Speed for 3 s |
-| P0 | **Opportunist** (core passive) | Start | — | Self | +4 / 8 / 12 / 16 / 20% damage to enemies that are controlled, Blinded or taking damage over time |
+| A1 | **Pocket Sand** | Lv. 1 | 50 / 12 s | Current target | Sand in the eyes: 30 / 45 / 60 / 75 / 90 physical damage + **Blind** 1.5 / 1.75 / 2 / 2.25 / 2.5 s |
+| A2 | **Nimble Escape** | Lv. 1 | 40 / 14 s | Self | Instantly breaks all **soft control** on himself (GDD §6.10); +20 / 25 / 30 / 35 / 40% Move Speed for 3 s |
+| P0 | **Opportunist** (core passive) | Lv. 1 | — | Self | +4 / 8 / 12 / 16 / 20% damage to enemies that are controlled, Blinded or taking damage over time |
 
-**Branch point:** after A1 Lv. 2 (A2 and the branch open at the same time). **3 branches**, permanent choice: B1 Shadow Assassin and B2 Trapmaster keep him an Assassin; B3 Goblin Sapper makes him a Mage (off-role).
+**Branch point:** hero Lv. 10. **3 branches**, permanent choice: B1 Shadow Assassin and B2 Trapmaster keep him an Assassin; B3 Goblin Sapper makes him a Mage (off-role).
 
 **B1 · Shadow Assassin** (role: Assassin) — the dive to the back line: vanish, reappear, strike.
 | # | Skill | Unlock | Mana / CD | Target / area | Effect (Lv. 1 / 2 / 3 / 4 / 5) |
 |---|---|---|---|---|---|
-| B1a | **Backstab** | Branch chosen | 70 / 12 s | Back-line enemy | Lunges behind them: 120 / 190 / 260 / 330 / 400 physical damage; **guaranteed crit if cast from Stealth** |
-| B1b | **Shadow Stalker** | B1a Lv. 2 | 60 / 16 s | Self | Instantly gains **Stealth** for 1.5 / 2 / 2.5 / 3 / 3.5 s, then reappears on a random tile next to an enemy in their back half |
-| B1p | **Lethal Precision** | B1b Lv. 2 | — | Self | +10 / 15 / 20 / 25 / 30% crit damage on hits made from Stealth |
+| B1a | **Backstab** | Branch (Lv. 10) | 70 / 12 s | Back-line enemy | Lunges behind them: 120 / 190 / 260 / 330 / 400 physical damage; **guaranteed crit if cast from Stealth** |
+| B1b | **Shadow Stalker** | Branch (Lv. 10) | 60 / 16 s | Self | Instantly gains **Stealth** for 1.5 / 2 / 2.5 / 3 / 3.5 s, then reappears on a random tile next to an enemy in their back half |
+| B1p | **Lethal Precision** | Branch (Lv. 10) | — | Self | +10 / 15 / 20 / 25 / 30% crit damage on hits made from Stealth |
 
 **B2 · Trapmaster** (role: Assassin) — traps set up his own kills (Templar Assassin style): he lays them, then strikes what they catch.
 | # | Skill | Unlock | Mana / CD | Target / area | Effect (Lv. 1 / 2 / 3 / 4 / 5) |
 |---|---|---|---|---|---|
-| B2a | **Caltrops & Wire** | Branch chosen | 80 / 18 s | A strip across all 3 lanes (placement rule below) | Field lasts 6 s: **Slow** 20 / 25 / 30 / 35 / 40%; Bleed 10 / 15 / 20 / 25 / 30 per second while an enemy moves inside it |
-| B2b | **Snare Trap** | B2a Lv. 2 | 70 / 16 s | 1 tile (placement rule below) | Invisible. The first enemy to step on it gets **Ensnare** 1.5 / 1.75 / 2 / 2.25 / 2.5 s and takes +10 / 15 / 20 / 25 / 30% damage from all sources while rooted. Max **1 active** (2 with Scavenger's Prep Lv. 3+). Lasts until triggered or 15 s. **Pre-placed** (GDD §6.2): the first Snare Trap is placed by the player before battle, free, and lasts until triggered |
-| B2p | **Scavenger's Prep** | B2b Lv. 2 | — | Self | Trap cooldowns −4 / 8 / 12 / 16 / 20%; from Lv. 3, a 2nd Snare Trap can be active |
+| B2a | **Caltrops & Wire** | Branch (Lv. 10) | 80 / 18 s | A strip across all 3 lanes (placement rule below) | Field lasts 6 s: **Slow** 20 / 25 / 30 / 35 / 40%; Bleed 10 / 15 / 20 / 25 / 30 per second while an enemy moves inside it |
+| B2b | **Snare Trap** | Branch (Lv. 10) | 70 / 16 s | 1 tile (placement rule below) | Invisible. The first enemy to step on it gets **Ensnare** 1.5 / 1.75 / 2 / 2.25 / 2.5 s and takes +10 / 15 / 20 / 25 / 30% damage from all sources while rooted. Max **1 active** (2 with Scavenger's Prep Lv. 3+). Lasts until triggered or 15 s. **Pre-placed** (GDD §6.2): the first Snare Trap is placed by the player before battle, free, and lasts until triggered |
+| B2p | **Scavenger's Prep** | Branch (Lv. 10) | — | Self | Trap cooldowns −4 / 8 / 12 / 16 / 20%; from Lv. 3, a 2nd Snare Trap can be active |
 
 **In-battle trap placement:** in the path of the nearest enemy moving toward his side; if none is moving, just in front of his own front row. Traps don't hit enemies that never move (Long range): that's their counter.
 
 **B3 · Goblin Sapper** (role: **Mage**, off-role) — high risk, high reward (Techies style): trades stealth for volatile area explosions. Area damage stays below Mage specialists (GDD §6.3). Explosions are physical; the fire is visual.
 | # | Skill | Unlock | Mana / CD | Target / area | Effect (Lv. 1 / 2 / 3 / 4 / 5) |
 |---|---|---|---|---|---|
-| B3a | **Black Powder Grenade** | Branch chosen | 90 / 16 s | The target and every enemy within 1 tile | 60 / 95 / 130 / 165 / 200 physical damage + **Knockback** on everyone hit |
-| B3b | **Kamikaze Dash** | B3a Lv. 2 | 120 / 24 s | Front-most enemy; enemies within 1 tile of the blast | Straps on a lit fuse and charges: 100 / 150 / 200 / 250 / 300 physical damage. **Costs him 15% of his max HP; if his HP is at or below the cost, the blast knocks him out.** Afterwards he is thrown 2 tiles back toward his side. AI-controlled Snick (PvP defense) never casts it when it would knock him out |
-| B3p | **Blast Shielding** | B3b Lv. 2 | — | Self | Self-damage from his skills −10 / 20 / 30 / 40 / 50%; 2 / 4 / 6 / 8 / 10% of his explosive damage dealt becomes a shield on himself for 4 s |
+| B3a | **Black Powder Grenade** | Branch (Lv. 10) | 90 / 16 s | The target and every enemy within 1 tile | 60 / 95 / 130 / 165 / 200 physical damage + **Knockback** on everyone hit |
+| B3b | **Kamikaze Dash** | Branch (Lv. 10) | 120 / 24 s | Front-most enemy; enemies within 1 tile of the blast | Straps on a lit fuse and charges: 100 / 150 / 200 / 250 / 300 physical damage. **Costs him 15% of his max HP; if his HP is at or below the cost, the blast knocks him out.** Afterwards he is thrown 2 tiles back toward his side. AI-controlled Snick (PvP defense) never casts it when it would knock him out |
+| B3p | **Blast Shielding** | Branch (Lv. 10) | — | Self | Self-damage from his skills −10 / 20 / 30 / 40 / 50%; 2 / 4 / 6 / 8 / 10% of his explosive damage dealt becomes a shield on himself for 4 s |
 
 **Scroll skill tags:** Physical, Crit, Speed.
 

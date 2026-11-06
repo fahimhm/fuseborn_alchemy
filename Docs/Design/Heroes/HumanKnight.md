@@ -61,37 +61,37 @@ Budget: base 50 (46–54 ✔), growth 5.6 (5.0–6.0 ✔).
 | Attacks per second | 0.66 | 0.86 |
 
 ## 5. Skill Tree
-Skill points: 1 per hero level. Every skill has 5 levels: core + one branch = 6 × 5 = 30 points, all spent at Lv. 30. Statuses: GDD §6.10.
+Skill points: 1 per hero level, spent on any open skill. Every skill has 5 levels; a skill's level can't exceed hero level ÷ 2, rounded up. Core skills are all open from Lv. 1; the branch opens at **hero Lv. 10** with all 3 of its skills open (GDD §4.6.4). Core + one branch = 6 × 5 = 30 points, all spent at Lv. 30. Statuses: GDD §6.10.
 
 **Core**
 | # | Skill | Unlock | Mana / CD | Target / area | Effect (Lv. 1 / 2 / 3 / 4 / 5) |
 |---|---|---|---|---|---|
-| A1 | **Shield Bash** | Start | 60 / 12 s | Current target | Hits with the pot lid: 60 / 100 / 140 / 180 / 220 physical damage, Stun 1.0 / 1.25 / 1.5 / 1.75 / 2.0 s |
-| A2 | **Panicked Shout** | A1 Lv. 2 | 80 / 18 s | Front-most enemy row | Yells in panic; enemies turn to him. Taunt 2 / 2.5 / 3 / 3.5 / 4 s; +4 / 6 / 8 / 10 / 12 DEF while it lasts |
-| P0 | **Pot-Lid Guard** (core passive) | Start | — | Self | 4 / 6 / 8 / 10 / 12% chance to block half a physical hit. At battle start he raises his shield first: Shield 60 / 80 / 100 / 120 / 140 for 3 s |
+| A1 | **Shield Bash** | Lv. 1 | 60 / 12 s | Current target | Hits with the pot lid: 60 / 100 / 140 / 180 / 220 physical damage, Stun 1.0 / 1.25 / 1.5 / 1.75 / 2.0 s |
+| A2 | **Panicked Shout** | Lv. 1 | 80 / 18 s | Front-most enemy row | Yells in panic; enemies turn to him. Taunt 2 / 2.5 / 3 / 3.5 / 4 s; +4 / 6 / 8 / 10 / 12 DEF while it lasts |
+| P0 | **Pot-Lid Guard** (core passive) | Lv. 1 | — | Self | 4 / 6 / 8 / 10 / 12% chance to block half a physical hit. At battle start he raises his shield first: Shield 60 / 80 / 100 / 120 / 140 for 3 s |
 
-**Branch point:** after A2 Lv. 2. Each branch is how Tobin finds his courage. Permanent choice. B2 and B3 keep him a Tank; **B1 makes him a Warrior** (GDD §4.6.4). In every branch he keeps Panicked Shout's Taunt, so a Warrior Tobin still protects a little (a weaker version of the Tank core tool).
+**Branch point:** hero Lv. 10. Each branch is how Tobin finds his courage. Permanent choice. B2 and B3 keep him a Tank; **B1 makes him a Warrior** (GDD §4.6.4). In every branch he keeps Panicked Shout's Taunt, so a Warrior Tobin still protects a little (a weaker version of the Tank core tool).
 
 **B1 · Bludgeon** (role: **Warrior**) — his bravery piles up until he stops hiding behind the lid and starts swinging: high mobility, staggering enemies, heavy physical damage.
 | # | Skill | Unlock | Mana / CD | Target / area | Effect |
 |---|---|---|---|---|---|
-| B1a | **Shield Charge** | Branch chosen | 90 / 14 s | Enemy in his lane | Dashes in and slams: 80 / 130 / 180 / 230 / 280 physical damage + Stagger; +20% Move Speed for 4 s |
-| B1b | **Shield Toss** | B1a Lv. 2 | 110 / 18 s | 3 enemies (bounces) | Throws the lid: 70 / 110 / 150 / 190 / 230 physical damage each. Pot-Lid Guard is off until it returns (2 s) |
-| B1p | **Heavy Lid** | B1b Lv. 2 | — | Self | +1 / 1.25 / 1.5 / 1.75 / 2 attack damage per point of DEF; +4 / 8 / 12 / 16 / 20% Move Speed |
+| B1a | **Shield Charge** | Branch (Lv. 10) | 90 / 14 s | Enemy in his lane | Dashes in and slams: 80 / 130 / 180 / 230 / 280 physical damage + Stagger; +20% Move Speed for 4 s |
+| B1b | **Shield Toss** | Branch (Lv. 10) | 110 / 18 s | 3 enemies (bounces) | Throws the lid: 70 / 110 / 150 / 190 / 230 physical damage each. Pot-Lid Guard is off until it returns (2 s) |
+| B1p | **Heavy Lid** | Branch (Lv. 10) | — | Self | +1 / 1.25 / 1.5 / 1.75 / 2 attack damage per point of DEF; +4 / 8 / 12 / 16 / 20% Move Speed |
 
 **B2 · Ultimate Protector** (role: Tank) — he gains confidence in defense.
 | # | Skill | Unlock | Mana / CD | Target / area | Effect |
 |---|---|---|---|---|---|
-| B2a | **Wall** | Branch chosen | 120 / 25 s | Allies in his lane + adjacent lanes | Plants the lid: a **shared shield** absorbs 150 / 240 / 330 / 420 / 510 damage in total for 6 s for every ally in those lanes; he can't move. **Redirection:** when it ends, 30% of the absorbed damage hits the front-most enemies |
-| B2b | **Oath Leap** | B2a Lv. 2 | 70 / 16 s | Lowest-HP ally | Leaps to them and takes all hits meant for them for 2 / 2.5 / 3 / 3.5 / 4 s |
-| B2p | **Unshaken** | B2b Lv. 2 | — | Self | Immune to knockback; status durations −10 / 20 / 30 / 40 / 50%; +4 / 5 / 6 / 7 / 8% block chance (stacks with Pot-Lid Guard, max 20%) |
+| B2a | **Wall** | Branch (Lv. 10) | 120 / 25 s | Allies in his lane + adjacent lanes | Plants the lid: a **shared shield** absorbs 150 / 240 / 330 / 420 / 510 damage in total for 6 s for every ally in those lanes; he can't move. **Redirection:** when it ends, 30% of the absorbed damage hits the front-most enemies |
+| B2b | **Oath Leap** | Branch (Lv. 10) | 70 / 16 s | Lowest-HP ally | Leaps to them and takes all hits meant for them for 2 / 2.5 / 3 / 3.5 / 4 s |
+| B2p | **Unshaken** | Branch (Lv. 10) | — | Self | Immune to knockback; status durations −10 / 20 / 30 / 40 / 50%; +4 / 5 / 6 / 7 / 8% block chance (stacks with Pot-Lid Guard, max 20%) |
 
 **B3 · Spellguard** (role: Tank) — magic infuses the shield.
 | # | Skill | Unlock | Mana / CD | Target / area | Effect |
 |---|---|---|---|---|---|
-| B3a | **Spell Mirror** | Branch chosen | 100 / 20 s | Self | For 3 s, reflects the next 1 / 1 / 2 / 2 / 3 enemy magic skills that hit him back at the caster at 50 / 60 / 70 / 80 / 90% damage |
-| B3b | **Lid Flash** | B3a Lv. 2 | 110 / 22 s | Front-most enemy row; allies in his lane | Confuse 1.5 / 2 / 2.5 / 3 / 3.5 s; heals allies in his lane for 60 / 90 / 120 / 150 / 180 |
-| B3p | **Rune-Etched Lid** | B3b Lv. 2 | — | Self | Pot-Lid Guard can also block magic hits; +3 / 4 / 5 / 6 / 7 RES |
+| B3a | **Spell Mirror** | Branch (Lv. 10) | 100 / 20 s | Self | For 3 s, reflects the next 1 / 1 / 2 / 2 / 3 enemy magic skills that hit him back at the caster at 50 / 60 / 70 / 80 / 90% damage |
+| B3b | **Lid Flash** | Branch (Lv. 10) | 110 / 22 s | Front-most enemy row; allies in his lane | Confuse 1.5 / 2 / 2.5 / 3 / 3.5 s; heals allies in his lane for 60 / 90 / 120 / 150 / 180 |
+| B3p | **Rune-Etched Lid** | Branch (Lv. 10) | — | Self | Pot-Lid Guard can also block magic hits; +3 / 4 / 5 / 6 / 7 RES |
 
 **Scroll skill tags:** Guard, Physical, Control.
 
