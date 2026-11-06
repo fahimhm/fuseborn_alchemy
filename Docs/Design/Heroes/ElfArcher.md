@@ -63,30 +63,30 @@ Budget: base 50 (46–54 ✔), growth 5.6 (5.0–6.0 ✔).
 | Attacks per second | 0.79 | 1.39 |
 
 ## 5. Skill Tree
-Skill points: 1 per hero level. Every skill has 5 levels: core + one branch = 6 × 5 = 30 points, all spent at Lv. 30. Statuses: GDD §6.10.
+Skill points: 1 per hero level, spent on any open skill. Every skill has 5 levels; a skill's level can't exceed hero level ÷ 2, rounded up. Core skills are all open from Lv. 1; the branch opens at **hero Lv. 10** with all 3 of its skills open (GDD §4.6.4). Core + one branch = 6 × 5 = 30 points, all spent at Lv. 30. Statuses: GDD §6.10.
 
 **Core**
 | # | Skill | Unlock | Mana / CD | Target / area | Effect (Lv. 1 / 2 / 3 / 4 / 5) |
 |---|---|---|---|---|---|
-| A1 | **Double Shot** | Start | 50 / 8 s | Current target | Two arrows, 40 / 65 / 90 / 115 / 140 physical damage each |
-| A2 | **Pinning Arrow** | A1 Lv. 2 | 70 / 14 s | Current target | 70 / 110 / 150 / 190 / 230 physical damage + Stagger |
-| P0 | **Forest Sense** (core passive) | Start | — | Self | +3 / 5 / 7 / 9 / 11% Crit Chance |
+| A1 | **Double Shot** | Lv. 1 | 50 / 8 s | Current target | Two arrows, 40 / 65 / 90 / 115 / 140 physical damage each |
+| A2 | **Pinning Arrow** | Lv. 1 | 70 / 14 s | Current target | 70 / 110 / 150 / 190 / 230 physical damage + Stagger |
+| P0 | **Forest Sense** (core passive) | Lv. 1 | — | Self | +3 / 5 / 7 / 9 / 11% Crit Chance |
 
-**Branch point:** after A1 Lv. 2 (A2 and the branch open at the same time). **2 branches**, permanent choice: her two answers to the curse. She stays a Ranger.
+**Branch point:** hero Lv. 10. **2 branches**, permanent choice: her two answers to the curse. She stays a Ranger.
 
 **B1 · Leashed** — she obeys, careful never to wake the mark. Precision and burst.
 | # | Skill | Unlock | Mana / CD | Target / area | Effect (Lv. 1 / 2 / 3 / 4 / 5) |
 |---|---|---|---|---|---|
-| B1a | **Aimed Shot** | Branch chosen | 100 / 18 s | Current target | Aims for 1 s, then 200 / 300 / 400 / 500 / 600 physical damage |
-| B1b | **Piercing Arrow** | B1a Lv. 2 | 90 / 16 s | Her lane, all enemies | 90 / 140 / 190 / 240 / 290 physical damage to every enemy in her lane |
-| B1p | **Fearful Focus** | B1b Lv. 2 | — | Self | +4 / 8 / 12 / 16 / 20% damage to enemies below 50% HP |
+| B1a | **Aimed Shot** | Branch (Lv. 10) | 100 / 18 s | Current target | Aims for 1 s, then 200 / 300 / 400 / 500 / 600 physical damage |
+| B1b | **Piercing Arrow** | Branch (Lv. 10) | 90 / 16 s | Her lane, all enemies | 90 / 140 / 190 / 240 / 290 physical damage to every enemy in her lane |
+| B1p | **Fearful Focus** | Branch (Lv. 10) | — | Self | +4 / 8 / 12 / 16 / 20% damage to enemies below 50% HP |
 
 **B2 · Unbound** — she still holds the grudge. Area control and evasion.
 | # | Skill | Unlock | Mana / CD | Target / area | Effect (Lv. 1 / 2 / 3 / 4 / 5) |
 |---|---|---|---|---|---|
-| B2a | **Bramble Rain** | Branch chosen | 120 / 22 s | Front 2 enemy rows | 3 waves of 20 / 30 / 45 / 55 / 70 physical damage (kept wide but light: a Ranger's area is weaker than a Mage's, GDD §6.3); the first wave applies **Ensnare** 1 / 1.25 / 1.5 / 1.75 / 2 s (15 / 20 / 25 / 30 / 35 damage per s) |
-| B2b | **Wild Dance** | B2a Lv. 2 | 80 / 20 s | Self | +15 / 20 / 25 / 30 / 35% Evasion for 4 s (Evasion cap 40% still applies) |
-| B2p | **Caged Fury** | B2b Lv. 2 | — | Self | **Rage:** +1 per hit taken (basic or skill). At **3 rage** she goes **Berserk** for 5 s: ×1.1 / 1.15 / 1.2 / 1.25 / 1.3 damage. On activation, roots burst through her lane: **Ensnare** on every enemy in it for 2 s (20 / 30 / 40 / 50 / 60 damage per s). When Berserk ends, the **curse** forces **Sleep** for 4 / 3.75 / 3.5 / 3.25 / 3 s: does **not** wake on damage and **ignores Control Resist**. Rage resets to 0; no rage is gained during Berserk or the curse Sleep |
+| B2a | **Bramble Rain** | Branch (Lv. 10) | 120 / 22 s | Front 2 enemy rows | 3 waves of 20 / 30 / 45 / 55 / 70 physical damage (kept wide but light: a Ranger's area is weaker than a Mage's, GDD §6.3); the first wave applies **Ensnare** 1 / 1.25 / 1.5 / 1.75 / 2 s (15 / 20 / 25 / 30 / 35 damage per s) |
+| B2b | **Wild Dance** | Branch (Lv. 10) | 80 / 20 s | Self | +15 / 20 / 25 / 30 / 35% Evasion for 4 s (Evasion cap 40% still applies) |
+| B2p | **Caged Fury** | Branch (Lv. 10) | — | Self | **Rage:** +1 per hit taken (basic or skill). At **3 rage** she goes **Berserk** for 5 s: ×1.1 / 1.15 / 1.2 / 1.25 / 1.3 damage. On activation, roots burst through her lane: **Ensnare** on every enemy in it for 2 s (20 / 30 / 40 / 50 / 60 damage per s). When Berserk ends, the **curse** forces **Sleep** for 4 / 3.75 / 3.5 / 3.25 / 3 s: does **not** wake on damage and **ignores Control Resist**. Rage resets to 0; no rage is gained during Berserk or the curse Sleep |
 
 **Scroll skill tags:** Physical, Crit, Speed.
 

@@ -63,23 +63,23 @@
 **Power-budget check:** base Salt + Mercury + Sulfur = **46–54**, total growth = **5.0–6.0 / level** for every hero. The dominant principle has the highest growth; lore and kit decide the rest. The more roles the branches cover, the flatter the spread (GDD §4.6.2).
 
 ## 5. Skill Tree
-Rules: GDD §4.6.4. Skill points: 1 per hero level (30 at cap). Unlocks depend on **skill levels**. Every skill has 5 levels: core + one branch = 6 × 5 = 30 points, all spent at Lv. 30. Scroll skills cost no points (duplicate Scrolls level them). In battle: 2 actives. Statuses: GDD §6.10.
+Rules: GDD §4.6.4. Skill points: 1 per hero level (30 at cap), spent on any open skill; a skill's level can't exceed hero level ÷ 2, rounded up. Core skills are all open from Lv. 1; the branch opens at **hero Lv. 10** with all 3 of its skills open. Every skill has 5 levels: core + one branch = 6 × 5 = 30 points, all spent at Lv. 30. No skill-point reset. Scroll skills cost no points (duplicate Scrolls level them). In battle: 2 actives. Statuses: GDD §6.10.
 
 **Core** (every skill 5 levels; passives: Lv. 5 = the intended max)
 | # | Skill | Unlock | Mana / CD | Target / area | Effect (Lv. 1 / 2 / 3 / 4 / 5) |
 |---|---|---|---|---|---|
-| A1 | | Start | | | |
-| A2 | | A1 Lv. 2 | | | |
-| P0 | (core passive) | Start | — | | |
+| A1 | | Lv. 1 | | | |
+| A2 | | Lv. 1 | | | |
+| P0 | (core passive) | Lv. 1 | — | | |
 
-**Branch point:** after A1 Lv. 2 / after A2 Lv. 2 (pick one). **Branches: 1 / 2 / 3** (pick to fit the lore; delete unused branch tables). With 2–3, choosing a branch is **permanent**; with 1, it opens automatically. Role stays the same in every branch.
+**Branch point:** hero Lv. 10 (all heroes). **Branches: 1 / 2 / 3** (pick to fit the lore; delete unused branch tables). With 2–3, choosing a branch is **permanent**; with 1, it opens automatically. Role stays the same in every branch.
 
 **B1 · [Branch name]** (style in one line)
 | # | Skill | Unlock | Mana / CD | Target / area | Effect (Lv. 1 / 2 / 3 / 4 / 5) |
 |---|---|---|---|---|---|
-| B1a | | Branch chosen | | | |
-| B1b | | B1a Lv. 2 | | | |
-| B1p | (passive) | B1b Lv. 2 | — | | |
+| B1a | | Branch (Lv. 10) | | | |
+| B1b | | Branch (Lv. 10) | | | |
+| B1p | (passive) | Branch (Lv. 10) | — | | |
 
 **B2 · [Branch name]** and **B3 · [Branch name]**: same table.
 

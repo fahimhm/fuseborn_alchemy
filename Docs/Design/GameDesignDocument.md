@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| **Version** | 0.34 (draft) |
+| **Version** | 0.35 (draft) |
 | **Last updated** | 2026-11-03 |
 | **Status** | Pre-production. Fusion, card categories, and upgrade systems defined; combat and mining outlined |
 | **Engine** | Unity (tentative) |
@@ -199,13 +199,15 @@ Every homunculus is made of the three alchemical **principles** (Lore.md): **Sal
 
 #### 4.6.4 Role, Trait & Unique Skill
 - Each hero has an **initial role** (a label, §6.3), a **targeting priority** (§6.4), and trait(s).
-- ✅ **Branching skill tree** (per hero, `Docs/Design/Heroes/`). Unlocks depend on **skill levels**, never on hero level:
-  - **Skill points:** 1 per hero level (Lv. 1 starts with 1, so 30 at cap). The player spends them.
-  - **Core:** **A1** (available from the start) → **A2** (unlocks at A1 skill Lv. 2), plus a **core passive** (on from the start; its levels cost points).
-  - **Branch point:** set per hero, after A1 Lv. 2 or after A2 Lv. 2. **1 to 3 branches per hero (maximum 3, fixed for now)**; the count fits the hero's lore. With **2–3 branches**, spending the first point in one **locks it permanently** and closes the others. With **1 branch** there is no choice: it opens automatically at the branch point, with no permanent-choice warning. The branch stays on the card when traded.
-  - **Each branch:** **Bx1** active (available once chosen) → **Bx2** active (at Bx1 Lv. 2) → **Bx passive** (at Bx2 Lv. 2).
+- ✅ **Branching skill tree** (per hero, `Docs/Design/Heroes/`), spent MOBA-style:
+  - **Skill points:** 1 per hero level (Lv. 1 starts with 1, so 30 at cap). The player spends them on any **open** skill: open a new one or raise one already open.
+  - **Level cap:** a skill's level can't exceed **hero level ÷ 2, rounded up** (hero Lv. 1 → 1, Lv. 3 → 2, Lv. 5 → 3, Lv. 7 → 4, Lv. 9+ → 5). Stops early power spikes; branch skills open at Lv. 10, so the cap never limits them.
+  - **Confirm, no reset:** points are pending until the player taps **Confirm** (they can be undone freely before that; extra warning before the first branch point). Once confirmed, points are permanent: **no skill-point reset**. At Lv. 30 every skill is Lv. 5 whatever the order, so spending order only matters while leveling; the permanent difference is the branch.
+  - **Core:** **A1**, **A2** and the **core passive** are **all open from Lv. 1**; no skill depends on another.
+  - **Branch point:** **hero Lv. 10** for every hero. **1 to 3 branches per hero (maximum 3, fixed for now)**; the count fits the hero's lore. With **2–3 branches**, spending the first point in one **locks it permanently** and closes the others. With **1 branch** there is no choice: it opens automatically at Lv. 10, with no permanent-choice warning. The branch stays on the card when traded.
+  - **Each branch:** **Bx1** and **Bx2** actives and the **Bx passive** are **all open** once the branch is chosen.
   - **Skill levels:** **5 for every skill**, actives and passives. Values are **fixed per skill level**; each active costs **mana** and has a **cooldown**.
-  - **Budget:** 6 skills (A1, A2, core passive + the branch's 2 actives and passive) × 5 levels = **30 points**, all on the hero's own skills, maxed exactly at Lv. 30. While leveling, the player chooses what to raise first.
+  - **Budget:** 6 skills (A1, A2, core passive + the branch's 2 actives and passive) × 5 levels = **30 points**, all on the hero's own skills, maxed exactly at Lv. 30. Before Lv. 10 only the core can take points (9 points, core max 15); from Lv. 10, 21 points cover the rest of the core and the branch's 15. While leveling, the player chooses what to raise first.
   - **Scroll skills** cost no points: a Scroll teaches its skill at Lv. 1; using another copy of the **same Scroll** on that hero raises it by 1 level (max Lv. 5). Server-authoritative, like all inventory use.
   - ✅ **Each branch declares its role** (§6.3). A branch may keep the initial role or shift to another one, so the same homunculus can become e.g. a healer, a paladin or a tank-like build. Rules for designing branches:
     1. **Lore decides** which roles a homunculus can reach (an angel priest can tank; a goblin rogue never does).
@@ -714,6 +716,7 @@ Planned to be discussed later.
 ## 14. Change History
 | Version | Date | Changes |
 |---|---|---|
+| 0.35 | 2026-11-06 | Skill tree MOBA-style: all core skills open from Lv. 1, branch at hero Lv. 10 with all 3 branch skills open; skill level cap = hero level ÷ 2 rounded up; Confirm button, no skill-point reset (§4.6.4) |
 | 0.34 | 2026-11-06 | Pre-placed skills (§6.2); Slow status; Stealth status; crit damage bonus rule (§6.9); Blind status (misdirected movement, basic hits miss, skills land); soft vs hard control defined (§6.10) |
 | 0.33 | 2026-11-05 | Board 3 × 8 (3 × 3 per side + 2 middle rows), square tiles for placement & range (Melee 1 / Short 3 / Medium 5 / Long 7), free movement, allies don't block, 4 melee per target + retarget; PvP 60 s, overtime, HP % tiebreak, stars (§6.12); §13 #38 closed |
 | 0.32 | 2026-11-04 | Roles become labels with a core tool; initial role + branch roles (lore-limited, one branch keeps the initial role); STR/AGI/MAG → Salt/Mercury/Sulfur with a designer-set dominant principle and Resonance (+10%); growth rules; attack type and DEF growth per homunculus; Taunt not Tank-only; §13 #38 board & range |
