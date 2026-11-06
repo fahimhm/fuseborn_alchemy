@@ -1,6 +1,6 @@
 # Tobin · Human – Knight
 
-**Status:** Numbers done (approved pilot)
+**Status:** Numbers done (approved)
 
 ## 1. Identity
 | Field | Value |

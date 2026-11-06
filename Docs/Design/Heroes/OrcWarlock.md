@@ -1,6 +1,6 @@
 # Grum · Orc – Warlock
 
-**Status:** Draft (for review)
+**Status:** Numbers done (approved)
 
 ## 1. Identity
 | Field | Value |
