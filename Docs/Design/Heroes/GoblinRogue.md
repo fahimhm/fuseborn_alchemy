@@ -84,7 +84,7 @@ Skill points: 1 per hero level, spent on any open skill. Every skill has 5 level
 **B2 · Trapmaster** (role: Assassin) — traps set up his own kills (Templar Assassin style): he lays them, then strikes what they catch.
 | # | Skill | Unlock | Mana / CD | Target / area | Effect (Lv. 1 / 2 / 3 / 4 / 5) |
 |---|---|---|---|---|---|
-| B2a | **Caltrops & Wire** | Branch (Lv. 10) | 80 / 18 s | A strip across all 3 lanes (placement rule below) | Field lasts 6 s: **Slow** 20 / 25 / 30 / 35 / 40%; Bleed 10 / 15 / 20 / 25 / 30 per second while an enemy moves inside it |
+| B2a | **Caltrops & Wire** | Branch (Lv. 10) | 80 / 18 s | Zone: a strip across all 3 lanes (placement rule below; GDD §6.13) | Field lasts 6 s: **Slow** 20 / 25 / 30 / 35 / 40%; Bleed 10 / 15 / 20 / 25 / 30 per second while an enemy moves inside it |
 | B2b | **Snare Trap** | Branch (Lv. 10) | 70 / 16 s | 1 tile (placement rule below) | Invisible. The first enemy to step on it gets **Ensnare** 1.5 / 1.75 / 2 / 2.25 / 2.5 s and takes +10 / 15 / 20 / 25 / 30% damage from all sources while rooted. Max **1 active** (2 with Scavenger's Prep Lv. 3+). Lasts until triggered or 15 s. **Pre-placed** (GDD §6.2): the first Snare Trap is placed by the player before battle, free, and lasts until triggered |
 | B2p | **Scavenger's Prep** | Branch (Lv. 10) | — | Self | Trap cooldowns −4 / 8 / 12 / 16 / 20%; from Lv. 3, a 2nd Snare Trap can be active |
 

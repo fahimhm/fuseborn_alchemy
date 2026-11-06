@@ -4,6 +4,11 @@ Short dated entries: what was done, what was learned, what's next. Newest at the
 
 ---
 
+## 2026-11-07
+**Done:** GDD v0.36: Holy / Dark tags with gear stats; statuses Silence and Invulnerable; hard control interrupts tethers; helpful vs harmful; Zones (§6.13); §13 #39 projectiles. Elsie reworked (branch `elsie_angel_priest`): sky-light soul, "Father"; core Minor Mending, Halo Pulse, Celestial Resilience; B1 Seraph (Support), B2 Archangel (off-role Warrior), B3 Fallen (off-role Mage); flatter stats. Grum's kit tagged Dark; Snick's Caltrops is a zone; 4 unused passives to SkillBank.
+**Learned:** Reviewing the user's input against the GDD before writing catches clashes early (role rule, damage types, projectiles); off-role branches need an aura or passive to cover the stat gap.
+**Next:** Review Elsie's active-skill numbers; Tier II homunculi.
+
 ## 2026-11-06
 **Done:** GDD v0.34: statuses Blind, Stealth, Slow; soft vs hard control; pre-placed skills; crit damage bonus rule. Snick reworked (branch `snick_goblin_rogue`): failed-elf backstory with a hare's soul; rogue core (Pocket Sand, Nimble Escape, Opportunist); B1 Shadow Assassin, B2 Trapmaster (Assassin), B3 Goblin Sapper (off-role Mage). New `SkillBank.md` for unused skills. Lore: the Alchemist is not always good.
 **Next:** Elsie rework (on the user's MacBook); Tier II homunculi.
