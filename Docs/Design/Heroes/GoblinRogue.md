@@ -81,12 +81,14 @@ Skill points: 1 per hero level. Every skill has 5 levels: core + one branch = 6 
 | B1b | **Shadow Stalker** | B1a Lv. 2 | 60 / 16 s | Self | Instantly gains **Stealth** for 1.5 / 2 / 2.5 / 3 / 3.5 s, then reappears on a random tile next to an enemy in their back half |
 | B1p | **Lethal Precision** | B1b Lv. 2 | — | Self | +10 / 15 / 20 / 25 / 30% crit damage on hits made from Stealth |
 
-**B2 · Shadow** — now you see him, now he has your wallet.
-| # | Skill | Unlock | Mana / CD | Target / area | Effect |
+**B2 · Trapmaster** (role: Assassin) — traps set up his own kills (Templar Assassin style): he lays them, then strikes what they catch.
+| # | Skill | Unlock | Mana / CD | Target / area | Effect (Lv. 1 / 2 / 3 / 4 / 5) |
 |---|---|---|---|---|---|
-| B2a | **Vanish** | Branch chosen | 70 / 18 s | Self | Untargetable for 1.5 / 2 / 2.5 / 3 / 3.5 s; his next hit deals +50% damage |
-| B2b | **Junk Decoy** | B2a Lv. 2 | 60 / 20 s | His cell | Leaves a pile of junk that Taunts enemies for 2 / 2.5 / 3 / 3.5 / 4 s |
-| B2p | **Slippery** | B2b Lv. 2 | — | Self | +8 / 10 / 12 / 14 / 16% Evasion |
+| B2a | **Caltrops & Wire** | Branch chosen | 80 / 18 s | A strip across all 3 lanes (placement rule below) | Field lasts 6 s: **Slow** 20 / 25 / 30 / 35 / 40%; Bleed 10 / 15 / 20 / 25 / 30 per second while an enemy moves inside it |
+| B2b | **Snare Trap** | B2a Lv. 2 | 70 / 16 s | 1 tile (placement rule below) | Invisible. The first enemy to step on it gets **Ensnare** 1.5 / 1.75 / 2 / 2.25 / 2.5 s and takes +10 / 15 / 20 / 25 / 30% damage from all sources while rooted. Max **1 active** (2 with Scavenger's Prep Lv. 3+). Lasts until triggered or 15 s. **Pre-placed** (GDD §6.2): the first Snare Trap is placed by the player before battle, free, and lasts until triggered |
+| B2p | **Scavenger's Prep** | B2b Lv. 2 | — | Self | Trap cooldowns −4 / 8 / 12 / 16 / 20%; from Lv. 3, a 2nd Snare Trap can be active |
+
+**In-battle trap placement:** in the path of the nearest enemy moving toward his side; if none is moving, just in front of his own front row. Traps don't hit enemies that never move (Long range): that's their counter.
 
 **B3 · Dirty Fighter** — rusty, sneaky and proud of it.
 | # | Skill | Unlock | Mana / CD | Target / area | Effect |
@@ -118,9 +120,9 @@ Skill points: 1 per hero level. Every skill has 5 levels: core + one branch = 6 
 | Weapon held | A chipped short blade held backwards; a worn sand pouch at his hip |
 | Card illustration | Mid-escape through a workshop doorway, a handful of sand flying behind him, ears flat |
 | Battle views | Front ¾ and back ¾. Back view shows the sand pouch and ears |
-| Animations | Idle (ears twitching, glancing over his shoulder), run (crouched), stab, Backstab (vanishing dash), Pocket Sand (throw), hit, KO (curls up small), victory (a quick, relieved breath; checks his pouch). Branches: B1 stab flurry; B2 fade out + junk pile drop; B3 shiv + bomb throw |
-| Branch props | B1 a pair of polished daggers; B2 a hooded coat; B3 a bandolier of junk bombs |
-| VFX per skill | Backstab: shadow streak; Pocket Sand: sand puff; Flurry: slash lines; Finish Them: big red slash; Vanish: smoke ring; Junk Decoy: junk pile pop; Rusty Shiv: dripping red ticks; Gutter Bomb: clattering blast |
+| Animations | Idle (ears twitching, glancing over his shoulder), run (crouched), stab, Backstab (vanishing dash), Pocket Sand (throw), hit, KO (curls up small), victory (a quick, relieved breath; checks his pouch). Branches: B1 Backstab lunge, Shadow Stalker fade and reappear; B2 kneels to set a trap, scatters caltrops; B3 shiv + bomb throw |
+| Branch props | B1 a dark hood and a thin black dagger; B2 a hooked wire knife, a coil of wire and a pouch of trap parts (still melee); B3 a bandolier of junk bombs |
+| VFX per skill | Pocket Sand: sand puff; Nimble Escape: dust kick; Backstab: shadow streak; Shadow Stalker: fade + reappear shimmer; Caltrops & Wire: scattered spikes; Snare Trap: hidden glint, then snapping jaws; Rusty Shiv: dripping red ticks; Gutter Bomb: clattering blast |
 | SFX / voice notes | Quick light footsteps; a sharp nervous laugh; a hiss of sand |
 | References | TBD (moodboard) |
 | Avoid | Anything that looks like an existing game's character |

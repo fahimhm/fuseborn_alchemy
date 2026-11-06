@@ -424,6 +424,7 @@ You     row 3 front · 2 middle · 1 back
 
 - ✅ **Movement:** a homunculus moves only until its target is in range, then attacks. **Move Speed** (per homunculus + gear) decides how fast. Attack type (melee / ranged) is set per homunculus.
 - ✅ **Crowding:** **allies never block allies** (they pass or slide around each other); only enemies block. Up to **4 melee attackers** can surround one target; extra ones **retarget** to the nearest other reachable enemy. Summons and back-row melee therefore always reach the fight.
+- ✅ **Pre-placed skills:** some skills (e.g. Snick's Snare Trap) let the player place their first use **before battle**, during formation setup: on their own 3 × 3 or the 2 middle rows, never on the enemy side. It's free and doesn't change the skill's charge at battle start. Saved with the formation; invisible ones are hidden from the attacker's PvP preview.
 - The simulation runs on the server in fixed steps, so every replay gives the same result.
 
 ### 6.3 Roles ✅ (labels)
@@ -490,7 +491,7 @@ Each hero has its **own built-in targeting characteristic**. This is part of the
 ### 6.8 Prototype 2 Scope (combat)
 - 1 chapter, ~5 stages with waves + 1 boss
 - 6 roles, targeting rules, basic hits, cooldown skills, passive unique skills
-- 5-hero 3×3 formation editor
+- 5-hero 3×3 formation editor (+ placing pre-placed skills, §6.2)
 - XP gain + card drops
 - PvP: out of scope (Phase 5)
 
@@ -547,9 +548,10 @@ Each hero has its **own built-in targeting characteristic**. This is part of the
 | **Curse** | Magic damage over time. If the target dies while cursed, the Curse **jumps** to the nearest living enemy (neighbor cell first) with its remaining duration. Re-applying refreshes the duration; it does not stack |
 | **Blind** | **Misdirection:** if the unit needs to move, it wanders off course instead of heading to its target; its **basic hits miss**. Skills still land |
 | **Stealth** | Can't be targeted by enemies; ends when the unit attacks or uses a skill, or when its duration ends. **Ensnare reveals** (removes Stealth) |
+| **Slow** | Move Speed reduced by the skill's % |
 | **Sleep** | Can't act (no attacks, skills or mana regen); **wakes on taking damage**. Skill-specific variants may say otherwise (e.g. Wren's curse) |
 
-- ✅ **Soft vs hard control.** **Soft** = slows, holds or misdirects movement: Ensnare, Stagger's slow, Blind. **Hard** = stops or overrides acting: Stun, Sleep, Confuse, Taunt. Skills that "break soft control" (e.g. Snick's Nimble Escape) remove soft statuses only; under hard control a unit can't act, so it can't cast them anyway.
+- ✅ **Soft vs hard control.** **Soft** = slows, holds or misdirects movement: Slow, Ensnare, Stagger's slow, Blind. **Hard** = stops or overrides acting: Stun, Sleep, Confuse, Taunt. Skills that "break soft control" (e.g. Snick's Nimble Escape) remove soft statuses only; under hard control a unit can't act, so it can't cast them anyway.
 - Status duration reduction (Control Resist from gear, passives, traits) is **capped at −50%**. No full status immunity; only **knockback** immunity exists.
 
 ### 6.11 Summons ✅
@@ -652,7 +654,7 @@ Planned to be discussed later.
 | Gear socket | Gear slots + Magic Stone inventory |
 | Codex | Discovered / ??? cards, recipes, progress, first discoverer |
 | Result reveal | New card / skill rarity / slot count animation |
-| Formation | 3×3 grid editor, place 5 heroes (PvE party / PvP defense) |
+| Formation | 3×3 grid editor, place 5 heroes (PvE party / PvP defense); place pre-placed skills (e.g. traps) on own side or middle rows |
 | Battle | Diagonal auto-battle view + hybrid HUD: 5 hero buttons, 2-skill bar, 2 consumable buttons (§6.1.1, Prototype 2) |
 
 ---
@@ -712,7 +714,7 @@ Planned to be discussed later.
 ## 14. Change History
 | Version | Date | Changes |
 |---|---|---|
-| 0.34 | 2026-11-06 | Stealth status; crit damage bonus rule (§6.9); Blind status (misdirected movement, basic hits miss, skills land); soft vs hard control defined (§6.10) |
+| 0.34 | 2026-11-06 | Pre-placed skills (§6.2); Slow status; Stealth status; crit damage bonus rule (§6.9); Blind status (misdirected movement, basic hits miss, skills land); soft vs hard control defined (§6.10) |
 | 0.33 | 2026-11-05 | Board 3 × 8 (3 × 3 per side + 2 middle rows), square tiles for placement & range (Melee 1 / Short 3 / Medium 5 / Long 7), free movement, allies don't block, 4 melee per target + retarget; PvP 60 s, overtime, HP % tiebreak, stars (§6.12); §13 #38 closed |
 | 0.32 | 2026-11-04 | Roles become labels with a core tool; initial role + branch roles (lore-limited, one branch keeps the initial role); STR/AGI/MAG → Salt/Mercury/Sulfur with a designer-set dominant principle and Resonance (+10%); growth rules; attack type and DEF growth per homunculus; Taunt not Tank-only; §13 #38 board & range |
 | 0.31 | 2026-11-03 | Tone "hopeful, with weight" and souls (lore only, Lore.md; §13 #37); Terms: hero = homunculus; 1–3 branches per hero (max 3), 1-branch heroes open it automatically; budget unchanged; new targeting rule "Same lane, back-most" (§6.4); statuses Ensnare, Sleep and Curse (§6.10); Summons (§6.11) |
