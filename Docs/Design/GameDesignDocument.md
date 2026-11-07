@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| **Version** | 0.41 (draft) |
+| **Version** | 0.42 (draft) |
 | **Last updated** | 2026-11-07 |
 | **Status** | Pre-production. Fusion, card categories, and upgrade systems defined; combat and mining outlined |
 | **Engine** | Unity (tentative) |
@@ -351,7 +351,10 @@ Existing caps still apply (Evasion 40%, Control Resist −50%, Holy / Dark resis
 | **Ring / Necklace / Amulet / Crown** | Accessory slot | ❌ | Stat bonus + trait (always rolls one, `TraitPool.md` §5) |
 | **Magic Stone** | Socketed into Gear slots | ✅ | Upgrade effect per stone type |
 
-✅ Item basics are junk materials. Usable items appear from Tier IV (Tier III + Tier I) and better ones at Tier V (Tier III + Tier II). Lists in §15.8.
+✅ Item basics are junk materials. Usable items appear from Tier IV (Tier III + Tier I) and better ones at Tier V (Tier III + Tier II). Lists in §15.8; content (descriptions, art briefs) in `Docs/Design/Items.md`.
+- ✅ **Materials (Tier I–III) are fusion only:** no battle use and no XP (8 random cards a day would make junk the main XP source). Their value is what they become, plus selling and the Exchange (§4.3).
+- ✅ **Principle lean (flavor):** each material's Codex page names the principle it leans to (Salt / Mercury / Sulfur). No mechanics, never a recipe hint.
+- ✅ **Junk Codex:** the first discovery of each material fills its Codex page (§4.5) and gives a small one-time reward (amount TBD).
 
 ### 4.9 Trading
 - ✅ Player-to-player trading using **in-game currency** (design in a later phase).
@@ -824,6 +827,7 @@ Planned to be discussed later.
 ## 14. Change History
 | Version | Date | Changes |
 |---|---|---|
+| 0.42 | 2026-11-08 | Materials: fusion only, principle lean (flavor), Junk Codex (§4.8); Old Coin renamed Ancient Token; item content in `Items.md` |
 | 0.41 | 2026-11-07 | Gear may add +1 attack range (fixed only: family property or signature; max +1; melee stays melee); Bomb family planned with +1 range (§6.2, §4.7) |
 | 0.40 | 2026-11-07 | Gear visuals (§4.7.5): weapons visible and set basic-attack effects, armor not visible, future high-tier auras; branches may replace weapon families; Knife and Bomb families (no cards yet, §13 #44) |
 | 0.39 | 2026-11-07 | Gear budget (§4.7.4): GP per tier 3 / 6 / 10 / 16 / 24, conversion rates, shape per tier, signatures and named legendaries; gear may give principles; content in `Gear.md`; §13 #42–43 |
@@ -1067,7 +1071,7 @@ No match: Stone + Log, Seed + Bone, Seed + Scrap Metal.
 | Glowcap | Mushroom + Bone | |
 | Ash | Charcoal + Log | |
 | Pearl | Fishhook + Bone | |
-| Old Coin | Rusty Nail + Scrap Metal | |
+| Ancient Token | Rusty Nail + Scrap Metal | |
 | Ink | Bone Dust + Log | |
 | Wax | Glue + Seed | |
 
@@ -1094,7 +1098,7 @@ No match: Stone + Log, Seed + Bone, Seed + Scrap Metal.
 | Fire Bomb | Ash + Charcoal | Bomb |
 | Rune Scroll | Ink + Glue | Scroll |
 | Guardian Charm | Rope + Chalk | Charm |
-| Lucky Coin | Old Coin + Fishhook | Charm |
+| Lucky Coin | Ancient Token + Fishhook | Charm |
 | Polished Magic Stone | Crystal Shard + Chalk | Magic Stone |
 | Ember Stone | Crystal Shard + Charcoal | Magic Stone |
 | Moonstone Ring | Silver Nugget + Flint | Ring |
@@ -1102,7 +1106,7 @@ No match: Stone + Log, Seed + Bone, Seed + Scrap Metal.
 | Amber Pendant | Resin + Plank | Necklace |
 | Ancestor Amulet | Clay + Bone Dust | Amulet |
 | Iron Crown | Iron Ingot + Rusty Nail | Crown |
-| Gilded Crown | Old Coin + Raw Ore | Crown |
+| Gilded Crown | Ancient Token + Raw Ore | Crown |
 
 Scrolls (Spell Scroll, Rune Scroll) teach heroes skills outside battle (§4.8). Every Tier II and Tier III card is used in Tier V. To-do: effects, second recipes for key Tier IV–V items, Tier II + Tier II items.
 

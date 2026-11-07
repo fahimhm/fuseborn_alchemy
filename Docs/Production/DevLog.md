@@ -4,6 +4,10 @@ Short dated entries: what was done, what was learned, what's next. Newest at the
 
 ---
 
+## 2026-11-08
+**Done:** GDD v0.42. New `Items.md`: Tier I–III materials (30) with ingredients, principle lean, description, Codex line and card art. Rules: materials fusion only, principle lean as flavor, Junk Codex. Old Coin → Ancient Token.
+**Next:** Tier IV–V usable items (effects + briefs); Tier III gear.
+
 ## 2026-11-07 (4)
 **Done:** GDD v0.39–0.40: gear budget, gear visuals, branch weapon families. `Gear.md`: Tier I and Tier II (16 cards) with stats, descriptions, card art, equipped look and attack effects / hit sounds.
 **Reminder:** Knife and Bomb families have no cards yet (Snick's Trapmaster and Goblin Sapper, GDD §13 #44).
