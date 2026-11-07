@@ -88,10 +88,10 @@ Rules: GDD §4.6.4. Skill points: 1 per hero level (30 at cap), spent on any ope
 ## 6. Equipment
 | Slot | Allowed |
 |---|---|
-| Weapon | 1–3 families (Sword, Dagger, Bow, Staff, Tome, Shield, Instrument; GDD §4.7) |
+| Weapon | 1–3 families (Sword, Dagger, Bow, Staff, Tome, Shield, Instrument, Knife, Bomb; GDD §4.7). A branch may replace them; list per branch if so, and check that cards exist for each family |
 | Armor | Any piece |
 | Accessory | Any |
-| Default weapon | The basic weapon the hero starts with |
+| Default weapon | What it holds with no weapon equipped (visual only; per branch if families change) |
 
 ## 7. Unique Trait
 - Odds: Bronze 70% · Silver 25% · Gold 5% (default; GDD §4.6.4).
@@ -109,7 +109,7 @@ Fill only when sections 1–7 are done.
 | Card illustration | Framing, pose, background mood |
 | Battle views | **Front ¾** (as an enemy / PvP) and **back ¾** (own party) |
 | Animations | Idle, move (melee), basic attack, one cast per active (A1, A2 + 2 per branch; reuse where possible), hit, KO, victory |
-| Branch props | Optional: one signature prop variant per branch so the build reads at a glance |
+| Branch props | Optional: one signature prop variant per branch so the build reads at a glance. Never a weapon: props may only accent the equipped weapon or be non-weapon items (GDD §4.7.5) |
 | VFX per skill | |
 | SFX / voice notes | |
 | References | |

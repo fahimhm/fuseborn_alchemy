@@ -112,7 +112,7 @@ Skill points: 1 per hero level, spent on any open skill. Every skill has 5 level
 | Card illustration | Drawing her bow at a workshop window, leaves drifting in from outside; the mark on her brow faintly glowing |
 | Battle views | Front ¾ and back ¾. Back view shows the quiver and ponytail |
 | Animations | Idle (glances toward the horizon), shoot, Double Shot, Pinning Arrow, hit, KO, victory (lowers the bow, looks away). Branches: B1 slow aim; B2 vine-wrapped volley, Berserk (mark flares), curse Sleep (collapses, mark glowing) |
-| Branch props | B1 a plain, well-kept bow; mark dimmed. B2 a bow wrapped in thorny vines; mark burning |
+| Branch props | B1 a plain, well-kept bow; mark dimmed. B2 thorny vines wrapped around whatever bow she holds (accent, GDD §4.7.5); mark burning |
 | VFX per skill | Double Shot: twin streaks; Pinning Arrow: impact pin; Aimed Shot: glint + long streak; Piercing Arrow: lane-long line; Bramble Rain: thorned arrow shower + roots; Wild Dance: leaf swirl; Caged Fury: mark flare, roots erupting down her lane, then a binding glow as she sleeps. UI: rage meter (3 pips) on her portrait, B2 only |
 | SFX / voice notes | Bowstring twangs; a quiet exhale on crits; a sharp breath when the mark flares |
 | References | TBD (moodboard) |

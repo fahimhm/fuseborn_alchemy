@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| **Version** | 0.39 (draft) |
+| **Version** | 0.41 (draft) |
 | **Last updated** | 2026-11-07 |
 | **Status** | Pre-production. Fusion, card categories, and upgrade systems defined; combat and mining outlined |
 | **Engine** | Unity (tentative) |
@@ -233,7 +233,7 @@ Every homunculus is made of the three alchemical **principles** (Lore.md): **Sal
 - ✅ **Trait pool:** all hero, gear and accessory traits, with rarity, start values, tags and % stat caps, live in `Docs/Design/TraitPool.md`.
 
 ### 4.7 Gear (Weapon & Armor)
-✅ **Weapon families** decide which heroes can equip a weapon. Each hero lists 1–3 allowed families; armor and accessories have no restriction (for now).
+✅ **Weapon families** decide which heroes can equip a weapon. Each hero lists 1–3 allowed families; armor and accessories have no restriction (for now). ✅ A **branch may replace the allowed families** (e.g. Snick's Trapmaster: Knife only). When that branch is chosen, an equipped weapon outside the new families goes back to the inventory.
 
 | Family | Gear cards |
 |---|---|
@@ -244,6 +244,8 @@ Every homunculus is made of the three alchemical **principles** (Lore.md): **Sal
 | Tome | Grimoire |
 | Shield | Tower Shield |
 | Instrument | Lute, War Drum |
+| Knife | ⚠️ **No cards yet** (needed by Snick's Trapmaster, §13 #44) |
+| Bomb | ⚠️ **No cards yet** (needed by Snick's Goblin Sapper; melee, §13 #44). **Planned family property: thrown, +1 range** (§6.2) |
 ✅ Weapons and armor are one category, **Gear**. Each Gear card has a **slot type** (Weapon or Armor) that decides which hero slot it fits. Lists in §15.7.
 
 #### 4.7.1 Random Slots
@@ -286,6 +288,14 @@ Every homunculus is made of the three alchemical **principles** (Lore.md): **Sal
 | Boots | Move Speed, Evasion |
 
 **Gear bonus stats** (on gear only; gear may **also** give Salt / Mercury / Sulfur points, §4.7.4): HP, DEF, ATK, Attack Speed, Move Speed, Crit Chance, Evasion, Block, Lifesteal, Cooldown Reduction, Skill Power, Thorns (reflects melee damage), Control Resist, Holy / Dark damage % (weapons and accessories), Holy / Dark resist % (body armor, helmets and accessories; §6.9). These are the only sources of % stats besides passives and traits (§4.6.2). Values TBD.
+
+#### 4.7.5 Gear Visuals ✅
+- **Weapons are visible:** the equipped weapon is a separate piece attached to the homunculus's hand (or off-hand for shields), so swapping weapons changes what it holds. Cheap with skeletal 2D or 3D (art pipeline: §13 #20).
+- **The weapon sets the basic-attack effect** (swing trail, projectile streak, impact) and its sound. Skills keep their own effects.
+- **The equipped weapon always wins:** branch props never replace it; they may only add accents to it (e.g. Wren's Unbound vines on whatever bow she holds) or be non-weapon items (hood, pouch, bandolier). Fixed hand props are replaced too: a Tower Shield replaces Tobin's pot lid.
+- **No weapon equipped:** the homunculus shows its **default weapon** (hero file §6), visual only (§13 #43).
+- **Armor is not visible** on the homunculus, not even as an accent; it shows only on its card and through a hit sound.
+- **Future:** very high-tier gear (Tier V or above) may give the homunculus an **aura**, a visible glow or particle effect around it (like an Archon aura in RF Online). Not designed yet.
 
 #### 4.7.4 Gear Budget ✅ (start values, revisit after launch)
 Every gear card has a **Gear Point (GP) budget set by its tier**, spent by the designer on principles and bonus stats at fixed rates, so cards of the same tier are equally strong on paper. Content per card: `Docs/Design/Gear.md`.
@@ -457,7 +467,7 @@ You     row 3 front · 2 middle · 1 back
 - The formation is set before battle and saved per mode (PvE party, PvP defense party).
 - Any role can be placed in any row. Placement is the player's strategy.
 - ✅ **Tiles are for placement and range only.** In battle, homunculi **move freely** (continuous, not tile to tile).
-- ✅ **Attack range in tile lengths**, set per homunculus (not by role):
+- ✅ **Attack range in tile lengths**, set per homunculus (not by role). ✅ **Gear exception:** gear may add **+1 range**, only as a **fixed** effect (a weapon family property or a card's signature, never a rolled trait), **max +1 from all sources**. Melee stays melee for every other rule (it still walks; it just stops 1 tile earlier). +1 on Long does nothing.
 
 | Range | Tiles | Reaches without moving |
 |---|---|---|
@@ -805,6 +815,7 @@ Planned to be discussed later.
 | 41 | Real-time Best of Three: swap limit between games (proposed 2 homunculi) | Open |
 | 42 | Families as combat tags: homunculi have families (HeroPool); PvE Runoffs need families too, so gear signatures like "+30% vs Draconic" work in PvE and PvP | Open; needed before Tier III+ signatures |
 | 43 | Does a homunculus's **default weapon** (hero files §6) give stats, or is it only what it holds with no weapon equipped? | Open; proposed: visual only, no stats |
+| 44 | ⚠️ **Homunculi without available weapons:** Snick's Trapmaster (Knife family) and Goblin Sapper (Bomb family) have **no gear cards yet**; until created (Tier III or higher, user's call), they fight with their default weapon only | Open; reminder |
 | 26 | Naming: card rarity and unique-skill rarity both use "Common/Rare". Use different labels to avoid confusion? | ✅ Skills use Bronze / Silver / Gold |
 | 27 | Risk: many random layers (card rarity, skill roll, slot roll, socket chance) can feel like a slot machine | Mitigate: progress never depends only on luck; Exchange, trading, pity |
 
@@ -813,6 +824,8 @@ Planned to be discussed later.
 ## 14. Change History
 | Version | Date | Changes |
 |---|---|---|
+| 0.41 | 2026-11-07 | Gear may add +1 attack range (fixed only: family property or signature; max +1; melee stays melee); Bomb family planned with +1 range (§6.2, §4.7) |
+| 0.40 | 2026-11-07 | Gear visuals (§4.7.5): weapons visible and set basic-attack effects, armor not visible, future high-tier auras; branches may replace weapon families; Knife and Bomb families (no cards yet, §13 #44) |
 | 0.39 | 2026-11-07 | Gear budget (§4.7.4): GP per tier 3 / 6 / 10 / 16 / 24, conversion rates, shape per tier, signatures and named legendaries; gear may give principles; content in `Gear.md`; §13 #42–43 |
 | 0.38 | 2026-11-07 | PvP launches async single battle (§6.7); post-launch real-time PvP plan, Best of Three, rules to keep it possible (§6.14); §13 #40–41 |
 | 0.37 | 2026-11-07 | Battle loadout 3 actives per hero (was 2): HUD skill bar A / B / C, ready dots 0–3, PC keys Q / W / E, consumables move to D / F |
