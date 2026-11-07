@@ -63,7 +63,7 @@
 **Power-budget check:** base Salt + Mercury + Sulfur = **46–54**, total growth = **5.0–6.0 / level** for every hero. The dominant principle has the highest growth; lore and kit decide the rest. The more roles the branches cover, the flatter the spread (GDD §4.6.2).
 
 ## 5. Skill Tree
-Rules: GDD §4.6.4. Skill points: 1 per hero level (30 at cap), spent on any open skill; a skill's level can't exceed hero level ÷ 2, rounded up. Core skills are all open from Lv. 1; the branch opens at **hero Lv. 10** with all 3 of its skills open. Every skill has 5 levels: core + one branch = 6 × 5 = 30 points, all spent at Lv. 30. No skill-point reset. Scroll skills cost no points (duplicate Scrolls level them). In battle: 2 actives. Statuses: GDD §6.10.
+Rules: GDD §4.6.4. Skill points: 1 per hero level (30 at cap), spent on any open skill; a skill's level can't exceed hero level ÷ 2, rounded up. Core skills are all open from Lv. 1; the branch opens at **hero Lv. 10** with all 3 of its skills open. Every skill has 5 levels: core + one branch = 6 × 5 = 30 points, all spent at Lv. 30. No skill-point reset. Scroll skills cost no points (duplicate Scrolls level them). In battle: 3 actives (loadout). Statuses: GDD §6.10.
 
 **Core** (every skill 5 levels; passives: Lv. 5 = the intended max)
 | # | Skill | Unlock | Mana / CD | Target / area | Effect (Lv. 1 / 2 / 3 / 4 / 5) |

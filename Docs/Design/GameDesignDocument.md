@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| **Version** | 0.36 (draft) |
+| **Version** | 0.37 (draft) |
 | **Last updated** | 2026-11-07 |
 | **Status** | Pre-production. Fusion, card categories, and upgrade systems defined; combat and mining outlined |
 | **Engine** | Unity (tentative) |
@@ -214,7 +214,7 @@ Every homunculus is made of the three alchemical **principles** (Lore.md): **Sal
     2. **At least one branch keeps the initial role**, so the label shown at discovery is always a valid path. A 1-branch homunculus stays in its initial role.
     3. **Specialists keep the core tool** (§6.3): an off-role branch takes the role's shape but only a weaker version of its core tool.
   - Body stays the same in every branch: dominant principle, base stats and growth, attack type and range never change; the branch changes skills and role.
-  - In battle the hero brings **2 actives** (loadout, §6.5) from A1, A2, its branch actives and Scroll skills. Passives are always on.
+  - In battle the hero brings **3 actives** (loadout, §6.5) from A1, A2, its branch actives and Scroll skills. With 4 tree actives at most, one always stays home, so the loadout is still a choice; the 3rd slot also gives Scroll skills room. Passives are always on.
   - Content per hero: 2 core actives + 1 core passive, plus 2 actives + 1 passive **per branch** (up to 9 actives + 3 passives with 3 branches). Fewer branches = less content and art. Branch skills should reuse the hero's animation set where possible; a branch may swap one signature prop so the build reads at a glance.
 - ✅ The **rolled unique skill** (innate trait, Lore.md) below is **separate** from the tree: tree passives are the hero's identity, the unique roll is what makes each copy special.
 - ✅ **Every hero rolls a unique skill (passive, always on), basics included.** A basic hero rolls when it is obtained (chest, starter pack, drop); a fused hero rolls when it is created. Basics are therefore worth keeping or trading, not only fusing. Weighted pool:
@@ -349,7 +349,7 @@ Every homunculus is made of the three alchemical **principles** (Lore.md): **Sal
 
 ## 6. Combat — Auto-Battle
 
-✅ **Auto-battle with manual skill activation.** Heroes attack automatically with basic hits. The player selects a hero and taps one of its 2 skills when ready.
+✅ **Auto-battle with manual skill activation.** Heroes attack automatically with basic hits. The player selects a hero and taps one of its 3 skills when ready.
 
 ### 6.1 Camera & Battlefield
 ✅ **Diagonal view:** the player's party stands at the **bottom-left**, and opponents come from the **top-right**.
@@ -366,28 +366,28 @@ Every homunculus is made of the three alchemical **principles** (Lore.md): **Sal
 ```
 
 #### 6.1.1 Battle HUD ✅ (hybrid select-then-cast)
-Each hero brings **2 active skills** (§6.5). The player **selects a hero, then taps one of its skills**.
+Each hero brings **3 active skills** (§6.5). The player **selects a hero, then taps one of its skills**.
 
 **Mobile (landscape)**
 ```
  (H1)•                                   [E][E][E]
  (H2)                                 [E][E][E]
- (H3)••  ← selected (larger)
+ (H3)•••  ← selected (larger)
  (H4)•          [H][H][H]
  (H5)        [H][H][H]
-          [ Skill A ][ Skill B ]              (P1)(P2)
+          [ Skill A ][ Skill B ][ Skill C ]   (P1)(P2)
 ```
 **PC**
 ```
-          [ Skill A ][ Skill B ]              (P1)(P2)
+          [ Skill A ][ Skill B ][ Skill C ]   (P1)(P2)
    [H1][H2][H3][H4][H5]   ← keys 1–5 select
 ```
 - **Hero buttons (5, formation order):** mobile = vertical column of small circles on the left edge; PC = row under the skill bar, selected with keys **1–5**. The selected hero's button grows slightly.
-- **Ready dots:** each hero button shows **one dot per ready skill** (0–2); the portrait ring shows HP. Ready skills are visible without selecting.
-- **Skill bar:** shows the selected hero's 2 skills with cooldowns. PC keys **Q / W**.
-- **Quick-cast:** tapping an **already selected** hero casts its first ready skill (Skill A first, then B).
+- **Ready dots:** each hero button shows **one dot per ready skill** (0–3); the portrait ring shows HP. Ready skills are visible without selecting.
+- **Skill bar:** shows the selected hero's 3 skills with cooldowns. PC keys **Q / W / E**.
+- **Quick-cast:** tapping an **already selected** hero casts its first ready skill (Skill A first, then B, then C).
 - **Default selection:** first living hero at battle start; jumps to the next living hero when the selected one is knocked out.
-- **Consumables:** **2 buttons in the bottom-right corner** (P1 / P2) on both platforms, with stack count and cooldown (§6.9). PC keys **E / R**.
+- **Consumables:** **2 buttons in the bottom-right corner** (P1 / P2) on both platforms, with stack count and cooldown (§6.9). PC keys **D / F** (E is the 3rd skill).
 - ⚠️ On mobile the left hero column must not cover the party at the bottom-left: shift the battle camera slightly right or keep the column narrow. Check in Prototype 2 (§13 #34).
 
 - ⚠️ **Art implication:** in this view, the player's heroes are seen from a **back ¾ angle**, and enemies from a **front ¾ angle**. In PvP, the opponent's heroes are the same characters seen from the front, so **every hero needs both views** (two sprite/animation sets). Options:
@@ -469,7 +469,7 @@ Each hero has its **own built-in targeting characteristic**. This is part of the
 | Element | Rule |
 |---|---|
 | **Basic hit** | ✅ Automatic when no skill is used. Rate from base attack interval + Attack Speed (Mercury, gear). Damage = base damage + dominant principle (§6.9) |
-| **Active skills** | ✅ **2 per hero in battle**, picked before battle from the hero's skill pool (leveling + Scrolls). Loadout saved per mode (PvE party, PvP defense). Cast via the hybrid HUD (§6.1.1) |
+| **Active skills** | ✅ **3 per hero in battle**, picked before battle from the hero's skill pool (leveling + Scrolls). Loadout saved per mode (PvE party, PvP defense). Cast via the hybrid HUD (§6.1.1) |
 | **Skill readiness** | ✅ Each skill costs **mana** and has a **cooldown**. Heroes start with 50% mana; skills start 50% charged. Cooldown Reduction only from gear |
 | **Unique skill** | ✅ **Passive**, always on (e.g. "heals allies 2% of damage dealt"). No extra button |
 | **Auto-skill toggle** | PvE: optional, so grinding can be fully automatic. PvP: AI-controlled (§6.7) |
@@ -678,7 +678,7 @@ Planned to be discussed later.
 | Main menu / Home | Daily Chest, Fusion, Party, Battle, Codex, (Market, Mine: later) |
 | **Fusion board** | Card grid (filter: Hero / Gear / Item), drag & drop fusion |
 | Card detail | Stats, gear, skills, slots, level |
-| Hero equip | Weapon / Armor / Accessory slots, **skill tree** (spend skill points; branch choice shows a **permanent** warning) and **skill loadout** (pick 2 actives) |
+| Hero equip | Weapon / Armor / Accessory slots, **skill tree** (spend skill points; branch choice shows a **permanent** warning) and **skill loadout** (pick 3 actives) |
 | Gear socket | Gear slots + Magic Stone inventory |
 | Codex | Discovered / ??? cards, recipes, progress, first discoverer |
 | Result reveal | New card / skill rarity / slot count animation |
@@ -743,6 +743,7 @@ Planned to be discussed later.
 ## 14. Change History
 | Version | Date | Changes |
 |---|---|---|
+| 0.37 | 2026-11-07 | Battle loadout 3 actives per hero (was 2): HUD skill bar A / B / C, ready dots 0–3, PC keys Q / W / E, consumables move to D / F |
 | 0.36 | 2026-11-07 | Holy / Dark as tags on Magic, with gear damage % and resist % (§6.9, §4.7.3); statuses Silence and Invulnerable; Silence is hard control; hard control interrupts tethers and channels; helpful vs harmful statuses (§6.10); overtime halves Invulnerable (§6.12); Zones (§6.13); §13 #39 projectiles; Elsie reworked |
 | 0.35 | 2026-11-06 | Skill tree MOBA-style: all core skills open from Lv. 1, branch at hero Lv. 10 with all 3 branch skills open; skill level cap = hero level ÷ 2 rounded up; Confirm button, no skill-point reset (§4.6.4) |
 | 0.34 | 2026-11-06 | Pre-placed skills (§6.2); Slow status; Stealth status; crit damage bonus rule (§6.9); Blind status (misdirected movement, basic hits miss, skills land); soft vs hard control defined (§6.10) |
