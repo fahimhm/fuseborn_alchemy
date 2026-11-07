@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| **Version** | 0.37 (draft) |
+| **Version** | 0.38 (draft) |
 | **Last updated** | 2026-11-07 |
 | **Status** | Pre-production. Fusion, card categories, and upgrade systems defined; combat and mining outlined |
 | **Engine** | Unity (tentative) |
@@ -484,6 +484,7 @@ Each hero has its **own built-in targeting characteristic**. This is part of the
 - Knocked-out heroes recover after battle. No permanent loss.
 
 ### 6.7 PvP — Asynchronous
+- ✅ **At launch:** asynchronous, **single battle** (no series). Real-time PvP comes later, once enough players are online (§6.14).
 - ✅ (proposed earlier) You fight another player's saved **defense party**. Both sides are shown in the same diagonal view: you at the bottom-left, the opponent at the top-right.
 - The opponent's skills fire automatically by AI (e.g. when ready, or by simple rules: heal when an ally is under 50% HP).
 - Your skills: manual, or auto if toggled.
@@ -606,6 +607,29 @@ A **zone** is an area on the ground with a fixed duration (users: Snick's Caltro
 | **Visibility** | Visible to both sides unless the skill says invisible |
 | **Overtime** | Zone healing is cut like all healing (§6.12) |
 | **Server** | Placement and ticks are server-authoritative |
+
+### 6.14 Real-time PvP (post-launch plan) 🔮
+Not in the launch scope. Ranked PvP launches **asynchronous, single battle** (§6.7). Real-time PvP is added **once enough players are online** to match them quickly. It's a **new mode next to** the async ladder, not a replacement.
+
+**Launch trigger (to set later):** enough concurrent players at peak, in one region, that a ranked match is found within a target wait (e.g. under 30 s) without falling back to bots. Exact numbers: §13 #40.
+
+**Format: Best of Three**
+| Rule | Value (proposed) |
+|---|---|
+| **Series** | First to **2 wins**. Each game is a normal battle (60 s, overtime, §6.12) |
+| **Between games** | Up to **30 s** to re-plan: formation, loadout, consumables, pre-placed skills, and **swap up to 2 homunculi** from the collection (limit: §13 #41). **Ready** skips the wait when both players are done. Re-plans are **hidden** until the next game starts |
+| **Each game starts fresh** | Full HP, 50% mana and cooldowns; pre-placed skills placed again; homunculi knocked out in one game are back for the next |
+| **Result** | **2-0** = win + **bonus reward**; **2-1** = normal win. Series score replaces stars for this mode |
+| **Draws** | A game timed out within 1% HP is a draw (no win for either). After 3 games with no 2 wins, the higher **total HP %** across games wins the series |
+| **Disconnects** | Short reconnect window; meanwhile the AI plays that side (same AI as async defense). Leaving the series = loss |
+
+**Keep it possible now (rules for every build until then):**
+- The battle simulation stays **server-authoritative and fixed-step**, so the same simulation can run live (§6.2).
+- Player actions in battle are **commands** (cast skill X of hero Y, use consumable Z) with a timestamp, never direct state changes, so they can come from a local tap, the async AI, or a network message.
+- The **async defense AI** doubles as the fallback for disconnects and empty queues.
+- Formations, loadouts and pre-placed skills are stored as data that can be swapped between games.
+
+**Tech (decide at the time):** live sessions on regional servers (e.g. Southeast Asia), matchmaking by rank, reconnect handling. Unity options include Photon (Quantum suits deterministic battles), Unity Netcode with Relay / Lobby, Nakama or PlayFab.
 
 ---
 
@@ -735,6 +759,8 @@ Planned to be discussed later.
 | 37 | Should souled vs soulless homunculi (Lore.md) ever matter in battle or fusion (e.g. soulless immune to Sleep/Confuse)? | Open; lore only for now |
 | 38 | Board & range: attack range per homunculus and whether every homunculus can move | ✅ 3 × 8 board, ranges in tiles, free movement, allies don't block (§6.2); results & overtime (§6.12). Tower/furnace objective parked: needs revive or deployment |
 | 39 | Do ranged attacks fly as projectiles (travel time, can be blocked or destroyed)? | Open. Hits land instantly for now; Heavenly Canopy (Elsie) cuts damage from ranged enemies, and its burning shots are visual only |
+| 40 | Real-time PvP launch trigger: how many concurrent players, in which region, and what queue time (§6.14) | Open; decide after launch data |
+| 41 | Real-time Best of Three: swap limit between games (proposed 2 homunculi) | Open |
 | 26 | Naming: card rarity and unique-skill rarity both use "Common/Rare". Use different labels to avoid confusion? | ✅ Skills use Bronze / Silver / Gold |
 | 27 | Risk: many random layers (card rarity, skill roll, slot roll, socket chance) can feel like a slot machine | Mitigate: progress never depends only on luck; Exchange, trading, pity |
 
@@ -743,6 +769,7 @@ Planned to be discussed later.
 ## 14. Change History
 | Version | Date | Changes |
 |---|---|---|
+| 0.38 | 2026-11-07 | PvP launches async single battle (§6.7); post-launch real-time PvP plan, Best of Three, rules to keep it possible (§6.14); §13 #40–41 |
 | 0.37 | 2026-11-07 | Battle loadout 3 actives per hero (was 2): HUD skill bar A / B / C, ready dots 0–3, PC keys Q / W / E, consumables move to D / F |
 | 0.36 | 2026-11-07 | Holy / Dark as tags on Magic, with gear damage % and resist % (§6.9, §4.7.3); statuses Silence and Invulnerable; Silence is hard control; hard control interrupts tethers and channels; helpful vs harmful statuses (§6.10); overtime halves Invulnerable (§6.12); Zones (§6.13); §13 #39 projectiles; Elsie reworked |
 | 0.35 | 2026-11-06 | Skill tree MOBA-style: all core skills open from Lv. 1, branch at hero Lv. 10 with all 3 branch skills open; skill level cap = hero level ÷ 2 rounded up; Confirm button, no skill-point reset (§4.6.4) |
