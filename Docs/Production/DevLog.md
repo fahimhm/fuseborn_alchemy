@@ -4,6 +4,10 @@ Short dated entries: what was done, what was learned, what's next. Newest at the
 
 ---
 
+## 2026-11-07 (3)
+**Done:** GDD v0.37: battle loadout 3 actives. GDD v0.38: PvP stays async single battle at launch; real-time Best of Three planned post-launch (§6.14) with rules to keep it possible; Roadmap post-launch item.
+**Next:** Tier II homunculi (user-led).
+
 ## 2026-11-07 (2)
 **Done:** All 5 Tier I homunculi approved by the user (Tobin, Wren, Elsie, Snick, Grum): status "Numbers done (approved)". Merged branches cleaned up on GitHub.
 **Next:** Tier II homunculi (not started; user will lead).

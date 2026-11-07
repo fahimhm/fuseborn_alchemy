@@ -50,3 +50,7 @@ The game is **online**, but we validate fun offline first, with code shaped so t
 ## Phase 6 — Vertical Slice  ⚪
 - [ ] Art from AssetList, audio pass, juice
 - [ ] Build for target platform(s)
+
+## Post-launch — Real-time PvP  🔮
+- [ ] When enough players are online (GDD §6.14, §13 #40): real-time Best of Three PvP as a new mode next to the async ladder
+- **Until then:** keep the battle simulation server-authoritative and fixed-step, and battle actions as commands (GDD §6.14)
