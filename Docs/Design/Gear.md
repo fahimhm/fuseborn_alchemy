@@ -2,7 +2,7 @@
 
 **Status:** Draft (Tier I and II for review). Rules: GDD §4.7 (budget §4.7.4, visuals §4.7.5, slots §4.7.1, stones §4.7.2, armor pieces §4.7.3). Traits: `TraitPool.md` §4. Lore: junk becomes treasure (Lore.md).
 
-> ⚠️ **Missing weapon families (GDD §13 #44):** **Knife** (Snick's Trapmaster) and **Bomb** (Snick's Goblin Sapper, melee) have **no cards yet**. Until they're created (Tier III or higher), those branches fight with their default weapon only.
+> ⚠️ **Missing weapon families (GDD §13 #44):** **Knife** (Snick's Trapmaster) and **Bomb** (Snick's Goblin Sapper, melee) have **no cards yet**. Until they're created (Tier III or higher), those branches fight with their default weapon only. Plan: **Bomb family property: thrown, +1 range** (GDD §6.2), so the Sapper lobs from 2 tiles.
 
 ## How to read an entry
 | Field | Meaning |

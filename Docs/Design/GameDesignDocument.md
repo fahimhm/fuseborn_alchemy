@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| **Version** | 0.40 (draft) |
+| **Version** | 0.41 (draft) |
 | **Last updated** | 2026-11-07 |
 | **Status** | Pre-production. Fusion, card categories, and upgrade systems defined; combat and mining outlined |
 | **Engine** | Unity (tentative) |
@@ -245,7 +245,7 @@ Every homunculus is made of the three alchemical **principles** (Lore.md): **Sal
 | Shield | Tower Shield |
 | Instrument | Lute, War Drum |
 | Knife | ⚠️ **No cards yet** (needed by Snick's Trapmaster, §13 #44) |
-| Bomb | ⚠️ **No cards yet** (needed by Snick's Goblin Sapper; melee, §13 #44) |
+| Bomb | ⚠️ **No cards yet** (needed by Snick's Goblin Sapper; melee, §13 #44). **Planned family property: thrown, +1 range** (§6.2) |
 ✅ Weapons and armor are one category, **Gear**. Each Gear card has a **slot type** (Weapon or Armor) that decides which hero slot it fits. Lists in §15.7.
 
 #### 4.7.1 Random Slots
@@ -467,7 +467,7 @@ You     row 3 front · 2 middle · 1 back
 - The formation is set before battle and saved per mode (PvE party, PvP defense party).
 - Any role can be placed in any row. Placement is the player's strategy.
 - ✅ **Tiles are for placement and range only.** In battle, homunculi **move freely** (continuous, not tile to tile).
-- ✅ **Attack range in tile lengths**, set per homunculus (not by role):
+- ✅ **Attack range in tile lengths**, set per homunculus (not by role). ✅ **Gear exception:** gear may add **+1 range**, only as a **fixed** effect (a weapon family property or a card's signature, never a rolled trait), **max +1 from all sources**. Melee stays melee for every other rule (it still walks; it just stops 1 tile earlier). +1 on Long does nothing.
 
 | Range | Tiles | Reaches without moving |
 |---|---|---|
@@ -824,6 +824,7 @@ Planned to be discussed later.
 ## 14. Change History
 | Version | Date | Changes |
 |---|---|---|
+| 0.41 | 2026-11-07 | Gear may add +1 attack range (fixed only: family property or signature; max +1; melee stays melee); Bomb family planned with +1 range (§6.2, §4.7) |
 | 0.40 | 2026-11-07 | Gear visuals (§4.7.5): weapons visible and set basic-attack effects, armor not visible, future high-tier auras; branches may replace weapon families; Knife and Bomb families (no cards yet, §13 #44) |
 | 0.39 | 2026-11-07 | Gear budget (§4.7.4): GP per tier 3 / 6 / 10 / 16 / 24, conversion rates, shape per tier, signatures and named legendaries; gear may give principles; content in `Gear.md`; §13 #42–43 |
 | 0.38 | 2026-11-07 | PvP launches async single battle (§6.7); post-launch real-time PvP plan, Best of Three, rules to keep it possible (§6.14); §13 #40–41 |
