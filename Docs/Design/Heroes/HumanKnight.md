@@ -103,7 +103,7 @@ Skill points: 1 per hero level, spent on any open skill. Every skill has 5 level
 | Accessory | Any |
 | Default weapon | Sword (drawn dull) |
 
-The pot-lid shield is part of Tobin (his look and P1), not a Gear card. If he equips a Tower Shield, his art swaps to it.
+The pot-lid shield is part of Tobin (his look and P1), not a Gear card. If he equips a Tower Shield, **it replaces the pot lid** in his off-hand (GDD §4.7.5); his sword hand shows his default dull sword.
 
 ## 7. Unique Trait
 - Odds: Bronze 70% · Silver 25% · Gold 5%.

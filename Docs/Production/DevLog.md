@@ -4,6 +4,11 @@ Short dated entries: what was done, what was learned, what's next. Newest at the
 
 ---
 
+## 2026-11-07 (4)
+**Done:** GDD v0.39–0.40: gear budget, gear visuals, branch weapon families. `Gear.md`: Tier I and Tier II (16 cards) with stats, descriptions, card art, equipped look and attack effects / hit sounds.
+**Reminder:** Knife and Bomb families have no cards yet (Snick's Trapmaster and Goblin Sapper, GDD §13 #44).
+**Next:** Tier III gear (10 GP, optional signatures); families as combat tags (§13 #42).
+
 ## 2026-11-07 (3)
 **Done:** GDD v0.37: battle loadout 3 actives. GDD v0.38: PvP stays async single battle at launch; real-time Best of Three planned post-launch (§6.14) with rules to keep it possible; Roadmap post-launch item.
 **Next:** Tier II homunculi (user-led).

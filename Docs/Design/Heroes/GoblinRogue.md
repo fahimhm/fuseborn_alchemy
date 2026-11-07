@@ -102,10 +102,12 @@ Skill points: 1 per hero level, spent on any open skill. Every skill has 5 level
 ## 6. Equipment
 | Slot | Allowed |
 |---|---|
-| Weapon | Dagger, Sword |
+| Weapon | Core and B1 Shadow Assassin: Dagger, Sword. **B2 Trapmaster: Knife only. B3 Goblin Sapper: Bomb only** (still melee, 1 tile) |
 | Armor | Any piece |
 | Accessory | Any |
-| Default weapon | Sword (worn as a "big knife") |
+| Default weapon | Core / B1: Sword (worn as a "big knife"). B2: a hooked wire knife. B3: a fizzing clay bomb (visual only) |
+
+⚠️ Knife and Bomb families have **no gear cards yet** (GDD §13 #44): until they exist, B2 and B3 fight with their default weapon only.
 
 ## 7. Unique Trait
 - Odds: Bronze 70% · Silver 25% · Gold 5%.
@@ -121,7 +123,7 @@ Skill points: 1 per hero level, spent on any open skill. Every skill has 5 level
 | Card illustration | Mid-escape through a workshop doorway, a handful of sand flying behind him, ears flat |
 | Battle views | Front ¾ and back ¾. Back view shows the sand pouch and ears |
 | Animations | Idle (ears twitching, glancing over his shoulder), run (crouched), stab, Backstab (vanishing dash), Pocket Sand (throw), hit, KO (curls up small), victory (a quick, relieved breath; checks his pouch). Branches: B1 Backstab lunge, Shadow Stalker fade and reappear; B2 kneels to set a trap, scatters caltrops; B3 bomb throw, lit-fuse charge and blast-back tumble |
-| Branch props | B1 a dark hood and a thin black dagger; B2 a hooked wire knife, a coil of wire and a pouch of trap parts (still melee); B3 a bandolier of junk bombs |
+| Branch props | Never replace the equipped weapon (GDD §4.7.5). B1 a dark hood; his blade blackened (accent on any equipped weapon). B2 a coil of wire and a pouch of trap parts. B3 a bandolier of junk bombs |
 | VFX per skill | Pocket Sand: sand puff; Nimble Escape: dust kick; Backstab: shadow streak; Shadow Stalker: fade + reappear shimmer; Caltrops & Wire: scattered spikes; Snare Trap: hidden glint, then snapping jaws; Black Powder Grenade: smoky fire blast; Kamikaze Dash: fuse sparks trail, big explosion |
 | SFX / voice notes | Quick light footsteps; a sharp nervous laugh; a hiss of sand |
 | References | TBD (moodboard) |
