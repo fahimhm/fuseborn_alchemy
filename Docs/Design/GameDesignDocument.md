@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| **Version** | 0.38 (draft) |
+| **Version** | 0.39 (draft) |
 | **Last updated** | 2026-11-07 |
 | **Status** | Pre-production. Fusion, card categories, and upgrade systems defined; combat and mining outlined |
 | **Engine** | Unity (tentative) |
@@ -285,7 +285,49 @@ Every homunculus is made of the three alchemical **principles** (Lore.md): **Sal
 | Gloves | ATK, Attack Speed, Crit Chance, Lifesteal |
 | Boots | Move Speed, Evasion |
 
-**Gear bonus stats** (on gear only, alongside hero Salt/Mercury/Sulfur): HP, DEF, ATK, Attack Speed, Move Speed, Crit Chance, Evasion, Block, Lifesteal, Cooldown Reduction, Skill Power, Thorns (reflects melee damage), Control Resist, Holy / Dark damage % (weapons and accessories), Holy / Dark resist % (body armor, helmets and accessories; §6.9). These are the only sources of % stats besides passives and traits (§4.6.2). Values TBD.
+**Gear bonus stats** (on gear only; gear may **also** give Salt / Mercury / Sulfur points, §4.7.4): HP, DEF, ATK, Attack Speed, Move Speed, Crit Chance, Evasion, Block, Lifesteal, Cooldown Reduction, Skill Power, Thorns (reflects melee damage), Control Resist, Holy / Dark damage % (weapons and accessories), Holy / Dark resist % (body armor, helmets and accessories; §6.9). These are the only sources of % stats besides passives and traits (§4.6.2). Values TBD.
+
+#### 4.7.4 Gear Budget ✅ (start values, revisit after launch)
+Every gear card has a **Gear Point (GP) budget set by its tier**, spent by the designer on principles and bonus stats at fixed rates, so cards of the same tier are equally strong on paper. Content per card: `Docs/Design/Gear.md`.
+
+| Tier | GP | Typically used around | ≈ share of the homunculus's total principles then |
+|---|---|---|---|
+| I | **3** | Lv. 1–8 | ~6% |
+| II | **6** | Lv. 8–15 | ~6% |
+| III | **10** | Lv. 15–25 | ~6–7% |
+| IV | **16** | Lv. 25–30 | ~8% |
+| V | **24** | Lv. 30 | ~11% (legendaries) |
+
+Gear **doesn't level up**: a card's share shrinks as its wearer levels, which pushes players to fuse better gear. "Typically used around" is a guess until Prototype 1 shows how fast players reach each tier. Sized like Dota's early items (+3 to a stat on a ~22-point hero).
+
+**1 GP buys:**
+| Spend on | Gives |
+|---|---|
+| **1 principle point** (Salt / Mercury / Sulfur) | Its normal grants (§4.6.2). On a homunculus whose **dominant** principle matches, also +1 attack damage and Resonance, so matching gear is worth more |
+| ATK | +1 |
+| HP | +25 |
+| DEF or RES | +0.3 |
+| Mana | +15 |
+| Attack Speed | +1.5 |
+| Move Speed | +5 |
+| Skill Power | +1% |
+| Cooldown Reduction | +0.5% |
+| Crit Chance / Block | +0.5% |
+| Evasion / Lifesteal | +0.4% |
+| Thorns / Control Resist / Holy-Dark damage or resist | +1% |
+
+Existing caps still apply (Evasion 40%, Control Resist −50%, Holy / Dark resist −50%…).
+
+**Shape per tier**
+| Tier | Principles | Bonus stats | Signature |
+|---|---|---|---|
+| **I** | **Whole budget** (1–2 principles) | — | — |
+| **II** | At least half the budget | 1 | — |
+| **III** | Any mix | Up to 2 | **Optional**; with one, stats get **75%** of the budget |
+| **IV–V** (named legendaries) | Any mix | Up to 2 | **Always**; stats get **70%** of the budget |
+
+- **Signature:** a fixed effect every copy of the card has (e.g. a folklore blade's power). One per card. Prefer conditional effects (vs a family, below 50% HP, first 10 s, an aura on the same row). Family bonuses **≤ +30%**; no immunities. Named legendaries may take real folklore names (public domain originals only, e.g. Balmung).
+- **On top of the budget:** the **rolled trait** (30% chance, §4.7.1, `TraitPool.md` §4), so two copies of the same card can differ, and the **0–5 stone slots**.
 
 ### 4.8 Item
 
@@ -761,6 +803,8 @@ Planned to be discussed later.
 | 39 | Do ranged attacks fly as projectiles (travel time, can be blocked or destroyed)? | Open. Hits land instantly for now; Heavenly Canopy (Elsie) cuts damage from ranged enemies, and its burning shots are visual only |
 | 40 | Real-time PvP launch trigger: how many concurrent players, in which region, and what queue time (§6.14) | Open; decide after launch data |
 | 41 | Real-time Best of Three: swap limit between games (proposed 2 homunculi) | Open |
+| 42 | Families as combat tags: homunculi have families (HeroPool); PvE Runoffs need families too, so gear signatures like "+30% vs Draconic" work in PvE and PvP | Open; needed before Tier III+ signatures |
+| 43 | Does a homunculus's **default weapon** (hero files §6) give stats, or is it only what it holds with no weapon equipped? | Open; proposed: visual only, no stats |
 | 26 | Naming: card rarity and unique-skill rarity both use "Common/Rare". Use different labels to avoid confusion? | ✅ Skills use Bronze / Silver / Gold |
 | 27 | Risk: many random layers (card rarity, skill roll, slot roll, socket chance) can feel like a slot machine | Mitigate: progress never depends only on luck; Exchange, trading, pity |
 
@@ -769,6 +813,7 @@ Planned to be discussed later.
 ## 14. Change History
 | Version | Date | Changes |
 |---|---|---|
+| 0.39 | 2026-11-07 | Gear budget (§4.7.4): GP per tier 3 / 6 / 10 / 16 / 24, conversion rates, shape per tier, signatures and named legendaries; gear may give principles; content in `Gear.md`; §13 #42–43 |
 | 0.38 | 2026-11-07 | PvP launches async single battle (§6.7); post-launch real-time PvP plan, Best of Three, rules to keep it possible (§6.14); §13 #40–41 |
 | 0.37 | 2026-11-07 | Battle loadout 3 actives per hero (was 2): HUD skill bar A / B / C, ready dots 0–3, PC keys Q / W / E, consumables move to D / F |
 | 0.36 | 2026-11-07 | Holy / Dark as tags on Magic, with gear damage % and resist % (§6.9, §4.7.3); statuses Silence and Invulnerable; Silence is hard control; hard control interrupts tethers and channels; helpful vs harmful statuses (§6.10); overtime halves Invulnerable (§6.12); Zones (§6.13); §13 #39 projectiles; Elsie reworked |
@@ -920,7 +965,7 @@ No match (✗): Priest + Rogue, Priest + Warlock. Two "no reaction" pairs are ke
 | Archer + Warlock | Oni – Shaman | Oni – Berserker | **Oni – Berserker** | Warrior |
 
 ### 15.7 Gear (proposed, to be sorted)
-**Tier I (basic): 3 weapons, 2 armor**
+**Tier I (basic): 3 weapons, 2 armor.** Stats, descriptions and art notes: `Docs/Design/Gear.md` (budget §4.7.4).
 | # | Card | Slot | Leans to |
 |---|---|---|---|
 | 1 | Sword | Weapon | Salt |
