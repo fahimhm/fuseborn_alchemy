@@ -95,7 +95,7 @@ Skill points: 1 per hero level, spent on any open skill. Every skill has 5 level
 | B3b | **Blight Wave** | Branch (Lv. 10) | 110 / 20 s | Front-most enemy row | **Curse** 4 s, 15 / 20 / 25 / 30 / 35 **Dark** damage per s |
 | B3p | **Lingering Curse** | Branch (Lv. 10) | — | Self | His Curses last +20 / 25 / 30 / 35 / 40% longer |
 
-**Scroll skill tags:** Magic, Control, Sustain.
+**Gear skill fit:** Magic, Control, Sustain. (guidance for which gear skills suit it, GDD §4.7.6).
 
 ## 6. Equipment
 | Slot | Allowed |

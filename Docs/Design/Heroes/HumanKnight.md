@@ -93,7 +93,7 @@ Skill points: 1 per hero level, spent on any open skill. Every skill has 5 level
 | B3b | **Lid Flash** | Branch (Lv. 10) | 110 / 22 s | Front-most enemy row; allies in his lane | Confuse 1.5 / 2 / 2.5 / 3 / 3.5 s; heals allies in his lane for 60 / 90 / 120 / 150 / 180 |
 | B3p | **Rune-Etched Lid** | Branch (Lv. 10) | — | Self | Pot-Lid Guard can also block magic hits; +3 / 4 / 5 / 6 / 7 RES |
 
-**Scroll skill tags:** Guard, Physical, Control.
+**Gear skill fit:** Guard, Physical, Control. (guidance for which gear skills suit it, GDD §4.7.6).
 
 ## 6. Equipment
 | Slot | Allowed |

@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| **Version** | 0.42 (draft) |
+| **Version** | 0.43 (draft) |
 | **Last updated** | 2026-11-07 |
 | **Status** | Pre-production. Fusion, card categories, and upgrade systems defined; combat and mining outlined |
 | **Engine** | Unity (tentative) |
@@ -81,7 +81,7 @@
 |---|---|---|---|
 | **Hero** | (Role-based, §4.6) | Hero | Unique instance (level, gear, skill) |
 | **Gear** | **Weapon** (sword, bow, staff…) · **Armor** (mail, robe…), §4.7 | Gear | Unique instance (random slots + sockets) |
-| **Item** | **Material** (junk basics and up, Tier I–III) · **Consumable** (Potion, Bomb, Scroll, Charm; only Potion & Bomb in battle) · **Accessory** (Ring, Necklace, Amulet, Crown) · **Magic Stone** | Item | Materials, consumables & Magic Stones **stack**; accessories are unique instances |
+| **Item** | **Material** (junk basics and up, Tier I–III) · **Consumable** (Potion, Throwable, Scroll, Charm; Potions, Throwables and Scrolls in battle, Charms outside) · **Accessory** (Ring, Necklace, Amulet, Crown) · **Magic Stone** | Item | Materials, consumables & Magic Stones **stack**; accessories are unique instances |
 
 - ✅ **Fusion stays within one category.** Hero + Hero, Gear + Gear, Item + Item. A Gear + Gear fusion can produce a weapon **or** an armor (e.g. Sword + Iron Mail → Tower Shield).
 - Cross-category interactions are **actions**, not fusion: *equip* (Hero ← Weapon/Armor/Accessory), *socket* (Gear ← Magic Stone), *use* (Hero ← Potion).
@@ -208,13 +208,13 @@ Every homunculus is made of the three alchemical **principles** (Lore.md): **Sal
   - **Each branch:** **Bx1** and **Bx2** actives and the **Bx passive** are **all open** once the branch is chosen.
   - **Skill levels:** **5 for every skill**, actives and passives. Values are **fixed per skill level**; each active costs **mana** and has a **cooldown**.
   - **Budget:** 6 skills (A1, A2, core passive + the branch's 2 actives and passive) × 5 levels = **30 points**, all on the hero's own skills, maxed exactly at Lv. 30. Before Lv. 10 only the core can take points (9 points, core max 15); from Lv. 10, 21 points cover the rest of the core and the branch's 15. While leveling, the player chooses what to raise first.
-  - **Scroll skills** cost no points: a Scroll teaches its skill at Lv. 1; using another copy of the **same Scroll** on that hero raises it by 1 level (max Lv. 5). Server-authoritative, like all inventory use.
+  - ✅ **Gear skills** (§4.7.6) cost no points: some weapons and armor carry one fixed active skill, usable by whoever equips them. **Scrolls never teach skills** (they're single-use battle spells, §4.8).
   - ✅ **Each branch declares its role** (§6.3). A branch may keep the initial role or shift to another one, so the same homunculus can become e.g. a healer, a paladin or a tank-like build. Rules for designing branches:
     1. **Lore decides** which roles a homunculus can reach (an angel priest can tank; a goblin rogue never does).
     2. **At least one branch keeps the initial role**, so the label shown at discovery is always a valid path. A 1-branch homunculus stays in its initial role.
     3. **Specialists keep the core tool** (§6.3): an off-role branch takes the role's shape but only a weaker version of its core tool.
   - Body stays the same in every branch: dominant principle, base stats and growth, attack type and range never change; the branch changes skills and role.
-  - In battle the hero brings **3 actives** (loadout, §6.5) from A1, A2, its branch actives and Scroll skills. With 4 tree actives at most, one always stays home, so the loadout is still a choice; the 3rd slot also gives Scroll skills room. Passives are always on.
+  - In battle the hero brings **3 actives** (loadout, §6.5) from A1, A2, its branch actives and **gear skills** (up to 2: weapon and armor). With 4 tree actives at most, one always stays home, so the loadout is still a choice; the 3rd slot also gives gear skills room. Passives are always on.
   - Content per hero: 2 core actives + 1 core passive, plus 2 actives + 1 passive **per branch** (up to 9 actives + 3 passives with 3 branches). Fewer branches = less content and art. Branch skills should reuse the hero's animation set where possible; a branch may swap one signature prop so the build reads at a glance.
 - ✅ The **rolled unique skill** (innate trait, Lore.md) below is **separate** from the tree: tree passives are the hero's identity, the unique roll is what makes each copy special.
 - ✅ **Every hero rolls a unique skill (passive, always on), basics included.** A basic hero rolls when it is obtained (chest, starter pack, drop); a fused hero rolls when it is created. Basics are therefore worth keeping or trading, not only fusing. Weighted pool:
@@ -276,6 +276,19 @@ Every homunculus is made of the three alchemical **principles** (Lore.md): **Sal
 - **Protection item:** an Item made through fusion (e.g. a "Ward Charm") that prevents loss on one failed attempt. It gives Item fusion an extra purpose.
 - When a weapon/armor is **fused**, its socketed stones are **lost** (they're part of the gear), unless detached first. A confirmation warns the player.
 - All attach/detach rolls happen **on the server**.
+
+**Stone color × rank ✅**
+- **Color = which stat it raises** (one stat each). **Rank = how strong**, in Gear Points (§4.7.4). A stone's card name is *rank + color*, e.g. "Rough Fury Stone".
+
+| Color | Raises | | Rank | Item tier | GP |
+|---|---|---|---|---|---|
+| **Grey · Guard** | DEF | | **Rough** | IV | 1 |
+| **Green · Vigor** | HP | | **Polished** | V | 2 |
+| **Red · Fury** | ATK | | Flawless | later | 3 |
+| **Violet · Arcana** | Skill Power | | Radiant | later | 4 |
+| **Yellow · Haste** | Attack Speed | | Perfect | later | 6 |
+
+- Rough stones come from **Crystal Shard (III) + each Tier I junk** (one color per junk, §15.8). Small on purpose: 5 slots are rare (2%) and filling all 5 succeeds only ~16% of the time, so a fully socketed card is a jackpot.
 
 #### 4.7.3 Armor Pieces & Bonus Stats (proposed)
 ✅ Body armor, helmets, gloves and boots all share the hero's **one Armor slot**. Pieces differ by bonus focus: body armor for survival, the others for utility.
@@ -339,17 +352,24 @@ Existing caps still apply (Evasion 40%, Control Resist −50%, Holy / Dark resis
 - **Signature:** a fixed effect every copy of the card has (e.g. a folklore blade's power). One per card. Prefer conditional effects (vs a family, below 50% HP, first 10 s, an aura on the same row). Family bonuses **≤ +30%**; no immunities. Named legendaries may take real folklore names (public domain originals only, e.g. Balmung).
 - **On top of the budget:** the **rolled trait** (30% chance, §4.7.1, `TraitPool.md` §4), so two copies of the same card can differ, and the **0–5 stone slots**.
 
+#### 4.7.6 Gear Skills ✅
+- Some weapons and armor carry **one fixed active skill** (e.g. a sword with *Quick Slash*, boots with *Stomp*). **Every copy** of that card has it.
+- **A card with a skill has nothing else:** no signature and it **never rolls a trait**. Stone slots still roll. Every gear card is one of: plain · rolled trait and/or signature · one fixed skill.
+- **From Tier II.** Strength ≈ a tree skill at **Lv. (tier − 1)** (Tier II → Lv. 1 … Tier V → Lv. 4), so it never matches a maxed homunculus skill. **Never levels**; a stronger version comes on higher-tier gear (fuse up). Costs **30% of the card's GP**.
+- Usable by whoever equips it (weapon families still apply). Goes into the battle loadout as one of the **3 active slots** (§4.6.4).
+- Accessories never carry skills.
+
 ### 4.8 Item
 
 | Subtype | Use | Stackable | Notes |
 |---|---|---|---|
 | **Material** | Fusion ingredient only (Tier I–III: Stone, Seed, Log, Bone, Scrap Metal and what they make) | ✅ | Junk-like basics |
-| **Potion** | Consumed on use (heal, mana refresh, buffs, special effects) | ✅ | Can be used in battle? TBD |
-| **Bomb** | Consumed on use (battle effect) | ✅ | Effects TBD |
-| **Scroll** | Used **outside battle**: teaches a hero a new active skill at Lv. 1; a duplicate of the same Scroll raises it 1 level (max 5; §4.6.4) | ✅ | Which skill, role limits: TBD |
-| **Charm** | Consumed on use (e.g. Ward Charm protects a socketing attempt) | ✅ | Effects TBD |
-| **Ring / Necklace / Amulet / Crown** | Accessory slot | ❌ | Stat bonus + trait (always rolls one, `TraitPool.md` §5) |
-| **Magic Stone** | Socketed into Gear slots | ✅ | Upgrade effect per stone type |
+| **Potion** | Consumed on use **in battle** on the selected homunculus (heal, mana, buffs) | ✅ | Shared consumable slots (§6.5) |
+| **Throwable** | Consumed on use **in battle**: **engineering**, not magic (bombs, smoke, traps) | ✅ | Shared consumable slots. Not the Bomb **weapon** family (§4.7) |
+| **Scroll** | Consumed on use **in battle**: one **fixed magic spell** per scroll (lightning, illusion…), like Clash of Clans spells. **Never teaches skills** | ✅ | Shared consumable slots |
+| **Charm** | Consumed on use **outside battle**: luck and protection for risky systems (e.g. Ward Charm saves a stone on a failed socketing attempt) | ✅ | Never in battle |
+| **Ring / Necklace / Amulet / Crown** | Accessory slot | ❌ | Stat bonus + trait (always rolls one, `TraitPool.md` §5). **Budget:** 8 GP at Tier IV, 12 GP at Tier V (gear conversion rates, §4.7.4; may include % stats). Not visible on the homunculus |
+| **Magic Stone** | Socketed into Gear slots | ✅ | **Color × rank** (§4.7.2) |
 
 ✅ Item basics are junk materials. Usable items appear from Tier IV (Tier III + Tier I) and better ones at Tier V (Tier III + Tier II). Lists in §15.8; content (descriptions, art briefs) in `Docs/Design/Items.md`.
 - ✅ **Materials (Tier I–III) are fusion only:** no battle use and no XP (8 random cards a day would make junk the main XP source). Their value is what they become, plus selling and the Exchange (§4.3).
@@ -524,11 +544,11 @@ Each hero has its **own built-in targeting characteristic**. This is part of the
 | Element | Rule |
 |---|---|
 | **Basic hit** | ✅ Automatic when no skill is used. Rate from base attack interval + Attack Speed (Mercury, gear). Damage = base damage + dominant principle (§6.9) |
-| **Active skills** | ✅ **3 per hero in battle**, picked before battle from the hero's skill pool (leveling + Scrolls). Loadout saved per mode (PvE party, PvP defense). Cast via the hybrid HUD (§6.1.1) |
+| **Active skills** | ✅ **3 per hero in battle**, picked before battle from the hero's skill pool (tree skills + gear skills, §4.7.6). Loadout saved per mode (PvE party, PvP defense). Cast via the hybrid HUD (§6.1.1) |
 | **Skill readiness** | ✅ Each skill costs **mana** and has a **cooldown**. Heroes start with 50% mana; skills start 50% charged. Cooldown Reduction only from gear |
 | **Unique skill** | ✅ **Passive**, always on (e.g. "heals allies 2% of damage dealt"). No extra button |
 | **Auto-skill toggle** | PvE: optional, so grinding can be fully automatic. PvP: AI-controlled (§6.7) |
-| **Consumables in battle** | ✅ **2 shared consumable slots** per party, shown as 2 buttons in the **bottom-right corner** (§6.1.1). **Potions and Bombs only** (Scrolls are used outside battle). Each slot holds one stackable consumable type (e.g. 5 × Minor Healing Potion). Per-slot cooldown and max uses per battle (to stop spam), and PvP AI use: TBD |
+| **Consumables in battle** | ✅ **2 shared consumable slots** per party, shown as 2 buttons in the **bottom-right corner** (§6.1.1). **Potions, Throwables and Scrolls** (Charms are used outside battle). Each slot holds one stackable consumable type (e.g. 5 × Minor Healing Potion). Per-slot cooldown and max uses per battle (to stop spam), and PvP AI use: TBD |
 
 ### 6.6 PvE — Monster Stages
 - ✅ Monsters are **Runoffs**: failed or uncontrolled reactions that came alive (Lore.md). Their drops are recovered reagents.
@@ -762,7 +782,7 @@ Planned to be discussed later.
 | Codex | Discovered / ??? cards, recipes, progress, first discoverer |
 | Result reveal | New card / skill rarity / slot count animation |
 | Formation | 3×3 grid editor, place 5 heroes (PvE party / PvP defense); place pre-placed skills (e.g. traps) on own side or middle rows |
-| Battle | Diagonal auto-battle view + hybrid HUD: 5 hero buttons, 2-skill bar, 2 consumable buttons (§6.1.1, Prototype 2) |
+| Battle | Diagonal auto-battle view + hybrid HUD: 5 hero buttons, 3-skill bar, 2 consumable buttons (§6.1.1, Prototype 2) |
 
 ---
 
@@ -827,6 +847,7 @@ Planned to be discussed later.
 ## 14. Change History
 | Version | Date | Changes |
 |---|---|---|
+| 0.43 | 2026-11-08 | Scrolls become single-use magic battle spells (never teach skills); Throwables (engineering) replace the Bomb item subtype; Potions, Throwables and Scrolls share the battle consumable slots; Charms outside battle; gear skills (§4.7.6); magic stone color × rank; accessory budget 8 / 12 GP; Tier IV list (14 items) with ingredient tiers |
 | 0.42 | 2026-11-08 | Materials: fusion only, principle lean (flavor), Junk Codex (§4.8); Old Coin renamed Ancient Token; item content in `Items.md` |
 | 0.41 | 2026-11-07 | Gear may add +1 attack range (fixed only: family property or signature; max +1; melee stays melee); Bomb family planned with +1 range (§6.2, §4.7) |
 | 0.40 | 2026-11-07 | Gear visuals (§4.7.5): weapons visible and set basic-attack effects, armor not visible, future high-tier auras; branches may replace weapon families; Knife and Bomb families (no cards yet, §13 #44) |
@@ -1075,19 +1096,23 @@ No match: Stone + Log, Seed + Bone, Seed + Scrap Metal.
 | Ink | Bone Dust + Log | |
 | Wax | Glue + Seed | |
 
-**Tier IV (Tier III + Tier I): 10 usable items, 55 ✗**
+**Tier IV (Tier III + Tier I): 14 usable items, 51 ✗.** Effects, descriptions and art: `Docs/Design/Items.md`.
 | Result | Recipe | Type |
 |---|---|---|
-| Minor Healing Potion | Healing Herb + Stone | Potion |
-| Mana Tonic | Glowcap + Seed | Potion |
-| Smoke Bomb | Ash + Scrap Metal | Bomb |
-| Spell Scroll | Ink + Log | Scroll |
-| Ward Charm | Wax + Bone | Charm (socketing protection, §4.7.2) |
-| Rough Magic Stone | Crystal Shard + Stone | Magic Stone |
-| Iron Ring | Iron Ingot + Bone | Ring |
-| Silver Necklace | Silver Nugget + Scrap Metal | Necklace |
-| Pearl Amulet | Pearl + Seed | Amulet |
-| Twig Crown | Rope + Log | Crown |
+| Minor Healing Potion | Healing Herb (III) + Stone (I) | Potion |
+| Minor Mana Tonic | Glowcap (III) + Seed (I) | Potion |
+| Smoke Pot | Ash (III) + Scrap Metal (I) | Throwable |
+| Spark Scroll | Ink (III) + Log (I) | Scroll |
+| Ward Charm | Wax (III) + Bone (I) | Charm (socketing protection, §4.7.2) |
+| Rough Guard Stone | Crystal Shard (III) + Stone (I) | Magic Stone (Grey, DEF) |
+| Rough Vigor Stone | Crystal Shard (III) + Seed (I) | Magic Stone (Green, HP) |
+| Rough Fury Stone | Crystal Shard (III) + Log (I) | Magic Stone (Red, ATK) |
+| Rough Arcana Stone | Crystal Shard (III) + Bone (I) | Magic Stone (Violet, Skill Power) |
+| Rough Haste Stone | Crystal Shard (III) + Scrap Metal (I) | Magic Stone (Yellow, Attack Speed) |
+| Iron Ring | Iron Ingot (III) + Bone (I) | Ring |
+| Silver Necklace | Silver Nugget (III) + Scrap Metal (I) | Necklace |
+| Pearl Amulet | Pearl (III) + Seed (I) | Amulet |
+| Twig Crown | Rope (III) + Log (I) | Crown |
 
 **Tier V (Tier III + Tier II): 15 better items, 141 ✗**
 | Result | Recipe | Type |
@@ -1095,7 +1120,7 @@ No match: Stone + Log, Seed + Bone, Seed + Scrap Metal.
 | Greater Healing Potion | Healing Herb + Mushroom | Potion |
 | Mana Elixir | Glowcap + Sprout | Potion |
 | Soothing Salve | Wax + Moss | Potion |
-| Fire Bomb | Ash + Charcoal | Bomb |
+| Fire Bomb | Ash + Charcoal | Throwable |
 | Rune Scroll | Ink + Glue | Scroll |
 | Guardian Charm | Rope + Chalk | Charm |
 | Lucky Coin | Ancient Token + Fishhook | Charm |
@@ -1108,7 +1133,7 @@ No match: Stone + Log, Seed + Bone, Seed + Scrap Metal.
 | Iron Crown | Iron Ingot + Rusty Nail | Crown |
 | Gilded Crown | Ancient Token + Raw Ore | Crown |
 
-Scrolls (Spell Scroll, Rune Scroll) teach heroes skills outside battle (§4.8). Every Tier II and Tier III card is used in Tier V. To-do: effects, second recipes for key Tier IV–V items, Tier II + Tier II items.
+Scrolls are single-use battle spells (§4.8). To rework at Tier V: Polished Magic Stone and Ember Stone into the color × rank system (§4.7.2), and "Fire Bomb" / "Lucky Coin" names (Bomb weapon family, Coins currency). Every Tier II and Tier III card is used in Tier V. To-do: effects, second recipes for key Tier IV–V items, Tier II + Tier II items.
 
 ### Recipe Table
 Hero recipes: see §15.3–15.4. Gear recipes: see §15.7. Item recipes: see §15.8.

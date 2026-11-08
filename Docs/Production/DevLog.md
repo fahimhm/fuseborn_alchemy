@@ -4,6 +4,10 @@ Short dated entries: what was done, what was learned, what's next. Newest at the
 
 ---
 
+## 2026-11-08 (2)
+**Done:** GDD v0.43: scrolls as single-use battle spells, Throwables, gear skills (§4.7.6), magic stone color × rank, accessory budget. `Items.md` Tier IV (14 items) with effects, descriptions and art briefs. Scroll skill tags in homunculus files became "Gear skill fit".
+**Next:** Tier V items (rework Polished/Ember stones, Fire Bomb, Lucky Coin); Tier III gear (which cards get skills).
+
 ## 2026-11-08
 **Done:** GDD v0.42. New `Items.md`: Tier I–III materials (30) with ingredients, principle lean, description, Codex line and card art. Rules: materials fusion only, principle lean as flavor, Junk Codex. Old Coin → Ancient Token.
 **Next:** Tier IV–V usable items (effects + briefs); Tier III gear.

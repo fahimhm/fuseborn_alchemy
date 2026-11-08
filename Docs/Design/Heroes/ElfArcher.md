@@ -88,7 +88,7 @@ Skill points: 1 per hero level, spent on any open skill. Every skill has 5 level
 | B2b | **Wild Dance** | Branch (Lv. 10) | 80 / 20 s | Self | +15 / 20 / 25 / 30 / 35% Evasion for 4 s (Evasion cap 40% still applies) |
 | B2p | **Caged Fury** | Branch (Lv. 10) | — | Self | **Rage:** +1 per hit taken (basic or skill). At **3 rage** she goes **Berserk** for 5 s: ×1.1 / 1.15 / 1.2 / 1.25 / 1.3 damage. On activation, roots burst through her lane: **Ensnare** on every enemy in it for 2 s (20 / 30 / 40 / 50 / 60 damage per s). When Berserk ends, the **curse** forces **Sleep** for 4 / 3.75 / 3.5 / 3.25 / 3 s: does **not** wake on damage and **ignores Control Resist**. Rage resets to 0; no rage is gained during Berserk or the curse Sleep |
 
-**Scroll skill tags:** Physical, Crit, Speed.
+**Gear skill fit:** Physical, Crit, Speed. (guidance for which gear skills suit it, GDD §4.7.6).
 
 ## 6. Equipment
 | Slot | Allowed |

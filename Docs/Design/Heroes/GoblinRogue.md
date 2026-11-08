@@ -97,7 +97,7 @@ Skill points: 1 per hero level, spent on any open skill. Every skill has 5 level
 | B3b | **Kamikaze Dash** | Branch (Lv. 10) | 120 / 24 s | Front-most enemy; enemies within 1 tile of the blast | Straps on a lit fuse and charges: 100 / 150 / 200 / 250 / 300 physical damage. **Costs him 15% of his max HP; if his HP is at or below the cost, the blast knocks him out.** Afterwards he is thrown 2 tiles back toward his side. AI-controlled Snick (PvP defense) never casts it when it would knock him out |
 | B3p | **Blast Shielding** | Branch (Lv. 10) | — | Self | Self-damage from his skills −10 / 20 / 30 / 40 / 50%; 2 / 4 / 6 / 8 / 10% of his explosive damage dealt becomes a shield on himself for 4 s |
 
-**Scroll skill tags:** Physical, Crit, Speed.
+**Gear skill fit:** Physical, Crit, Speed. (guidance for which gear skills suit it, GDD §4.7.6).
 
 ## 6. Equipment
 | Slot | Allowed |
