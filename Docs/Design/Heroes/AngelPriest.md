@@ -97,7 +97,7 @@ Skill points: 1 per hero level, spent on any open skill. Every skill has 5 level
 | B3b | **Condemnation** | Branch (Lv. 10) | 140 / 24 s | Zone: 1-tile radius around the current target's position | Absolute darkness for 4 s: enemies inside are **Blinded** and **Silenced** (pulsed, GDD §6.13) and take 20 / 30 / 40 / 50 / 60 **Dark** (decay) damage per s |
 | B3p | **Malice Aura** | Branch (Lv. 10) | — | Enemies inside her zones or linked by her tether | RES −10 / 15 / 20 / 25 / 30% and +5 / 10 / 15 / 20 / 25% damage taken from damage over time |
 
-**Scroll skill tags:** Support, Sustain, Control.
+**Gear skill fit:** Support, Sustain, Control. (guidance for which gear skills suit it, GDD §4.7.6).
 
 ## 6. Equipment
 | Slot | Allowed |

@@ -1,6 +1,6 @@
 # Items — Fuseborn
 
-**Status:** Draft (Tier I–III approved; Tier IV–V usable items to do). Rules: GDD §4.8 (subtypes), §15.8 (recipe lists; grids in `Docs/Design/Data/ItemGrid*.tsv`). Lore: junk becomes treasure; principles (Lore.md).
+**Status:** Draft (Tier I–III approved; Tier IV for review; Tier V to do). Rules: GDD §4.8 (subtypes), §15.8 (recipe lists; grids in `Docs/Design/Data/ItemGrid*.tsv`). Lore: junk becomes treasure; principles (Lore.md).
 
 ## Rules for materials (Tier I–III)
 - **Fusion only.** Materials have no battle use and give no XP. Their value is what they become (and selling / the Exchange, GDD §4.3).
@@ -57,5 +57,36 @@ The last step before usable items. Items with two recipes list both.
 
 ---
 
-## Tier IV–V (to do)
-Usable items (potions, bombs, scrolls, charms, accessories, magic stones): GDD §15.8. Need effects, descriptions and illustrator briefs (incl. battle effects for potions and bombs).
+## Tier IV (Tier III + Tier I): first usable items
+Battle consumables (Potions, Throwables, Scrolls) use the **2 shared consumable slots**: 15 s cooldown per slot, max 3 uses per slot per battle (GDD §6.5, §6.9). Charms and Magic Stones are used outside battle. Accessories (8 GP, always roll a trait) aren't visible on the homunculus.
+
+### Consumables and charm
+| Item | Ingredients | Type | Effect | Description | Codex line | Card art | Use effect |
+|---|---|---|---|---|---|---|---|
+| **Minor Healing Potion** | Healing Herb (III) + Stone (I) | Potion | Heals the selected homunculus **20% of its max HP**, instantly | Healing Herb sap stirred into stone-cooled water. It tastes like grass and works like magic. | "Drink fast. Complain later." | A small round flask of bright green liquid, a cork stopper and a leaf-shaped paper tag. | Green sparkles burst around the target and a few leaves drift upward. SFX: a cork pop and a gulp. |
+| **Minor Mana Tonic** | Glowcap (III) + Seed (I) | Potion | Restores **25% of its max mana** to the selected homunculus, instantly | Glowcap steeped with a seed until the brew glows blue. One sip and your thoughts start to hum again. | "The buzzing is normal." | A slim glass vial of glowing blue liquid with a tiny mushroom cap floating inside. | A blue swirl spirals into the target. SFX: a soft fizz and a chime. |
+| **Smoke Pot** | Ash (III) + Scrap Metal (I) | Throwable | Thrown at the selected enemy: **Blind 2 s** on it and every enemy within 1 tile | A clay pot of ash packed around a scrap-metal fuse. Shake it, light it, throw it, run. | "Not for cooking." | A small sealed clay pot with a short sputtering fuse and soot smudges. | The pot arcs through the air and bursts into a thick grey smoke cloud (1-tile radius). SFX: a hollow thunk and a whoosh. |
+| **Spark Scroll** | Ink (III) + Log (I) | Scroll | Lightning strikes one enemy: **200 magic damage** and **interrupts** its cast | Spark words written in moving ink on bark paper. Read aloud, they leave the page as lightning. | "Read it once. Don't read it twice." | A rolled bark-paper scroll with a wax seal, tiny blue sparks crackling along its edge. | The scroll unrolls and burns away; a jagged lightning bolt drops onto the target. SFX: a sharp crack and rolling thunder. |
+| **Ward Charm** | Wax (III) + Bone (I) | Charm | **Outside battle:** if your next socketing attempt fails, the stone is saved (GDD §4.7.2). Then the charm breaks | A sliver of bone sealed in pale wax and blessed with a muttered wish. It's made to break so your stone doesn't. | "It breaks so the stone doesn't." | A small wax disc with a bone sliver visible inside, hung on a string. | On the socketing screen: on a failed attempt the charm cracks apart and the stone glows, safe. SFX: a soft crack and a relieved chime. |
+
+### Magic stones (rank: Rough, 1 GP)
+Socketed into gear slots (GDD §4.7.2). Shared description: *a Crystal Shard fused with a piece of junk until it took on that junk's nature; rough-cut and cloudy, but it holds.* Socketed look: a small gem of its color in the gear card's slot.
+
+| Item | Ingredients | Color · raises | Value | Flavor | Codex line | Card art |
+|---|---|---|---|---|---|---|
+| **Rough Guard Stone** | Crystal Shard (III) + Stone (I) | Grey · DEF | +0.3 DEF | Rough-cut and steady as the guild's foundation stones. | "Steady." | A rough, cloudy grey crystal chunk with uneven facets |
+| **Rough Vigor Stone** | Crystal Shard (III) + Seed (I) | Green · HP | +25 HP | Rough-cut and warm and alive, like a seed waiting to grow. | "Warm to the touch." | A rough, cloudy green crystal chunk with uneven facets |
+| **Rough Fury Stone** | Crystal Shard (III) + Log (I) | Red · ATK | +1 ATK | Rough-cut and smouldering like a log that won't go out. | "Never quite cools." | A rough, cloudy red, with a faint ember glow crystal chunk with uneven facets |
+| **Rough Arcana Stone** | Crystal Shard (III) + Bone (I) | Violet · Skill Power | +1% Skill Power | Rough-cut and whispering like old bones. | "It whispers." | A rough, cloudy violet crystal chunk with uneven facets |
+| **Rough Haste Stone** | Crystal Shard (III) + Scrap Metal (I) | Yellow · Attack Speed | +1.5 Attack Speed | Rough-cut and jittery as loose scrap in a shaken box. | "Can't sit still." | A rough, cloudy yellow crystal chunk with uneven facets |
+
+### Accessories (8 GP + 1 rolled trait)
+| Item | Ingredients | Slot | Stats | Description | Codex line | Card art |
+|---|---|---|---|---|---|---|
+| **Iron Ring** | Iron Ingot (III) + Bone (I) | Ring | +4 Salt, +4 ATK | An ingot hammered into a thick band and set with a bone stud. Heavy on the finger, steady in the hand. | "Heavier than it looks." | A chunky dark-iron ring with a small white bone stud. |
+| **Silver Necklace** | Silver Nugget (III) + Scrap Metal (I) | Necklace | +5 Mercury, +1.5% Crit Chance | A silver nugget drawn into a thin chain, mended with scrap links. It catches the light, and somehow the wearer's eye catches weak spots. | "Shine on. Strike true." | A thin silver chain with two mismatched scrap links and a small silver bead. |
+| **Pearl Amulet** | Pearl (III) + Seed (I) | Amulet | +4 Sulfur, +60 mana | The cistern's pearl set in a dried seed-pod clasp. It feels cool and calm, and the mind goes quiet around it. | "Calm waters, deep wells." | A round pearl in a curled seed-pod setting on a leather cord. |
+| **Twig Crown** | Rope (III) + Log (I) | Crown | +3 Mercury, +2.5% Cooldown Reduction | Twigs bound with rope into a lopsided circlet. It looks ridiculous, but thoughts come quicker under it. | "Royalty is a state of mind." | A crooked crown of woven twigs tied with rough rope, one leaf still attached. |
+
+## Tier V (to do)
+15 better items (GDD §15.8). Rework first: Polished Magic Stone and Ember Stone into color × rank (Polished = 2 GP); the names "Fire Bomb" (Bomb weapon family) and "Lucky Coin" (Coins currency). Accessories at 12 GP.

@@ -7,7 +7,7 @@
 ## 1. Rules
 | Rule | Value |
 |---|---|
-| **Who rolls** | **Hero:** always, 1 trait, when obtained (basics) or created by fusion. **Gear:** **30% chance** of 1 trait when created, rolled separately from the 0–5 stone slots (§4.7.1). **Accessory** (Ring, Necklace, Amulet, Crown): always, 1 trait, when created. Materials, Potions, Bombs, Scrolls, Charms and Magic Stones never roll a trait |
+| **Who rolls** | **Hero:** always, 1 trait, when obtained (basics) or created by fusion. **Gear:** **30% chance** of 1 trait when created, rolled separately from the 0–5 stone slots (§4.7.1). **Accessory** (Ring, Necklace, Amulet, Crown): always, 1 trait, when created. Materials, Potions, Throwables, Scrolls, Charms and Magic Stones never roll a trait. **Gear with a fixed skill never rolls a trait** (GDD §4.7.6) |
 | **Rarity odds** | Bronze 70% · Silver 25% · Gold 5%, same for all three pools |
 | **Pool** | Each card rolls only from its own pool (Hero → §3, Gear → §4, Accessory → §5). Gear traits marked Weapon or Armor only roll on that slot type |
 | **Fusion** | Pure re-roll: ingredient traits never affect the result's roll (§4.6.4) |

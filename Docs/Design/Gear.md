@@ -14,7 +14,8 @@
 | Fits | Guidance only: which homunculi it suits |
 | Stats | Fixed: every copy has them |
 | Signature | Fixed special effect (Tier III optional, IV–V always); costs 25–30% of the budget |
-| Rolled extras | 30% chance of a gear trait; 0–5 stone slots. Not listed per card |
+| Skill | Fixed active skill (from Tier II, GDD §4.7.6); costs 30% of the budget. A card with a skill has **no** signature and **never** rolls a trait |
+| Rolled extras | 30% chance of a gear trait (not on skill cards); 0–5 stone slots. Not listed per card |
 | Description | 2–3 sentences of flavor for the Codex and card details |
 | Codex line | One short line on the card |
 | Card art | What the illustrator draws on the card |
@@ -116,7 +117,7 @@ All five are basics from chests and drops. Tier I: **3 GP, all in principles**, 
 ---
 
 ## Tier II
-11 cards from two basics (GDD §15.7). Tier II: **6 GP**, at least half in principles, plus 1 bonus stat; no signature.
+11 cards from two basics (GDD §15.7). Tier II: **6 GP**, at least half in principles, plus 1 bonus stat; no signature. All 11 are plain for now; some may get a fixed skill later (GDD §4.7.6).
 
 ### Greatsword
 | Field | Value |

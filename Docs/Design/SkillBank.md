@@ -1,6 +1,6 @@
 # Skill Bank — Fuseborn
 
-Skills designed but not used yet. Future homunculi, branches or Scrolls can take them. When a skill is used, move it into that homunculus's file and delete it here.
+Skills designed but not used yet. Future homunculi, branches or **gear skills** (GDD §4.7.6) can take them. When a skill is used, move it into that homunculus's file and delete it here.
 
 | Skill | Type | Idea | From | Notes before use |
 |---|---|---|---|---|
