@@ -4,6 +4,10 @@ Short dated entries: what was done, what was learned, what's next. Newest at the
 
 ---
 
+## 2026-11-09
+**Done:** GDD v0.44: Tier V items (16) with effects, descriptions and art in `Items.md`; Fire tag and Oiled status; item grid T5 updated.
+**Next:** Item Tier VI (potions, charms, Polished stones; §13 #45); Tier III gear.
+
 ## 2026-11-08 (2)
 **Done:** GDD v0.43: scrolls as single-use battle spells, Throwables, gear skills (§4.7.6), magic stone color × rank, accessory budget. `Items.md` Tier IV (14 items) with effects, descriptions and art briefs. Scroll skill tags in homunculus files became "Gear skill fit".
 **Next:** Tier V items (rework Polished/Ember stones, Fire Bomb, Lucky Coin); Tier III gear (which cards get skills).

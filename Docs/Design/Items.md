@@ -1,6 +1,6 @@
 # Items — Fuseborn
 
-**Status:** Draft (Tier I–III approved; Tier IV for review; Tier V to do). Rules: GDD §4.8 (subtypes), §15.8 (recipe lists; grids in `Docs/Design/Data/ItemGrid*.tsv`). Lore: junk becomes treasure; principles (Lore.md).
+**Status:** Draft (Tier I–IV approved; Tier V for review; Tier VI to define). Rules: GDD §4.8 (subtypes), §15.8 (recipe lists; grids in `Docs/Design/Data/ItemGrid*.tsv`). Lore: junk becomes treasure; principles (Lore.md).
 
 ## Rules for materials (Tier I–III)
 - **Fusion only.** Materials have no battle use and give no XP. Their value is what they become (and selling / the Exchange, GDD §4.3).
@@ -88,5 +88,42 @@ Socketed into gear slots (GDD §4.7.2). Shared description: *a Crystal Shard fus
 | **Pearl Amulet** | Pearl (III) + Seed (I) | Amulet | +4 Sulfur, +60 mana | The cistern's pearl set in a dried seed-pod clasp. It feels cool and calm, and the mind goes quiet around it. | "Calm waters, deep wells." | A round pearl in a curled seed-pod setting on a leather cord. |
 | **Twig Crown** | Rope (III) + Log (I) | Crown | +3 Mercury, +2.5% Cooldown Reduction | Twigs bound with rope into a lopsided circlet. It looks ridiculous, but thoughts come quicker under it. | "Royalty is a state of mind." | A crooked crown of woven twigs tied with rough rope, one leaf still attached. |
 
-## Tier V (to do)
-15 better items (GDD §15.8). Rework first: Polished Magic Stone and Ember Stone into color × rank (Polished = 2 GP); the names "Fire Bomb" (Bomb weapon family) and "Lucky Coin" (Coins currency). Accessories at 12 GP.
+## Tier V (Tier III + Tier II)
+16 items. Potions and charms moved to a later tier (GDD §13 #45). Battle consumables use the shared slots (GDD §6.5).
+
+### Materials (Tier V exception: ingredients for later-tier potions)
+| Item | Ingredients | Lean | Becomes | Description | Codex line | Card art |
+|---|---|---|---|---|---|---|
+| **Lifebloom** | Healing Herb (III) + Mushroom (II) | Salt | Greater Healing Potion (later tier) | A Healing Herb that took root in a warm mushroom and flowered. Its petals close wounds faster than the leaf ever did, and it never quite stops blooming. | "It heals the hand that picks it." | A small flowering herb with soft pink-green petals, roots still wrapped around a mushroom cap. |
+| **Starcap** | Glowcap (III) + Sprout (II) | Sulfur | Mana Elixir (later tier) | A Glowcap grown from a fresh sprout, its cap speckled with tiny points of light. The guild keeps them in jars; left out, they float a finger's width off the table. | "Brighter than the stars it's named for." | A slender mushroom whose deep-blue cap is dotted with glowing star-like specks, hovering slightly. |
+
+### Consumables
+| Item | Ingredients | Type | Effect | Description | Codex line | Card art | Use effect |
+|---|---|---|---|---|---|---|---|
+| **Soothing Salve** | Wax (III) + Moss (II) | Potion | On the selected homunculus: **removes all soft control and damage over time** (Slow, Ensnare, Blind, Stagger's slow; Burn, Bleed, Curse…), and heals **10% max HP over 4 s** | Moss crushed into warm wax until it turns into a cool green balm. One dab and the sting, the burn and the panic all fade together. | "Cool, green, and very calming." | A small round tin of pale-green salve with a fingerprint dip in it; a moss sprig on the lid. | A cool green glow washes over the target, shaking off chains, smoke and flames. SFX: a soft sigh and a gentle chime. |
+| **Fire Oil** | Ash (III) + Charcoal (II) | Throwable | Thrown at the selected enemy: it and every enemy within 1 tile are **Oiled for 5 s**. The next **Fire** hit on an Oiled enemy deals **×2** and causes **Burn 3 s** (30 per s). An Oiled enemy that uses a **Fire** skill takes **30%** of that skill's damage itself | Charcoal and ash boiled down into black, slick oil that clings to whatever it touches. It doesn't burn on its own; it waits. Alchemists call it "patience in a jug." | "Don't stand near the torch." | A clay jug with a rag stopper, dark oil with a rainbow sheen dribbling down its side. | The jug shatters on the target and splashes nearby enemies; Oiled enemies drip and shine. When a Fire hit lands, the oil goes up in a big orange burst. SFX: a wet splash, then a deep whump. |
+| **Binding Scroll** | Ink (III) + Glue (II) | Scroll | Magical roots **Ensnare every enemy in the front-most enemy row for 2 s** (10 per s) | Ink thickened with glue and written in long, looping strokes. Read aloud, the words sink into the ground and come back up as roots. | "The words grip the ground." | A rolled scroll with dark green looping script and a wax seal shaped like a knotted root. | The scroll burns away; glowing green roots burst from the ground under the enemy front row and wrap their legs. SFX: a creaking crack and a rustle. |
+
+### Magic stones (second Rough recipes, 1 GP)
+Same cards as Tier IV, a second way to make each color. Same description, Codex line and art.
+
+| Item | Tier V recipe |
+|---|---|
+| Rough Guard Stone | Crystal Shard (III) + Chalk (II) |
+| Rough Vigor Stone | Crystal Shard (III) + Sprout (II) |
+| Rough Fury Stone | Crystal Shard (III) + Charcoal (II) |
+| Rough Arcana Stone | Crystal Shard (III) + Bone Dust (II) |
+| Rough Haste Stone | Crystal Shard (III) + Flint (II) |
+
+### Accessories (12 GP + 1 rolled trait)
+| Item | Ingredients | Slot | Stats | Description | Codex line | Card art |
+|---|---|---|---|---|---|---|
+| **Moonstone Ring** | Silver Nugget (III) + Flint (II) | Ring | +6 Sulfur, +6% Skill Power | A silver band set with a stone that sparked once in the flint and never stopped glowing. Spells cast through it come out a shade brighter. | "Glows brightest at night." | A slim silver ring with a pale, milky-blue stone that glows softly. |
+| **Pearl Necklace** | Pearl (III) + Fishhook (II) | Necklace | +6 Mercury, +2.4% Evasion | Cistern pearls strung on a fishhook line. They sway with every step and seem to pull the wearer half a pace out of harm's way. | "Slippery as the water it came from." | A short string of small white pearls on fine line, a tiny hook as the clasp. |
+| **Amber Pendant** | Resin (III) + Plank (II) | Necklace | +6 Salt, +150 HP | A drop of resin hardened into amber around a splinter of old guild timber. It feels warm against the chest, like a steady heartbeat. | "Old wood, still alive." | A golden amber pendant with a wooden splinter visible inside, on a leather cord. |
+| **Ancestor Amulet** | Clay (III) + Bone Dust (II) | Amulet | +6 Sulfur, +6% Control Resist | A clay disc pressed with bone dust and an old, unreadable face. Wearers say it mutters warnings just before something tries to hold them. | "Someone old is watching over you." | A round grey clay amulet stamped with a faint face, bone-white powder in the cracks. |
+| **Iron Crown** | Iron Ingot (III) + Rusty Nail (II) | Crown | +6 Salt, +1.8 DEF | A crown hammered from an ingot and studded with rusty nails, points out. Not pretty, but nobody tries to knock it off twice. | "Heavy is the head." | A plain dark-iron crown with uneven rusty nail spikes around the rim. |
+| **Gilded Crown** | Ancient Token (III) + Raw Ore (II) | Crown | +6 Mercury, +3% Cooldown Reduction | Ancient Tokens melted with raw ore into a thin, bright crown. The forgotten faces on it seem to hurry its wearer along. | "Borrowed glory, quickly spent." | A thin golden crown with old token faces set around it, catching the light. |
+
+## Later tier (Tier VI, to define)
+Greater Healing Potion (from Lifebloom), Mana Elixir (from Starcap), Guardian Charm, Lucky Coin (to rename), Polished stones (2 GP). Tier VI pairs: GDD §13 #45.
