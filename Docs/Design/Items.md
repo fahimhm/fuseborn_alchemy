@@ -125,5 +125,19 @@ Same cards as Tier IV, a second way to make each color. Same description, Codex 
 | **Iron Crown** | Iron Ingot (III) + Rusty Nail (II) | Crown | +6 Salt, +1.8 DEF | A crown hammered from an ingot and studded with rusty nails, points out. Not pretty, but nobody tries to knock it off twice. | "Heavy is the head." | A plain dark-iron crown with uneven rusty nail spikes around the rim. |
 | **Gilded Crown** | Ancient Token (III) + Raw Ore (II) | Crown | +6 Mercury, +3% Cooldown Reduction | Ancient Tokens melted with raw ore into a thin, bright crown. The forgotten faces on it seem to hurry its wearer along. | "Borrowed glory, quickly spent." | A thin golden crown with old token faces set around it, catching the light. |
 
+## Named accessories (future, item Tier VI+)
+Crowns from myth, legend and classic fantasy (GDD §4.7.4 named cards). Each has a fixed **signature** plus the usual rolled trait and stats. No rarity label in game: the name says it. **One of each per party.** Numbers (x, y) and recipes come when Tier VI+ is designed.
+
+| Crown | Legend | Signature idea | Notes |
+|---|---|---|---|
+| **Holly King's Crown** | European winter folklore: the Holly King, crowned with thorny holly, battles the Oak King each year | Converts x% of damage taken into bonus ATK for y s | Cap the ATK bonus; doesn't loop with Thorns |
+| **King Arthur's Crown** | Arthurian legend | Allies within 1 tile get +x% DEF and RES | Team aura; one per party |
+| **Iron Crown of Lombardy** | The iron crown kept in Monza Cathedral | +x% Control Resist (Stun, Silence, Freeze…); **can't be Knocked Back** | Knockback immunity is the allowed exception |
+| **Crown of Midas** | Greek myth: King Midas's golden touch | **Golden Touch:** the wearer's skill hits add Gilding; at 3 stacks the enemy becomes a golden statue (**Freeze 1.5 s**). Bonus Coins per enemy slain on a win (daily cap). **Curse:** healing received −30% | |
+| **Diadem of Shadows** | Classic dark fantasy | When an enemy dies within 2 tiles, the wearer catches its soul's **echo on its way back to nature**: restores x% max HP and mana and gains +y% Lifesteal for s s (stacking, capped) | **Counts summons and minions:** a counter to minion-heavy teams |
+| **Ariadne's Crown** | Greek myth: Dionysus's wedding gift, set in the sky as the Corona Borealis; her light guided Theseus out of the labyrinth | **Guiding light:** enemies within 2 tiles lose **Stealth** and can't regain it | Counter to assassins |
+| **Uraeus Crown** | Egyptian myth: the cobra on the pharaoh's crown that spits fire at the king's enemies | Every 4th basic hit, the cobra spits a **Fire**-tagged bolt | A Fire source for Fire Oil combos |
+| **Phoenix Crown** | Chinese empresses' phoenix crown; the phoenix reborn from its ashes | **Once per battle**, a lethal hit leaves the wearer at 1 HP, then it heals 30% over 3 s | |
+
 ## Later tier (Tier VI, to define)
 Greater Healing Potion (from Lifebloom), Mana Elixir (from Starcap), Guardian Charm, Lucky Coin (to rename), Polished stones (2 GP). Tier VI pairs: GDD §13 #45.
