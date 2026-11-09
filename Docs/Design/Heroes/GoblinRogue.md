@@ -90,7 +90,7 @@ Skill points: 1 per hero level, spent on any open skill. Every skill has 5 level
 
 **In-battle trap placement:** in the path of the nearest enemy moving toward his side; if none is moving, just in front of his own front row. Traps don't hit enemies that never move (Long range): that's their counter.
 
-**B3 · Goblin Sapper** (role: **Mage**, off-role) — high risk, high reward (Techies style): trades stealth for volatile area explosions. Area damage stays below Mage specialists (GDD §6.3). Explosions are physical; the fire is visual.
+**B3 · Goblin Sapper** (role: **Mage**, off-role) — high risk, high reward (Techies style): trades stealth for volatile area explosions. Area damage stays below Mage specialists (GDD §6.3). Explosions are **physical with the Fire tag** (GDD §6.9): they ignite Oiled enemies, and backfire if Snick is Oiled.
 | # | Skill | Unlock | Mana / CD | Target / area | Effect (Lv. 1 / 2 / 3 / 4 / 5) |
 |---|---|---|---|---|---|
 | B3a | **Black Powder Grenade** | Branch (Lv. 10) | 90 / 16 s | The target and every enemy within 1 tile | 60 / 95 / 130 / 165 / 200 physical damage + **Knockback** on everyone hit |

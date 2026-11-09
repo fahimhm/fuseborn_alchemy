@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| **Version** | 0.43 (draft) |
+| **Version** | 0.44 (draft) |
 | **Last updated** | 2026-11-07 |
 | **Status** | Pre-production. Fusion, card categories, and upgrade systems defined; combat and mining outlined |
 | **Engine** | Unity (tentative) |
@@ -371,7 +371,7 @@ Existing caps still apply (Evasion 40%, Control Resist −50%, Holy / Dark resis
 | **Ring / Necklace / Amulet / Crown** | Accessory slot | ❌ | Stat bonus + trait (always rolls one, `TraitPool.md` §5). **Budget:** 8 GP at Tier IV, 12 GP at Tier V (gear conversion rates, §4.7.4; may include % stats). Not visible on the homunculus |
 | **Magic Stone** | Socketed into Gear slots | ✅ | **Color × rank** (§4.7.2) |
 
-✅ Item basics are junk materials. Usable items appear from Tier IV (Tier III + Tier I) and better ones at Tier V (Tier III + Tier II). Lists in §15.8; content (descriptions, art briefs) in `Docs/Design/Items.md`.
+✅ Item basics are junk materials (Tier I–III; **exception:** a few Tier V materials, e.g. Lifebloom and Starcap, that feed later-tier potions). Usable items appear from Tier IV (Tier III + Tier I) and better ones at Tier V (Tier III + Tier II). Lists in §15.8; content (descriptions, art briefs) in `Docs/Design/Items.md`.
 - ✅ **Materials (Tier I–III) are fusion only:** no battle use and no XP (8 random cards a day would make junk the main XP source). Their value is what they become, plus selling and the Exchange (§4.3).
 - ✅ **Principle lean (flavor):** each material's Codex page names the principle it leans to (Salt / Mercury / Sulfur). No mechanics, never a recipe hint.
 - ✅ **Junk Codex:** the first discovery of each material fills its Codex page (§4.5) and gives a small one-time reward (amount TBD).
@@ -582,6 +582,8 @@ Each hero has its **own built-in targeting characteristic**. This is part of the
 - **Bonuses and resists:** Holy / Dark damage % and Holy / Dark resist % come from **gear** (§4.7.3), branch passives, traits and Magic Stones. Resist applies after RES and is **capped at −50%** (never immune).
 - Users: Elsie (Seraph and Archangel: Holy; Fallen: Dark), Grum (Dark).
 
+✅ **Fire** is a tag on **Physical or Magic** damage (skills, the statuses they apply, and items; basic attacks are never tagged). Users: Snick's Goblin Sapper explosions (Physical + Fire), **Burn** (Magic + Fire), future fire spells and items. It matters only through Fire interactions (e.g. **Oiled**, §6.10); no Fire damage % or resist yet.
+
 **Per-hero data:** base Salt / Mercury / Sulfur, growth per level for each, dominant principle, initial role, base HP, base attack damage, base DEF / RES, DEF growth (per homunculus; 0 for most), base mana, base attack interval, attack range (melee / ranged), Move Speed. Never set by tier (§4.4).
 
 **Attribute at level L** = base + growth × (L − 1).
@@ -622,7 +624,8 @@ Each hero has its **own built-in targeting characteristic**. This is part of the
 | **Taunt** | Must target the taunter |
 | **Stagger** | Interrupts the current action and slows attacks by 30% for 2 s |
 | **Confuse** | Attacks a random unit; may hit its own allies at 50% damage |
-| **Burn** | Magic damage over time |
+| **Burn** | Magic damage over time (**Fire** tag) |
+| **Oiled** | Harmful. The next **Fire**-tagged hit on the unit deals **×2** and applies Burn; if the unit uses a **Fire**-tagged skill, it takes part of that skill's damage itself (amounts per source, e.g. Fire Oil) |
 | **Shield** | Absorbs damage before HP |
 | **Bleed** | Physical damage over time |
 | **Weaken** | Deals less damage (%) |
@@ -839,6 +842,7 @@ Planned to be discussed later.
 | 42 | Families as combat tags: homunculi have families (HeroPool); PvE Runoffs need families too, so gear signatures like "+30% vs Draconic" work in PvE and PvP | Open; needed before Tier III+ signatures |
 | 43 | Does a homunculus's **default weapon** (hero files §6) give stats, or is it only what it holds with no weapon equipped? | Open; proposed: visual only, no stats |
 | 44 | ⚠️ **Homunculi without available weapons:** Snick's Trapmaster (Knife family) and Goblin Sapper (Bomb family) have **no gear cards yet**; until created (Tier III or higher, user's call), they fight with their default weapon only | Open; reminder |
+| 45 | Item **Tier VI**: which pairs form it (e.g. Tier V + Tier I?) and its contents (Greater Healing Potion from Lifebloom, Mana Elixir from Starcap, Guardian Charm, Lucky Coin renamed, Polished stones) | Open |
 | 26 | Naming: card rarity and unique-skill rarity both use "Common/Rare". Use different labels to avoid confusion? | ✅ Skills use Bronze / Silver / Gold |
 | 27 | Risk: many random layers (card rarity, skill roll, slot roll, socket chance) can feel like a slot machine | Mitigate: progress never depends only on luck; Exchange, trading, pity |
 
@@ -847,6 +851,7 @@ Planned to be discussed later.
 ## 14. Change History
 | Version | Date | Changes |
 |---|---|---|
+| 0.44 | 2026-11-09 | Tier V items reworked (16): Lifebloom and Starcap as Tier V materials, Soothing Salve, Fire Oil, Binding Scroll, second Rough stone recipes, 6 accessories; potions and charms moved to a later tier (§13 #45). **Fire** tag (§6.9) and **Oiled** status (§6.10) |
 | 0.43 | 2026-11-08 | Scrolls become single-use magic battle spells (never teach skills); Throwables (engineering) replace the Bomb item subtype; Potions, Throwables and Scrolls share the battle consumable slots; Charms outside battle; gear skills (§4.7.6); magic stone color × rank; accessory budget 8 / 12 GP; Tier IV list (14 items) with ingredient tiers |
 | 0.42 | 2026-11-08 | Materials: fusion only, principle lean (flavor), Junk Codex (§4.8); Old Coin renamed Ancient Token; item content in `Items.md` |
 | 0.41 | 2026-11-07 | Gear may add +1 attack range (fixed only: family property or signature; max +1; melee stays melee); Bomb family planned with +1 range (§6.2, §4.7) |
@@ -1114,26 +1119,27 @@ No match: Stone + Log, Seed + Bone, Seed + Scrap Metal.
 | Pearl Amulet | Pearl (III) + Seed (I) | Amulet |
 | Twig Crown | Rope (III) + Log (I) | Crown |
 
-**Tier V (Tier III + Tier II): 15 better items, 141 ✗**
+**Tier V (Tier III + Tier II): 16 items, 140 ✗.** Effects, descriptions and art: `Docs/Design/Items.md`.
 | Result | Recipe | Type |
 |---|---|---|
-| Greater Healing Potion | Healing Herb + Mushroom | Potion |
-| Mana Elixir | Glowcap + Sprout | Potion |
-| Soothing Salve | Wax + Moss | Potion |
-| Fire Bomb | Ash + Charcoal | Throwable |
-| Rune Scroll | Ink + Glue | Scroll |
-| Guardian Charm | Rope + Chalk | Charm |
-| Lucky Coin | Ancient Token + Fishhook | Charm |
-| Polished Magic Stone | Crystal Shard + Chalk | Magic Stone |
-| Ember Stone | Crystal Shard + Charcoal | Magic Stone |
-| Moonstone Ring | Silver Nugget + Flint | Ring |
-| Pearl Necklace | Pearl + Fishhook | Necklace |
-| Amber Pendant | Resin + Plank | Necklace |
-| Ancestor Amulet | Clay + Bone Dust | Amulet |
-| Iron Crown | Iron Ingot + Rusty Nail | Crown |
-| Gilded Crown | Ancient Token + Raw Ore | Crown |
+| Lifebloom | Healing Herb (III) + Mushroom (II) | Material (→ Greater Healing Potion, later tier) |
+| Starcap | Glowcap (III) + Sprout (II) | Material (→ Mana Elixir, later tier) |
+| Soothing Salve | Wax (III) + Moss (II) | Potion |
+| Fire Oil | Ash (III) + Charcoal (II) | Throwable |
+| Binding Scroll | Ink (III) + Glue (II) | Scroll |
+| Rough Guard Stone | Crystal Shard (III) + Chalk (II) | Magic Stone (2nd recipe) |
+| Rough Vigor Stone | Crystal Shard (III) + Sprout (II) | Magic Stone (2nd recipe) |
+| Rough Fury Stone | Crystal Shard (III) + Charcoal (II) | Magic Stone (2nd recipe) |
+| Rough Arcana Stone | Crystal Shard (III) + Bone Dust (II) | Magic Stone (2nd recipe) |
+| Rough Haste Stone | Crystal Shard (III) + Flint (II) | Magic Stone (2nd recipe) |
+| Moonstone Ring | Silver Nugget (III) + Flint (II) | Ring |
+| Pearl Necklace | Pearl (III) + Fishhook (II) | Necklace |
+| Amber Pendant | Resin (III) + Plank (II) | Necklace |
+| Ancestor Amulet | Clay (III) + Bone Dust (II) | Amulet |
+| Iron Crown | Iron Ingot (III) + Rusty Nail (II) | Crown |
+| Gilded Crown | Ancient Token (III) + Raw Ore (II) | Crown |
 
-Scrolls are single-use battle spells (§4.8). To rework at Tier V: Polished Magic Stone and Ember Stone into the color × rank system (§4.7.2), and "Fire Bomb" / "Lucky Coin" names (Bomb weapon family, Coins currency). Every Tier II and Tier III card is used in Tier V. To-do: effects, second recipes for key Tier IV–V items, Tier II + Tier II items.
+Every Tier II card is used in Tier V; Rope (Tier III) has no Tier V recipe. **Moved to a later tier (Tier VI, not defined yet, §13 #45):** Greater Healing Potion, Mana Elixir, Guardian Charm, Lucky Coin (rename: "Coin" clashes with the Coins currency). Polished stones (2 GP) come later too.
 
 ### Recipe Table
 Hero recipes: see §15.3–15.4. Gear recipes: see §15.7. Item recipes: see §15.8.
