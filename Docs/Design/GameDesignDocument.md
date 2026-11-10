@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| **Version** | 0.45 (draft) |
+| **Version** | 0.46 (draft) |
 | **Last updated** | 2026-11-07 |
 | **Status** | Pre-production. Fusion, card categories, and upgrade systems defined; combat and mining outlined |
 | **Engine** | Unity (tentative) |
@@ -15,7 +15,7 @@
 ## 1. Core Concept
 
 **Elevator pitch:**
-> _An online card game where you fuse two cards to discover new heroes, weapons, and items. Fusion consumes the ingredients, results roll random unique skills and weapon slots, and your party fights monsters and other players in auto-battles where you choose when to fire each skill._
+> _An online card game where you fuse two cards to discover new heroes, weapons, and items. Fusion consumes the ingredients; results may roll a random **trait** (30% chance) and weapon slots, so even the same recipe can surprise you._
 
 **World & Story:** ✅ In Alembria *(placeholder)*, alchemy is everything: any two things can **react** into something new. The first to discover a reaction is written into the **Great Codex** and gains wealth and fame. The player leads a new **alchemy guild** of **homunculi** (the heroes: living alchemical beings in the forms of the world's peoples), reacts junk into treasure, fights **Runoffs** (monsters born from failed reactions) and rival guilds for resources. Tone: hopeful, with weight (the player is the alchemist and carries the risk; souls return to nature in reactions). Full lore: [Lore.md](Lore.md).
 
@@ -34,7 +34,7 @@
 **What makes it different (the hook):**
 1. **Fusion consumes ingredients.** Every success is a trade-off.
 2. **Results are usable and tradable game objects.** Heroes fight and level up, weapons get socketed, items are equipped or consumed.
-3. **Multiple random layers:** hero unique skills (tier-based) and weapon slot counts (0–5). Two copies of the "same" card can differ a lot in value.
+3. **Multiple random layers:** a rare rolled **trait** (30% of homunculi, gear and accessories; Faint → Bright → Radiant → Unique) and weapon slot counts (0–5). Two copies of the "same" card can differ a lot in value.
 4. **Card presentation** for everything.
 
 ---
@@ -142,7 +142,7 @@ Players trade unwanted basic cards to the system for a chest:
 | **Match** | Both cards are **consumed** and the result is created. The recipe is recorded in the Codex. |
 | **No match** | **Nothing happens.** No cards are lost. A short "no reaction" feedback plays. |
 | Same + same | Allowed as a recipe |
-| Determinism | The **result card type** is fixed per recipe. **Random rolls:** hero unique skill (§4.6.4) and gear slot count (§4.7.1). |
+| Determinism | The **result card type** is fixed per recipe. **Random rolls:** trait (30% chance, §4.6.4) and gear slot count (§4.7.1). |
 | Server authority | Recipe lookup and all random rolls happen **on the server** (§12). |
 
 **Consumed hero / gear:**
@@ -185,7 +185,7 @@ Every homunculus is made of the three alchemical **principles** (Lore.md): **Sal
   1. **Budget:** base Salt + Mercury + Sulfur = **46–54**, total growth = **5.0–6.0 / level**, for every homunculus (tier ≠ power).
   2. The **dominant principle has the highest growth**.
   3. The rest of the spread follows **lore and kit**. **The more roles its branches cover (§4.6.4), the flatter the spread**: single-role homunculi can be spiky, multi-role ones flatter, with branch passives filling the gap.
-- **Percentage stats are never from principles:** Crit, Evasion and Block come from gear, items, skill-tree passives and unique traits.
+- **Percentage stats are never from principles:** Crit, Evasion and Block come from gear, items, skill-tree passives and traits.
 - Full formulas: §6.9. Per-homunculus values: `Docs/Design/Heroes/`.
 
 #### 4.6.3 Equipment Slots
@@ -197,7 +197,7 @@ Every homunculus is made of the three alchemical **principles** (Lore.md): **Sal
 | **Armor** | Gear card of slot type Armor: **one** piece, either Body, Helmet, Gloves or Boots (§4.7.3) |
 | **Accessory** | ✅ **One slot:** Ring, Necklace, Amulet **or** Crown |
 
-#### 4.6.4 Role, Trait & Unique Skill
+#### 4.6.4 Role, Skill Tree & Trait
 - Each hero has an **initial role** (a label, §6.3), a **targeting priority** (§6.4), and trait(s).
 - ✅ **Branching skill tree** (per hero, `Docs/Design/Heroes/`), spent MOBA-style:
   - **Skill points:** 1 per hero level (Lv. 1 starts with 1, so 30 at cap). The player spends them on any **open** skill: open a new one or raise one already open.
@@ -216,21 +216,24 @@ Every homunculus is made of the three alchemical **principles** (Lore.md): **Sal
   - Body stays the same in every branch: dominant principle, base stats and growth, attack type and range never change; the branch changes skills and role.
   - In battle the hero brings **3 actives** (loadout, §6.5) from A1, A2, its branch actives and **gear skills** (up to 2: weapon and armor). With 4 tree actives at most, one always stays home, so the loadout is still a choice; the 3rd slot also gives gear skills room. Passives are always on.
   - Content per hero: 2 core actives + 1 core passive, plus 2 actives + 1 passive **per branch** (up to 9 actives + 3 passives with 3 branches). Fewer branches = less content and art. Branch skills should reuse the hero's animation set where possible; a branch may swap one signature prop so the build reads at a glance.
-- ✅ The **rolled unique skill** (innate trait, Lore.md) below is **separate** from the tree: tree passives are the hero's identity, the unique roll is what makes each copy special.
-- ✅ **Every hero rolls a unique skill (passive, always on), basics included.** A basic hero rolls when it is obtained (chest, starter pack, drop); a fused hero rolls when it is created. Basics are therefore worth keeping or trading, not only fusing. Weighted pool:
+- ✅ **Traits** (rolled, passive, always on; innate trait in Lore.md) are **separate** from the tree: tree passives are the hero's identity; a trait is what makes **that copy** special.
+- ✅ **Only 30% of cards get a trait.** Homunculi, gear and accessories each have a **30% chance** of one trait when born (chest, starter pack or drop for basics; fusion for the rest). **Most cards have no trait, and that's intended.** Materials, consumables and stones never have one (they stack). Gear with a fixed skill never rolls one (§4.7.6).
+- ✅ **Rarity ladder** (if a trait rolls): **Faint 65% · Bright 27% · Radiant 8% · Unique** (special). Names never reuse basic card rarity (Common / Uncommon / Rare).
 
-| Rarity | Example weight |
-|---|---|
-| Bronze | 70% |
-| Silver | 25% |
-| Gold | 5% |
+| Rarity | Kind of effect (all passive) | Strength |
+|---|---|---|
+| **Faint** | Always on: a plain stat bonus | ≈ 6 GP (a Tier II gear). About 10–15% of Faint traits are harmless **jokes** (pure "cursed" comedy) |
+| **Bright** | Conditional or triggered (works under a condition or when something happens); may be **ironic** | ≈ 10–12 GP, conditional |
+| **Radiant** | Build-defining, rule-bending; may be **ironic** (big upside, real downside) | By judgment |
+| **Unique** | **One in the whole game world** (below) | About Radiant, but flashier |
 
-- Same ingredients → possibly a different unique skill.
-- ✅ **Pure re-roll:** ingredient skills have no effect on the result's roll. Fusing a hero with a good skill gives that skill up.
-- ✅ **Skill strength does not scale with tier** (consistent with tier = recipe depth).
-- ✅ Skill rarity uses **Bronze / Silver / Gold**, so it never gets confused with basic card rarity (Common / Uncommon / Rare).
+- ✅ **Level traits** (homunculus pool only): dormant until the homunculus reaches **Lv. 10** (Faint), **Lv. 20** (Bright) or **Lv. 30** (Radiant), then always on; a bit stronger than a normal trait of their rarity. Shown greyed out with the level until they awaken.
+- ✅ **Irony and comedy:** pure jokes only at Faint; from Bright up every downside comes with a real upside (*high risk, high reward*), so a lucky roll is never just a punishment.
+- ✅ **Unique traits:** each is a named trait that **only one card in the game** can hold at a time (one per server if regions split). It drops (tiny chance, e.g. 0.1% of trait rolls) only while **unowned**, and **returns to the pool** when its card is fused or destroyed, or its owner is inactive for about 6 months, with an announcement ("The First Flame has been released"). Special name, visual aura, and a Codex entry naming the current owner. A badge of honor, not an automatic win.
+- ✅ **Pure re-roll:** ingredient traits never affect the result's roll. **Fusing a card with a trait shows a warning** naming the trait; Bright and up warn more strongly; **Unique** needs a hold-to-confirm, since it releases the trait to the world.
+- ✅ **Trait strength does not scale with tier** (tier = recipe depth). **Rolls ignore tags** (a misfit trait is worth trading to someone it fits).
 - ✅ **No pity and no re-roll item.** Trading is the answer to bad luck.
-- ✅ **Trait pool:** all hero, gear and accessory traits, with rarity, start values, tags and % stat caps, live in `Docs/Design/TraitPool.md`.
+- ✅ **Trait pool:** all homunculus, gear and accessory traits, with rarity, start values, tags and caps, live in `Docs/Design/TraitPool.md`.
 
 ### 4.7 Gear (Weapon & Armor)
 ✅ **Weapon families** decide which heroes can equip a weapon. Each hero lists 1–3 allowed families; armor and accessories have no restriction (for now). ✅ A **branch may replace the allowed families** (e.g. Snick's Trapmaster: Knife only). When that branch is chosen, an equipped weapon outside the new families goes back to the inventory.
@@ -242,7 +245,7 @@ Every homunculus is made of the three alchemical **principles** (Lore.md): **Sal
 | Bow | Bow, Crossbow, Arcane Repeater |
 | Staff | Staff, Elder Staff |
 | Tome | Grimoire |
-| Shield | Tower Shield |
+| Shield | Tower Shield. **Family property: Block** by tier (Tier II 4%, III 6%, IV 8%, V 10%); the wearer counts as a shield bearer (§6.9) |
 | Instrument | Lute, War Drum |
 | Knife | ⚠️ **No cards yet** (needed by Snick's Trapmaster, §13 #44) |
 | Bomb | ⚠️ **No cards yet** (needed by Snick's Goblin Sapper; melee, §13 #44). **Planned family property: thrown, +1 range** (§6.2) |
@@ -255,7 +258,7 @@ Every homunculus is made of the three alchemical **principles** (Lore.md): **Sal
 |---|---|---|---|---|---|---|
 | Tier 1 weight | 30% | 30% | 20% | 12% | 6% | 2% |
 
-- ✅ **Gear trait:** separately from slots, a new Gear card has a **30% chance** to roll one trait (Bronze/Silver/Gold 70/25/5) from the gear pool in `TraitPool.md` §4. Fusing gear re-rolls it.
+- ✅ **Gear trait:** separately from slots, a new Gear card has a **30% chance** to roll one trait (Faint / Bright / Radiant / Unique, §4.6.4) from the gear pool in `TraitPool.md` §4. Fusing gear re-rolls it.
 
 #### 4.7.2 Socketing Magic Stones (risk-based)
 ✅ **Magic Stones** (Item subtype) are attached to **Gear** slots (weapon or armor). Both attaching and detaching have a **success chance**.
@@ -335,7 +338,8 @@ Gear **doesn't level up**: a card's share shrinks as its wearer levels, which pu
 | Move Speed | +5 |
 | Skill Power | +1% |
 | Cooldown Reduction | +0.5% |
-| Crit Chance / Block | +0.5% |
+| Crit Chance | +0.5% |
+| Block (shield bearers only, §6.9) | +0.25% |
 | Evasion / Lifesteal | +0.4% |
 | Thorns / Control Resist / Holy-Dark damage or resist | +1% |
 
@@ -350,7 +354,7 @@ Existing caps still apply (Evasion 40%, Control Resist −50%, Holy / Dark resis
 | **IV–V** (named cards) | Any mix | Up to 2 | **Always**; stats get **70%** of the budget |
 
 - **Signature:** a fixed effect every copy of the card has (e.g. a folklore blade's power). One per card. Prefer conditional effects (vs a family, below 50% HP, first 10 s, an aura on the same row). Family bonuses **≤ +30%**; no immunities (exception: **Knockback** immunity is allowed). Named cards may take real folklore names (public domain originals only, e.g. Balmung).
-- ✅ **Named cards** (design term only): gear and accessories with a real myth, legend or folklore name and a fixed signature. **No rarity label or special frame in game**: the name itself tells players it's special. Gear: Tier IV+. Accessories: item Tier VI+, with a signature **plus** the usual rolled trait, and optionally **one active skill** (uses a battle slot). Named cards may break a general rule on purpose when noted (e.g. Draupnir's illusions don't count as summons). Ideas: `Gear.md` and `Items.md` (named sections); recipes come when those tiers are designed.
+- ✅ **Named cards** (design term only): gear and accessories with a real myth, legend or folklore name and a fixed signature. **No rarity label or special frame in game**: the name itself tells players it's special. Gear: Tier IV+. Accessories: item Tier VI+, with a signature **plus** the usual 30% trait chance, and optionally **one active skill** (uses a battle slot). Named cards may break a general rule on purpose when noted (e.g. Draupnir's illusions don't count as summons). Ideas: `Gear.md` and `Items.md` (named sections); recipes come when those tiers are designed.
 - ✅ **One of each named card per party:** a party can't bring two copies of the same named card (two Crowns of Midas), but different named cards are fine.
 - **On top of the budget:** the **rolled trait** (30% chance, §4.7.1, `TraitPool.md` §4), so two copies of the same card can differ, and the **0–5 stone slots**.
 
@@ -370,7 +374,7 @@ Existing caps still apply (Evasion 40%, Control Resist −50%, Holy / Dark resis
 | **Throwable** | Consumed on use **in battle**: **engineering**, not magic (bombs, smoke, traps) | ✅ | Shared consumable slots. Not the Bomb **weapon** family (§4.7) |
 | **Scroll** | Consumed on use **in battle**: one **fixed magic spell** per scroll (lightning, illusion…), like Clash of Clans spells. **Never teaches skills** | ✅ | Shared consumable slots |
 | **Charm** | Consumed on use **outside battle**: luck and protection for risky systems (e.g. Ward Charm saves a stone on a failed socketing attempt) | ✅ | Never in battle |
-| **Ring / Necklace / Amulet / Crown** | Accessory slot | ❌ | Stat bonus + trait (always rolls one, `TraitPool.md` §5). **Budget:** 8 GP at Tier IV, 12 GP at Tier V (gear conversion rates, §4.7.4; may include % stats). Not visible on the homunculus |
+| **Ring / Necklace / Amulet / Crown** | Accessory slot | ❌ | Stat bonus; **30% chance** of a trait (`TraitPool.md` §5), like gear. **Budget:** 8 GP at Tier IV, 12 GP at Tier V (gear conversion rates, §4.7.4; may include % stats). Not visible on the homunculus |
 | **Magic Stone** | Socketed into Gear slots | ✅ | **Color × rank** (§4.7.2) |
 
 ✅ Item basics are junk materials (Tier I–III; **exception:** a few Tier V materials, e.g. Lifebloom and Starcap, that feed later-tier potions). Usable items appear from Tier IV (Tier III + Tier I) and better ones at Tier V (Tier III + Tier II). Lists in §15.8; content (descriptions, art briefs) in `Docs/Design/Items.md`.
@@ -547,8 +551,8 @@ Each hero has its **own built-in targeting characteristic**. This is part of the
 |---|---|
 | **Basic hit** | ✅ Automatic when no skill is used. Rate from base attack interval + Attack Speed (Mercury, gear). Damage = base damage + dominant principle (§6.9) |
 | **Active skills** | ✅ **3 per hero in battle**, picked before battle from the hero's skill pool (tree skills + gear skills, §4.7.6). Loadout saved per mode (PvE party, PvP defense). Cast via the hybrid HUD (§6.1.1) |
-| **Skill readiness** | ✅ Each skill costs **mana** and has a **cooldown**. Heroes start with 50% mana; skills start 50% charged. Cooldown Reduction only from gear |
-| **Unique skill** | ✅ **Passive**, always on (e.g. "heals allies 2% of damage dealt"). No extra button |
+| **Skill readiness** | ✅ Each skill costs **mana** and has a **cooldown**. Heroes start with 50% mana; skills start 50% charged. Cooldown Reduction from gear, accessories and traits (cap 40%) |
+| **Trait** | ✅ **Passive**, always on, if the card has one (30% chance, §4.6.4). No extra button |
 | **Auto-skill toggle** | PvE: optional, so grinding can be fully automatic. PvP: AI-controlled (§6.7) |
 | **Consumables in battle** | ✅ **2 shared consumable slots** per party, shown as 2 buttons in the **bottom-right corner** (§6.1.1). **Potions, Throwables and Scrolls** (Charms are used outside battle). Each slot holds one stackable consumable type (e.g. 5 × Minor Healing Potion). Per-slot cooldown and max uses per battle (to stop spam), and PvP AI use: TBD |
 
@@ -570,7 +574,7 @@ Each hero has its **own built-in targeting characteristic**. This is part of the
 
 ### 6.8 Prototype 2 Scope (combat)
 - 1 chapter, ~5 stages with waves + 1 boss
-- 6 roles, targeting rules, basic hits, cooldown skills, passive unique skills
+- 6 roles, targeting rules, basic hits, cooldown skills, passive traits
 - 5-hero 3×3 formation editor (+ placing pre-placed skills, §6.2)
 - XP gain + card drops
 - PvP: out of scope (Phase 5)
@@ -604,6 +608,16 @@ Each hero has its **own built-in targeting characteristic**. This is part of the
 | Attacks per second | (100 + Attack Speed) / 100 / base attack interval |
 | Crit / Evasion / Block | gear, items, passives, traits only. Crit = 150% damage; **crit damage bonuses** (e.g. Snick's Lethal Precision) come only from passives and traits |
 | Move Speed | per hero + gear (everyone who needs to move, §6.2) |
+
+**Stat definitions ✅**
+| Stat | Definition |
+|---|---|
+| **Crit** | Chance for a hit to deal 150% damage. Basic hits by default; skills only when a skill or effect says so (e.g. Backstab from Stealth, Eye of Ra) |
+| **Evasion** | Chance to fully dodge an enemy **basic hit**. Skills always land |
+| **Block** | **Shield bearers only:** a homunculus with a **Shield-family weapon** or a **built-in shield** (e.g. Tobin's pot lid). Chance to **negate 100%** of a **physical hit**, basic or skill; magic hits only when an effect says so (e.g. Rune-Etched Lid). **Never** damage-over-time ticks or zones. Block from any source does nothing on others. **Stacks multiplicatively** (each source blocks a share of what's left: 10% + 10% = 19%), **cap 60%**: very hard to build |
+| **Lifesteal** | Heal for this % of **basic-hit** damage dealt; skill damage only when an effect says so (e.g. Siphon) |
+| **Thorns** | Reflect this % of **melee** damage taken back to the attacker as physical damage |
+| **Control Resist** | Shortens all control (soft and hard) on this unit by this %, capped at −50% |
 
 **Damage reduction** = 0.06 × DEF / (1 + 0.06 × DEF) against physical; same formula with RES against magic. 10 DEF ≈ 37%, 20 DEF ≈ 55%, never immune.
 
@@ -740,10 +754,10 @@ Planned to be discussed later.
 │ Role / Subtype      │
 │ Salt 12 Mercury 8 Sulfur 4  │  ← hero stats / item effect
 │ ◆ ◆ ◇ ◇ ◇           │  ← weapon slots (filled / empty)
-│ [Unique Skill]      │  ← highlighted by rarity
+│ [Trait]             │  ← only if it has one; Faint / Bright / Radiant / Unique
 └─────────────────────┘
 ```
-- **Frame color = category** (3 colors). **Stars = Tier.** Basic card rarity is **not** printed on cards, since it rotates each season (§4.2.2). Unique-skill rarity shows on the skill banner.
+- **Frame color = category** (3 colors). **Stars = Tier.** Basic card rarity is **not** printed on cards, since it rotates each season (§4.2.2). Trait rarity shows on the trait banner; Unique traits get a special aura.
 - Stackable items show a count badge (×3).
 - Battle scene: diagonal view. Heroes need **back-¾ and front-¾** views (§6.1). Card art is used for cards and skill buttons; battle characters are separate assets.
 
@@ -765,7 +779,7 @@ Planned to be discussed later.
 | 3 categories, 15 basics, ~20–30 recipes | Mining |
 | Starter pack (30) + Daily Chest (8) + streak chest + Exchange + debug chest | Monetization, seasonal rotation |
 | Codex with ??? entries | Final art & audio |
-| Unique skill roll + weapon slot roll | XP leveling (stub only) |
+| Trait roll (30%) + weapon slot roll | XP leveling (stub only) |
 | Equip weapon/armor/accessory, socket stones, use potions | |
 | **Server-shaped code** (fusion & rolls behind a "service" interface, local for now) | |
 
@@ -813,7 +827,7 @@ Planned to be discussed later.
 | 8 | Magic Stones | ✅ Risk-based attach/detach; fail = stone destroyed, gear kept. Armor rolls slots too. Rates tuned in playtests |
 | 9 | Starter pack guarantees (min. heroes, fusable pair)? | ✅ 30 cards: at least 5 heroes and 1 fusable pair per category |
 | 10 | Party size | ✅ 5 heroes, 3×3 grid (grid size proposed) |
-| 11 | Unique skill: from which tier? Pity? Re-roll? | ✅ All heroes incl. basics (rolled when obtained); pure re-roll on fusion; no pity, no re-roll item; no tier scaling |
+| 11 | Unique skill: from which tier? Pity? Re-roll? | ✅ All heroes incl. basics (rolled when obtained); pure re-roll on fusion; no pity, no re-roll item; no tier scaling **Updated v0.46:** only 30% of cards get a trait (§4.6.4). |
 | 12 | PvP: async or real-time? | ✅ Async (proposed, kept) |
 | 13 | Potions usable during battle? | ✅ Yes: 2 shared slots, bottom-right; Potions & Bombs (§6.5) |
 | 14 | Inventory limit, currencies | ✅ Collection unlimited, identical cards stack; 2 shared battle consumable slots; Coins (soft) + Gems (premium) |
@@ -846,7 +860,7 @@ Planned to be discussed later.
 | 43 | Does a homunculus's **default weapon** (hero files §6) give stats, or is it only what it holds with no weapon equipped? | Open; proposed: visual only, no stats |
 | 44 | ⚠️ **Homunculi without available weapons:** Snick's Trapmaster (Knife family) and Goblin Sapper (Bomb family) have **no gear cards yet**; until created (Tier III or higher, user's call), they fight with their default weapon only | Open; reminder |
 | 45 | Item **Tier VI**: which pairs form it (e.g. Tier V + Tier I?) and its contents (Greater Healing Potion from Lifebloom, Mana Elixir from Starcap, Guardian Charm, Lucky Coin renamed, Polished stones) | Open |
-| 26 | Naming: card rarity and unique-skill rarity both use "Common/Rare". Use different labels to avoid confusion? | ✅ Skills use Bronze / Silver / Gold |
+| 26 | Naming: card rarity and unique-skill rarity both use "Common/Rare". Use different labels to avoid confusion? | ✅ Skills use Bronze / Silver / Gold **Updated v0.46:** traits use Faint / Bright / Radiant / Unique. |
 | 27 | Risk: many random layers (card rarity, skill roll, slot roll, socket chance) can feel like a slot machine | Mitigate: progress never depends only on luck; Exchange, trading, pity |
 
 ---
@@ -854,6 +868,7 @@ Planned to be discussed later.
 ## 14. Change History
 | Version | Date | Changes |
 |---|---|---|
+| 0.46 | 2026-11-10 | Level traits (late bloomers, Lv. 10 / 20 / 30). Traits reworked: 30% chance for homunculi, gear and accessories (most cards have none); rarity Faint / Bright / Radiant / Unique (65 / 27 / 8 / special), Unique = one in the game world; jokes at Faint, ironic trade-offs from Bright; fusion warning. Stat definitions in §6.9; **Block** = shield bearers only, negates 100% of a physical hit, multiplicative stacking, cap 60%; Shield family Block by tier; Block 1 GP = +0.25% |
 | 0.45 | 2026-11-10 | Named accessories may carry one active skill (uses a battle slot); named cards may break a rule on purpose when noted. Named cards (design term; no in-game label): gear Tier IV+, accessories item Tier VI+ with signature + rolled trait; one of each named card per party; Knockback immunity allowed in signatures; Freeze status registered |
 | 0.44 | 2026-11-09 | Tier V items reworked (16): Lifebloom and Starcap as Tier V materials, Soothing Salve, Fire Oil, Binding Scroll, second Rough stone recipes, 6 accessories; potions and charms moved to a later tier (§13 #45). **Fire** tag (§6.9) and **Oiled** status (§6.10) |
 | 0.43 | 2026-11-08 | Scrolls become single-use magic battle spells (never teach skills); Throwables (engineering) replace the Bomb item subtype; Potions, Throwables and Scrolls share the battle consumable slots; Charms outside battle; gear skills (§4.7.6); magic stone color × rank; accessory budget 8 / 12 GP; Tier IV list (14 items) with ingredient tiers |

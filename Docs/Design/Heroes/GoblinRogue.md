@@ -109,8 +109,8 @@ Skill points: 1 per hero level, spent on any open skill. Every skill has 5 level
 
 ⚠️ Knife and Bomb families have **no gear cards yet** (GDD §13 #44): until they exist, B2 and B3 fight with their default weapon only. Planned: Bomb weapons give **+1 range** (thrown), so the Sapper attacks from 2 tiles while staying melee (GDD §6.2).
 
-## 7. Unique Trait
-- Odds: Bronze 70% · Silver 25% · Gold 5%.
+## 7. Trait
+- Chance: 30% when born; if it rolls: Faint 65% · Bright 27% · Radiant 8% · Unique (GDD §4.6.4).
 - Fitting trait tags: Physical, Crit, Speed ([TraitPool.md](../TraitPool.md)).
 
 ## 8. Illustrator Brief (draft)

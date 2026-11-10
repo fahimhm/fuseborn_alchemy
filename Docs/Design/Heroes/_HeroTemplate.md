@@ -93,8 +93,9 @@ Rules: GDD §4.6.4. Skill points: 1 per hero level (30 at cap), spent on any ope
 | Accessory | Any |
 | Default weapon | What it holds with no weapon equipped (visual only; per branch if families change) |
 
-## 7. Unique Trait
-- Odds: Bronze 70% · Silver 25% · Gold 5% (default; GDD §4.6.4).
+## 7. Trait
+- Chance: 30% when born; if it rolls: Faint 65% · Bright 27% · Radiant 8% · Unique (GDD §4.6.4).
+- Built-in shield: yes / no (a built-in shield lets it Block; GDD §6.9).
 - Fitting trait tags: 2–3 from [TraitPool.md](../TraitPool.md) §2 (Guard, Physical, Magic, Crit, Speed, Sustain, Support, Control). Tags only drive the "Good fit" badge, not the roll.
 
 ## 8. Illustrator Brief

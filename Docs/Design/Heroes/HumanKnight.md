@@ -68,7 +68,7 @@ Skill points: 1 per hero level, spent on any open skill. Every skill has 5 level
 |---|---|---|---|---|---|
 | A1 | **Shield Bash** | Lv. 1 | 60 / 12 s | Current target | Hits with the pot lid: 60 / 100 / 140 / 180 / 220 physical damage, Stun 1.0 / 1.25 / 1.5 / 1.75 / 2.0 s |
 | A2 | **Panicked Shout** | Lv. 1 | 80 / 18 s | Front-most enemy row | Yells in panic; enemies turn to him. Taunt 2 / 2.5 / 3 / 3.5 / 4 s; +4 / 6 / 8 / 10 / 12 DEF while it lasts |
-| P0 | **Pot-Lid Guard** (core passive) | Lv. 1 | — | Self | 4 / 6 / 8 / 10 / 12% chance to block half a physical hit. At battle start he raises his shield first: Shield 60 / 80 / 100 / 120 / 140 for 3 s |
+| P0 | **Pot-Lid Guard** (core passive) | Lv. 1 | — | Self | 4 / 6 / 8 / 10 / 12% chance to **Block** a physical hit (basic or skill; negates it, GDD §6.9). The pot lid is a **built-in shield**. At battle start he raises his shield first: Shield 60 / 80 / 100 / 120 / 140 for 3 s |
 
 **Branch point:** hero Lv. 10. Each branch is how Tobin finds his courage. Permanent choice. B2 and B3 keep him a Tank; **B1 makes him a Warrior** (GDD §4.6.4). In every branch he keeps Panicked Shout's Taunt, so a Warrior Tobin still protects a little (a weaker version of the Tank core tool).
 
@@ -84,7 +84,7 @@ Skill points: 1 per hero level, spent on any open skill. Every skill has 5 level
 |---|---|---|---|---|---|
 | B2a | **Wall** | Branch (Lv. 10) | 120 / 25 s | Allies in his lane + adjacent lanes | Plants the lid: a **shared shield** absorbs 150 / 240 / 330 / 420 / 510 damage in total for 6 s for every ally in those lanes; he can't move. **Redirection:** when it ends, 30% of the absorbed damage hits the front-most enemies |
 | B2b | **Oath Leap** | Branch (Lv. 10) | 70 / 16 s | Lowest-HP ally | Leaps to them and takes all hits meant for them for 2 / 2.5 / 3 / 3.5 / 4 s |
-| B2p | **Unshaken** | Branch (Lv. 10) | — | Self | Immune to knockback; status durations −10 / 20 / 30 / 40 / 50%; +4 / 5 / 6 / 7 / 8% block chance (stacks with Pot-Lid Guard, max 20%) |
+| B2p | **Unshaken** | Branch (Lv. 10) | — | Self | Immune to knockback; status durations −10 / 20 / 30 / 40 / 50%; +4 / 5 / 6 / 7 / 8% Block chance (stacks multiplicatively with Pot-Lid Guard, cap 60%) |
 
 **B3 · Spellguard** (role: Tank) — magic infuses the shield.
 | # | Skill | Unlock | Mana / CD | Target / area | Effect |
@@ -105,8 +105,9 @@ Skill points: 1 per hero level, spent on any open skill. Every skill has 5 level
 
 The pot-lid shield is part of Tobin (his look and P1), not a Gear card. If he equips a Tower Shield, **it replaces the pot lid** in his off-hand (GDD §4.7.5); his sword hand shows his default dull sword.
 
-## 7. Unique Trait
-- Odds: Bronze 70% · Silver 25% · Gold 5%.
+## 7. Trait
+- Chance: 30% when born; if it rolls: Faint 65% · Bright 27% · Radiant 8% · Unique (GDD §4.6.4).
+- Built-in shield: **yes** (pot lid): he can Block and can roll Block traits.
 - Fitting trait tags: Guard, Physical, Control ([TraitPool.md](../TraitPool.md)).
 
 ## 8. Illustrator Brief (draft)

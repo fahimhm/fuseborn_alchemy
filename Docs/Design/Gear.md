@@ -15,7 +15,7 @@
 | Stats | Fixed: every copy has them |
 | Signature | Fixed special effect (Tier III optional, IV–V always); costs 25–30% of the budget |
 | Skill | Fixed active skill (from Tier II, GDD §4.7.6); costs 30% of the budget. A card with a skill has **no** signature and **never** rolls a trait |
-| Rolled extras | 30% chance of a gear trait (not on skill cards); 0–5 stone slots. Not listed per card |
+| Rolled extras | 30% chance of a gear trait (Faint / Bright / Radiant / Unique; not on skill cards); 0–5 stone slots. Not listed per card |
 | Description | 2–3 sentences of flavor for the Codex and card details |
 | Codex line | One short line on the card |
 | Card art | What the illustrator draws on the card |
@@ -195,7 +195,7 @@ All five are basics from chests and drops. Tier I: **3 GP, all in principles**, 
 | Tier · GP | II · 6 |
 | Recipe | Sword + Iron Mail |
 | Fits | Tanks (e.g. Tobin) |
-| **Stats** | **+3 Salt, +1.5% Block** |
+| **Stats** | **+3 Salt, +0.9 DEF**. Shield family property: **+4% Block** (Tier II); the wearer counts as a shield bearer (GDD §6.9) |
 | Signature | — |
 
 **Description:** A workshop door, reinforced with the chain mail's rings and given a sword-hilt handle. It doesn't look like much until something tries to get through it.
