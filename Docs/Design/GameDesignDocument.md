@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| **Version** | 0.46 (draft) |
+| **Version** | 0.47 (draft) |
 | **Last updated** | 2026-11-07 |
 | **Status** | Pre-production. Fusion, card categories, and upgrade systems defined; combat and mining outlined |
 | **Engine** | Unity (tentative) |
@@ -197,6 +197,8 @@ Every homunculus is made of the three alchemical **principles** (Lore.md): **Sal
 | **Armor** | Gear card of slot type Armor: **one** piece, either Body, Helmet, Gloves or Boots (§4.7.3) |
 | **Accessory** | ✅ **One slot:** Ring, Necklace, Amulet **or** Crown |
 
+✅ **Level requirement:** every gear and accessory card has a **power band** (§4.7.4) that sets the homunculus level needed to equip it (Starter / Early: none · Mid: Lv. 10 · Late: Lv. 20 · Peak: Lv. 25). Weapon families still apply. Consumables and stones have no level requirement.
+
 #### 4.6.4 Role, Skill Tree & Trait
 - Each hero has an **initial role** (a label, §6.3), a **targeting priority** (§6.4), and trait(s).
 - ✅ **Branching skill tree** (per hero, `Docs/Design/Heroes/`), spent MOBA-style:
@@ -245,7 +247,7 @@ Every homunculus is made of the three alchemical **principles** (Lore.md): **Sal
 | Bow | Bow, Crossbow, Arcane Repeater |
 | Staff | Staff, Elder Staff |
 | Tome | Grimoire |
-| Shield | Tower Shield. **Family property: Block** by tier (Tier II 4%, III 6%, IV 8%, V 10%); the wearer counts as a shield bearer (§6.9) |
+| Shield | Tower Shield. **Family property: Block** by power band (Early 4%, Mid 6%, Late 8%, Peak 10%; §4.7.4); the wearer counts as a shield bearer (§6.9) |
 | Instrument | Lute, War Drum |
 | Knife | ⚠️ **No cards yet** (needed by Snick's Trapmaster, §13 #44) |
 | Bomb | ⚠️ **No cards yet** (needed by Snick's Goblin Sapper; melee, §13 #44). **Planned family property: thrown, +1 range** (§6.2) |
@@ -311,20 +313,20 @@ Every homunculus is made of the three alchemical **principles** (Lore.md): **Sal
 - **The equipped weapon always wins:** branch props never replace it; they may only add accents to it (e.g. Wren's Unbound vines on whatever bow she holds) or be non-weapon items (hood, pouch, bandolier). Fixed hand props are replaced too: a Tower Shield replaces Tobin's pot lid.
 - **No weapon equipped:** the homunculus shows its **default weapon** (hero file §6), visual only (§13 #43).
 - **Armor is not visible** on the homunculus, not even as an accent; it shows only on its card and through a hit sound.
-- **Future:** very high-tier gear (Tier V or above) may give the homunculus an **aura**, a visible glow or particle effect around it (like an Archon aura in RF Online). Not designed yet.
+- **Future:** very high-band gear (Peak or above) may give the homunculus an **aura**, a visible glow or particle effect around it (like an Archon aura in RF Online). Not designed yet.
 
 #### 4.7.4 Gear Budget ✅ (start values, revisit after launch)
-Every gear card has a **Gear Point (GP) budget set by its tier**, spent by the designer on principles and bonus stats at fixed rates, so cards of the same tier are equally strong on paper. Content per card: `Docs/Design/Gear.md`.
+✅ **Tier is not power.** For every category, a card's tier is only its **batch and depth in the recipe tree**, and tiers will keep growing (Tier XX one day). Power comes from the card's **power band**, chosen by the designer per card: it sets the **Gear Point (GP) budget** and the **level requirement**. A deep-tier card can still sit in a modest band; new power is added on purpose (a new band above Peak, e.g. when the level cap rises above 30, §13 #36), never as a side effect of adding tiers. Content per card: `Docs/Design/Gear.md`.
 
-| Tier | GP | Typically used around | ≈ share of the homunculus's total principles then |
-|---|---|---|---|
-| I | **3** | Lv. 1–8 | ~6% |
-| II | **6** | Lv. 8–15 | ~6% |
-| III | **10** | Lv. 15–25 | ~6–7% |
-| IV | **16** | Lv. 25–30 | ~8% |
-| V | **24** | Lv. 30 | ~11% (named cards) |
+| Power band | GP (gear) | GP (accessory) | Required level | Typically used around | ≈ share of total principles then | Today's cards |
+|---|---|---|---|---|---|---|
+| **Starter** | **3** | — | none | Lv. 1–8 | ~6% | Tier I gear |
+| **Early** | **6** | — | none | Lv. 8–15 | ~6% | Tier II gear |
+| **Mid** | **10** | **8** | **Lv. 10** | Lv. 15–25 | ~6–7% | Tier III gear; item Tier IV accessories |
+| **Late** | **16** | **12** | **Lv. 20** | Lv. 25–30 | ~8% | Tier IV gear; item Tier V accessories |
+| **Peak** | **24** | by design | **Lv. 25** | Lv. 30 | ~11% | Tier V gear; named cards |
 
-Gear **doesn't level up**: a card's share shrinks as its wearer levels, which pushes players to fuse better gear. "Typically used around" is a guess until Prototype 1 shows how fast players reach each tier. Sized like Dota's early items (+3 to a stat on a ~22-point hero).
+Cards with the same band are equally strong on paper. Gear **doesn't level up**: a card's share shrinks as its wearer levels, which pushes players to fuse better gear. "Typically used around" is a guess until Prototype 1. Starter is sized like Dota's early items (+3 to a stat on a ~22-point hero).
 
 **1 GP buys:**
 | Spend on | Gives |
@@ -345,23 +347,23 @@ Gear **doesn't level up**: a card's share shrinks as its wearer levels, which pu
 
 Existing caps still apply (Evasion 40%, Control Resist −50%, Holy / Dark resist −50%…).
 
-**Shape per tier**
-| Tier | Principles | Bonus stats | Signature |
+**Shape per band**
+| Band | Principles | Bonus stats | Signature |
 |---|---|---|---|
-| **I** | **Whole budget** (1–2 principles) | — | — |
-| **II** | At least half the budget | 1 | — |
-| **III** | Any mix | Up to 2 | **Optional**; with one, stats get **75%** of the budget |
-| **IV–V** (named cards) | Any mix | Up to 2 | **Always**; stats get **70%** of the budget |
+| **Starter** | **Whole budget** (1–2 principles) | — | — |
+| **Early** | At least half the budget | 1 | — |
+| **Mid** | Any mix | Up to 2 | **Optional**; with one, stats get **75%** of the budget |
+| **Late–Peak** (incl. named cards) | Any mix | Up to 2 | **Always** for named cards (stats get **70%** of the budget); optional otherwise |
 
 - **Signature:** a fixed effect every copy of the card has (e.g. a folklore blade's power). One per card. Prefer conditional effects (vs a family, below 50% HP, first 10 s, an aura on the same row). Family bonuses **≤ +30%**; no immunities (exception: **Knockback** immunity is allowed). Named cards may take real folklore names (public domain originals only, e.g. Balmung).
-- ✅ **Named cards** (design term only): gear and accessories with a real myth, legend or folklore name and a fixed signature. **No rarity label or special frame in game**: the name itself tells players it's special. Gear: Tier IV+. Accessories: item Tier VI+, with a signature **plus** the usual 30% trait chance, and optionally **one active skill** (uses a battle slot). Named cards may break a general rule on purpose when noted (e.g. Draupnir's illusions don't count as summons). Ideas: `Gear.md` and `Items.md` (named sections); recipes come when those tiers are designed.
+- ✅ **Named cards** (design term only): gear and accessories with a real myth, legend or folklore name and a fixed signature. **No rarity label or special frame in game**: the name itself tells players it's special. Gear: Late band and up. Accessories: Peak band, with a signature **plus** the usual 30% trait chance, and optionally **one active skill** (uses a battle slot). Named cards may break a general rule on purpose when noted (e.g. Draupnir's illusions don't count as summons). Ideas: `Gear.md` and `Items.md` (named sections); recipes come when those tiers are designed.
 - ✅ **One of each named card per party:** a party can't bring two copies of the same named card (two Crowns of Midas), but different named cards are fine.
 - **On top of the budget:** the **rolled trait** (30% chance, §4.7.1, `TraitPool.md` §4), so two copies of the same card can differ, and the **0–5 stone slots**.
 
 #### 4.7.6 Gear Skills ✅
 - Some weapons and armor carry **one fixed active skill** (e.g. a sword with *Quick Slash*, boots with *Stomp*). **Every copy** of that card has it.
 - **A card with a skill has nothing else:** no signature and it **never rolls a trait**. Stone slots still roll. Every gear card is one of: plain · rolled trait and/or signature · one fixed skill.
-- **From Tier II.** Strength ≈ a tree skill at **Lv. (tier − 1)** (Tier II → Lv. 1 … Tier V → Lv. 4), so it never matches a maxed homunculus skill. **Never levels**; a stronger version comes on higher-tier gear (fuse up). Costs **30% of the card's GP**.
+- **From the Early band.** Strength ≈ a tree skill at Lv. 1 (Early), 2 (Mid), 3 (Late) or 4 (Peak), so it never matches a maxed homunculus skill. **Never levels**; a stronger version comes on higher-band gear (fuse up). Costs **30% of the card's GP**.
 - Usable by whoever equips it (weapon families still apply). Goes into the battle loadout as one of the **3 active slots** (§4.6.4).
 - Accessories never carry skills, **except named accessories** (§4.7.4), which may carry one active skill. Like a gear skill, it uses one of the **3 battle slots**.
 
@@ -374,7 +376,7 @@ Existing caps still apply (Evasion 40%, Control Resist −50%, Holy / Dark resis
 | **Throwable** | Consumed on use **in battle**: **engineering**, not magic (bombs, smoke, traps) | ✅ | Shared consumable slots. Not the Bomb **weapon** family (§4.7) |
 | **Scroll** | Consumed on use **in battle**: one **fixed magic spell** per scroll (lightning, illusion…), like Clash of Clans spells. **Never teaches skills** | ✅ | Shared consumable slots |
 | **Charm** | Consumed on use **outside battle**: luck and protection for risky systems (e.g. Ward Charm saves a stone on a failed socketing attempt) | ✅ | Never in battle |
-| **Ring / Necklace / Amulet / Crown** | Accessory slot | ❌ | Stat bonus; **30% chance** of a trait (`TraitPool.md` §5), like gear. **Budget:** 8 GP at Tier IV, 12 GP at Tier V (gear conversion rates, §4.7.4; may include % stats). Not visible on the homunculus |
+| **Ring / Necklace / Amulet / Crown** | Accessory slot | ❌ | Stat bonus; **30% chance** of a trait (`TraitPool.md` §5), like gear. **Budget by power band** (§4.7.4): Mid 8 GP (Lv. 10), Late 12 GP (Lv. 20) (gear conversion rates; may include % stats). Not visible on the homunculus |
 | **Magic Stone** | Socketed into Gear slots | ✅ | **Color × rank** (§4.7.2) |
 
 ✅ Item basics are junk materials (Tier I–III; **exception:** a few Tier V materials, e.g. Lifebloom and Starcap, that feed later-tier potions). Usable items appear from Tier IV (Tier III + Tier I) and better ones at Tier V (Tier III + Tier II). Lists in §15.8; content (descriptions, art briefs) in `Docs/Design/Items.md`.
@@ -868,6 +870,7 @@ Planned to be discussed later.
 ## 14. Change History
 | Version | Date | Changes |
 |---|---|---|
+| 0.47 | 2026-11-11 | **Power bands** (Starter / Early / Mid / Late / Peak): tier is only batch and recipe depth; a card's band sets its GP budget and **level requirement** (none / none / Lv. 10 / Lv. 20 / Lv. 25). Gear skills, Shield Block, accessory budgets and named cards keyed to bands |
 | 0.46 | 2026-11-10 | Level traits (late bloomers, Lv. 10 / 20 / 30). Traits reworked: 30% chance for homunculi, gear and accessories (most cards have none); rarity Faint / Bright / Radiant / Unique (65 / 27 / 8 / special), Unique = one in the game world; jokes at Faint, ironic trade-offs from Bright; fusion warning. Stat definitions in §6.9; **Block** = shield bearers only, negates 100% of a physical hit, multiplicative stacking, cap 60%; Shield family Block by tier; Block 1 GP = +0.25% |
 | 0.45 | 2026-11-10 | Named accessories may carry one active skill (uses a battle slot); named cards may break a rule on purpose when noted. Named cards (design term; no in-game label): gear Tier IV+, accessories item Tier VI+ with signature + rolled trait; one of each named card per party; Knockback immunity allowed in signatures; Freeze status registered |
 | 0.44 | 2026-11-09 | Tier V items reworked (16): Lifebloom and Starcap as Tier V materials, Soothing Salve, Fire Oil, Binding Scroll, second Rough stone recipes, 6 accessories; potions and charms moved to a later tier (§13 #45). **Fire** tag (§6.9) and **Oiled** status (§6.10) |

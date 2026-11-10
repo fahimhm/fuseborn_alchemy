@@ -9,12 +9,12 @@
 |---|---|
 | Data ID | `SO_Gear_<Name>` |
 | Slot · family / piece | Weapon (with its family: which homunculi can hold it, GDD §4.7), or Armor · Body / Helmet / Gloves / Boots |
-| Tier · GP | Tier and its Gear Point budget (GDD §4.7.4) |
+| Tier · Band · GP | Tier (batch and recipe depth only), **power band**, and its Gear Point budget. The band sets the **level requirement** (GDD §4.7.4) |
 | Recipe | Basic, or the fusion that makes it |
 | Fits | Guidance only: which homunculi it suits |
 | Stats | Fixed: every copy has them |
 | Signature | Fixed special effect (Tier III optional, IV–V always); costs 25–30% of the budget |
-| Skill | Fixed active skill (from Tier II, GDD §4.7.6); costs 30% of the budget. A card with a skill has **no** signature and **never** rolls a trait |
+| Skill | Fixed active skill (from the Early band, GDD §4.7.6); costs 30% of the budget. A card with a skill has **no** signature and **never** rolls a trait |
 | Rolled extras | 30% chance of a gear trait (Faint / Bright / Radiant / Unique; not on skill cards); 0–5 stone slots. Not listed per card |
 | Description | 2–3 sentences of flavor for the Codex and card details |
 | Codex line | One short line on the card |
@@ -25,14 +25,14 @@
 ---
 
 ## Tier I (basic)
-All five are basics from chests and drops. Tier I: **3 GP, all in principles**, no signature.
+All five are basics from chests and drops. **Starter band:** 3 GP, all in principles, no signature, no level requirement.
 
 ### Sword
 | Field | Value |
 |---|---|
 | Data ID | `SO_Gear_Sword` |
 | Slot · Family | Weapon · Sword |
-| Tier · GP | I · 3 |
+| Tier · Band · GP | I · Starter · 3 (no level requirement) |
 | Recipe | Basic |
 | Fits | Salt homunculi (e.g. Tobin) |
 | **Stats** | **+3 Salt** |
@@ -49,7 +49,7 @@ All five are basics from chests and drops. Tier I: **3 GP, all in principles**, 
 |---|---|
 | Data ID | `SO_Gear_Bow` |
 | Slot · Family | Weapon · Bow |
-| Tier · GP | I · 3 |
+| Tier · Band · GP | I · Starter · 3 (no level requirement) |
 | Recipe | Basic |
 | Fits | Mercury homunculi (e.g. Wren) |
 | **Stats** | **+3 Mercury** |
@@ -66,7 +66,7 @@ All five are basics from chests and drops. Tier I: **3 GP, all in principles**, 
 |---|---|
 | Data ID | `SO_Gear_Staff` |
 | Slot · Family | Weapon · Staff |
-| Tier · GP | I · 3 |
+| Tier · Band · GP | I · Starter · 3 (no level requirement) |
 | Recipe | Basic |
 | Fits | Sulfur homunculi (e.g. Grum, Elsie) |
 | **Stats** | **+3 Sulfur** |
@@ -83,7 +83,7 @@ All five are basics from chests and drops. Tier I: **3 GP, all in principles**, 
 |---|---|
 | Data ID | `SO_Gear_IronMail` |
 | Slot · piece | Armor · Body |
-| Tier · GP | I · 3 |
+| Tier · Band · GP | I · Starter · 3 (no level requirement) |
 | Recipe | Basic |
 | Fits | Front-line homunculi; Salt first |
 | **Stats** | **+2 Salt, +1 Mercury (HP, and a little DEF)** |
@@ -100,7 +100,7 @@ All five are basics from chests and drops. Tier I: **3 GP, all in principles**, 
 |---|---|
 | Data ID | `SO_Gear_ClothRobe` |
 | Slot · piece | Armor · Body |
-| Tier · GP | I · 3 |
+| Tier · Band · GP | I · Starter · 3 (no level requirement) |
 | Recipe | Basic |
 | Fits | Back-line casters; Sulfur first |
 | **Stats** | **+2 Sulfur, +1 Mercury (mana and RES, a little DEF)** |
@@ -117,14 +117,14 @@ All five are basics from chests and drops. Tier I: **3 GP, all in principles**, 
 ---
 
 ## Tier II
-11 cards from two basics (GDD §15.7). Tier II: **6 GP**, at least half in principles, plus 1 bonus stat; no signature. All 11 are plain for now; some may get a fixed skill later (GDD §4.7.6).
+11 cards from two basics (GDD §15.7). **Early band:** 6 GP, at least half in principles, plus 1 bonus stat; no signature; no level requirement. All 11 are plain for now; some may get a fixed skill later (GDD §4.7.6).
 
 ### Greatsword
 | Field | Value |
 |---|---|
 | Data ID | `SO_Gear_Greatsword` |
 | Slot · Family | Weapon · Sword |
-| Tier · GP | II · 6 |
+| Tier · Band · GP | II · Early · 6 (no level requirement) |
 | Recipe | Sword + Sword |
 | Fits | Salt front-liners (Warrior builds) |
 | **Stats** | **+4 Salt, +2 ATK** |
@@ -141,7 +141,7 @@ All five are basics from chests and drops. Tier I: **3 GP, all in principles**, 
 |---|---|
 | Data ID | `SO_Gear_Crossbow` |
 | Slot · Family | Weapon · Bow |
-| Tier · GP | II · 6 |
+| Tier · Band · GP | II · Early · 6 (no level requirement) |
 | Recipe | Bow + Bow |
 | Fits | Mercury ranged homunculi |
 | **Stats** | **+4 Mercury, +2 ATK** |
@@ -158,7 +158,7 @@ All five are basics from chests and drops. Tier I: **3 GP, all in principles**, 
 |---|---|
 | Data ID | `SO_Gear_Grimoire` |
 | Slot · Family | Weapon · Tome |
-| Tier · GP | II · 6 |
+| Tier · Band · GP | II · Early · 6 (no level requirement) |
 | Recipe | Staff + Staff |
 | Fits | Sulfur casters |
 | **Stats** | **+4 Sulfur, +2% Skill Power** |
@@ -175,7 +175,7 @@ All five are basics from chests and drops. Tier I: **3 GP, all in principles**, 
 |---|---|
 | Data ID | `SO_Gear_TwinDaggers` |
 | Slot · Family | Weapon · Dagger |
-| Tier · GP | II · 6 |
+| Tier · Band · GP | II · Early · 6 (no level requirement) |
 | Recipe | Sword + Bow |
 | Fits | Mercury melee (Assassin builds) |
 | **Stats** | **+3 Mercury, +1.5% Crit Chance** |
@@ -192,7 +192,7 @@ All five are basics from chests and drops. Tier I: **3 GP, all in principles**, 
 |---|---|
 | Data ID | `SO_Gear_TowerShield` |
 | Slot · Family | Weapon · Shield |
-| Tier · GP | II · 6 |
+| Tier · Band · GP | II · Early · 6 (no level requirement) |
 | Recipe | Sword + Iron Mail |
 | Fits | Tanks (e.g. Tobin) |
 | **Stats** | **+3 Salt, +0.9 DEF**. Shield family property: **+4% Block** (Tier II); the wearer counts as a shield bearer (GDD §6.9) |
@@ -209,7 +209,7 @@ All five are basics from chests and drops. Tier I: **3 GP, all in principles**, 
 |---|---|
 | Data ID | `SO_Gear_Lute` |
 | Slot · Family | Weapon · Instrument |
-| Tier · GP | II · 6 |
+| Tier · Band · GP | II · Early · 6 (no level requirement) |
 | Recipe | Bow + Staff |
 | Fits | Sulfur supports |
 | **Stats** | **+4 Sulfur, +30 mana** |
@@ -226,7 +226,7 @@ All five are basics from chests and drops. Tier I: **3 GP, all in principles**, 
 |---|---|
 | Data ID | `SO_Gear_PlateArmor` |
 | Slot · piece | Armor · Body |
-| Tier · GP | II · 6 |
+| Tier · Band · GP | II · Early · 6 (no level requirement) |
 | Recipe | Iron Mail + Iron Mail |
 | Fits | Tanks; Salt first |
 | **Stats** | **+3 Salt, +0.9 DEF** |
@@ -243,7 +243,7 @@ All five are basics from chests and drops. Tier I: **3 GP, all in principles**, 
 |---|---|
 | Data ID | `SO_Gear_ShadowCloak` |
 | Slot · piece | Armor · Body |
-| Tier · GP | II · 6 |
+| Tier · Band · GP | II · Early · 6 (no level requirement) |
 | Recipe | Bow + Cloth Robe |
 | Fits | Mercury melee (evasion) |
 | **Stats** | **+3 Mercury, +1.2% Evasion** |
@@ -260,7 +260,7 @@ All five are basics from chests and drops. Tier I: **3 GP, all in principles**, 
 |---|---|
 | Data ID | `SO_Gear_SageRobe` |
 | Slot · piece | Armor · Body |
-| Tier · GP | II · 6 |
+| Tier · Band · GP | II · Early · 6 (no level requirement) |
 | Recipe | Staff + Cloth Robe |
 | Fits | Sulfur casters |
 | **Stats** | **+4 Sulfur, +0.6 RES** |
@@ -277,7 +277,7 @@ All five are basics from chests and drops. Tier I: **3 GP, all in principles**, 
 |---|---|
 | Data ID | `SO_Gear_RuneMail` |
 | Slot · piece | Armor · Body |
-| Tier · GP | II · 6 |
+| Tier · Band · GP | II · Early · 6 (no level requirement) |
 | Recipe | Staff + Iron Mail |
 | Fits | Salt + Sulfur hybrids |
 | **Stats** | **+2 Salt, +2 Sulfur, +0.6 DEF** |
@@ -294,7 +294,7 @@ All five are basics from chests and drops. Tier I: **3 GP, all in principles**, 
 |---|---|
 | Data ID | `SO_Gear_LeatherArmor` |
 | Slot · piece | Armor · Body |
-| Tier · GP | II · 6 |
+| Tier · Band · GP | II · Early · 6 (no level requirement) |
 | Recipe | Iron Mail + Cloth Robe |
 | Fits | Mercury ranged and skirmishers |
 | **Stats** | **+4 Mercury, +10 Move Speed** |
@@ -309,9 +309,9 @@ All five are basics from chests and drops. Tier I: **3 GP, all in principles**, 
 ---
 
 ## Tier III (to do)
-11 cards (GDD §15.7). Budget 10 GP; signature optional (War Drum's aura and Thorn Plate's thorns are likely candidates).
+11 cards (GDD §15.7). Mostly **Mid band** (10 GP, requires Lv. 10); signature optional (War Drum's aura and Thorn Plate's thorns are likely candidates).
 
-## Named cards (future, Tier IV+)
+## Named cards (future, Late band and up)
 Folklore weapons and armor discovered through fusion, each with a fixed signature (GDD §4.7.4). No rarity label in game: the name says it. One of each per party. Very high tiers may also give the homunculus a visible **aura** (GDD §4.7.5). Recipes come when those tiers are designed.
 
 | Card | Slot | Legend | Signature idea |
