@@ -317,4 +317,4 @@ Folklore weapons and armor discovered through fusion, each with a fixed signatur
 | Card | Slot | Legend | Signature idea |
 |---|---|---|---|
 | **Balmung** | Weapon · Sword | Nibelungenlied: Siegfried's sword | *Dragon-Slayer:* +30% damage vs Draconic (needs families as combat tags, GDD §13 #42) |
-| **Tarnhelm** | Armor · Helmet | Nibelung saga: the helm of invisibility | **Stealth** for the first 3 s of battle. Could start a **Nibelung set** with Balmung |
+| **Tarnhelm** | Armor · Helmet | Nibelung saga: the helm of invisibility, shape-shifting and instant travel | **To decide** (Stealth at battle start now belongs to the Ring of Gyges). Ideas: *shape-shift* (first 5 s, enemies treat the wearer as their lowest-priority target) or *instant travel* (once, at battle start, teleports to a tile chosen during placement). Part of a **Nibelung set** with Balmung and Andvaranaut (`Items.md`) |

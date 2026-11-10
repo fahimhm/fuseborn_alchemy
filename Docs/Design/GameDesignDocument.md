@@ -350,7 +350,7 @@ Existing caps still apply (Evasion 40%, Control Resist −50%, Holy / Dark resis
 | **IV–V** (named cards) | Any mix | Up to 2 | **Always**; stats get **70%** of the budget |
 
 - **Signature:** a fixed effect every copy of the card has (e.g. a folklore blade's power). One per card. Prefer conditional effects (vs a family, below 50% HP, first 10 s, an aura on the same row). Family bonuses **≤ +30%**; no immunities (exception: **Knockback** immunity is allowed). Named cards may take real folklore names (public domain originals only, e.g. Balmung).
-- ✅ **Named cards** (design term only): gear and accessories with a real myth, legend or folklore name and a fixed signature. **No rarity label or special frame in game**: the name itself tells players it's special. Gear: Tier IV+. Accessories: item Tier VI+, with a signature **plus** the usual rolled trait. Ideas: `Gear.md` and `Items.md` (named sections); recipes come when those tiers are designed.
+- ✅ **Named cards** (design term only): gear and accessories with a real myth, legend or folklore name and a fixed signature. **No rarity label or special frame in game**: the name itself tells players it's special. Gear: Tier IV+. Accessories: item Tier VI+, with a signature **plus** the usual rolled trait, and optionally **one active skill** (uses a battle slot). Named cards may break a general rule on purpose when noted (e.g. Draupnir's illusions don't count as summons). Ideas: `Gear.md` and `Items.md` (named sections); recipes come when those tiers are designed.
 - ✅ **One of each named card per party:** a party can't bring two copies of the same named card (two Crowns of Midas), but different named cards are fine.
 - **On top of the budget:** the **rolled trait** (30% chance, §4.7.1, `TraitPool.md` §4), so two copies of the same card can differ, and the **0–5 stone slots**.
 
@@ -359,7 +359,7 @@ Existing caps still apply (Evasion 40%, Control Resist −50%, Holy / Dark resis
 - **A card with a skill has nothing else:** no signature and it **never rolls a trait**. Stone slots still roll. Every gear card is one of: plain · rolled trait and/or signature · one fixed skill.
 - **From Tier II.** Strength ≈ a tree skill at **Lv. (tier − 1)** (Tier II → Lv. 1 … Tier V → Lv. 4), so it never matches a maxed homunculus skill. **Never levels**; a stronger version comes on higher-tier gear (fuse up). Costs **30% of the card's GP**.
 - Usable by whoever equips it (weapon families still apply). Goes into the battle loadout as one of the **3 active slots** (§4.6.4).
-- Accessories never carry skills.
+- Accessories never carry skills, **except named accessories** (§4.7.4), which may carry one active skill. Like a gear skill, it uses one of the **3 battle slots**.
 
 ### 4.8 Item
 
@@ -854,7 +854,7 @@ Planned to be discussed later.
 ## 14. Change History
 | Version | Date | Changes |
 |---|---|---|
-| 0.45 | 2026-11-09 | Named cards (design term; no in-game label): gear Tier IV+, accessories item Tier VI+ with signature + rolled trait; one of each named card per party; Knockback immunity allowed in signatures; Freeze status registered |
+| 0.45 | 2026-11-10 | Named accessories may carry one active skill (uses a battle slot); named cards may break a rule on purpose when noted. Named cards (design term; no in-game label): gear Tier IV+, accessories item Tier VI+ with signature + rolled trait; one of each named card per party; Knockback immunity allowed in signatures; Freeze status registered |
 | 0.44 | 2026-11-09 | Tier V items reworked (16): Lifebloom and Starcap as Tier V materials, Soothing Salve, Fire Oil, Binding Scroll, second Rough stone recipes, 6 accessories; potions and charms moved to a later tier (§13 #45). **Fire** tag (§6.9) and **Oiled** status (§6.10) |
 | 0.43 | 2026-11-08 | Scrolls become single-use magic battle spells (never teach skills); Throwables (engineering) replace the Bomb item subtype; Potions, Throwables and Scrolls share the battle consumable slots; Charms outside battle; gear skills (§4.7.6); magic stone color × rank; accessory budget 8 / 12 GP; Tier IV list (14 items) with ingredient tiers |
 | 0.42 | 2026-11-08 | Materials: fusion only, principle lean (flavor), Junk Codex (§4.8); Old Coin renamed Ancient Token; item content in `Items.md` |

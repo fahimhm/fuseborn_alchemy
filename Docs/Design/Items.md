@@ -126,7 +126,9 @@ Same cards as Tier IV, a second way to make each color. Same description, Codex 
 | **Gilded Crown** | Ancient Token (III) + Raw Ore (II) | Crown | +6 Mercury, +3% Cooldown Reduction | Ancient Tokens melted with raw ore into a thin, bright crown. The forgotten faces on it seem to hurry its wearer along. | "Borrowed glory, quickly spent." | A thin golden crown with old token faces set around it, catching the light. |
 
 ## Named accessories (future, item Tier VI+)
-Crowns from myth, legend and classic fantasy (GDD §4.7.4 named cards). Each has a fixed **signature** plus the usual rolled trait and stats. No rarity label in game: the name says it. **One of each per party.** Numbers (x, y) and recipes come when Tier VI+ is designed.
+Crowns, amulets, necklaces and rings from myth, legend and classic fantasy (GDD §4.7.4 named cards). Each has a fixed **signature** plus the usual rolled trait and stats, and may carry **one active skill** (uses a battle slot).
+
+### Crowns No rarity label in game: the name says it. **One of each per party.** Numbers (x, y) and recipes come when Tier VI+ is designed.
 
 | Crown | Legend | Signature idea | Notes |
 |---|---|---|---|
@@ -138,6 +140,24 @@ Crowns from myth, legend and classic fantasy (GDD §4.7.4 named cards). Each has
 | **Ariadne's Crown** | Greek myth: Dionysus's wedding gift, set in the sky as the Corona Borealis; her light guided Theseus out of the labyrinth | **Guiding light:** enemies within 2 tiles lose **Stealth** and can't regain it | Counter to assassins |
 | **Uraeus Crown** | Egyptian myth: the cobra on the pharaoh's crown that spits fire at the king's enemies | Every 4th basic hit, the cobra spits a **Fire**-tagged bolt | A Fire source for Fire Oil combos |
 | **Phoenix Crown** | Chinese empresses' phoenix crown; the phoenix reborn from its ashes | **Once per battle**, a lethal hit leaves the wearer at 1 HP, then it heals 30% over 3 s | |
+
+### Amulets and necklaces
+| Item | Slot | Legend | Signature idea | Active skill | Notes |
+|---|---|---|---|---|---|
+| **Eye of Ra** | Amulet | Egyptian myth: the sun god's fierce, all-seeing eye | +x% Evasion. After dodging a basic hit, the wearer's next attack or skill is a **guaranteed crit** | — | Evasion cap 40%; Evasion dodges basic hits only |
+| **Necklace of Harmonia** | Necklace | Greek myth: the cursed wedding necklace that brought ruin to its owners | +x% damage dealt; −y% max HP. **Aura:** enemies within 1 tile get −z% RES | **Curse of Discord** (20 s cooldown): Confuse the target for 2 s | Four effects on purpose: a rich, cursed myth |
+| **Brisingamen** | Necklace | Norse myth: Freyja's radiant necklace | 10% of damage dealt becomes a shield on the wearer; +15% magic damage | — | Cap the shield (e.g. at 20% max HP) |
+| **Hesperus Pendant** | Necklace | Greek myth: Hesperus, the Evening Star | Regenerates **0.5% max mana per second**. Once per battle, a lethal hit leaves the wearer at 1 HP and **Invulnerable for 2.5 s** | — | Second "cheat death" (with the Phoenix Crown, on a different slot); a party may bring both |
+| **Talisman of Mercury** | Amulet | Roman myth: Mercury, the swift messenger god (echoes the Mercury principle) | When a single hit deals more than 20% of the wearer's max HP, it blinks up to 3 tiles to a safe tile (away from enemies, toward its own side) and gains +30% Move Speed for 3 s | — | |
+
+### Rings
+| Item | Legend | Signature idea | Active skill | Notes |
+|---|---|---|---|---|
+| **Draupnir** | Norse myth: Odin's ring that drips copies of itself | Every x s in battle, gains a spectral duplicate ring: +y% damage per duplicate (stacks up to b, proposed 4–5). Hard control resets the stacks | **Multiplicity:** consumes all duplicates to create that many spectral illusions of the wearer for 6 s (1 HP each, 110% of its base attack) | **Exception on purpose:** illusions are **not summons**: no 2-summon cap, not buffed by the Ring of the Djinn, not counted by the Diadem of Shadows |
+| **Ring of Gyges** | Plato's *Republic*: the ring of invisibility | **Stealth** at battle start; the first attack out of Stealth deals +x% bonus damage that **ignores DEF and RES** | — | Owns the "Stealth at start" idea (Tarnhelm changed) |
+| **Ring of the Djinn** | *One Thousand and One Nights*: a ring that summons a powerful djinn | Allied summons get +x% max HP and +y% Attack Speed | — | A **Djinn homunculus** is planned for a later tier; the shared name is intended |
+| **Andvaranaut** | Norse myth: the dwarf Andvari's cursed ring | +30% Crit Chance; the wearer takes +10% physical and magic damage | — | Crit cap 60%. Part of a **Nibelung set** with Balmung and Tarnhelm (`Gear.md`) |
+| **Ring of Polycrates** | Herodotus: the tyrant's ring of endless good fortune | +15% Cooldown Reduction; attacks **ignore 15% of the target's DEF**. Healing received from allies −20% | — | CDR cap 40% |
 
 ## Later tier (Tier VI, to define)
 Greater Healing Potion (from Lifebloom), Mana Elixir (from Starcap), Guardian Charm, Lucky Coin (to rename), Polished stones (2 GP). Tier VI pairs: GDD §13 #45.
