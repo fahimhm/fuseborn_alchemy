@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| **Version** | 0.47 (draft) |
+| **Version** | 0.48 (draft) |
 | **Last updated** | 2026-11-07 |
 | **Status** | Pre-production. Fusion, card categories, and upgrade systems defined; combat and mining outlined |
 | **Engine** | Unity (tentative) |
@@ -860,7 +860,7 @@ Planned to be discussed later.
 | 41 | Real-time Best of Three: swap limit between games (proposed 2 homunculi) | Open |
 | 42 | Families as combat tags: homunculi have families (HeroPool); PvE Runoffs need families too, so gear signatures like "+30% vs Draconic" work in PvE and PvP | Open; needed before Tier III+ signatures |
 | 43 | Does a homunculus's **default weapon** (hero files §6) give stats, or is it only what it holds with no weapon equipped? | Open; proposed: visual only, no stats |
-| 44 | ⚠️ **Homunculi without available weapons:** Snick's Trapmaster (Knife family) and Goblin Sapper (Bomb family) have **no gear cards yet**; until created (Tier III or higher, user's call), they fight with their default weapon only | Open; reminder |
+| 44 | ⚠️ **Homunculi without available weapons:** Snick's Trapmaster (Knife family) and Goblin Sapper (Bomb family) have **no gear cards yet**; until then they fight with their default weapon only | Open; **planned: Knife at Tier IV, Bomb at Tier V** |
 | 45 | Item **Tier VI**: which pairs form it (e.g. Tier V + Tier I?) and its contents (Greater Healing Potion from Lifebloom, Mana Elixir from Starcap, Guardian Charm, Lucky Coin renamed, Polished stones) | Open |
 | 26 | Naming: card rarity and unique-skill rarity both use "Common/Rare". Use different labels to avoid confusion? | ✅ Skills use Bronze / Silver / Gold **Updated v0.46:** traits use Faint / Bright / Radiant / Unique. |
 | 27 | Risk: many random layers (card rarity, skill roll, slot roll, socket chance) can feel like a slot machine | Mitigate: progress never depends only on luck; Exchange, trading, pity |
@@ -870,6 +870,7 @@ Planned to be discussed later.
 ## 14. Change History
 | Version | Date | Changes |
 |---|---|---|
+| 0.48 | 2026-11-11 | Tier III gear: bands (6 Early, 4 Mid, 1 Late), 3 gear skills, 3 signatures, stats and content in `Gear.md`; Knife planned at Tier IV, Bomb at Tier V (§13 #44) |
 | 0.47 | 2026-11-11 | **Power bands** (Starter / Early / Mid / Late / Peak): tier is only batch and recipe depth; a card's band sets its GP budget and **level requirement** (none / none / Lv. 10 / Lv. 20 / Lv. 25). Gear skills, Shield Block, accessory budgets and named cards keyed to bands |
 | 0.46 | 2026-11-10 | Level traits (late bloomers, Lv. 10 / 20 / 30). Traits reworked: 30% chance for homunculi, gear and accessories (most cards have none); rarity Faint / Bright / Radiant / Unique (65 / 27 / 8 / special), Unique = one in the game world; jokes at Faint, ironic trade-offs from Bright; fusion warning. Stat definitions in §6.9; **Block** = shield bearers only, negates 100% of a physical hit, multiplicative stacking, cap 60%; Shield family Block by tier; Block 1 GP = +0.25% |
 | 0.45 | 2026-11-10 | Named accessories may carry one active skill (uses a battle slot); named cards may break a rule on purpose when noted. Named cards (design term; no in-game label): gear Tier IV+, accessories item Tier VI+ with signature + rolled trait; one of each named card per party; Knockback immunity allowed in signatures; Freeze status registered |
@@ -1066,22 +1067,22 @@ No match (✗): Priest + Rogue, Priest + Warlock. Two "no reaction" pairs are ke
 No match: Cloth Robe + Cloth Robe, Sword + Staff, Sword + Cloth Robe, Bow + Iron Mail.
 
 **Tier III (Tier II + Tier I): 11 results from 55 pairs, 44 ✗.** Source: `Docs/Design/Data/GearGridTier3.tsv`.
-| Result | Recipe | Slot · piece | Bonus focus | Role fit |
+| Result | Recipe | Slot · piece | Band | Extra |
 |---|---|---|---|---|
-| Iron Gauntlets | Greatsword + Iron Mail | Armor · Gloves | Salt, ATK | Warrior |
-| Arcane Repeater | Crossbow + Staff | Weapon | Attack Speed, Sulfur | Ranger |
-| Wizard Hat | Grimoire + Cloth Robe | Armor · Helmet | Cooldown Reduction, Sulfur | Mage |
-| Silent Boots | Twin Daggers + Cloth Robe | Armor · Boots | Move Speed, Evasion | Assassin |
-| Knight Helm | Tower Shield + Sword | Armor · Helmet | DEF, Control Resist | Tank |
-| War Drum | Lute + Iron Mail | Weapon | Team Attack Speed aura | Support |
-| Thorn Plate | Plate Armor + Sword | Armor · Body | DEF, Thorns | Tank |
-| Nightgrip Gloves | Shadow Cloak + Bow | Armor · Gloves | Crit Chance, Attack Speed | Assassin |
-| Elder Staff | Sage Robe + Staff | Weapon | Skill Power, Sulfur | Mage / Support |
-| Runeblade | Rune Mail + Iron Mail | Weapon | Salt + Sulfur hybrid | Warrior |
-| Hunter's Boots | Leather Armor + Bow | Armor · Boots | Move Speed, Mercury | Ranger |
+| Iron Gauntlets | Greatsword (II) + Iron Mail (I) | Armor · Gloves | Early | Skill: Haymaker |
+| Arcane Repeater | Crossbow (II) + Staff (I) | Weapon · Bow | Mid | Skill: Rapid Volley |
+| Wizard Hat | Grimoire (II) + Cloth Robe (I) | Armor · Helmet | Early | — |
+| Silent Boots | Twin Daggers (II) + Cloth Robe (I) | Armor · Boots | Early | Skill: Shadowstep |
+| Knight Helm | Tower Shield (II) + Sword (I) | Armor · Helmet | Early | — |
+| War Drum | Lute (II) + Iron Mail (I) | Weapon · Instrument | Late | Signature: Marching Beat |
+| Thorn Plate | Plate Armor (II) + Sword (I) | Armor · Body | Mid | Signature: Barbs |
+| Nightgrip Gloves | Shadow Cloak (II) + Bow (I) | Armor · Gloves | Early | — |
+| Elder Staff | Sage Robe (II) + Staff (I) | Weapon · Staff | Mid | — |
+| Runeblade | Rune Mail (II) + Iron Mail (I) | Weapon · Sword | Mid | Signature: Spellstrike |
+| Hunter's Boots | Leather Armor (II) + Bow (I) | Armor · Boots | Early | — |
 
-Mix: 4 weapons, 7 armor (1 body, 2 helmets, 2 gloves, 2 boots). Each Tier II card is used once.
-To-do: exact stat values, second recipes for key results, Tier II + Tier II gear.
+Mix: 4 weapons, 7 armor (1 body, 2 helmets, 2 gloves, 2 boots). Each Tier II card is used once. Bands: 6 Early, 4 Mid, 1 Late. Stats, descriptions and art: `Docs/Design/Gear.md`.
+To-do: second recipes for key results, Tier II + Tier II gear.
 
 ### 15.8 Items (proposed, to be sorted)
 Junk materials climb two tiers before they become usable items. Effects of Tier IV–V items: TBD. Grids in `Docs/Design/Data/ItemGridT2.tsv` … `ItemGridT5.tsv`.

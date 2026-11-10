@@ -1,8 +1,8 @@
 # Gear — Fuseborn
 
-**Status:** Draft (Tier I and II for review). Rules: GDD §4.7 (budget §4.7.4, visuals §4.7.5, slots §4.7.1, stones §4.7.2, armor pieces §4.7.3). Traits: `TraitPool.md` §4. Lore: junk becomes treasure (Lore.md).
+**Status:** Draft (Tier I–II approved; Tier III for review). Rules: GDD §4.7 (budget §4.7.4, visuals §4.7.5, slots §4.7.1, stones §4.7.2, armor pieces §4.7.3). Traits: `TraitPool.md` §4. Lore: junk becomes treasure (Lore.md).
 
-> ⚠️ **Missing weapon families (GDD §13 #44):** **Knife** (Snick's Trapmaster) and **Bomb** (Snick's Goblin Sapper, melee) have **no cards yet**. Until they're created (Tier III or higher), those branches fight with their default weapon only. Plan: **Bomb family property: thrown, +1 range** (GDD §6.2), so the Sapper lobs from 2 tiles.
+> ⚠️ **Missing weapon families (GDD §13 #44):** **Knife** (Snick's Trapmaster) and **Bomb** (Snick's Goblin Sapper, melee) have **no cards yet**. Until they're created (Tier III or higher), those branches fight with their default weapon only. **Planned: Knife at Tier IV, Bomb at Tier V.** Plan: **Bomb family property: thrown, +1 range** (GDD §6.2), so the Sapper lobs from 2 tiles.
 
 ## How to read an entry
 | Field | Meaning |
@@ -308,8 +308,208 @@ All five are basics from chests and drops. **Starter band:** 3 GP, all in princi
 
 ---
 
-## Tier III (to do)
-11 cards (GDD §15.7). Mostly **Mid band** (10 GP, requires Lv. 10); signature optional (War Drum's aura and Thorn Plate's thorns are likely candidates).
+## Tier III
+11 cards from a Tier II + a Tier I gear (GDD §15.7). Bands: **6 Early** (new helmets, gloves and boots: sideways choices next to body armor), **4 Mid** (weapon upgrades and heavy body armor, require Lv. 10), **1 Late** (War Drum, requires Lv. 20). Extras: **3 gear skills** (Iron Gauntlets, Silent Boots, Arcane Repeater: such cards never roll a trait), **3 signatures** (Runeblade, Thorn Plate, War Drum), 5 plain.
+
+### Iron Gauntlets
+| Field | Value |
+|---|---|
+| Data ID | `SO_Gear_IronGauntlets` |
+| Slot · piece | Armor · Gloves |
+| Tier · Band · GP | III · Early · 6 (no level requirement) |
+| Recipe | Greatsword (II) + Iron Mail (I) |
+| Fits | Salt front-liners (Warrior builds) |
+| **Stats** | **+3 Salt, +1 ATK (4 GP after the skill)** |
+| Signature | — |
+| Skill | **Haymaker** (60 mana / 12 s): a heavy punch to the current target: 80 physical damage + **Knockback** 1 tile |
+
+**Description:** The Greatsword's spare steel, folded around two chain-mail sleeves and riveted into heavy fists. They make every handshake a small threat.
+**Codex line:** "Knock first, ask later."
+**Card art:** A pair of chunky iron gauntlets with riveted knuckle plates and chain links at the wrists.
+**Equipped look:** Not shown on the homunculus (GDD §4.7.5).
+**Hit sound:** A dull metallic clank.
+**Skill effect:** Haymaker: the fist glows briefly, a wide punch with a shockwave ring; the target slides back. SFX: a heavy thud.
+
+### Wizard Hat
+| Field | Value |
+|---|---|
+| Data ID | `SO_Gear_WizardHat` |
+| Slot · piece | Armor · Helmet |
+| Tier · Band · GP | III · Early · 6 (no level requirement) |
+| Recipe | Grimoire (II) + Cloth Robe (I) |
+| Fits | Sulfur casters |
+| **Stats** | **+3 Sulfur, +1.5% Cooldown Reduction** |
+| Signature | — |
+| Skill | — |
+
+**Description:** A Grimoire's loose pages stitched into the lining of a tall, stained workshop hat. Ideas come faster under it, mostly because the pages whisper them.
+**Codex line:** "The point helps you think."
+**Card art:** A tall, floppy pointed hat in faded blue, with paper scraps peeking out of the brim.
+**Equipped look:** Not shown on the homunculus (GDD §4.7.5).
+**Hit sound:** A soft papery rustle.
+
+### Silent Boots
+| Field | Value |
+|---|---|
+| Data ID | `SO_Gear_SilentBoots` |
+| Slot · piece | Armor · Boots |
+| Tier · Band · GP | III · Early · 6 (no level requirement) |
+| Recipe | Twin Daggers (II) + Cloth Robe (I) |
+| Fits | Mercury melee (Assassin builds) |
+| **Stats** | **+3 Mercury, +5 Move Speed (4 GP after the skill)** |
+| Signature | — |
+| Skill | **Shadowstep** (40 mana / 14 s): blinks up to 2 tiles toward its target or away from danger, then +15% Evasion for 2 s |
+
+**Description:** Soft cloth wrapped tight around the Twin Daggers' springy sinew, so every step lands and lifts without a sound. Their owners are always somewhere else.
+**Codex line:** "Not a sound. Not a trace."
+**Card art:** A pair of dark, wrapped cloth boots with thin sinew bindings up the calves.
+**Equipped look:** Not shown on the homunculus (GDD §4.7.5).
+**Hit sound:** Almost no sound: a faint whisper of cloth.
+**Skill effect:** Shadowstep: a puff of shadow where the wearer stood, a faint afterimage, then it reappears. SFX: a soft whoosh.
+
+### Knight Helm
+| Field | Value |
+|---|---|
+| Data ID | `SO_Gear_KnightHelm` |
+| Slot · piece | Armor · Helmet |
+| Tier · Band · GP | III · Early · 6 (no level requirement) |
+| Recipe | Tower Shield (II) + Sword (I) |
+| Fits | Tanks; Salt first |
+| **Stats** | **+3 Salt, +3% Control Resist** |
+| Signature | — |
+| Skill | — |
+
+**Description:** A corner cut from the Tower Shield's old door, hammered into a helm and crested with a cauldron-rim blade. Hard to shake, harder to knock over.
+**Codex line:** "Keeps your head on straight."
+**Card art:** A rounded helmet with a visor slit, an old keyhole still visible on one side, and a short metal crest.
+**Equipped look:** Not shown on the homunculus (GDD §4.7.5).
+**Hit sound:** A hollow wooden-metal bonk.
+
+### Nightgrip Gloves
+| Field | Value |
+|---|---|
+| Data ID | `SO_Gear_NightgripGloves` |
+| Slot · piece | Armor · Gloves |
+| Tier · Band · GP | III · Early · 6 (no level requirement) |
+| Recipe | Shadow Cloak (II) + Bow (I) |
+| Fits | Mercury attackers (crit builds) |
+| **Stats** | **+3 Mercury, +1.5% Crit Chance** |
+| Signature | — |
+| Skill | — |
+
+**Description:** Cut from the light-drinking Shadow Cloak and strung with broom-bow sinew at the fingers. The wearer's hand always seems to find the weak spot first.
+**Codex line:** "They find the gap in the armor."
+**Card art:** Thin black gloves with an oily sheen and sinew lines along each finger.
+**Equipped look:** Not shown on the homunculus (GDD §4.7.5).
+**Hit sound:** A soft leathery slap.
+
+### Hunter's Boots
+| Field | Value |
+|---|---|
+| Data ID | `SO_Gear_HuntersBoots` |
+| Slot · piece | Armor · Boots |
+| Tier · Band · GP | III · Early · 6 (no level requirement) |
+| Recipe | Leather Armor (II) + Bow (I) |
+| Fits | Mercury ranged and skirmishers |
+| **Stats** | **+4 Mercury, +10 Move Speed** |
+| Signature | — |
+| Skill | — |
+
+**Description:** Hardened leather boots with the broom-bow's springy limb set into the soles. They put a little bounce in every step, and a lot in every chase.
+**Codex line:** "Always one step ahead."
+**Card art:** Brown, laced leather boots with a curved wooden strip visible in each sole.
+**Equipped look:** Not shown on the homunculus (GDD §4.7.5).
+**Hit sound:** A leathery creak.
+
+### Arcane Repeater
+| Field | Value |
+|---|---|
+| Data ID | `SO_Gear_ArcaneRepeater` |
+| Slot · Family | Weapon · Bow |
+| Tier · Band · GP | III · Mid · 10 (requires Lv. 10) |
+| Recipe | Crossbow (II) + Staff (I) |
+| Fits | Mercury ranged (e.g. Wren) |
+| **Stats** | **+4 Mercury, +3 ATK (7 GP after the skill)** |
+| Signature | — |
+| Skill | **Rapid Volley** (70 mana / 14 s): fires 3 quick bolts at the current target, 45 physical damage each |
+
+**Description:** The Crossbow's angry spring, wound by the stirring rod's leftover magic so it re-cocks itself. It fires as fast as its holder can aim.
+**Codex line:** "The spring winds itself now."
+**Card art:** A sleek crossbow with a glowing copper coil and faint sparks along the rail.
+**Equipped look:** Held at the hip with both hands; the coil glows and turns after every shot.
+**Attack effect:** Fast bolt streaks with a faint violet spark trail; a sharp snap on impact. SFX: a quick clack and a magical whir. Rapid Volley: three bolts in a tight burst, the coil spinning hard.
+
+### Elder Staff
+| Field | Value |
+|---|---|
+| Data ID | `SO_Gear_ElderStaff` |
+| Slot · Family | Weapon · Staff |
+| Tier · Band · GP | III · Mid · 10 (requires Lv. 10) |
+| Recipe | Sage Robe (II) + Staff (I) |
+| Fits | Sulfur casters (e.g. Grum, Elsie) |
+| **Stats** | **+6 Sulfur, +4% Skill Power** |
+| Signature | — |
+| Skill | — |
+
+**Description:** A stirring rod wrapped in the Sage Robe's lesson-stained cloth until it grew heavy with knowledge. Older than the guild, the apprentices say, though it was made last spring.
+**Codex line:** "Older than the guild. Wiser too."
+**Card art:** A tall, gnarled staff wrapped in blue cloth strips, a small glowing crystal knot at the top.
+**Equipped look:** Held upright in the main hand; the crystal knot glows softly while idle.
+**Attack effect:** A brighter, steadier bolt than the Staff's (a blue-white orb with a cloth-ribbon trail); a soft burst on impact. SFX: a low hum and a chime.
+
+### Runeblade
+| Field | Value |
+|---|---|
+| Data ID | `SO_Gear_Runeblade` |
+| Slot · Family | Weapon · Sword |
+| Tier · Band · GP | III · Mid · 10 (requires Lv. 10) |
+| Recipe | Rune Mail (II) + Iron Mail (I) |
+| Fits | Salt + Sulfur hybrids (Warrior builds that cast) |
+| **Stats** | **+4 Salt, +3 Sulfur (7 GP after the signature)** |
+| Signature | **Spellstrike:** after the wearer casts a skill, its next basic hit deals **+40 magic damage** |
+| Skill | — |
+
+**Description:** Rune Mail's humming rings melted and forged into a blade, with fresh iron to give it weight. The runes wake whenever its bearer casts, and the next swing carries the spell.
+**Codex line:** "Steel that remembers the spell."
+**Card art:** A straight sword with faintly glowing runes along the blade and a ring-wrapped hilt.
+**Equipped look:** Held in the main hand; runes flicker along the blade, brightening after a skill.
+**Attack effect:** A clean silver arc trail; runes flash on impact. Spellstrike: the next swing leaves a blue rune trail and a magic burst. SFX: a ring of steel; a chime on Spellstrike.
+
+### Thorn Plate
+| Field | Value |
+|---|---|
+| Data ID | `SO_Gear_ThornPlate` |
+| Slot · piece | Armor · Body |
+| Tier · Band · GP | III · Mid · 10 (requires Lv. 10) |
+| Recipe | Plate Armor (II) + Sword (I) |
+| Fits | Tanks; Salt first |
+| **Stats** | **+4 Salt, +3% Thorns (7 GP after the signature)** |
+| Signature | **Barbs:** melee attackers that hit the wearer get **Bleed 2 s** (20 per s), once per 5 s per attacker |
+| Skill | — |
+
+**Description:** Pot-bottom plates bristling with sword shards, welded point-out. Anyone who gets close enough to hit it learns to regret it.
+**Codex line:** "Hug it. We dare you."
+**Card art:** A heavy breastplate covered in short, jagged blade shards, like a metal hedgehog.
+**Equipped look:** Not shown on the homunculus (GDD §4.7.5).
+**Hit sound:** A clang with a sharp metallic scrape (Barbs: a small red spark on the attacker).
+
+### War Drum
+| Field | Value |
+|---|---|
+| Data ID | `SO_Gear_WarDrum` |
+| Slot · Family | Weapon · Instrument |
+| Tier · Band · GP | III · Late · 16 (requires Lv. 20) |
+| Recipe | Lute (II) + Iron Mail (I) |
+| Fits | Supports and front-row leaders |
+| **Stats** | **+6 Sulfur, +6 Mercury (12 GP after the signature)** |
+| Signature | **Marching Beat:** allies in the wearer's **row** get **+15 Attack Speed** (two War Drums on one row count once) |
+| Skill | — |
+
+**Description:** The Lute's body stretched with leather and ringed with iron, beaten until it boomed. When it plays, everyone nearby falls into step, even the ones who swear they can't dance.
+**Codex line:** "Everyone marches to its beat."
+**Card art:** A round iron-banded drum with a leather head and two knobbly drumsticks.
+**Equipped look:** Hung at the hip and struck with a stick in the main hand.
+**Attack effect:** Basic hit: a booming beat sends a ring-shaped sound wave to the target; a dull thump on impact. Marching Beat: small pulsing rings around allies in its row. SFX: a deep drum boom.
 
 ## Named cards (future, Late band and up)
 Folklore weapons and armor discovered through fusion, each with a fixed signature (GDD §4.7.4). No rarity label in game: the name says it. One of each per party. Very high tiers may also give the homunculus a visible **aura** (GDD §4.7.5). Recipes come when those tiers are designed.
