@@ -4,6 +4,10 @@ Short dated entries: what was done, what was learned, what's next. Newest at the
 
 ---
 
+## 2026-11-10
+**Done:** GDD v0.45–0.46. Named accessories banked (crowns, amulets, necklaces, rings). Trait pool rebuilt: 30% trait chance, Faint / Bright / Radiant / Unique, world-unique traits, joke and ironic traits, retuned values, stat definitions and the new Block rule in GDD §6.9.
+**Next:** Tier III gear (incl. Knife and Bomb families, gear skills); item Tier VI; full Unique trait list.
+
 ## 2026-11-09
 **Done:** GDD v0.44: Tier V items (16) with effects, descriptions and art in `Items.md`; Fire tag and Oiled status; item grid T5 updated.
 **Next:** Item Tier VI (potions, charms, Polished stones; §13 #45); Tier III gear.

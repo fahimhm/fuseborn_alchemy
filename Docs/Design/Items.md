@@ -58,7 +58,7 @@ The last step before usable items. Items with two recipes list both.
 ---
 
 ## Tier IV (Tier III + Tier I): first usable items
-Battle consumables (Potions, Throwables, Scrolls) use the **2 shared consumable slots**: 15 s cooldown per slot, max 3 uses per slot per battle (GDD §6.5, §6.9). Charms and Magic Stones are used outside battle. Accessories (8 GP, always roll a trait) aren't visible on the homunculus.
+Battle consumables (Potions, Throwables, Scrolls) use the **2 shared consumable slots**: 15 s cooldown per slot, max 3 uses per slot per battle (GDD §6.5, §6.9). Charms and Magic Stones are used outside battle. Accessories (8 GP, 30% chance of a trait) aren't visible on the homunculus.
 
 ### Consumables and charm
 | Item | Ingredients | Type | Effect | Description | Codex line | Card art | Use effect |
@@ -80,7 +80,7 @@ Socketed into gear slots (GDD §4.7.2). Shared description: *a Crystal Shard fus
 | **Rough Arcana Stone** | Crystal Shard (III) + Bone (I) | Violet · Skill Power | +1% Skill Power | Rough-cut and whispering like old bones. | "It whispers." | A rough, cloudy violet crystal chunk with uneven facets |
 | **Rough Haste Stone** | Crystal Shard (III) + Scrap Metal (I) | Yellow · Attack Speed | +1.5 Attack Speed | Rough-cut and jittery as loose scrap in a shaken box. | "Can't sit still." | A rough, cloudy yellow crystal chunk with uneven facets |
 
-### Accessories (8 GP + 1 rolled trait)
+### Accessories (8 GP; 30% chance of a trait)
 | Item | Ingredients | Slot | Stats | Description | Codex line | Card art |
 |---|---|---|---|---|---|---|
 | **Iron Ring** | Iron Ingot (III) + Bone (I) | Ring | +4 Salt, +4 ATK | An ingot hammered into a thick band and set with a bone stud. Heavy on the finger, steady in the hand. | "Heavier than it looks." | A chunky dark-iron ring with a small white bone stud. |
@@ -115,7 +115,7 @@ Same cards as Tier IV, a second way to make each color. Same description, Codex 
 | Rough Arcana Stone | Crystal Shard (III) + Bone Dust (II) |
 | Rough Haste Stone | Crystal Shard (III) + Flint (II) |
 
-### Accessories (12 GP + 1 rolled trait)
+### Accessories (12 GP; 30% chance of a trait)
 | Item | Ingredients | Slot | Stats | Description | Codex line | Card art |
 |---|---|---|---|---|---|---|
 | **Moonstone Ring** | Silver Nugget (III) + Flint (II) | Ring | +6 Sulfur, +6% Skill Power | A silver band set with a stone that sparked once in the flint and never stopped glowing. Spells cast through it come out a shade brighter. | "Glows brightest at night." | A slim silver ring with a pale, milky-blue stone that glows softly. |
@@ -126,7 +126,7 @@ Same cards as Tier IV, a second way to make each color. Same description, Codex 
 | **Gilded Crown** | Ancient Token (III) + Raw Ore (II) | Crown | +6 Mercury, +3% Cooldown Reduction | Ancient Tokens melted with raw ore into a thin, bright crown. The forgotten faces on it seem to hurry its wearer along. | "Borrowed glory, quickly spent." | A thin golden crown with old token faces set around it, catching the light. |
 
 ## Named accessories (future, item Tier VI+)
-Crowns, amulets, necklaces and rings from myth, legend and classic fantasy (GDD §4.7.4 named cards). Each has a fixed **signature** plus the usual rolled trait and stats, and may carry **one active skill** (uses a battle slot).
+Crowns, amulets, necklaces and rings from myth, legend and classic fantasy (GDD §4.7.4 named cards). Each has a fixed **signature** plus stats and the usual 30% trait chance, and may carry **one active skill** (uses a battle slot).
 
 ### Crowns No rarity label in game: the name says it. **One of each per party.** Numbers (x, y) and recipes come when Tier VI+ is designed.
 
