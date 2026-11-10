@@ -4,6 +4,10 @@ Short dated entries: what was done, what was learned, what's next. Newest at the
 
 ---
 
+## 2026-11-11
+**Done:** GDD v0.47 (power bands, equip level requirements) and v0.48 (Tier III gear: 11 cards with bands, skills, signatures, stats, descriptions and art briefs).
+**Next:** Gear Tier IV (incl. Knife family) and Tier V (incl. Bomb family); item Tier VI; full Unique trait list.
+
 ## 2026-11-10
 **Done:** GDD v0.45–0.46. Named accessories banked (crowns, amulets, necklaces, rings). Trait pool rebuilt: 30% trait chance, Faint / Bright / Radiant / Unique, world-unique traits, joke and ironic traits, retuned values, stat definitions and the new Block rule in GDD §6.9.
 **Next:** Tier III gear (incl. Knife and Bomb families, gear skills); item Tier VI; full Unique trait list.
