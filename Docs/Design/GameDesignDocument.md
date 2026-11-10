@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| **Version** | 0.44 (draft) |
+| **Version** | 0.45 (draft) |
 | **Last updated** | 2026-11-07 |
 | **Status** | Pre-production. Fusion, card categories, and upgrade systems defined; combat and mining outlined |
 | **Engine** | Unity (tentative) |
@@ -319,7 +319,7 @@ Every gear card has a **Gear Point (GP) budget set by its tier**, spent by the d
 | II | **6** | Lv. 8–15 | ~6% |
 | III | **10** | Lv. 15–25 | ~6–7% |
 | IV | **16** | Lv. 25–30 | ~8% |
-| V | **24** | Lv. 30 | ~11% (legendaries) |
+| V | **24** | Lv. 30 | ~11% (named cards) |
 
 Gear **doesn't level up**: a card's share shrinks as its wearer levels, which pushes players to fuse better gear. "Typically used around" is a guess until Prototype 1 shows how fast players reach each tier. Sized like Dota's early items (+3 to a stat on a ~22-point hero).
 
@@ -347,9 +347,11 @@ Existing caps still apply (Evasion 40%, Control Resist −50%, Holy / Dark resis
 | **I** | **Whole budget** (1–2 principles) | — | — |
 | **II** | At least half the budget | 1 | — |
 | **III** | Any mix | Up to 2 | **Optional**; with one, stats get **75%** of the budget |
-| **IV–V** (named legendaries) | Any mix | Up to 2 | **Always**; stats get **70%** of the budget |
+| **IV–V** (named cards) | Any mix | Up to 2 | **Always**; stats get **70%** of the budget |
 
-- **Signature:** a fixed effect every copy of the card has (e.g. a folklore blade's power). One per card. Prefer conditional effects (vs a family, below 50% HP, first 10 s, an aura on the same row). Family bonuses **≤ +30%**; no immunities. Named legendaries may take real folklore names (public domain originals only, e.g. Balmung).
+- **Signature:** a fixed effect every copy of the card has (e.g. a folklore blade's power). One per card. Prefer conditional effects (vs a family, below 50% HP, first 10 s, an aura on the same row). Family bonuses **≤ +30%**; no immunities (exception: **Knockback** immunity is allowed). Named cards may take real folklore names (public domain originals only, e.g. Balmung).
+- ✅ **Named cards** (design term only): gear and accessories with a real myth, legend or folklore name and a fixed signature. **No rarity label or special frame in game**: the name itself tells players it's special. Gear: Tier IV+. Accessories: item Tier VI+, with a signature **plus** the usual rolled trait, and optionally **one active skill** (uses a battle slot). Named cards may break a general rule on purpose when noted (e.g. Draupnir's illusions don't count as summons). Ideas: `Gear.md` and `Items.md` (named sections); recipes come when those tiers are designed.
+- ✅ **One of each named card per party:** a party can't bring two copies of the same named card (two Crowns of Midas), but different named cards are fine.
 - **On top of the budget:** the **rolled trait** (30% chance, §4.7.1, `TraitPool.md` §4), so two copies of the same card can differ, and the **0–5 stone slots**.
 
 #### 4.7.6 Gear Skills ✅
@@ -357,7 +359,7 @@ Existing caps still apply (Evasion 40%, Control Resist −50%, Holy / Dark resis
 - **A card with a skill has nothing else:** no signature and it **never rolls a trait**. Stone slots still roll. Every gear card is one of: plain · rolled trait and/or signature · one fixed skill.
 - **From Tier II.** Strength ≈ a tree skill at **Lv. (tier − 1)** (Tier II → Lv. 1 … Tier V → Lv. 4), so it never matches a maxed homunculus skill. **Never levels**; a stronger version comes on higher-tier gear (fuse up). Costs **30% of the card's GP**.
 - Usable by whoever equips it (weapon families still apply). Goes into the battle loadout as one of the **3 active slots** (§4.6.4).
-- Accessories never carry skills.
+- Accessories never carry skills, **except named accessories** (§4.7.4), which may carry one active skill. Like a gear skill, it uses one of the **3 battle slots**.
 
 ### 4.8 Item
 
@@ -636,11 +638,12 @@ Each hero has its **own built-in targeting characteristic**. This is part of the
 | **Blind** | **Misdirection:** if the unit needs to move, it wanders off course instead of heading to its target; its **basic hits miss**. Skills still land |
 | **Stealth** | Can't be targeted by enemies; ends when the unit attacks or uses a skill, or when its duration ends. **Ensnare reveals** (removes Stealth) |
 | **Slow** | Move Speed reduced by the skill's % |
+| **Freeze** | Hard control: can't move or act. Registered for future skills and items (e.g. the Crown of Midas's golden statue) |
 | **Sleep** | Can't act (no attacks, skills or mana regen); **wakes on taking damage**. Skill-specific variants may say otherwise (e.g. Wren's curse) |
 | **Silence** | Can't cast active skills. Basic attacks, passives and mana regen still work |
 | **Invulnerable** | Takes no damage (damage over time included). Can still be targeted and receive statuses. Short by design (~2 s max per skill); **halved in overtime** (§6.12) |
 
-- ✅ **Soft vs hard control.** **Soft** = slows, holds or misdirects movement: Slow, Ensnare, Stagger's slow, Blind. **Hard** = stops or overrides acting: Stun, Sleep, Confuse, Taunt, Silence. Skills that "break soft control" (e.g. Snick's Nimble Escape) remove soft statuses only; under hard control a unit can't act, so it can't cast them anyway.
+- ✅ **Soft vs hard control.** **Soft** = slows, holds or misdirects movement: Slow, Ensnare, Stagger's slow, Blind. **Hard** = stops or overrides acting: Stun, Sleep, Freeze, Confuse, Taunt, Silence. Skills that "break soft control" (e.g. Snick's Nimble Escape) remove soft statuses only; under hard control a unit can't act, so it can't cast them anyway.
 - ✅ **Hard control interrupts:** it ends the unit's running **tethers and channels** (e.g. Grum's Soul Tether, Elsie's Abyssal Tether); no mana refund. Zones, traps and summons already placed keep going.
 - ✅ **Helpful vs harmful:** **helpful** = Shield, Untargetable, Stealth, Invulnerable; every other status is **harmful**. Cleanses remove harmful statuses only; effects that count "negative statuses" count harmful ones.
 - Status duration reduction (Control Resist from gear, passives, traits) is **capped at −50%**. No full status immunity; only **knockback** immunity exists.
@@ -851,6 +854,7 @@ Planned to be discussed later.
 ## 14. Change History
 | Version | Date | Changes |
 |---|---|---|
+| 0.45 | 2026-11-10 | Named accessories may carry one active skill (uses a battle slot); named cards may break a rule on purpose when noted. Named cards (design term; no in-game label): gear Tier IV+, accessories item Tier VI+ with signature + rolled trait; one of each named card per party; Knockback immunity allowed in signatures; Freeze status registered |
 | 0.44 | 2026-11-09 | Tier V items reworked (16): Lifebloom and Starcap as Tier V materials, Soothing Salve, Fire Oil, Binding Scroll, second Rough stone recipes, 6 accessories; potions and charms moved to a later tier (§13 #45). **Fire** tag (§6.9) and **Oiled** status (§6.10) |
 | 0.43 | 2026-11-08 | Scrolls become single-use magic battle spells (never teach skills); Throwables (engineering) replace the Bomb item subtype; Potions, Throwables and Scrolls share the battle consumable slots; Charms outside battle; gear skills (§4.7.6); magic stone color × rank; accessory budget 8 / 12 GP; Tier IV list (14 items) with ingredient tiers |
 | 0.42 | 2026-11-08 | Materials: fusion only, principle lean (flavor), Junk Codex (§4.8); Old Coin renamed Ancient Token; item content in `Items.md` |

@@ -311,5 +311,10 @@ All five are basics from chests and drops. Tier I: **3 GP, all in principles**, 
 ## Tier III (to do)
 11 cards (GDD §15.7). Budget 10 GP; signature optional (War Drum's aura and Thorn Plate's thorns are likely candidates).
 
-## Named legendaries (future, Tier IV–V)
-Folklore weapons and armor discovered through fusion, each with a signature. Idea: **Balmung** (Nibelungenlied), signature *Dragon-Slayer*: +30% damage vs Draconic (needs families as combat tags, GDD §13 #42). Very high tiers may also give the homunculus a visible **aura** (GDD §4.7.5).
+## Named cards (future, Tier IV+)
+Folklore weapons and armor discovered through fusion, each with a fixed signature (GDD §4.7.4). No rarity label in game: the name says it. One of each per party. Very high tiers may also give the homunculus a visible **aura** (GDD §4.7.5). Recipes come when those tiers are designed.
+
+| Card | Slot | Legend | Signature idea |
+|---|---|---|---|
+| **Balmung** | Weapon · Sword | Nibelungenlied: Siegfried's sword | *Dragon-Slayer:* +30% damage vs Draconic (needs families as combat tags, GDD §13 #42) |
+| **Tarnhelm** | Armor · Helmet | Nibelung saga: the helm of invisibility, shape-shifting and instant travel | **To decide** (Stealth at battle start now belongs to the Ring of Gyges). Ideas: *shape-shift* (first 5 s, enemies treat the wearer as their lowest-priority target) or *instant travel* (once, at battle start, teleports to a tile chosen during placement). Part of a **Nibelung set** with Balmung and Andvaranaut (`Items.md`) |
