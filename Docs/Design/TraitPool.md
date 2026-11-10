@@ -29,6 +29,8 @@ All traits are **passive**: none is an active skill, none needs a button or a ba
 | **Radiant** | 8% | **Build-defining, rule-bending.** May be **ironic**: big upside, real downside | By judgment |
 | **Unique** | special | **One in the whole game world** | About Radiant, but flashier |
 
+**Level traits (late bloomers, homunculus pool only):** dormant until the homunculus reaches a level, then always on. **Faint** awakens at **Lv. 10**, **Bright** at **Lv. 20**, **Radiant** at **Lv. 30**. Strength varies per trait; as a guide, an awakened level trait is a bit **stronger** than a normal trait of its rarity (it was dormant for part of the game). The card shows the trait greyed out with its level until it awakens. Tag ✨.
+
 **Irony and comedy:** pure jokes only at Faint. From Bright up, every downside comes with a real upside (*high risk, high reward*), so a lucky roll is never just a punishment.
 
 **Unique traits (one and only)**
@@ -52,8 +54,9 @@ Tags say what a trait is good for. Homunculus files list their **fitting tags**;
 | **Control** | Applies or resists control (soft: Slow, Ensnare, Blind…; hard: Stun, Sleep, Freeze…) | Tank, Mage |
 | **Universal** | Useful on any card | All |
 | **Joke** 🃏 | Pure comedy, little or no effect | Nobody (trade it as a meme) |
+| **Level** ✨ | Dormant until a level (late bloomer); homunculus pool only | Patient players |
 
-## 4. Homunculus Traits (17)
+## 4. Homunculus Traits (20)
 The homunculus's innate trait: passive, always on, separate from the skill tree.
 
 | ID | Trait | Rarity | Effect (start values) | Tags |
@@ -67,15 +70,18 @@ The homunculus's innate trait: passive, always on, separate from the skill tree.
 | HT07 | Blood Thirst | Faint | +2.4% Lifesteal | Sustain, Physical |
 | HT08 | Gentle Touch | Faint | Healing received +10% | Support |
 | HT16 | Butterfingers 🃏 | Faint | 5% of basic hits fumble and miss (with a little fumble animation) | Joke |
+| HT19 | Late Bloomer ✨ | Faint | **From Lv. 10:** +5% max HP and +2% Crit | Guard, Crit |
 | HT09 | Last Stand | Bright | Below 30% HP: +6 DEF and +6 RES | Guard |
 | HT10 | Staggering Blows | Bright | Basic hits have a 15% chance to **Stagger** the target for 1.5 s | Control, Physical |
 | HT11 | Mana Spark | Bright | Each skill cast refunds 15% of its mana cost | Magic |
 | HT12 | Shared Spoils | Bright | Heals the lowest-HP ally for 4% of damage this homunculus deals | Support, Sustain |
 | HT13 | Battle Rhythm | Bright | Each basic hit gives +2 Attack Speed for 4 s, stacks up to 10 (+20) | Speed, Physical |
 | HT17 | Lazy Genius | Bright | Attacks 20% slower, but every 4th basic hit deals ×2 damage | Physical |
+| HT20 | Seasoned ✨ | Bright | **From Lv. 20:** +5 DEF, +5 RES and +8 Attack Speed | Guard, Speed |
 | HT14 | Second Wind | Radiant | Once per battle, when knocked out, revives with 30% max HP, **but deals −30% damage** for the rest of the battle | Guard, Sustain |
 | HT15 | Arcane Echo | Radiant | Damage and healing skills have a 15% chance to fire again at 50% power (no mana, no cooldown) | Magic, Support |
 | HT18 | Glass Cannon | Radiant | +40% damage dealt, −30% max HP | Physical, Magic |
+| HT21 | Ascended ✨ | Radiant | **At Lv. 30:** +15% damage dealt and +10% max HP | Universal |
 
 ## 5. Gear Traits (14)
 Rolled on 30% of new gear cards (never on gear with a fixed skill). **Slot** = which gear can roll it.
@@ -144,13 +150,14 @@ Starter ideas; the full list is designed later. Each exists on at most one card 
 ## 10. Tag Coverage
 | Tag | Homunculus | Gear | Accessory |
 |---|---|---|---|
-| Guard | HT01, HT04, HT09, HT14 | GT03, GT04, GT08, GT10 | IT01, IT06, IT07, IT09, IT11 |
+| Guard | HT01, HT04, HT09, HT14, HT19, HT20 | GT03, GT04, GT08, GT10 | IT01, IT06, IT07, IT09, IT11 |
 | Physical | HT02, HT05, HT07, HT10, HT13, HT17, HT18 | GT01, GT07, GT12, GT14 | IT10 |
 | Magic | HT06, HT11, HT15, HT18 | GT04, GT06, GT09 | IT04, IT08, IT09, IT12 |
-| Crit | HT02 | GT01, GT12 | IT02 |
-| Speed | HT03, HT05, HT13 | GT02, GT05 | IT03 |
+| Crit | HT02, HT19 | GT01, GT12 | IT02 |
+| Speed | HT03, HT05, HT13, HT20 | GT02, GT05 | IT03 |
 | Sustain | HT07, HT12, HT14 | GT07 | IT05, IT08 |
 | Support | HT08, HT12, HT15 | GT09 | IT07, IT10, IT11 |
 | Control | HT10 | GT10 | IT06 |
-| Universal | | GT06, GT11 | IT12 |
+| Universal | HT21 | GT06, GT11 | IT12 |
+| Level ✨ | HT19, HT20, HT21 | | |
 | Joke | HT16 | GT13 | IT13 |
