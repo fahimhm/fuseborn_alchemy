@@ -28,9 +28,9 @@ Grouping races into families keeps art efficient: races in one family can share 
 | Role | Classes |
 |---|---|
 | **Tank** | Knight ✔, Shieldbearer ✔, Brute ✔, Guardian ✔, Paladin, Warden, Juggernaut |
-| **Warrior** | Crusader ✔, Berserker ✔, Brawler ✔, Samurai, Gladiator, Duelist, Lancer |
+| **Warrior** | Crusader ✔, Berserker ✔, Brawler ✔, Scrapper ✔, Samurai, Gladiator, Duelist, Lancer |
 | **Ranger** | Archer ✔, Hunter ✔, Gunner ✔, Engineer ✔, Marksman ✔, Slinger, Crossbowman, Beastmaster |
-| **Assassin** | Rogue ✔, Thief ✔, Nightblade ✔, Saboteur ✔, Ninja, Stalker |
+| **Assassin** | Rogue ✔, Thief ✔, Nightblade ✔, Ninja, Stalker |
 | **Mage** | Warlock ✔, Wizard ✔, Necromancer ✔, Runecaster ✔, Alchemist ✔, Pyromancer, Sorcerer, Hexer, Plague Doctor |
 | **Support** | Priest ✔, Commander ✔, Druid ✔, Bard ✔, Oracle ✔, Shaman ✔, Mender ✔, Conduit, Mystic, Tidecaller |
 
