@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| **Version** | 0.50 (draft) |
+| **Version** | 0.51 (draft) |
 | **Last updated** | 2026-11-07 |
 | **Status** | Pre-production. Fusion, card categories, and upgrade systems defined; combat and mining outlined |
 | **Engine** | Unity (tentative) |
@@ -871,6 +871,7 @@ Planned to be discussed later.
 ## 14. Change History
 | Version | Date | Changes |
 |---|---|---|
+| 0.51 | 2026-11-12 | Goblin – Saboteur → **Goblin – Scrapper** (Warrior); Human – Thief identity → stealing (buffs, mana, consumables); role balance Warrior 4, Assassin 3 |
 | 0.50 | 2026-11-11 | **Disarm** status (hard control: no basic attacks); first Tier II homunculus written (Ronan, Human – Commander) |
 | 0.49 | 2026-11-11 | Gear Tier IV: 22 cards (bands 6 / 9 / 5 / 2), 5 gear skills, 8 signatures incl. named Tarnhelm, Hagoromo of the Sky Kami, Balmung; Knife (Black Knife) and Bomb (Grenade) families filled; §13 #44 solved |
 | 0.48 | 2026-11-11 | Tier III gear: bands (6 Early, 4 Mid, 1 Late), 3 gear skills, 3 signatures, stats and content in `Gear.md`; Knife planned at Tier IV, Bomb at Tier V (§13 #44) |
@@ -937,7 +938,7 @@ Planned to be discussed later.
   3. A compound race only when it's a known type (Dark Elf, Light Elf, Wood Elf, Half-Angel), not a mash-up (no "Goblin Zombie").
   4. ✅ **Character name:** each Race – Class has **one character name**, shown on the card as **"Name · Race – Class"** (e.g. *Tobin · Human – Knight*). All copies share it; the rolled trait makes each copy unique. Names are humble or fit the personality, and never copy a real person or an existing game's character.
 - Race and class pools for future heroes: [HeroPool.md](HeroPool.md).
-- **Initial-role balance (28 heroes):** Tank 4 · Warrior 3 · Ranger 5 · Assassin 4 · Mage 5 · Support 7.
+- **Initial-role balance (28 heroes):** Tank 4 · Warrior 4 · Ranger 5 · Assassin 3 · Mage 5 · Support 7.
 - Source of truth: [Hero recipe sheet](https://docs.google.com/spreadsheets/d/1r2Nj3ZUcm3-e148e-pixrB-15U9P9bdaQpWJdFwOqZo/edit?gid=0#gid=0) (cross-section grid). This section mirrors it. Synced with the sheet in v0.12.
 
 ### 15.2 Heroes — Tier I (Basic)
@@ -957,20 +958,20 @@ Per-hero content (backstory, stats, skill tree, equipment, illustrator brief): `
 | **Knight** | Human – Commander | | | | |
 | **Archer** | Human – Thief | Wood Elf – Hunter 🆕 | | | |
 | **Priest** | Fairy – Druid | Light Elf – Bard | Angel – Crusader | | |
-| **Rogue** | Goblin – Shieldbearer | Dark Elf – Nightblade | ✗ | Goblin – Saboteur | |
+| **Rogue** | Goblin – Shieldbearer | Dark Elf – Nightblade | ✗ | Goblin – Scrapper | |
 | **Warlock** | Human – Wizard | Oni – Berserker | ✗ | Dwarf – Gunner 🆕 | Hobgoblin – Brute |
 
 | Result | Recipe | Role |
 |---|---|---|
 | Human – Commander | Knight + Knight | Support (leader buffs) |
-| Human – Thief | Knight + Archer | Assassin |
+| Human – Thief | Knight + Archer | Assassin (**stealing**: buffs, mana, consumables; no stealth, traps or bombs, which are Snick's) |
 | Wood Elf – Hunter 🆕 | Archer + Archer | Ranger |
 | Fairy – Druid | Knight + Priest | Support |
 | Light Elf – Bard | Archer + Priest | Support |
 | Angel – Crusader | Priest + Priest | Warrior |
 | Goblin – Shieldbearer | Knight + Rogue | Tank |
 | Dark Elf – Nightblade | Archer + Rogue | Assassin |
-| Goblin – Saboteur | Rogue + Rogue | Assassin (bombs, traps) |
+| Goblin – Scrapper | Rogue + Rogue | **Warrior** (junk-exoskeleton brawler; one Assassin branch planned) |
 | Human – Wizard | Knight + Warlock | Mage |
 | Oni – Berserker | Archer + Warlock | Warrior |
 | Dwarf – Gunner 🆕 | Rogue + Warlock | Ranger |
@@ -989,12 +990,12 @@ No match (✗): Priest + Rogue, Priest + Warlock. Two "no reaction" pairs are ke
 | Dryad – Shaman | Light Elf – Bard + Priest | Fairy – Druid + Warlock | Support |
 | Slime – Alchemist | Oni – Berserker + Rogue | Hobgoblin – Brute + Priest | Mage (poison, debuffs) |
 | Wisp – Mender | Angel – Crusader + Archer | Fairy – Druid + Priest | Support |
-| Minotaur – Brawler | Goblin – Saboteur + Warlock | Oni – Berserker + Knight | Warrior |
+| Minotaur – Brawler | Goblin – Scrapper + Warlock | Oni – Berserker + Knight | Warrior |
 | Golem – Guardian | Hobgoblin – Brute + Knight | _TBD_ | Tank |
 
 ### 15.5 Notes & To-Do (heroes)
 - ✅ Class names: role words and duplicates replaced (§15.6).
-- ✅ Role balance (28 heroes): Tank 4 · Warrior 3 · Ranger 5 · Assassin 4 · Mage 5 · Support 7.
+- ✅ Role balance (28 heroes): Tank 4 · Warrior 4 · Ranger 5 · Assassin 3 · Mage 5 · Support 7.
 - Second recipe still needed for: Wraith – Runecaster, Troll – Marksman, Half-Angel – Oracle, Golem – Guardian.
 - Tier II + Tier II combinations: not designed yet.
 - Stats, default weapon, active skill, targeting per hero: TBD.
@@ -1006,6 +1007,8 @@ No match (✗): Priest + Rogue, Priest + Warlock. Two "no reaction" pairs are ke
 | II | Angel – Warrior | Angel – Crusader | — | Class was a role word |
 | II | Goblin – Knight | Goblin – Shieldbearer | — | Duplicate of Human – Knight |
 | II | Goblin – Thief | Goblin – Saboteur | — | Duplicate of Human – Thief |
+| II | Goblin – Saboteur | **Goblin – Scrapper** | Assassin → **Warrior** | Bombs and traps duplicated Snick's Trapmaster and Goblin Sapper branches; Warrior was the thinnest role (2026-11-12) |
+| II | Human – Thief | (unchanged) | — (identity changed) | Now a **stealing** Assassin (buffs, mana, consumables), no stealth, traps or bombs, to stay apart from Snick (2026-11-12) |
 | II | Dark Elf – Assassin | Dark Elf – Nightblade | — | Class was a role word |
 | II | Fairy – Healer | Fairy – Druid | — | Near-role word |
 | II | Light Elf – Buffer | Light Elf – Bard | — | Near-role word |
@@ -1029,7 +1032,7 @@ No match (✗): Priest + Rogue, Priest + Warlock. Two "no reaction" pairs are ke
 | Wizard + Priest | Half Angel – Support | — (new) | **Half-Angel – Oracle** | Support |
 | Bard + Priest | Dryad – Buffer | Elemental – Conduit | **Dryad – Shaman** | Support |
 | Berserker + Rogue | Slime – Support | Zombie – Plague Doctor | **Slime – Alchemist** | Mage |
-| Saboteur + Warlock | Minotaur – Warrior | Beastkin – Brawler | **Minotaur – Brawler** | Warrior |
+| Saboteur (now Scrapper) + Warlock | Minotaur – Warrior | Beastkin – Brawler | **Minotaur – Brawler** | Warrior |
 | Brute + Knight | Golem – Guardian | — (new) | **Golem – Guardian** | Tank |
 | Archer + Warlock | Oni – Shaman | Oni – Berserker | **Oni – Berserker** | Warrior |
 

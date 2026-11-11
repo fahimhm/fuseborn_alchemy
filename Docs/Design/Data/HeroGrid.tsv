@@ -1,8 +1,8 @@
-	Human - Knight	Elf - Archer	Angel - Priest	Goblin - Rogue	Orc - Warlock	Human - Commander	Human - Thief	Fairy - Druid	Goblin - Shieldbearer	Human - Wizard	Light Elf - Bard	Dark Elf - Nightblade	Oni - Berserker	Angel - Crusader	Goblin - Saboteur	Hobgoblin - Brute	Wood Elf - Hunter	Dwarf - Gunner
+	Human - Knight	Elf - Archer	Angel - Priest	Goblin - Rogue	Orc - Warlock	Human - Commander	Human - Thief	Fairy - Druid	Goblin - Shieldbearer	Human - Wizard	Light Elf - Bard	Dark Elf - Nightblade	Oni - Berserker	Angel - Crusader	Goblin - Scrapper	Hobgoblin - Brute	Wood Elf - Hunter	Dwarf - Gunner
 Human - Knight	Human - Commander																	
 Elf - Archer	Human - Thief	Wood Elf - Hunter																
 Angel - Priest	Fairy - Druid	Light Elf - Bard	Angel - Crusader															
-Goblin - Rogue	Goblin - Shieldbearer	Dark Elf - Nightblade	x	Goblin - Saboteur														
+Goblin - Rogue	Goblin - Shieldbearer	Dark Elf - Nightblade	x	Goblin - Scrapper														
 Orc - Warlock	Human - Wizard	Oni - Berserker	x	Dwarf - Gunner	Hobgoblin - Brute													
 Human - Commander	Dwarf - Engineer																	
 Human - Thief					Skeleton - Necromancer													
@@ -13,7 +13,7 @@ Light Elf - Bard			Dryad - Shaman
 Dark Elf - Nightblade																		
 Oni - Berserker	Minotaur - Brawler			Slime - Alchemist														
 Angel - Crusader		Wisp - Mender																
-Goblin - Saboteur					Minotaur - Brawler													
+Goblin - Scrapper					Minotaur - Brawler													
 Hobgoblin - Brute	Golem - Guardian		Slime - Alchemist															
 Wood Elf - Hunter																		
 Dwarf - Gunner	Dwarf - Engineer																	

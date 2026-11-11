@@ -19,7 +19,7 @@ One file per hero, made from [_HeroTemplate.md](_HeroTemplate.md). Roster and re
 | 11 | Angel – Crusader | — | II | Warrior | | — |
 | 12 | Goblin – Shieldbearer | — | II | Tank | | — |
 | 13 | Dark Elf – Nightblade | — | II | Assassin | | — |
-| 14 | Goblin – Saboteur | — | II | Assassin | | — |
+| 14 | Goblin – Scrapper | — | II | Warrior | | — |
 | 15 | Human – Wizard | — | II | Mage | | — |
 | 16 | Oni – Berserker | — | II | Warrior | | — |
 | 17 | Dwarf – Gunner | — | II | Ranger | | — |
