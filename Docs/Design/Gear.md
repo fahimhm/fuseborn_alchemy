@@ -1,8 +1,8 @@
 # Gear — Fuseborn
 
-**Status:** Draft (Tier I–II approved; Tier III for review). Rules: GDD §4.7 (budget §4.7.4, visuals §4.7.5, slots §4.7.1, stones §4.7.2, armor pieces §4.7.3). Traits: `TraitPool.md` §4. Lore: junk becomes treasure (Lore.md).
+**Status:** Draft (Tier I–III approved; Tier IV for review). Rules: GDD §4.7 (budget §4.7.4, visuals §4.7.5, slots §4.7.1, stones §4.7.2, armor pieces §4.7.3). Traits: `TraitPool.md` §4. Lore: junk becomes treasure (Lore.md).
 
-> ⚠️ **Missing weapon families (GDD §13 #44):** **Knife** (Snick's Trapmaster) and **Bomb** (Snick's Goblin Sapper, melee) have **no cards yet**. Until they're created (Tier III or higher), those branches fight with their default weapon only. **Planned: Knife at Tier IV, Bomb at Tier V.** Plan: **Bomb family property: thrown, +1 range** (GDD §6.2), so the Sapper lobs from 2 tiles.
+> ✅ **Knife** (Black Knife) and **Bomb** (Grenade) families now have cards (Tier IV, Early), so every branch of Snick has a weapon.
 
 ## How to read an entry
 | Field | Meaning |
@@ -511,10 +511,419 @@ All five are basics from chests and drops. **Starter band:** 3 GP, all in princi
 **Equipped look:** Hung at the hip and struck with a stick in the main hand.
 **Attack effect:** Basic hit: a booming beat sends a ring-shaped sound wave to the target; a dull thump on impact. Marching Beat: small pulsing rings around allies in its row. SFX: a deep drum boom.
 
-## Named cards (future, Late band and up)
-Folklore weapons and armor discovered through fusion, each with a fixed signature (GDD §4.7.4). No rarity label in game: the name says it. One of each per party. Very high tiers may also give the homunculus a visible **aura** (GDD §4.7.5). Recipes come when those tiers are designed.
+## Tier IV
+22 cards: 12 from a Tier III + a Tier I gear, 8 from a Tier III + a Tier II, and 2 self pairs (a Tier III with itself). Bands: **6 Early, 9 Mid, 5 Late, 2 Peak**. Extras: **5 gear skills** (Viper Fangs, Battle Horn, Siren Harp, Shadowfang, Spellbrand; never roll a trait), **8 signatures** (Longbow, Siege Crossbow, Warblade, Fortress Plate, Castle Wall, and the named cards **Tarnhelm**, **Hagoromo of the Sky Kami**, **Balmung**), 9 plain. Every Tier III card has at least one use here; 8 of the 11 Tier II cards get a second use. The **Knife** (Black Knife) and **Bomb** (Grenade) families arrive here.
 
-| Card | Slot | Legend | Signature idea |
+### Black Knife
+| Field | Value |
+|---|---|
+| Data ID | `SO_Gear_BlackKnife` |
+| Slot · Family | Weapon · Knife |
+| Tier · Band · GP | IV · Early · 6 (no level requirement) |
+| Recipe | Nightgrip Gloves (III) + Sword (I) |
+| Fits | Snick's Trapmaster (Knife family); quick melee |
+| **Stats** | **+3 Mercury, +3 ATK** |
+| Signature | — |
+| Skill | — |
+
+**Description:** A cauldron-rim blade blackened in the Nightgrip Gloves' oily dye and bent into a hook at the tip. Made for cutting wire, setting snares and leaving before anyone notices.
+**Codex line:** "Cuts the rope. Or the hand on it."
+**Card art:** A short, hooked black knife with a coil of thin wire wrapped around the grip.
+**Equipped look:** Held low in the main hand, hook forward; the wire coil glints on the grip.
+**Attack effect:** A quick hooked slash leaving a thin dark trail; a small snag spark on impact. SFX: a sharp zip.
+
+### Grenade
+| Field | Value |
+|---|---|
+| Data ID | `SO_Gear_Grenade` |
+| Slot · Family | Weapon · Bomb |
+| Tier · Band · GP | IV · Early · 6 (no level requirement) |
+| Recipe | Iron Gauntlets (III) + Staff (I) |
+| Fits | Snick's Goblin Sapper (Bomb family) |
+| **Stats** | **+4 Mercury, +2 ATK. Bomb family property: **thrown, +1 range** (still melee for every other rule)** |
+| Signature | — |
+| Skill | — |
+
+**Description:** An iron fist-casing from the Gauntlets, packed tight around the stirring rod's spark-soaked tip. Its owner always seems to have one more in a pocket.
+**Codex line:** "Pull, count, throw. Mostly in that order."
+**Card art:** A round, riveted iron grenade with a short sputtering fuse.
+**Equipped look:** A grenade held ready in the main hand, fuse fizzing; a few more on a belt.
+**Attack effect:** Basic hit: lobs a grenade from 2 tiles; a small smoky blast on impact. SFX: a fuse hiss and a pop-boom.
+
+### Viper Fangs
+| Field | Value |
+|---|---|
+| Data ID | `SO_Gear_ViperFangs` |
+| Slot · Family | Weapon · Dagger |
+| Tier · Band · GP | IV · Early · 6 (no level requirement) |
+| Recipe | Silent Boots (III) + Sword (I) |
+| Fits | Mercury melee (Assassin builds) |
+| **Stats** | **+3 Mercury, +0.5% Crit (4 GP after the skill)** |
+| Signature | — |
+| Skill | **Venomous Strike** (50 mana / 12 s): the next basic hit deals +40 physical damage and **Bleed 3 s** (15 per s) that **ignores DEF** |
+
+**Description:** Two thin blades forged from a split sword and grooved like snake fangs; the boots' soft wraps became their grips. A drop of something green always seems to be on the tip.
+**Codex line:** "Two bites. One regret."
+**Card art:** A pair of slim, curved daggers with green-tinted grooves along the blades.
+**Equipped look:** One in each hand, reverse grip, a faint green drip at the tips.
+**Attack effect:** Two fast slashes with a thin green trail. SFX: a double hiss.
+**Skill / signature effect:** Venomous Strike: the blades glow green, the hit leaves a green splash and dripping venom ticks. SFX: a wet hiss.
+
+### Swiftwind Boots
+| Field | Value |
+|---|---|
+| Data ID | `SO_Gear_SwiftwindBoots` |
+| Slot · piece | Armor · Boots |
+| Tier · Band · GP | IV · Early · 6 (no level requirement) |
+| Recipe | Hunter's Boots (III) + Cloth Robe (I) |
+| Fits | Mercury skirmishers and ranged |
+| **Stats** | **+3 Mercury, +15 Move Speed** |
+| Signature | — |
+| Skill | — |
+
+**Description:** Hunter's Boots lined with the robe's light cloth, so loose and airy that wind runs through them. Wearers swear the breeze pushes them along.
+**Codex line:** "The wind wears them too."
+**Card art:** Light boots with fluttering cloth tails at the ankles and a faint swirl of wind around them.
+**Equipped look:** Not shown on the homunculus (GDD §4.7.5).
+**Hit sound:** A soft whoosh.
+
+### Ranger's Hood
+| Field | Value |
+|---|---|
+| Data ID | `SO_Gear_RangersHood` |
+| Slot · piece | Armor · Helmet |
+| Tier · Band · GP | IV · Early · 6 (no level requirement) |
+| Recipe | Arcane Repeater (III) + Cloth Robe (I) |
+| Fits | Mercury ranged (e.g. Wren) |
+| **Stats** | **+3 Mercury, +4.5 Attack Speed** |
+| Signature | — |
+| Skill | — |
+
+**Description:** A deep cloth hood with a spare copper coil from the Arcane Repeater sewn into the brim. It keeps the rain out and the aim steady.
+**Codex line:** "See them first."
+**Card art:** A dark green hood with a small copper coil glinting at the brim.
+**Equipped look:** Not shown on the homunculus (GDD §4.7.5).
+**Hit sound:** A muffled cloth thump.
+
+### Phantom Cloak
+| Field | Value |
+|---|---|
+| Data ID | `SO_Gear_PhantomCloak` |
+| Slot · piece | Armor · Body |
+| Tier · Band · GP | IV · Early · 6 (no level requirement) |
+| Recipe | Silent Boots (III) + Shadow Cloak (II) |
+| Fits | Mercury melee (evasion) |
+| **Stats** | **+4 Mercury, +0.8% Evasion** |
+| Signature | — |
+| Skill | — |
+
+**Description:** The Shadow Cloak, hemmed with the Silent Boots' soundless wraps. It doesn't just drink the light now; it forgets where its wearer was a moment ago.
+**Codex line:** "Was it ever there?"
+**Card art:** A long, ragged grey-black cloak whose edges fade into mist.
+**Equipped look:** Not shown on the homunculus (GDD §4.7.5).
+**Hit sound:** Barely anything: a faint rustle.
+
+### Bastion Shield
+| Field | Value |
+|---|---|
+| Data ID | `SO_Gear_BastionShield` |
+| Slot · Family | Weapon · Shield |
+| Tier · Band · GP | IV · Mid · 10 (requires Lv. 10) |
+| Recipe | Knight Helm (III) + Iron Mail (I) |
+| Fits | Tanks (e.g. Tobin) |
+| **Stats** | **+6 Salt, +1.2 DEF. Shield family: **Block 6%** (Mid)** |
+| Signature | — |
+| Skill | — |
+
+**Description:** The Knight Helm's door-wood, widened with sheets of chain mail into a proper shield. Heavy, square and very stubborn.
+**Codex line:** "Hold the line. It holds you."
+**Card art:** A broad, square shield of dark wood banded with chain mail, a small helm crest on the boss.
+**Equipped look:** Off-hand, replacing fixed hand props (Tobin's pot lid); the main hand shows the default weapon.
+**Attack effect:** Basic hit: a hard shield shove with a dust puff. SFX: a heavy wooden thud.
+
+### Tome of Ages
+| Field | Value |
+|---|---|
+| Data ID | `SO_Gear_TomeOfAges` |
+| Slot · Family | Weapon · Tome |
+| Tier · Band · GP | IV · Mid · 10 (requires Lv. 10) |
+| Recipe | Wizard Hat (III) + Staff (I) |
+| Fits | Sulfur casters |
+| **Stats** | **+6 Sulfur, +2% Cooldown Reduction** |
+| Signature | — |
+| Skill | — |
+
+**Description:** The Wizard Hat's whispering pages bound around a stirring rod spine. It seems to hold more pages than it has room for, and some are from books not written yet.
+**Codex line:** "Every page, a century."
+**Card art:** A thick, ancient-looking tome with a wooden spine and loose pages fluttering out.
+**Equipped look:** Held open in the off-hand, pages turning by themselves.
+**Attack effect:** A swirling page-shaped bolt; the page bursts into glyphs on impact. SFX: a fast page flutter.
+
+### Longbow
+| Field | Value |
+|---|---|
+| Data ID | `SO_Gear_Longbow` |
+| Slot · Family | Weapon · Bow |
+| Tier · Band · GP | IV · Mid · 10 (requires Lv. 10) |
+| Recipe | Hunter's Boots (III) + Bow (I) |
+| Fits | Mercury ranged (e.g. Wren) |
+| **Stats** | **+4 Mercury, +3 ATK (7 GP after the signature)** |
+| Signature | **Far Shot:** +15% damage to targets 5 or more tiles away |
+| Skill | — |
+
+**Description:** A tall bow strung with the Hunter's Boots' springy sole strips. It needs room to draw, and rewards patience with arrows that fly farther than anyone expects.
+**Codex line:** "Distance is just a number."
+**Card art:** A very tall wooden longbow taller than its owner, with leather-wrapped grip.
+**Equipped look:** Held in the off-hand, nearly as tall as the wearer.
+**Attack effect:** A long, thin arrow streak; on Far Shot hits, a small golden flash. SFX: a deep twang.
+
+### Battle Horn
+| Field | Value |
+|---|---|
+| Data ID | `SO_Gear_BattleHorn` |
+| Slot · Family | Weapon · Instrument |
+| Tier · Band · GP | IV · Mid · 10 (requires Lv. 10) |
+| Recipe | War Drum (III) + Bow (I) |
+| Fits | Supports and front-row leaders |
+| **Stats** | **+4 Sulfur, +3 Mercury (7 GP after the skill)** |
+| Signature | — |
+| Skill | **Rallying Call** (70 mana / 16 s): allies in the wearer's row get +4 DEF for 4 s |
+
+**Description:** The War Drum's iron band coiled into a horn and fitted with a bow-limb mouthpiece. One long blast and everyone nearby stands a little straighter.
+**Codex line:** "One blast, and they stand taller."
+**Card art:** A curved iron-banded horn with a wooden mouthpiece and a leather strap.
+**Equipped look:** Hung on a strap; raised to the lips to play.
+**Attack effect:** Basic hit: a short horn blast sends a cone-shaped sound wave to the target. SFX: a brassy toot.
+**Skill / signature effect:** Rallying Call: a long blast; golden rings rise around allies in its row. SFX: a long, rising horn call.
+
+### Berserker Gauntlets
+| Field | Value |
+|---|---|
+| Data ID | `SO_Gear_BerserkerGauntlets` |
+| Slot · piece | Armor · Gloves |
+| Tier · Band · GP | IV · Mid · 10 (requires Lv. 10) |
+| Recipe | Iron Gauntlets (III) + Greatsword (II) |
+| Fits | Salt front-liners (Warrior builds) |
+| **Stats** | **+5 Salt, +5 ATK** |
+| Signature | — |
+| Skill | — |
+
+**Description:** Iron Gauntlets fused with the Greatsword's spare edge, so the knuckles are now blades. They always seem eager to punch something.
+**Codex line:** "They want to punch something."
+**Card art:** Huge iron gauntlets with short blade edges along the knuckles.
+**Equipped look:** Not shown on the homunculus (GDD §4.7.5).
+**Hit sound:** A loud iron clang.
+
+### Sage's Circlet
+| Field | Value |
+|---|---|
+| Data ID | `SO_Gear_SagesCirclet` |
+| Slot · piece | Armor · Helmet |
+| Tier · Band · GP | IV · Mid · 10 (requires Lv. 10) |
+| Recipe | Wizard Hat (III) + Sage Robe (II) |
+| Fits | Sulfur casters |
+| **Stats** | **+5 Sulfur, +75 mana** |
+| Signature | — |
+| Skill | — |
+
+**Description:** The Wizard Hat's brim and the Sage Robe's copper thread, woven into a thin circlet. Wearing it feels like a quiet room inside your head.
+**Codex line:** "A ring of quiet thought."
+**Card art:** A slim copper circlet with a small blue stone set in the front.
+**Equipped look:** Not shown on the homunculus (GDD §4.7.5).
+**Hit sound:** A light metallic ting.
+
+### Siege Crossbow
+| Field | Value |
+|---|---|
+| Data ID | `SO_Gear_SiegeCrossbow` |
+| Slot · Family | Weapon · Bow |
+| Tier · Band · GP | IV · Mid · 10 (requires Lv. 10) |
+| Recipe | Arcane Repeater (III) + Crossbow (II) |
+| Fits | Mercury ranged (heavy hitters) |
+| **Stats** | **+3 Mercury, +4 ATK (7 GP after the signature)** |
+| Signature | **Armor-Piercer:** basic hits ignore 20% of the target's DEF |
+| Skill | — |
+
+**Description:** Two crossbow springs stacked and wound by the Repeater's self-turning coil. It fires slowly, but every bolt goes through whatever it hits.
+**Codex line:** "Knock, knock. Through the door."
+**Card art:** A big, heavy crossbow with two stacked springs and a thick iron bolt loaded.
+**Equipped look:** Braced at the hip with both hands; recoils hard after each shot.
+**Attack effect:** A thick bolt streak; a punch-through burst of splinters on impact. SFX: a heavy clunk.
+
+### Siren Harp
+| Field | Value |
+|---|---|
+| Data ID | `SO_Gear_SirenHarp` |
+| Slot · Family | Weapon · Instrument |
+| Tier · Band · GP | IV · Mid · 10 (requires Lv. 10) |
+| Recipe | War Drum (III) + Lute (II) |
+| Fits | Sulfur supports (control) |
+| **Stats** | **+5 Sulfur, +30 mana (7 GP after the skill)** |
+| Signature | — |
+| Skill | **Siren Song** (80 mana / 18 s): the target falls into **Sleep** for 1.5 s (wakes on damage) |
+
+**Description:** The Lute's strings, restrung across the War Drum's iron ring into a small harp. Its notes are soft, sweet and dangerously relaxing.
+**Codex line:** "Listen. Then sleep."
+**Card art:** A small curved harp with an iron frame and glowing silver strings.
+**Equipped look:** Held in the crook of the arm and plucked.
+**Attack effect:** Basic hit: a ripple of soft note shapes drifts to the target. SFX: a gentle pluck.
+**Skill / signature effect:** Siren Song: a slow, glowing melody wraps around the target; a sleepy "Zz" bubble. SFX: a soft lullaby phrase.
+
+### Shadowfang
+| Field | Value |
+|---|---|
+| Data ID | `SO_Gear_Shadowfang` |
+| Slot · Family | Weapon · Dagger |
+| Tier · Band · GP | IV · Mid · 10 (requires Lv. 10) |
+| Recipe | Nightgrip Gloves (III) + Twin Daggers (II) |
+| Fits | Mercury melee (Assassin builds) |
+| **Stats** | **+4 Mercury, +1.5% Crit (7 GP after the skill)** |
+| Signature | — |
+| Skill | **Garrote** (70 mana / 16 s): leaps onto the target's back: **Silence** 1.5 s and 25 physical damage per s for 3 s |
+
+**Description:** The Twin Daggers, reforged as one long black fang with the Nightgrip's grip wound around it. Once it catches something, it doesn't let go.
+**Codex line:** "It doesn't let go."
+**Card art:** A long, curved black dagger shaped like a fang, with a wire loop at the pommel.
+**Equipped look:** Held in reverse grip in the main hand; the wire loop dangles from the pommel.
+**Attack effect:** A fast, dark crescent slash. SFX: a sharp snick.
+**Skill / signature effect:** Garrote: the wearer leaps onto the target's back, a wire flashes around its neck; a silence icon pops above it. SFX: a whip-snap and a choke.
+
+### Warblade
+| Field | Value |
+|---|---|
+| Data ID | `SO_Gear_Warblade` |
+| Slot · Family | Weapon · Sword |
+| Tier · Band · GP | IV · Late · 16 (requires Lv. 20) |
+| Recipe | Iron Gauntlets (III) + Sword (I) |
+| Fits | Salt front-liners (Warrior builds) |
+| **Stats** | **+7 Salt, +5 ATK (12 GP after the signature)** |
+| Signature | **Cleave:** basic hits deal 30% of their damage to enemies next to the target |
+| Skill | — |
+
+**Description:** A broad blade beaten from the Iron Gauntlets' fists around an old sword's core. Each swing carries far past where it should stop.
+**Codex line:** "One swing, many problems solved."
+**Card art:** A wide, heavy single-edged sword with a fist-shaped iron guard.
+**Equipped look:** Held two-handed, resting on the shoulder while idle.
+**Attack effect:** A wide sweeping arc that clips nearby enemies; sparks on each one. SFX: a deep whoosh and several clangs.
+
+### Fortress Plate
+| Field | Value |
+|---|---|
+| Data ID | `SO_Gear_FortressPlate` |
+| Slot · piece | Armor · Body |
+| Tier · Band · GP | IV · Late · 16 (requires Lv. 20) |
+| Recipe | Thorn Plate (III) + Iron Mail (I) |
+| Fits | Tanks; Salt first |
+| **Stats** | **+7 Salt, +1.5 DEF (12 GP after the signature)** |
+| Signature | **Immovable:** can't be Knocked Back; +10% Control Resist |
+| Skill | — |
+
+**Description:** Thorn Plate's barbs hammered flat and layered over chain mail until it looks like a small castle wall. Nothing moves its wearer unless the wearer wants to move.
+**Codex line:** "Walls don't walk. Neither do you."
+**Card art:** A massive, blocky breastplate like stacked castle stones, with flattened barbs between the plates.
+**Equipped look:** Not shown on the homunculus (GDD §4.7.5).
+**Hit sound:** A deep, solid clang like a struck wall.
+
+### Castle Wall
+| Field | Value |
+|---|---|
+| Data ID | `SO_Gear_CastleWall` |
+| Slot · Family | Weapon · Shield |
+| Tier · Band · GP | IV · Late · 16 (requires Lv. 20) |
+| Recipe | Knight Helm (III) + Tower Shield (II) |
+| Fits | Tanks (e.g. Tobin) |
+| **Stats** | **+7 Salt, +1.5 DEF (12 GP after the signature). Shield family: **Block 8%** (Late)** |
+| Signature | **Shelter:** allies behind the wearer in its lane take −10% damage |
+| Skill | — |
+
+**Description:** A Tower Shield rebuilt with the Knight Helm's crest and plates until it has battlements. Allies who stand behind it feel like they're inside a keep.
+**Codex line:** "The castle comes with you."
+**Card art:** A huge tower shield shaped like a castle wall section, with small battlements along the top edge.
+**Equipped look:** Off-hand, replacing fixed hand props (Tobin's pot lid); the main hand shows the default weapon.
+**Attack effect:** Basic hit: a heavy shield bash with stone-dust puff. SFX: a stony thump. Shelter: a faint wall-shaped shimmer behind the wearer in its lane.
+
+### Spellbrand
+| Field | Value |
+|---|---|
+| Data ID | `SO_Gear_Spellbrand` |
+| Slot · Family | Weapon · Sword |
+| Tier · Band · GP | IV · Late · 16 (requires Lv. 20) |
+| Recipe | Runeblade (III) + Grimoire (II) |
+| Fits | Salt + Sulfur hybrids |
+| **Stats** | **+5 Salt, +5 Sulfur, +1% Skill Power (11 GP after the skill)** |
+| Signature | — |
+| Skill | **Arcane Slash** (90 mana / 16 s): a magic slash along the target's lane: 140 magic damage to every enemy in it |
+
+**Description:** The Runeblade, with a Grimoire's pages pressed into the steel. The spells are written along the edge now, and they read themselves aloud when it swings.
+**Codex line:** "The spell has an edge."
+**Card art:** A long sword with glowing script running along the blade and a book-clasp crossguard.
+**Equipped look:** Held in the main hand; script glows along the edge.
+**Attack effect:** A silver arc with floating glyphs. SFX: a ring of steel and a whispered word.
+**Skill / signature effect:** Arcane Slash: a glowing blue crescent flies down the target's lane, leaving glyphs behind. SFX: a sharp magical whoosh.
+
+### Tarnhelm
+| Field | Value |
+|---|---|
+| Data ID | `SO_Gear_Tarnhelm` |
+| Slot · piece | Armor · Helmet |
+| Tier · Band · GP | IV · Late · 16 (requires Lv. 20) |
+| Recipe | Knight Helm (III) + Knight Helm (III) |
+| Fits | Melee who want a gamble (front-liners, assassins) |
+| **Stats** | **+5 Mercury, +4 Salt, +1% Crit (11 GP after the named signature)** |
+| Signature | **Instant Travel** (named card): at battle start, the wearer teleports to a **random empty tile anywhere** (own side, middle rows or enemy side). If it lands on the **enemy side**, its first attack hits from behind for **+50% damage** |
+| Skill | — |
+
+**Description:** Two Knight Helms fused into one that no longer quite stays in one place. In the old saga it carried its wearer wherever it wished; here, it carries them wherever it likes.
+**Codex line:** "Where will you wake up?"
+**Card art:** A dark, sleek helm with a shimmering veil-like visor that seems to blur at the edges.
+**Equipped look:** Not shown on the homunculus (GDD §4.7.5).
+**Hit sound:** A hollow ring with a faint shimmer.
+**Skill / signature effect:** Instant Travel: the wearer vanishes in a shimmer at battle start and reappears elsewhere; from behind, a bright strike flash. SFX: a soft warp and a sharp hit.
+
+### Hagoromo of the Sky Kami
+| Field | Value |
+|---|---|
+| Data ID | `SO_Gear_Hagoromo` |
+| Slot · piece | Armor · Body |
+| Tier · Band · GP | IV · Peak · 24 (requires Lv. 25) |
+| Recipe | Elder Staff (III) + Cloth Robe (I) |
+| Fits | Sulfur casters and supports |
+| **Stats** | **+9 Sulfur, +4 Mercury, +2% Cooldown Reduction (17 GP after the named signature)** |
+| Signature | **Heavenly Robe** (named card): the wearer floats: **immune to Ensnare and ground zones**. Once per battle, when it drops below 30% HP, it becomes **Untargetable for 2 s** |
+| Skill | — |
+
+**Description:** From Japanese legend: the feathered robe of a celestial maiden, without which she cannot fly home to the sky. Woven here from an elder staff's light and a simple robe, it lifts its wearer a hand's width above the ground and never quite lets the earth hold them.
+**Codex line:** "Lighter than the sky it came from."
+**Card art:** A flowing white-and-pale-blue feathered robe with sleeves that drift as if underwater, faint light along the hems.
+**Equipped look:** Not shown on the homunculus (GDD §4.7.5).
+**Hit sound:** A soft feathery whisper.
+**Skill / signature effect:** Heavenly Robe: feathers drift around the wearer's feet while it floats; at low HP it rises in a soft glow and turns translucent for 2 s. SFX: a gentle chime and a rush of wind.
+
+### Balmung
+| Field | Value |
+|---|---|
+| Data ID | `SO_Gear_Balmung` |
+| Slot · Family | Weapon · Sword |
+| Tier · Band · GP | IV · Peak · 24 (requires Lv. 25) |
+| Recipe | Runeblade (III) + Runeblade (III) |
+| Fits | Salt front-liners |
+| **Stats** | **+9 Salt, +8 ATK (17 GP after the named signature)** |
+| Signature | **Dragon-Slayer** (named card): +30% damage vs **Draconic** enemies (needs families as combat tags, GDD §13 #42) |
+| Skill | — |
+
+**Description:** From the Nibelungenlied: Siegfried's sword, the blade that slew the dragon Fafnir. Two Runeblades fused into one, its runes still remember the dragon's blood.
+**Codex line:** "Forged for a hero. Hungry for dragons."
+**Card art:** A long, gleaming broadsword with a gold hilt and a faint red rune glowing near the guard.
+**Equipped look:** Held in the main hand; the red rune pulses softly.
+**Attack effect:** A bright golden arc; a red rune flash on hits against Draconic enemies. SFX: a clear, ringing slash.
+
+## Named cards (Late band and up)
+Folklore weapons and armor discovered through fusion, each with a fixed signature (GDD §4.7.4). No rarity label in game: the name says it. One of each per party. Very high tiers may also give the homunculus a visible **aura** (GDD §4.7.5).
+
+| Card | Slot | Where | Legend |
 |---|---|---|---|
-| **Balmung** | Weapon · Sword | Nibelungenlied: Siegfried's sword | *Dragon-Slayer:* +30% damage vs Draconic (needs families as combat tags, GDD §13 #42) |
-| **Tarnhelm** | Armor · Helmet | Nibelung saga: the helm of invisibility, shape-shifting and instant travel | **To decide** (Stealth at battle start now belongs to the Ring of Gyges). Ideas: *shape-shift* (first 5 s, enemies treat the wearer as their lowest-priority target) or *instant travel* (once, at battle start, teleports to a tile chosen during placement). Part of a **Nibelung set** with Balmung and Andvaranaut (`Items.md`) |
+| **Balmung** | Weapon · Sword | Tier IV, Peak (Runeblade + Runeblade) | Nibelungenlied: Siegfried's dragon-slaying sword |
+| **Tarnhelm** | Armor · Helmet | Tier IV, Late (Knight Helm + Knight Helm) | Nibelung saga: the helm of shape-shifting and instant travel |
+| **Hagoromo of the Sky Kami** | Armor · Body | Tier IV, Peak (Elder Staff + Cloth Robe) | Japanese legend: the celestial maiden's feathered robe |
+
+Balmung, Tarnhelm and Andvaranaut (`Items.md`) form a possible **Nibelung set**.

@@ -4,6 +4,10 @@ Short dated entries: what was done, what was learned, what's next. Newest at the
 
 ---
 
+## 2026-11-11 (2)
+**Done:** GDD v0.49: gear Tier IV (22 cards) with bands, skills, signatures and full content; new `GearGridTier4.tsv`; named cards Balmung, Tarnhelm, Hagoromo of the Sky Kami have recipes; Knife and Bomb families filled.
+**Next:** Gear Tier V; item Tier VI; second uses for Plate Armor, Rune Mail, Leather Armor; full Unique trait list.
+
 ## 2026-11-11
 **Done:** GDD v0.47 (power bands, equip level requirements) and v0.48 (Tier III gear: 11 cards with bands, skills, signatures, stats, descriptions and art briefs).
 **Next:** Gear Tier IV (incl. Knife family) and Tier V (incl. Bomb family); item Tier VI; full Unique trait list.
