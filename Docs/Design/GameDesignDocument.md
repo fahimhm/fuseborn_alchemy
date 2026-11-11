@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| **Version** | 0.48 (draft) |
+| **Version** | 0.49 (draft) |
 | **Last updated** | 2026-11-07 |
 | **Status** | Pre-production. Fusion, card categories, and upgrade systems defined; combat and mining outlined |
 | **Engine** | Unity (tentative) |
@@ -242,15 +242,15 @@ Every homunculus is made of the three alchemical **principles** (Lore.md): **Sal
 
 | Family | Gear cards |
 |---|---|
-| Sword | Sword, Greatsword, Runeblade |
-| Dagger | Twin Daggers |
-| Bow | Bow, Crossbow, Arcane Repeater |
+| Sword | Sword, Greatsword, Runeblade, Warblade, Spellbrand, Balmung |
+| Dagger | Twin Daggers, Viper Fangs, Shadowfang |
+| Bow | Bow, Crossbow, Arcane Repeater, Longbow, Siege Crossbow |
 | Staff | Staff, Elder Staff |
-| Tome | Grimoire |
-| Shield | Tower Shield. **Family property: Block** by power band (Early 4%, Mid 6%, Late 8%, Peak 10%; §4.7.4); the wearer counts as a shield bearer (§6.9) |
-| Instrument | Lute, War Drum |
-| Knife | ⚠️ **No cards yet** (needed by Snick's Trapmaster, §13 #44) |
-| Bomb | ⚠️ **No cards yet** (needed by Snick's Goblin Sapper; melee, §13 #44). **Planned family property: thrown, +1 range** (§6.2) |
+| Tome | Grimoire, Tome of Ages |
+| Shield | Tower Shield, Bastion Shield, Castle Wall. **Family property: Block** by power band (Early 4%, Mid 6%, Late 8%, Peak 10%; §4.7.4); the wearer counts as a shield bearer (§6.9) |
+| Instrument | Lute, War Drum, Battle Horn, Siren Harp |
+| Knife | Black Knife (Snick's Trapmaster) |
+| Bomb | Grenade (Snick's Goblin Sapper). **Family property: thrown, +1 range** (still melee for every other rule, §6.2) |
 ✅ Weapons and armor are one category, **Gear**. Each Gear card has a **slot type** (Weapon or Armor) that decides which hero slot it fits. Lists in §15.7.
 
 #### 4.7.1 Random Slots
@@ -860,7 +860,7 @@ Planned to be discussed later.
 | 41 | Real-time Best of Three: swap limit between games (proposed 2 homunculi) | Open |
 | 42 | Families as combat tags: homunculi have families (HeroPool); PvE Runoffs need families too, so gear signatures like "+30% vs Draconic" work in PvE and PvP | Open; needed before Tier III+ signatures |
 | 43 | Does a homunculus's **default weapon** (hero files §6) give stats, or is it only what it holds with no weapon equipped? | Open; proposed: visual only, no stats |
-| 44 | ⚠️ **Homunculi without available weapons:** Snick's Trapmaster (Knife family) and Goblin Sapper (Bomb family) have **no gear cards yet**; until then they fight with their default weapon only | Open; **planned: Knife at Tier IV, Bomb at Tier V** |
+| 44 | Homunculi without available weapons (Snick's Trapmaster: Knife; Goblin Sapper: Bomb) | ✅ Solved: Black Knife and Grenade (gear Tier IV, Early) |
 | 45 | Item **Tier VI**: which pairs form it (e.g. Tier V + Tier I?) and its contents (Greater Healing Potion from Lifebloom, Mana Elixir from Starcap, Guardian Charm, Lucky Coin renamed, Polished stones) | Open |
 | 26 | Naming: card rarity and unique-skill rarity both use "Common/Rare". Use different labels to avoid confusion? | ✅ Skills use Bronze / Silver / Gold **Updated v0.46:** traits use Faint / Bright / Radiant / Unique. |
 | 27 | Risk: many random layers (card rarity, skill roll, slot roll, socket chance) can feel like a slot machine | Mitigate: progress never depends only on luck; Exchange, trading, pity |
@@ -870,6 +870,7 @@ Planned to be discussed later.
 ## 14. Change History
 | Version | Date | Changes |
 |---|---|---|
+| 0.49 | 2026-11-11 | Gear Tier IV: 22 cards (bands 6 / 9 / 5 / 2), 5 gear skills, 8 signatures incl. named Tarnhelm, Hagoromo of the Sky Kami, Balmung; Knife (Black Knife) and Bomb (Grenade) families filled; §13 #44 solved |
 | 0.48 | 2026-11-11 | Tier III gear: bands (6 Early, 4 Mid, 1 Late), 3 gear skills, 3 signatures, stats and content in `Gear.md`; Knife planned at Tier IV, Bomb at Tier V (§13 #44) |
 | 0.47 | 2026-11-11 | **Power bands** (Starter / Early / Mid / Late / Peak): tier is only batch and recipe depth; a card's band sets its GP budget and **level requirement** (none / none / Lv. 10 / Lv. 20 / Lv. 25). Gear skills, Shield Block, accessory budgets and named cards keyed to bands |
 | 0.46 | 2026-11-10 | Level traits (late bloomers, Lv. 10 / 20 / 30). Traits reworked: 30% chance for homunculi, gear and accessories (most cards have none); rarity Faint / Bright / Radiant / Unique (65 / 27 / 8 / special), Unique = one in the game world; jokes at Faint, ironic trade-offs from Bright; fusion warning. Stat definitions in §6.9; **Block** = shield bearers only, negates 100% of a physical hit, multiplicative stacking, cap 60%; Shield family Block by tier; Block 1 GP = +0.25% |
@@ -1083,6 +1084,34 @@ No match: Cloth Robe + Cloth Robe, Sword + Staff, Sword + Cloth Robe, Bow + Iron
 
 Mix: 4 weapons, 7 armor (1 body, 2 helmets, 2 gloves, 2 boots). Each Tier II card is used once. Bands: 6 Early, 4 Mid, 1 Late. Stats, descriptions and art: `Docs/Design/Gear.md`.
 To-do: second recipes for key results, Tier II + Tier II gear.
+
+**Tier IV: 22 results** (12 from Tier III + Tier I, 8 from Tier III + Tier II, 2 self pairs). Source: `Docs/Design/Data/GearGridTier4.tsv`. Stats, descriptions and art: `Docs/Design/Gear.md`.
+| Result | Recipe | Slot | Band | Extra |
+|---|---|---|---|---|
+| Black Knife | Nightgrip Gloves (III) + Sword (I) | Weapon · Knife | Early | — |
+| Grenade | Iron Gauntlets (III) + Staff (I) | Weapon · Bomb | Early | Thrown, +1 range (family) |
+| Viper Fangs | Silent Boots (III) + Sword (I) | Weapon · Dagger | Early | Skill: Venomous Strike |
+| Swiftwind Boots | Hunter's Boots (III) + Cloth Robe (I) | Armor · Boots | Early | — |
+| Ranger's Hood | Arcane Repeater (III) + Cloth Robe (I) | Armor · Helmet | Early | — |
+| Phantom Cloak | Silent Boots (III) + Shadow Cloak (II) | Armor · Body | Early | — |
+| Bastion Shield | Knight Helm (III) + Iron Mail (I) | Weapon · Shield | Mid | — |
+| Tome of Ages | Wizard Hat (III) + Staff (I) | Weapon · Tome | Mid | — |
+| Longbow | Hunter's Boots (III) + Bow (I) | Weapon · Bow | Mid | Signature: Far Shot |
+| Battle Horn | War Drum (III) + Bow (I) | Weapon · Instrument | Mid | Skill: Rallying Call |
+| Berserker Gauntlets | Iron Gauntlets (III) + Greatsword (II) | Armor · Gloves | Mid | — |
+| Sage's Circlet | Wizard Hat (III) + Sage Robe (II) | Armor · Helmet | Mid | — |
+| Siege Crossbow | Arcane Repeater (III) + Crossbow (II) | Weapon · Bow | Mid | Signature: Armor-Piercer |
+| Siren Harp | War Drum (III) + Lute (II) | Weapon · Instrument | Mid | Skill: Siren Song |
+| Shadowfang | Nightgrip Gloves (III) + Twin Daggers (II) | Weapon · Dagger | Mid | Skill: Garrote |
+| Warblade | Iron Gauntlets (III) + Sword (I) | Weapon · Sword | Late | Signature: Cleave |
+| Fortress Plate | Thorn Plate (III) + Iron Mail (I) | Armor · Body | Late | Signature: Immovable |
+| Castle Wall | Knight Helm (III) + Tower Shield (II) | Weapon · Shield | Late | Signature: Shelter |
+| Spellbrand | Runeblade (III) + Grimoire (II) | Weapon · Sword | Late | Skill: Arcane Slash |
+| **Tarnhelm** | Knight Helm (III) + Knight Helm (III) | Armor · Helmet | Late | Named: Instant Travel |
+| **Hagoromo of the Sky Kami** | Elder Staff (III) + Cloth Robe (I) | Armor · Body | Peak | Named: Heavenly Robe |
+| **Balmung** | Runeblade (III) + Runeblade (III) | Weapon · Sword | Peak | Named: Dragon-Slayer |
+
+Bands: 6 Early, 9 Mid, 5 Late, 2 Peak. Every Tier III card has at least one use; 8 of 11 Tier II cards get a second use (not yet: Plate Armor, Rune Mail, Leather Armor). No Staff-family card at Tier IV.
 
 ### 15.8 Items (proposed, to be sorted)
 Junk materials climb two tiers before they become usable items. Effects of Tier IV–V items: TBD. Grids in `Docs/Design/Data/ItemGridT2.tsv` … `ItemGridT5.tsv`.
