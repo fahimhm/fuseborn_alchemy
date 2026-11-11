@@ -4,6 +4,10 @@ Short dated entries: what was done, what was learned, what's next. Newest at the
 
 ---
 
+## 2026-11-11 (3)
+**Done:** First Tier II homunculus: Ronan (Human – Commander), full file with backstory, stats, 3 branches and illustrator brief. GDD v0.50: Disarm status.
+**Next:** More Tier II homunculi (user-led).
+
 ## 2026-11-11 (2)
 **Done:** GDD v0.49: gear Tier IV (22 cards) with bands, skills, signatures and full content; new `GearGridTier4.tsv`; named cards Balmung, Tarnhelm, Hagoromo of the Sky Kami have recipes; Knife and Bomb families filled.
 **Next:** Gear Tier V; item Tier VI; second uses for Plate Armor, Rune Mail, Leather Armor; full Unique trait list.

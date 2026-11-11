@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| **Version** | 0.49 (draft) |
+| **Version** | 0.50 (draft) |
 | **Last updated** | 2026-11-07 |
 | **Status** | Pre-production. Fusion, card categories, and upgrade systems defined; combat and mining outlined |
 | **Engine** | Unity (tentative) |
@@ -656,10 +656,11 @@ Each hero has its **own built-in targeting characteristic**. This is part of the
 | **Slow** | Move Speed reduced by the skill's % |
 | **Freeze** | Hard control: can't move or act. Registered for future skills and items (e.g. the Crown of Midas's golden statue) |
 | **Sleep** | Can't act (no attacks, skills or mana regen); **wakes on taking damage**. Skill-specific variants may say otherwise (e.g. Wren's curse) |
+| **Disarm** | Hard control: can't use basic attacks; skills still work (the opposite of Silence) |
 | **Silence** | Can't cast active skills. Basic attacks, passives and mana regen still work |
 | **Invulnerable** | Takes no damage (damage over time included). Can still be targeted and receive statuses. Short by design (~2 s max per skill); **halved in overtime** (§6.12) |
 
-- ✅ **Soft vs hard control.** **Soft** = slows, holds or misdirects movement: Slow, Ensnare, Stagger's slow, Blind. **Hard** = stops or overrides acting: Stun, Sleep, Freeze, Confuse, Taunt, Silence. Skills that "break soft control" (e.g. Snick's Nimble Escape) remove soft statuses only; under hard control a unit can't act, so it can't cast them anyway.
+- ✅ **Soft vs hard control.** **Soft** = slows, holds or misdirects movement: Slow, Ensnare, Stagger's slow, Blind. **Hard** = stops or overrides acting: Stun, Sleep, Freeze, Confuse, Taunt, Silence, Disarm. Skills that "break soft control" (e.g. Snick's Nimble Escape) remove soft statuses only; under hard control a unit can't act, so it can't cast them anyway.
 - ✅ **Hard control interrupts:** it ends the unit's running **tethers and channels** (e.g. Grum's Soul Tether, Elsie's Abyssal Tether); no mana refund. Zones, traps and summons already placed keep going.
 - ✅ **Helpful vs harmful:** **helpful** = Shield, Untargetable, Stealth, Invulnerable; every other status is **harmful**. Cleanses remove harmful statuses only; effects that count "negative statuses" count harmful ones.
 - Status duration reduction (Control Resist from gear, passives, traits) is **capped at −50%**. No full status immunity; only **knockback** immunity exists.
@@ -870,6 +871,7 @@ Planned to be discussed later.
 ## 14. Change History
 | Version | Date | Changes |
 |---|---|---|
+| 0.50 | 2026-11-11 | **Disarm** status (hard control: no basic attacks); first Tier II homunculus written (Ronan, Human – Commander) |
 | 0.49 | 2026-11-11 | Gear Tier IV: 22 cards (bands 6 / 9 / 5 / 2), 5 gear skills, 8 signatures incl. named Tarnhelm, Hagoromo of the Sky Kami, Balmung; Knife (Black Knife) and Bomb (Grenade) families filled; §13 #44 solved |
 | 0.48 | 2026-11-11 | Tier III gear: bands (6 Early, 4 Mid, 1 Late), 3 gear skills, 3 signatures, stats and content in `Gear.md`; Knife planned at Tier IV, Bomb at Tier V (§13 #44) |
 | 0.47 | 2026-11-11 | **Power bands** (Starter / Early / Mid / Late / Peak): tier is only batch and recipe depth; a card's band sets its GP budget and **level requirement** (none / none / Lv. 10 / Lv. 20 / Lv. 25). Gear skills, Shield Block, accessory budgets and named cards keyed to bands |
