@@ -10,7 +10,7 @@ The **Great Codex** records every known reaction. Whoever discovers a new reacti
 ## The Player
 You lead a newly founded **alchemy guild** *(name chosen by the player)*. You start with a handful of homunculi and a pile of junk. Your goal is to grow into the most famous guild in the Codex by recruiting, reacting and discovering.
 
-**The Alchemist is not always good.** The player experiments to strengthen the guild against Runoffs and rival Alchemists, and controls each homunculus in whatever way works on it: a curse (Wren), harsh "fixing" (Snick), a father's hand (Tobin), trust and responsibility (Ronan).
+**The Alchemist is not always good.** The player experiments to strengthen the guild against Runoffs and rival Alchemists, and controls each homunculus in whatever way works on it: a curse (Wren), harsh "fixing" (Snick), a father's hand (Tobin), trust and responsibility (Ronan), a trade of loot for good food (Silas).
 
 ## Tone
 **Hopeful, with weight.** Alchemy has a price, and the alchemist pays it. The player is the guild master and the alchemist: every experiment and reaction is the player's own, and so is every risk. Each reaction sends its reagents' souls back to nature; a new homunculus may draw a fresh soul, or none. Souled homunculi have their own will and don't always obey. Humor stays in item flavor, the goblins' antics and some personalities, but not every homunculus's story is light. Tone can vary per homunculus.

@@ -2,8 +2,8 @@
 
 | | |
 |---|---|
-| **Version** | 0.51 (draft) |
-| **Last updated** | 2026-11-07 |
+| **Version** | 0.52 (draft) |
+| **Last updated** | 2026-11-12 |
 | **Status** | Pre-production. Fusion, card categories, and upgrade systems defined; combat and mining outlined |
 | **Engine** | Unity (tentative) |
 | **Online** | ✅ Online game (server-authoritative) |
@@ -543,6 +543,7 @@ Each hero has its **own built-in targeting characteristic**. This is part of the
 | Role: X | First enemy whose **current role** is X (branch role if branched, else initial role), otherwise fallback |
 | Lowest HP | Enemy with the lowest current HP % |
 | Highest ATK | Strongest enemy attacker |
+| Richest | Enemy with the most **gear cards** (PvP) or the most **passives** (Runoffs, PvE); tie: lowest HP %. The default weapon (visual only) doesn't count. First user: Silas (Human – Thief) |
 | Random | Any living enemy |
 
 - **Taunt** (any skill that applies it, usually Tanks) overrides targeting for its duration.
@@ -565,6 +566,8 @@ Each hero has its **own built-in targeting characteristic**. This is part of the
 - Cleared stages can be replayed for grinding (optional later: "sweep" / skip for **3-star** stages, §6.12).
 - **Win:** all waves defeated. **Lose:** all heroes knocked out, or the time limit runs out (**90 s per wave group**, with overtime in the last 15 s, §6.12). Wins are graded with **stars** (§6.12).
 - Knocked-out heroes recover after battle. No permanent loss.
+- ✅ **Runoffs have no gear.** Any effect that targets gear (lock, steal, break) targets the Runoff's own body instead: its **base stats** in place of a card's base stats, and its **passives** in place of signatures and extra stats. Written once here so every future gear effect inherits it (first user: Silas, Human – Thief).
+- ✅ **Runoff passives:** small Runoffs 0–1, elites 1–2, bosses 2–3. A Runoff with no passive is the PvE counter to passive-stealing skills.
 
 ### 6.7 PvP — Asynchronous
 - ✅ **At launch:** asynchronous, **single battle** (no series). Real-time PvP comes later, once enough players are online (§6.14).
@@ -871,6 +874,7 @@ Planned to be discussed later.
 ## 14. Change History
 | Version | Date | Changes |
 |---|---|---|
+| 0.52 | 2026-11-12 | Second Tier II homunculus written (Silas, Human – Thief); targeting rule **Richest** (§6.4); Runoffs have no gear, gear effects hit their body, and Runoff passives per size (§6.6); Thief identity: consumables → gear and skills (§15.3) |
 | 0.51 | 2026-11-12 | Goblin – Saboteur → **Goblin – Scrapper** (Warrior); Human – Thief identity → stealing (buffs, mana, consumables); role balance Warrior 4, Assassin 3 |
 | 0.50 | 2026-11-11 | **Disarm** status (hard control: no basic attacks); first Tier II homunculus written (Ronan, Human – Commander) |
 | 0.49 | 2026-11-11 | Gear Tier IV: 22 cards (bands 6 / 9 / 5 / 2), 5 gear skills, 8 signatures incl. named Tarnhelm, Hagoromo of the Sky Kami, Balmung; Knife (Black Knife) and Bomb (Grenade) families filled; §13 #44 solved |
@@ -964,7 +968,7 @@ Per-hero content (backstory, stats, skill tree, equipment, illustrator brief): `
 | Result | Recipe | Role |
 |---|---|---|
 | Human – Commander | Knight + Knight | Support (leader buffs) |
-| Human – Thief | Knight + Archer | Assassin (**stealing**: buffs, mana, consumables; no stealth, traps or bombs, which are Snick's) |
+| Human – Thief | Knight + Archer | Assassin (**stealing**: buffs, mana, gear and skills; no stealth, traps or bombs, which are Snick's) |
 | Wood Elf – Hunter 🆕 | Archer + Archer | Ranger |
 | Fairy – Druid | Knight + Priest | Support |
 | Light Elf – Bard | Archer + Priest | Support |

@@ -12,7 +12,7 @@ One file per hero, made from [_HeroTemplate.md](_HeroTemplate.md). Roster and re
 | 4 | Goblin – Rogue | Snick | I | Assassin | [GoblinRogue.md](GoblinRogue.md) | Numbers done (approved) |
 | 5 | Orc – Warlock | Grum | I | Mage | [OrcWarlock.md](OrcWarlock.md) | Numbers done (approved) |
 | 6 | Human – Commander | Ronan | II | Support | [HumanCommander.md](HumanCommander.md) | Draft |
-| 7 | Human – Thief | — | II | Assassin | | — |
+| 7 | Human – Thief | Silas | II | Assassin | [HumanThief.md](HumanThief.md) | Draft |
 | 8 | Wood Elf – Hunter | — | II | Ranger | | — |
 | 9 | Fairy – Druid | — | II | Support | | — |
 | 10 | Light Elf – Bard | — | II | Support | | — |
