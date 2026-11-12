@@ -32,7 +32,7 @@ Grouping races into families keeps art efficient: races in one family can share 
 | **Ranger** | Archer ✔, Hunter ✔, Gunner ✔, Engineer ✔, Marksman ✔, Slinger, Crossbowman, Beastmaster |
 | **Assassin** | Rogue ✔, Thief ✔, Nightblade ✔, Ninja, Stalker |
 | **Mage** | Warlock ✔, Wizard ✔, Necromancer ✔, Runecaster ✔, Alchemist ✔, Pyromancer, Sorcerer, Hexer, Plague Doctor |
-| **Support** | Priest ✔, Commander ✔, Druid ✔, Bard ✔, Oracle ✔, Shaman ✔, Mender ✔, Conduit, Mystic, Tidecaller |
+| **Support** | Priest ✔, Commander ✔, Enchanter ✔, Bard ✔, Oracle ✔, Shaman ✔, Mender ✔, Conduit, Mystic, Tidecaller |
 
 ## Unused Ideas (for Tier II + II, Tier IV, or events)
 Example pairings that read well (ingredients to be designed):

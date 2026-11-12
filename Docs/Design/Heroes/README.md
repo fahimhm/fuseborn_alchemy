@@ -14,7 +14,7 @@ One file per hero, made from [_HeroTemplate.md](_HeroTemplate.md). Roster and re
 | 6 | Human – Commander | Ronan | II | Support | [HumanCommander.md](HumanCommander.md) | Draft |
 | 7 | Human – Thief | Silas | II | Assassin | [HumanThief.md](HumanThief.md) | Draft |
 | 8 | Wood Elf – Hunter | — | II | Ranger | | — |
-| 9 | Fairy – Druid | — | II | Support | | — |
+| 9 | Fairy – Enchanter | Maeve | II | Support | [FairyEnchanter.md](FairyEnchanter.md) | Draft |
 | 10 | Light Elf – Bard | — | II | Support | | — |
 | 11 | Angel – Crusader | — | II | Warrior | | — |
 | 12 | Goblin – Shieldbearer | — | II | Tank | | — |

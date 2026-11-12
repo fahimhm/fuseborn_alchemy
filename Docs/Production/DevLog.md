@@ -4,6 +4,10 @@ Short dated entries: what was done, what was learned, what's next. Newest at the
 
 ---
 
+## 2026-11-13
+**Done:** Third Tier II homunculus: Maeve (Fairy – Enchanter, renamed from Druid), full file. GDD v0.53: Accuracy stat and formula, true damage rules, Puppeteer's String exception, Ring of Gyges relabeled; Druid renamed in the roster, recipes, HeroPool and HeroGrid.
+**Next:** More Tier II homunculi (user-led); add Accuracy to gloves and bows in `Gear.md` when gear is next revised; Runoff passives.
+
 ## 2026-11-12
 **Done:** Second Tier II homunculus: Silas (Human – Thief), full file with backstory, stats, 3 branches, stealing rules and illustrator brief. GDD v0.52: Richest targeting, Runoff gear rule and Runoff passives, Thief identity updated. Lore: Silas's trade.
 **Next:** More Tier II homunculi (user-led); Runoff design needs passives per size.

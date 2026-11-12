@@ -2,8 +2,8 @@
 
 | | |
 |---|---|
-| **Version** | 0.52 (draft) |
-| **Last updated** | 2026-11-12 |
+| **Version** | 0.53 (draft) |
+| **Last updated** | 2026-11-13 |
 | **Status** | Pre-production. Fusion, card categories, and upgrade systems defined; combat and mining outlined |
 | **Engine** | Unity (tentative) |
 | **Online** | ✅ Online game (server-authoritative) |
@@ -302,10 +302,10 @@ Every homunculus is made of the three alchemical **principles** (Lore.md): **Sal
 |---|---|
 | Body | HP, DEF, Block, Thorns, Holy / Dark resist |
 | Helmet | DEF, Cooldown Reduction, Control Resist, Holy / Dark resist |
-| Gloves | ATK, Attack Speed, Crit Chance, Lifesteal |
+| Gloves | ATK, Attack Speed, Crit Chance, Lifesteal, Accuracy |
 | Boots | Move Speed, Evasion |
 
-**Gear bonus stats** (on gear only; gear may **also** give Salt / Mercury / Sulfur points, §4.7.4): HP, DEF, ATK, Attack Speed, Move Speed, Crit Chance, Evasion, Block, Lifesteal, Cooldown Reduction, Skill Power, Thorns (reflects melee damage), Control Resist, Holy / Dark damage % (weapons and accessories), Holy / Dark resist % (body armor, helmets and accessories; §6.9). These are the only sources of % stats besides passives and traits (§4.6.2). Values TBD.
+**Gear bonus stats** (on gear only; gear may **also** give Salt / Mercury / Sulfur points, §4.7.4): HP, DEF, ATK, Attack Speed, Move Speed, Crit Chance, Evasion, Accuracy (gloves and bows), Block, Lifesteal, Cooldown Reduction, Skill Power, Thorns (reflects melee damage), Control Resist, Holy / Dark damage % (weapons and accessories), Holy / Dark resist % (body armor, helmets and accessories; §6.9). These are the only sources of % stats besides passives and traits (§4.6.2). Values TBD.
 
 #### 4.7.5 Gear Visuals ✅
 - **Weapons are visible:** the equipped weapon is a separate piece attached to the homunculus's hand (or off-hand for shields), so swapping weapons changes what it holds. Cheap with skeletal 2D or 3D (art pipeline: §13 #20).
@@ -343,9 +343,10 @@ Cards with the same band are equally strong on paper. Gear **doesn't level up**:
 | Crit Chance | +0.5% |
 | Block (shield bearers only, §6.9) | +0.25% |
 | Evasion / Lifesteal | +0.4% |
+| Accuracy | +1% (cheap: it only works against Evasion, §6.9) |
 | Thorns / Control Resist / Holy-Dark damage or resist | +1% |
 
-Existing caps still apply (Evasion 40%, Control Resist −50%, Holy / Dark resist −50%…).
+Existing caps still apply (Evasion 40%, Accuracy 50%, Control Resist −50%, Holy / Dark resist −50%…).
 
 **Shape per band**
 | Band | Principles | Bonus stats | Signature |
@@ -595,6 +596,13 @@ Each hero has its **own built-in targeting characteristic**. This is part of the
 
 ✅ **Fire** is a tag on **Physical or Magic** damage (skills, the statuses they apply, and items; basic attacks are never tagged). Users: Snick's Goblin Sapper explosions (Physical + Fire), **Burn** (Magic + Fire), future fire spells and items. It matters only through Fire interactions (e.g. **Oiled**, §6.10); no Fire damage % or resist yet.
 
+✅ **True damage** (2026-11-13) is damage that **ignores DEF and RES**. It is **not** a third damage type and not a stat: it is a rare **property** written explicitly on a specific skill or equipment effect (never on basic hits by default; no stat, trait or Magic Stone gives "true damage %").
+- **Can't be amplified:** no Skill Power, Crit, "+X% damage" or "+X% damage taken" effects, Holy / Dark %, or Oiled ×2. Its number is exactly what the effect says.
+- **Can't be reduced** either: damage-reduction effects and Holy / Dark resist don't touch it. Only **Shields** (absorb it), **Invulnerable**, and **Block** stop it.
+- **Block:** true damage from a **weapon or physical strike** can be Blocked (shield bearers); true damage from **spells, curses or anything inside the target** can't (e.g. Maeve's Searing Metal).
+- **No tags:** true damage is never Fire, Holy or Dark.
+- Users: Maeve (Searing Metal), Ring of Gyges. Effects that ignore only part of the defense (Venomous Strike's Bleed ignores DEF; Ring of Polycrates ignores 15% DEF) are **not** true damage.
+
 **Per-hero data:** base Salt / Mercury / Sulfur, growth per level for each, dominant principle, initial role, base HP, base attack damage, base DEF / RES, DEF growth (per homunculus; 0 for most), base mana, base attack interval, attack range (melee / ranged), Move Speed. Never set by tier (§4.4).
 
 **Attribute at level L** = base + growth × (L − 1).
@@ -618,7 +626,8 @@ Each hero has its **own built-in targeting characteristic**. This is part of the
 | Stat | Definition |
 |---|---|
 | **Crit** | Chance for a hit to deal 150% damage. Basic hits by default; skills only when a skill or effect says so (e.g. Backstab from Stealth, Eye of Ra) |
-| **Evasion** | Chance to fully dodge an enemy **basic hit**. Skills always land |
+| **Evasion** | Chance to fully dodge an enemy **basic hit**. Skills always land. Cap 40% |
+| **Accuracy** | Chance to **ignore** the target's Evasion on a basic hit. **Miss chance = Evasion × (1 − Accuracy)** (e.g. 40% Evasion vs 25% Accuracy → 30%). Gear, items, passives and traits only (never principles); basic hits only; **cap 50%**, so Evasion always keeps at least half its value. Useless against targets with no Evasion: a counter-pick, not a tax. Doesn't help against **Blind** (a Blinded unit misses every basic hit). Effects that once "ignored Evasion" grant +Accuracy instead (e.g. Maeve's Puppeteer's String: +50%) |
 | **Block** | **Shield bearers only:** a homunculus with a **Shield-family weapon** or a **built-in shield** (e.g. Tobin's pot lid). Chance to **negate 100%** of a **physical hit**, basic or skill; magic hits only when an effect says so (e.g. Rune-Etched Lid). **Never** damage-over-time ticks or zones. Block from any source does nothing on others. **Stacks multiplicatively** (each source blocks a share of what's left: 10% + 10% = 19%), **cap 60%**: very hard to build |
 | **Lifesteal** | Heal for this % of **basic-hit** damage dealt; skill damage only when an effect says so (e.g. Siphon) |
 | **Thorns** | Reflect this % of **melee** damage taken back to the attacker as physical damage |
@@ -666,6 +675,7 @@ Each hero has its **own built-in targeting characteristic**. This is part of the
 - ✅ **Soft vs hard control.** **Soft** = slows, holds or misdirects movement: Slow, Ensnare, Stagger's slow, Blind. **Hard** = stops or overrides acting: Stun, Sleep, Freeze, Confuse, Taunt, Silence, Disarm. Skills that "break soft control" (e.g. Snick's Nimble Escape) remove soft statuses only; under hard control a unit can't act, so it can't cast them anyway.
 - ✅ **Hard control interrupts:** it ends the unit's running **tethers and channels** (e.g. Grum's Soul Tether, Elsie's Abyssal Tether); no mana refund. Zones, traps and summons already placed keep going.
 - ✅ **Helpful vs harmful:** **helpful** = Shield, Untargetable, Stealth, Invulnerable; every other status is **harmful**. Cleanses remove harmful statuses only; effects that count "negative statuses" count harmful ones.
+- ⚠ **Logged exception:** Maeve's **Puppeteer's String** keeps an ally's weapon making basic hits while the ally is Stunned, Asleep or Frozen (it can't move or cast). Disarm stops it; Taunt and Confuse still apply.
 - Status duration reduction (Control Resist from gear, passives, traits) is **capped at −50%**. No full status immunity; only **knockback** immunity exists.
 
 ### 6.11 Summons ✅
@@ -874,6 +884,7 @@ Planned to be discussed later.
 ## 14. Change History
 | Version | Date | Changes |
 |---|---|---|
+| 0.53 | 2026-11-13 | Fairy – Druid → **Fairy – Enchanter**; third Tier II homunculus written (Maeve); new stat **Accuracy** (miss = Evasion × (1 − Accuracy), cap 50%, 1 GP = 1%); **true damage** registered as a rare property (ignores DEF / RES, can't be amplified or reduced, no tags; Block only from strikes); Puppeteer's String logged as a Stun exception (§6.10); Ring of Gyges → true damage |
 | 0.52 | 2026-11-12 | Second Tier II homunculus written (Silas, Human – Thief); targeting rule **Richest** (§6.4); Runoffs have no gear, gear effects hit their body, and Runoff passives per size (§6.6); Thief identity: consumables → gear and skills (§15.3) |
 | 0.51 | 2026-11-12 | Goblin – Saboteur → **Goblin – Scrapper** (Warrior); Human – Thief identity → stealing (buffs, mana, consumables); role balance Warrior 4, Assassin 3 |
 | 0.50 | 2026-11-11 | **Disarm** status (hard control: no basic attacks); first Tier II homunculus written (Ronan, Human – Commander) |
@@ -961,7 +972,7 @@ Per-hero content (backstory, stats, skill tree, equipment, illustrator brief): `
 |---|---|---|---|---|---|
 | **Knight** | Human – Commander | | | | |
 | **Archer** | Human – Thief | Wood Elf – Hunter 🆕 | | | |
-| **Priest** | Fairy – Druid | Light Elf – Bard | Angel – Crusader | | |
+| **Priest** | Fairy – Enchanter | Light Elf – Bard | Angel – Crusader | | |
 | **Rogue** | Goblin – Shieldbearer | Dark Elf – Nightblade | ✗ | Goblin – Scrapper | |
 | **Warlock** | Human – Wizard | Oni – Berserker | ✗ | Dwarf – Gunner 🆕 | Hobgoblin – Brute |
 
@@ -970,7 +981,7 @@ Per-hero content (backstory, stats, skill tree, equipment, illustrator brief): `
 | Human – Commander | Knight + Knight | Support (leader buffs) |
 | Human – Thief | Knight + Archer | Assassin (**stealing**: buffs, mana, gear and skills; no stealth, traps or bombs, which are Snick's) |
 | Wood Elf – Hunter 🆕 | Archer + Archer | Ranger |
-| Fairy – Druid | Knight + Priest | Support |
+| Fairy – Enchanter | Knight + Priest | Support |
 | Light Elf – Bard | Archer + Priest | Support |
 | Angel – Crusader | Priest + Priest | Warrior |
 | Goblin – Shieldbearer | Knight + Rogue | Tank |
@@ -988,12 +999,12 @@ No match (✗): Priest + Rogue, Priest + Warlock. Two "no reaction" pairs are ke
 |---|---|---|---|
 | Dwarf – Engineer | Human – Commander + Knight | Dwarf – Gunner + Knight | Ranger |
 | Skeleton – Necromancer | Human – Thief + Warlock | Human – Wizard + Rogue | Mage |
-| Wraith – Runecaster | Fairy – Druid + Rogue | _TBD_ | Mage |
+| Wraith – Runecaster | Fairy – Enchanter + Rogue | _TBD_ | Mage |
 | Troll – Marksman | Goblin – Shieldbearer + Archer | _TBD_ | Ranger |
 | Half-Angel – Oracle | Human – Wizard + Priest | _TBD_ | Support |
-| Dryad – Shaman | Light Elf – Bard + Priest | Fairy – Druid + Warlock | Support |
+| Dryad – Shaman | Light Elf – Bard + Priest | Fairy – Enchanter + Warlock | Support |
 | Slime – Alchemist | Oni – Berserker + Rogue | Hobgoblin – Brute + Priest | Mage (poison, debuffs) |
-| Wisp – Mender | Angel – Crusader + Archer | Fairy – Druid + Priest | Support |
+| Wisp – Mender | Angel – Crusader + Archer | Fairy – Enchanter + Priest | Support |
 | Minotaur – Brawler | Goblin – Scrapper + Warlock | Oni – Berserker + Knight | Warrior |
 | Golem – Guardian | Hobgoblin – Brute + Knight | _TBD_ | Tank |
 
@@ -1015,6 +1026,7 @@ No match (✗): Priest + Rogue, Priest + Warlock. Two "no reaction" pairs are ke
 | II | Human – Thief | (unchanged) | — (identity changed) | Now a **stealing** Assassin (buffs, mana, consumables), no stealth, traps or bombs, to stay apart from Snick (2026-11-12) |
 | II | Dark Elf – Assassin | Dark Elf – Nightblade | — | Class was a role word |
 | II | Fairy – Healer | Fairy – Druid | — | Near-role word |
+| II | Fairy – Druid | **Fairy – Enchanter** | — | "Fairy" and "Druid" both meant nature and clashed with Dryad – Shaman; a Knight + Priest fits a fairy who enchants gear (2026-11-13) |
 | II | Light Elf – Buffer | Light Elf – Bard | — | Near-role word |
 | II | Oni – Support | Oni – Berserker | Support → Warrior | Oni fits a brute; fewer Supports |
 | II | Hobgoblin – Tank | Hobgoblin – Brute | — | Class was a role word |
@@ -1031,7 +1043,7 @@ No match (✗): Priest + Rogue, Priest + Warlock. Two "no reaction" pairs are ke
 | Recipe | Sheet name | v0.11 GDD name | Final name | Role |
 |---|---|---|---|---|
 | Commander + Knight | Dwarf – Engineer | Human – Engineer | **Dwarf – Engineer** | Ranger |
-| Druid + Rogue | Wraith – Runecaster | — (new) | **Wraith – Runecaster** | Mage |
+| Enchanter + Rogue | Wraith – Runecaster | — (new) | **Wraith – Runecaster** | Mage |
 | Shieldbearer + Archer | Troll – Marksman | — (new) | **Troll – Marksman** | Ranger |
 | Wizard + Priest | Half Angel – Support | — (new) | **Half-Angel – Oracle** | Support |
 | Bard + Priest | Dryad – Buffer | Elemental – Conduit | **Dryad – Shaman** | Support |
