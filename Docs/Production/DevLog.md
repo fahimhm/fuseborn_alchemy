@@ -4,6 +4,10 @@ Short dated entries: what was done, what was learned, what's next. Newest at the
 
 ---
 
+## 2026-11-12
+**Done:** Second Tier II homunculus: Silas (Human – Thief), full file with backstory, stats, 3 branches, stealing rules and illustrator brief. GDD v0.52: Richest targeting, Runoff gear rule and Runoff passives, Thief identity updated. Lore: Silas's trade.
+**Next:** More Tier II homunculi (user-led); Runoff design needs passives per size.
+
 ## 2026-11-11 (3)
 **Done:** First Tier II homunculus: Ronan (Human – Commander), full file with backstory, stats, 3 branches and illustrator brief. GDD v0.50: Disarm status.
 **Next:** More Tier II homunculi (user-led).
