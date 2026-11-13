@@ -4,6 +4,10 @@ Short dated entries: what was done, what was learned, what's next. Newest at the
 
 ---
 
+## 2026-11-13 (2)
+**Done:** Checked Accuracy for gloves and bows: permanent Evasion is only ~5–6%, so Accuracy gear is postponed to gear Tier V as a counter-pair (GDD v0.54, §13 #46; note in `Gear.md`).
+**Next:** Gear Tier V (Accuracy and Evasion pair, Staff upgrade, second uses for Plate Armor, Rune Mail, Leather Armor).
+
 ## 2026-11-13
 **Done:** Third Tier II homunculus: Maeve (Fairy – Enchanter, renamed from Druid), full file. GDD v0.53: Accuracy stat and formula, true damage rules, Puppeteer's String exception, Ring of Gyges relabeled; Druid renamed in the roster, recipes, HeroPool and HeroGrid.
 **Next:** More Tier II homunculi (user-led); add Accuracy to gloves and bows in `Gear.md` when gear is next revised; Runoff passives.

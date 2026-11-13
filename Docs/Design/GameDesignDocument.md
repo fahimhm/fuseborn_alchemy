@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| **Version** | 0.53 (draft) |
+| **Version** | 0.54 (draft) |
 | **Last updated** | 2026-11-13 |
 | **Status** | Pre-production. Fusion, card categories, and upgrade systems defined; combat and mining outlined |
 | **Engine** | Unity (tentative) |
@@ -302,10 +302,10 @@ Every homunculus is made of the three alchemical **principles** (Lore.md): **Sal
 |---|---|
 | Body | HP, DEF, Block, Thorns, Holy / Dark resist |
 | Helmet | DEF, Cooldown Reduction, Control Resist, Holy / Dark resist |
-| Gloves | ATK, Attack Speed, Crit Chance, Lifesteal, Accuracy |
+| Gloves | ATK, Attack Speed, Crit Chance, Lifesteal, Accuracy (from gear Tier V, §13 #46) |
 | Boots | Move Speed, Evasion |
 
-**Gear bonus stats** (on gear only; gear may **also** give Salt / Mercury / Sulfur points, §4.7.4): HP, DEF, ATK, Attack Speed, Move Speed, Crit Chance, Evasion, Accuracy (gloves and bows), Block, Lifesteal, Cooldown Reduction, Skill Power, Thorns (reflects melee damage), Control Resist, Holy / Dark damage % (weapons and accessories), Holy / Dark resist % (body armor, helmets and accessories; §6.9). These are the only sources of % stats besides passives and traits (§4.6.2). Values TBD.
+**Gear bonus stats** (on gear only; gear may **also** give Salt / Mercury / Sulfur points, §4.7.4): HP, DEF, ATK, Attack Speed, Move Speed, Crit Chance, Evasion, Accuracy (gloves and bows, from gear Tier V, §13 #46), Block, Lifesteal, Cooldown Reduction, Skill Power, Thorns (reflects melee damage), Control Resist, Holy / Dark damage % (weapons and accessories), Holy / Dark resist % (body armor, helmets and accessories; §6.9). These are the only sources of % stats besides passives and traits (§4.6.2). Values TBD.
 
 #### 4.7.5 Gear Visuals ✅
 - **Weapons are visible:** the equipped weapon is a separate piece attached to the homunculus's hand (or off-hand for shields), so swapping weapons changes what it holds. Cheap with skeletal 2D or 3D (art pipeline: §13 #20).
@@ -876,6 +876,7 @@ Planned to be discussed later.
 | 43 | Does a homunculus's **default weapon** (hero files §6) give stats, or is it only what it holds with no weapon equipped? | Open; proposed: visual only, no stats |
 | 44 | Homunculi without available weapons (Snick's Trapmaster: Knife; Goblin Sapper: Bomb) | ✅ Solved: Black Knife and Grenade (gear Tier IV, Early) |
 | 45 | Item **Tier VI**: which pairs form it (e.g. Tier V + Tier I?) and its contents (Greater Healing Potion from Lifebloom, Mana Elixir from Starcap, Guardian Charm, Lucky Coin renamed, Polished stones) | Open |
+| 46 | **Accuracy and Evasion on gear:** permanent Evasion today tops out around 5–6%, so Accuracy gear (1 GP = 1%) would be worthless | Planned: design them as a **counter-pair in gear Tier V**: stronger Evasion gear plus one Accuracy glove and one Accuracy bow. Until then Accuracy comes only from skills (e.g. Puppeteer's String) |
 | 26 | Naming: card rarity and unique-skill rarity both use "Common/Rare". Use different labels to avoid confusion? | ✅ Skills use Bronze / Silver / Gold **Updated v0.46:** traits use Faint / Bright / Radiant / Unique. |
 | 27 | Risk: many random layers (card rarity, skill roll, slot roll, socket chance) can feel like a slot machine | Mitigate: progress never depends only on luck; Exchange, trading, pity |
 
@@ -884,6 +885,7 @@ Planned to be discussed later.
 ## 14. Change History
 | Version | Date | Changes |
 |---|---|---|
+| 0.54 | 2026-11-13 | Accuracy gear postponed to gear Tier V as a counter-pair with stronger Evasion gear (§13 #46); no existing card changed |
 | 0.53 | 2026-11-13 | Fairy – Druid → **Fairy – Enchanter**; third Tier II homunculus written (Maeve); new stat **Accuracy** (miss = Evasion × (1 − Accuracy), cap 50%, 1 GP = 1%); **true damage** registered as a rare property (ignores DEF / RES, can't be amplified or reduced, no tags; Block only from strikes); Puppeteer's String logged as a Stun exception (§6.10); Ring of Gyges → true damage |
 | 0.52 | 2026-11-12 | Second Tier II homunculus written (Silas, Human – Thief); targeting rule **Richest** (§6.4); Runoffs have no gear, gear effects hit their body, and Runoff passives per size (§6.6); Thief identity: consumables → gear and skills (§15.3) |
 | 0.51 | 2026-11-12 | Goblin – Saboteur → **Goblin – Scrapper** (Warrior); Human – Thief identity → stealing (buffs, mana, consumables); role balance Warrior 4, Assassin 3 |

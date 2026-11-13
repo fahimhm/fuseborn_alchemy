@@ -4,6 +4,8 @@
 
 > ✅ **Knife** (Black Knife) and **Bomb** (Grenade) families now have cards (Tier IV, Early), so every branch of Snick has a weapon.
 
+> ⏳ **Accuracy** (GDD §6.9) has no gear cards yet. Permanent Evasion is only ~5–6% today, so Accuracy gear would be worthless. Plan (GDD §13 #46): in **Tier V**, design stronger Evasion gear together with **one Accuracy glove and one Accuracy bow** as a counter-pair. Existing gloves and bows stay unchanged.
+
 ## How to read an entry
 | Field | Meaning |
 |---|---|
