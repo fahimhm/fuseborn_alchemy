@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| **Version** | 0.54 (draft) |
+| **Version** | 0.55 (draft) |
 | **Last updated** | 2026-11-13 |
 | **Status** | Pre-production. Fusion, card categories, and upgrade systems defined; combat and mining outlined |
 | **Engine** | Unity (tentative) |
@@ -560,10 +560,12 @@ Each hero has its **own built-in targeting characteristic**. This is part of the
 | **Auto-skill toggle** | PvE: optional, so grinding can be fully automatic. PvP: AI-controlled (§6.7) |
 | **Consumables in battle** | ✅ **2 shared consumable slots** per party, shown as 2 buttons in the **bottom-right corner** (§6.1.1). **Potions, Throwables and Scrolls** (Charms are used outside battle). Each slot holds one stackable consumable type (e.g. 5 × Minor Healing Potion). Per-slot cooldown and max uses per battle (to stop spam), and PvP AI use: TBD |
 
-### 6.6 PvE — Monster Stages
+### 6.6 PvE — The Athanor (tower)
+> ✅ **The whole PvE is a tower**, the **Athanor**: full design in [Tower.md](Tower.md). Floors (one alchemical process each, with an environment modifier) hold several rooms (around 10 early, more higher up; not fixed); the last is the **boss room**, where the boss appears only when the floor's **summon condition** is met (e.g. the altar: recreate the failed reaction with cards). Season 1: Ripley's **Twelve Gates**, 12 floors (at least ~120 stages); each season the Athanor **grows** with floors from another alchemical text.
+
 - ✅ Monsters are **Runoffs**: failed or uncontrolled reactions that came alive (Lore.md). Their drops are recovered reagents.
-- Stages are grouped into **chapters** following the guild's rise; chapter bosses are large Runoffs from famous failed reactions. Each stage = several **waves** entering from the top-right, ending with a **boss wave** on key stages.
-- Rewards: **XP for party heroes**, **basic card drops** (main card source), Coins, chance of higher-tier cards on harder stages.
+- Stages (rooms) are grouped into **floors** of the Athanor; each floor's boss is a large Runoff from a famous failed reaction. Each room = several **waves** entering from the top-right.
+- Rewards: **XP for party heroes**, **basic card drops** (main card source, **targeted**: each floor and Runoff has its own drop table), Coins. Higher-tier cards drop **only if already in the player's Codex**, at a lower rate; the one exception is the **exceptional** reward (first clears, seasonal top 3 per floor), which can be an undiscovered card, arriving as "seen, recipe unknown" ([Tower.md](Tower.md) §4).
 - Cleared stages can be replayed for grinding (optional later: "sweep" / skip for **3-star** stages, §6.12).
 - **Win:** all waves defeated. **Lose:** all heroes knocked out, or the time limit runs out (**90 s per wave group**, with overtime in the last 15 s, §6.12). Wins are graded with **stars** (§6.12).
 - Knocked-out heroes recover after battle. No permanent loss.
@@ -579,7 +581,7 @@ Each hero has its **own built-in targeting characteristic**. This is part of the
 - Rewards: **rank points scaled by stars** (§6.12) + a winner reward chest. A loss costs rank points; a draw gives a small change. **The loser loses no cards.**
 
 ### 6.8 Prototype 2 Scope (combat)
-- 1 chapter, ~5 stages with waves + 1 boss
+- 1 floor of the Athanor, ~5 rooms with waves + the boss room (altar summon)
 - 6 roles, targeting rules, basic hits, cooldown skills, passive traits
 - 5-hero 3×3 formation editor (+ placing pre-placed skills, §6.2)
 - XP gain + card drops
@@ -700,7 +702,7 @@ Some skills summon **minions** onto the grid (first user: Grum's Demonology bran
 | **HP %** | Party's current HP ÷ its starting max HP. Knocked-out homunculi count as 0; **minions don't count** |
 | **Stars (win)** | ★★★ ≥ 60% HP · ★★ 30–59% · ★ < 30% |
 | **PvP timeout** | Both sides standing → higher HP % wins, **★ at most**. Within 1% → **draw**, no stars |
-| **Rewards** | PvP rank points scale with stars (exact values with the rank system). PvE stars count toward chapter rewards; 3★ unlocks sweep |
+| **Rewards** | PvP rank points scale with stars (exact values with the rank system). PvE stars count toward floor rewards, Gate Seals and per-floor leaderboards (stars, then clear time); 3★ unlocks sweep |
 | **Why** | Fights normally end in ~25–45 s; HP % (not raw HP) keeps tank teams from winning timeouts; overtime and the ★ cap stop turtling |
 
 ### 6.13 Zones ✅
@@ -753,7 +755,7 @@ A spot where players obtain basic cards. **Mechanic TBD.** Candidate approaches:
 | Farming-style plots | Place/plant, wait, harvest; plots can be upgraded | Medium |
 | Mini-game | Short active mining game (tap/dig) for cards | Medium–High |
 
-Planned to be discussed later.
+Planned to be discussed later. ⏸ **Banked** (2026-11-13): no good mechanic yet; an idle expedition from tower "landings" was discussed and not chosen. Targeted drops in the Athanor cover farming for now ([Tower.md](Tower.md) §8).
 
 ---
 
@@ -877,6 +879,7 @@ Planned to be discussed later.
 | 44 | Homunculi without available weapons (Snick's Trapmaster: Knife; Goblin Sapper: Bomb) | ✅ Solved: Black Knife and Grenade (gear Tier IV, Early) |
 | 45 | Item **Tier VI**: which pairs form it (e.g. Tier V + Tier I?) and its contents (Greater Healing Potion from Lifebloom, Mana Elixir from Starcap, Guardian Charm, Lucky Coin renamed, Polished stones) | Open |
 | 46 | **Accuracy and Evasion on gear:** permanent Evasion today tops out around 5–6%, so Accuracy gear (1 GP = 1%) would be worthless | Planned: design them as a **counter-pair in gear Tier V**: stronger Evasion gear plus one Accuracy glove and one Accuracy bow. Until then Accuracy comes only from skills (e.g. Puppeteer's String) |
+| 47 | **The Athanor (PvE tower):** more summon conditions and Gate Seals, per-floor story and riddles, boss and Runoff roster, reward amounts, side wings, what's at the top | Open ([Tower.md](Tower.md) §9) |
 | 26 | Naming: card rarity and unique-skill rarity both use "Common/Rare". Use different labels to avoid confusion? | ✅ Skills use Bronze / Silver / Gold **Updated v0.46:** traits use Faint / Bright / Radiant / Unique. |
 | 27 | Risk: many random layers (card rarity, skill roll, slot roll, socket chance) can feel like a slot machine | Mitigate: progress never depends only on luck; Exchange, trading, pity |
 
@@ -885,6 +888,7 @@ Planned to be discussed later.
 ## 14. Change History
 | Version | Date | Changes |
 |---|---|---|
+| 0.55 | 2026-11-13 | PvE becomes **the Athanor** (tower): floors × rooms, boss room with summon conditions (altar first), Gate Seals, targeted drops, per-floor leaderboards, exceptional rewards; Runoff model (reagent recipe → drops, look, kit; homunculus stat model); Season 1 = Twelve Gates; mining banked. New doc `Tower.md` |
 | 0.54 | 2026-11-13 | Accuracy gear postponed to gear Tier V as a counter-pair with stronger Evasion gear (§13 #46); no existing card changed |
 | 0.53 | 2026-11-13 | Fairy – Druid → **Fairy – Enchanter**; third Tier II homunculus written (Maeve); new stat **Accuracy** (miss = Evasion × (1 − Accuracy), cap 50%, 1 GP = 1%); **true damage** registered as a rare property (ignores DEF / RES, can't be amplified or reduced, no tags; Block only from strikes); Puppeteer's String logged as a Stun exception (§6.10); Ring of Gyges → true damage |
 | 0.52 | 2026-11-12 | Second Tier II homunculus written (Silas, Human – Thief); targeting rule **Richest** (§6.4); Runoffs have no gear, gear effects hit their body, and Runoff passives per size (§6.6); Thief identity: consumables → gear and skills (§15.3) |

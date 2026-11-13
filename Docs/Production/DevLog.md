@@ -4,6 +4,10 @@ Short dated entries: what was done, what was learned, what's next. Newest at the
 
 ---
 
+## 2026-11-13 (3)
+**Done:** PvE redesigned as the Athanor tower (first idea): new `Tower.md`; GDD v0.55 (§6.6, §6.8, §6.12, §7 mining banked, §13 #47); Lore (Athanor, Runoffs).
+**Next:** Runoff roster and bosses per floor; more summon conditions and Gate Seals (user-led); reward amounts.
+
 ## 2026-11-13 (2)
 **Done:** Checked Accuracy for gloves and bows: permanent Evasion is only ~5–6%, so Accuracy gear is postponed to gear Tier V as a counter-pair (GDD v0.54, §13 #46; note in `Gear.md`).
 **Next:** Gear Tier V (Accuracy and Evasion pair, Staff upgrade, second uses for Plate Armor, Rune Mail, Leather Armor).
