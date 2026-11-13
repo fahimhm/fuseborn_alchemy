@@ -12,13 +12,13 @@ The **Athanor** is a giant alchemical furnace shaped like a tower (in real alche
 ## 2. Structure
 - ✅ **The tower is the whole PvE.** It replaces the earlier chapters (GDD §6.6).
 - ✅ **One floor = one Gate** (one alchemical process), with its own environment modifier and story.
-- ✅ **Each floor has about 10 rooms** (stages with waves). Rooms open one after another; the **last room is the boss room**.
-- ✅ **Season 1:** 12 floors (Ripley's Twelve Gates) × ~10 rooms = **~120 stages**.
+- ✅ **Each floor has its own number of rooms** (stages with waves): **not fixed**. Early floors start around **10**; higher floors can have **more**. The room count is part of each floor's data. Rooms open one after another; the **last room is the boss room**.
+- ✅ **Season 1:** 12 floors (Ripley's Twelve Gates) × their rooms: **at least ~120 stages** (around 10 per floor early, more higher up).
 - ✅ **Acts:** the four stages of the Great Work group the floors 3 by 3 for mood and colors: **Nigredo** (black) floors 1–3, **Albedo** (white) 4–6, **Citrinitas** (yellow) 7–9, **Rubedo** (red) 10–12. A creative grouping, not strict alchemical history.
 - ✅ Cleared rooms and floors stay **replayable** for farming (3★ sweep, GDD §6.12). No stamina (GDD §13 #22).
 - ✅ **No walking: a stage map** (like Cookie Run: Kingdom's adventure map). Two levels:
   - **Tower view:** the Athanor drawn vertically, floors stacked upward; each floor band shows its Gate name, act color, stars, and a lock with its Gate Seal requirements. Tap a floor to enter.
-  - **Floor view:** the floor's environment as background, **~10 dots joined by a path**, ending at the **boss room**; stars (0–3) under each dot; tap a dot to see its waves, the party and **Start**. The boss dot shows an **empty altar** until the summon condition is met. The floor modifier is shown as an icon in the corner.
+  - **Floor view:** the floor's environment as background, **one dot per room, joined by a path** (around 10 early, more higher up), ending at the **boss room**; stars (0–3) under each dot; tap a dot to see its waves, the party and **Start**. The boss dot shows an **empty altar** until the summon condition is met. The floor modifier is shown as an icon in the corner.
   - ✅ **Main path plus optional side dots:** the main path is not the only route; side branches hold optional content: a **journal page** (story, riddle hints), an **elite** fight (better drop table), a **treasure** dot (one-time Coins or a Rare). Players who only climb can ignore them.
 - ⏸ **Banked: a labyrinth** floor or section (which floor and details TBD).
 - **Content cost:** zones share a tileset; floors vary through modifiers; milestone floors and boss rooms get hand-made story and riddles.
@@ -42,6 +42,9 @@ The **Athanor** is a giant alchemical furnace shaped like a tower (in real alche
 - Coins, journal pages (Codex), recipe hints (GDD §4.1) and titles / frames: rewards to use around these (amounts TBD).
 
 ## 5. Runoffs
+- ✅ **Roster per floor:** about **4 small** types, **2 elites**, **1 boss**. To cut art cost, Runoffs from lower floors **come back higher up** (more levels, plus the new floor's modifier), so each floor adds only about **2 new small types**. Season 1: about 24 small, 24 elite, 12 bosses.
+- ✅ **Early floors use early reagents:** floor 1's Runoffs are made of Tier I homunculi and Tier I junk, so their drops are what a new player needs; higher floors bring in deeper reagents.
+- ✅ **Elites are "worse" reactions** of a small Runoff: the same reagents plus one more, so the family stays recognizable.
 - ✅ **Every Runoff has a "recipe":** the 2 reagents that failed to react (e.g. *Ash Slime = Goblin – Rogue + Rust*).
 - ✅ **Its drops are its reagents** (targeted farming); the Codex shows a Runoff's reagents once it's defeated.
 - ✅ **Its look and kit come from its reagents** (an Orc inside makes it bulky; Fire Oil makes it burn).
@@ -83,7 +86,7 @@ Source: George Ripley, *The Compound of Alchemy* (1471), public domain; Ripley's
 | Splendor Solis | 1582 | 22 | Illustrated plates: art direction |
 | Atalanta Fugiens (Maier) | 1617 | 50 | Emblems with music: long endgame climb |
 
-- ✅ **Data, not code:** each floor is one data asset (number, source text, environment modifier, Runoff waves, drop table, journal page, summon conditions). Nothing depends on "12".
+- ✅ **Data, not code:** each floor is one data asset (number, source text, room count, environment modifier, Runoff waves, drop table, journal page, summon conditions). Nothing depends on "12".
 - **Risk:** content added only on top reaches veterans only. Later option: **side wings** that open at mid floors.
 
 ## 8. Banked
