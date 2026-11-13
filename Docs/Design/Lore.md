@@ -26,7 +26,8 @@ You lead a newly founded **alchemy guild** *(name chosen by the player)*. You st
 | **Dark being** | An old power that lives inside a hex book in the guild library. It grants dark energy through an **oath**, and asks for absurd payments in return (Grum's: a lot of donuts). What else it wants is an open story hook | Warlock lore (Grum) |
 | **Innate trait** | A rare gift some homunculi wake up with (about 1 in 3); most have none. The rarest exist only once in the whole world | Trait roll (GDD §4.6.4) |
 | **Reagent** | Any reactable thing: junk, materials, gear, homunculi | Cards |
-| **Runoff** | A failed or uncontrolled reaction that leaked into the world as a living creature. Defeating one recovers its reagents. | PvE monsters, card drops |
+| **Runoff** | A failed or uncontrolled reaction that leaked into the world as a living creature, mostly out of the Athanor. Each is made of the 2 reagents that failed to react; defeating one recovers them. | PvE monsters, card drops |
+| **Athanor** | A giant alchemical tower-furnace whose Great Work never stopped burning; it keeps growing floors | PvE tower ([Tower.md](Tower.md)) |
 | **Great Codex** | The world's record of reactions; first discoverers are named forever | Codex, first-discoverer credit |
 | **Alchemists' Exchange** | The trade house that supplies guilds and takes surplus reagents | Daily Chest, starter pack, Exchange |
 | **Guild rivalry** | Guilds clash over resources; the winner takes the spoils, and the loser keeps its homunculi | Async PvP (no card loss) |
@@ -46,8 +47,8 @@ You lead a newly founded **alchemy guild** *(name chosen by the player)*. You st
 | Recipes are secret, no official list | Discoveries are a guild's fortune; nobody gives them away |
 
 ## Story Progression (outline)
-- PvE chapters follow the guild's rise from a tiny workshop to the Codex elite.
-- Each chapter boss is a large Runoff born from a famous failed reaction.
+- ✅ PvE is the **Athanor**: a giant tower-furnace where an ancient Alchemist's Great Work went wrong and never stopped burning. It is the source of Runoffs, and it **grows** new floors each season. The guild climbs it for reagents and treasure, racing rival Alchemists ([Tower.md](Tower.md)).
+- Every floor is an experiment left running (Season 1: Ripley's Twelve Gates); each floor boss is a large Runoff born from a famous failed reaction, summoned by recreating that reaction.
 - Full narrative, characters and rival guilds: TBD.
 
 ## Open
