@@ -16,6 +16,11 @@ The **Athanor** is a giant alchemical furnace shaped like a tower (in real alche
 - ✅ **Season 1:** 12 floors (Ripley's Twelve Gates) × ~10 rooms = **~120 stages**.
 - ✅ **Acts:** the four stages of the Great Work group the floors 3 by 3 for mood and colors: **Nigredo** (black) floors 1–3, **Albedo** (white) 4–6, **Citrinitas** (yellow) 7–9, **Rubedo** (red) 10–12. A creative grouping, not strict alchemical history.
 - ✅ Cleared rooms and floors stay **replayable** for farming (3★ sweep, GDD §6.12). No stamina (GDD §13 #22).
+- ✅ **No walking: a stage map** (like Cookie Run: Kingdom's adventure map). Two levels:
+  - **Tower view:** the Athanor drawn vertically, floors stacked upward; each floor band shows its Gate name, act color, stars, and a lock with its Gate Seal requirements. Tap a floor to enter.
+  - **Floor view:** the floor's environment as background, **~10 dots joined by a path**, ending at the **boss room**; stars (0–3) under each dot; tap a dot to see its waves, the party and **Start**. The boss dot shows an **empty altar** until the summon condition is met. The floor modifier is shown as an icon in the corner.
+  - ✅ **Main path plus optional side dots:** the main path is not the only route; side branches hold optional content: a **journal page** (story, riddle hints), an **elite** fight (better drop table), a **treasure** dot (one-time Coins or a Rare). Players who only climb can ignore them.
+- ⏸ **Banked: a labyrinth** floor or section (which floor and details TBD).
 - **Content cost:** zones share a tileset; floors vary through modifiers; milestone floors and boss rooms get hand-made story and riddles.
 
 ## 3. Unlocking floors: the boss room
@@ -89,3 +94,4 @@ Source: George Ripley, *The Compound of Alchemy* (1471), public domain; Ripley's
 - Per-floor story, journal pages, riddles; boss list; Runoff roster per floor.
 - Reward amounts; exceptional reward chances; leaderboard details (ties on time).
 - Side wings; what's at the top.
+- The labyrinth (banked, §2).
